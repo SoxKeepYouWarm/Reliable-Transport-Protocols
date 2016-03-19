@@ -26,7 +26,7 @@
 int sequence_num_a;
 int sequence_num_b;
 
-struct pkt current_packet;
+pkt current_packet;
 
 void flip_sequence_bit_a() {
 	
@@ -53,12 +53,12 @@ void flip_sequence_bit_b() {
 int generate_checksum(struct pkt packet) {
 
 	int checksum = 0;
-	checksum += packet->seqnum;
-	checksum += packet->acknum;
+	checksum += packet.seqnum;
+	checksum += packet.acknum;
 
 	for (int i = 0; i < 20; i++) {
 
-		checksum += (int) packet->payload[i];
+		checksum += (int) packet.payload[i];
 
 	}
 
@@ -81,15 +81,14 @@ int valid_packet(struct pkt packet) {
 
 
 int IN_TRANSIT;
-struct pkt current_packet;
 /* called from layer 5, passed the data to be sent to other side */
 void A_output(struct msg message) {
 
-	printf("a_output called: %s\n", message);
+	printf("A_OUTPUT called: %s\n", message.data);
 	
 	// check if packet already in transit
 	if (IN_TRANSIT) {
-		printf("a_output: message in_transit, returning\n");
+		printf("A_OUTPUT: message in_transit, returning\n");
 		return;
 	}
 	
@@ -99,12 +98,6 @@ void A_output(struct msg message) {
 	for (int i = 0; i < 20; i++) {
 		outgoing_packet.payload[i] = message.data[i];
 	}
-	
-	outgoing_packet.seqnum;
-	
-	IN_TRANSIT = TRUE;
-	
-	struct pkt p;
 	
 	// set packet sequence number
 	outgoing_packet.seqnum = sequence_num_a;
@@ -119,9 +112,9 @@ void A_output(struct msg message) {
 	starttimer(FROM_A, 100.00);
 	
 	// send packet out
-	tolayer3(FROM_A, outgoing_packet);
-	
 	IN_TRANSIT = TRUE;
+	printf("A_OUTPUT: packet leaving A\n");
+	tolayer3(FROM_A, outgoing_packet);
 	
 }
 
@@ -129,17 +122,17 @@ void A_output(struct msg message) {
 /* called from layer 3, when a packet arrives for layer 4 */
 void A_input(struct pkt packet) {
 
-	printf("a_input: seq_num: %d message: %s\n", packet.seqnum, packet.payload);
+	printf("A_INPUT: seq_num: %d message: %s\n", packet.seqnum, packet.payload);
 	
 	// check for valid checksum
 	if (valid_packet(packet)) {
 		printf("packet is valid\n");
 		// check if sequence number is correct
-		if (packet.seqnum == sequence_num_a) {
+		if (packet.acknum == sequence_num_a) {
 			printf("correct sequence number\n");
 			// stop timer, and advance seq number
 			stoptimer(FROM_A);
-			sequence_num_a ++;
+			flip_sequence_bit_a();
 			
 			// allow another message to come from above
 			IN_TRANSIT = FALSE;
@@ -162,7 +155,7 @@ void A_input(struct pkt packet) {
 void A_timerinterrupt() {
 
 	// timer went off, resend packet and restart timer
-	printf("timer a went off, resending packet");
+	printf("A_TIMER: resending packet");
 	starttimer(FROM_A, 100.00);
 	tolayer3(FROM_A, current_packet);
 	
@@ -173,6 +166,7 @@ void A_timerinterrupt() {
 /* entity A routines are called. You can use it to do any initialization */
 void A_init() {
 
+	printf("a init just called\n");
 	IN_TRANSIT = FALSE;
 	sequence_num_a = 0;
 	
@@ -184,7 +178,26 @@ void A_init() {
 /* called from layer 3, when a packet arrives for layer 4 at B*/
 void B_input(struct pkt packet) {
 
-	printf("b received a packet, seq_num: %d message: %s\n", packet.seqnum, packet.payload);
+	printf("B_INPUT: seq_num: %d message: %s\n", packet.seqnum, packet.payload);
+	
+	if (packet.seqnum == sequence_num_b) {
+		// correct packet received
+		printf("B_INPUT: correct packet received\n");
+		packet.acknum = sequence_num_b;
+		packet.seqnum = -1;
+		
+		// send packet back with ACK
+		tolayer3(FROM_B, packet);
+		tolayer5(FROM_B, packet.payload);
+		
+		// flip sequence for next packet
+		flip_sequence_bit_b();
+	} else {
+		// wrong seq number, drop packet
+		printf("B_INPUT: wrong packet received\n");
+		return;
+	}
+	
 }
 
 
@@ -192,6 +205,7 @@ void B_input(struct pkt packet) {
 /* entity B routines are called. You can use it to do any initialization */
 void B_init() {
 
+	printf("b init just called\n");
 	sequence_num_b = 0;
 	
 }
