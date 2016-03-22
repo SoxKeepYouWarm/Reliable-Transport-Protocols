@@ -48,6 +48,10 @@ struct Window {
 		window[end_index] = new_packet;
 	}
 	
+	struct pkt get_packet(int index) {
+		return window[index];
+	}
+	
 	int window_full() {
 		return (next_seqnum < (base + WINDOW_SIZE));
 	}
@@ -57,7 +61,6 @@ struct Window {
 
 struct Message_buffer {
 	std::queue<msg> message_buffer;
-	//struct msg message_buffer[MESSAGE_BUFFERSIZE];
 	int start_index;
 	int end_index;
 	int current_index;
@@ -68,6 +71,13 @@ struct Message_buffer {
 	
 	void add_message(struct msg new_msg) {
 		message_buffer.push(new_msg);
+	}
+	
+	struct msg pop_message() {
+		struct next_msg = message_buffer.front();
+		message_buffer.pop();
+		return next_msg;
+		
 	}
 	
 	int is_empty() {
@@ -121,6 +131,9 @@ void build_packet_a(struct pkt* outgoing_packet, struct msg message) {
 	for (int i = 0; i < 20; i++) {
 		outgoing_packet->payload[i] = message.data[i];
 	}
+	
+	// default ack_num
+	outgoing_packet->acknum = -1;
 	
 	// set packet sequence number
 	outgoing_packet->seqnum = next_seqnum;
@@ -185,7 +198,42 @@ void A_input(struct pkt packet) {
 	// check for valid checksum
 	if (valid_packet(packet)) {
 		printf("packet is valid\n");
-		// check if sequence number is correct
+		
+		base = packet.acknum + 1;
+		if (base == next_seqnum) {
+			stoptimer(FROM_A);
+		} else {
+			starttimer(FROM_A);
+		}
+		
+       /* send new packets */ 
+       while ( ( ! message_buffer.is_empty()) && (next_seqnum < base + WINDOW_SIZE) ) 
+		 {
+	    
+			struct pkt new_packet;
+			
+			build_packet_a(&new_packet, message_buffer.pop_message());
+			
+            /* start timeout */
+            if ( base == nextnum )
+				{
+		 		starttimer(A,RTT);
+		 		printf ("send packets\n");
+            }
+            /* send packet */
+            tolayer3 (A, sendpkt);
+
+            /* copy the packet */
+            winend = (winend+1)%WINDOWSIZE;
+            winbuf[winend] = sendpkt;
+	    		pktnum ++;
+				
+	   		 /* increment nextnum */
+	   		nextnum = nextnum+1; 
+				       
+	   		 /* lower number of messages */
+            msgnum --;
+       }   
 		
 	} else {
 		// packet is not valid, drop it.
@@ -200,7 +248,10 @@ void A_input(struct pkt packet) {
 void A_timerinterrupt() {
 
 	// timer went off, resend packet and restart timer
-	printf("A_TIMER: resending packet");
+	printf("A_TIMER: resending packets");
+	for (int i = base; i < next_seqnum; i++) {
+		tolayer3(FROM_A, window.)
+	}
 	
 }
 
@@ -210,6 +261,8 @@ void A_timerinterrupt() {
 void A_init() {
 
 	printf("a init just called\n");
+	base = 1;
+	next_seqnum = 1;
 	
 }
 
