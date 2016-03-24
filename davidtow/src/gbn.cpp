@@ -24,9 +24,13 @@
 #define FROM_A 0
 #define FROM_B 1
 
+#define TIME_A 100
+
 int base; 
-int expected_seqnum;  
 int next_seqnum; 
+
+int expected_seqnum;  
+
 
 #define WINDOW_SIZE 10
 #define MESSAGE_BUFFERSIZE 100
@@ -52,8 +56,8 @@ struct Window {
 		return window[index];
 	}
 	
-	int window_full() {
-		return (next_seqnum < (base + WINDOW_SIZE));
+	int is_full() {
+		return ( ! (next_seqnum < (base + WINDOW_SIZE)) );
 	}
 	
 };
@@ -74,7 +78,7 @@ struct Message_buffer {
 	}
 	
 	struct msg pop_message() {
-		struct next_msg = message_buffer.front();
+		struct msg next_msg = message_buffer.front();
 		message_buffer.pop();
 		return next_msg;
 		
@@ -111,7 +115,6 @@ int generate_checksum(struct pkt packet) {
 	return checksum;
 
 }
-
 
 
 int valid_packet(struct pkt packet) {
@@ -152,13 +155,13 @@ void A_output(struct msg message) {
 	struct pkt outgoing_packet;
 
 	/* if window is not full */
-	if ( ! window.window_full() ) {
+	if ( ! window.is_full() ) {
 		
 		build_packet_a(&outgoing_packet, message);
 	
 		// if first in window, start timer
 		if (next_seqnum == base) {
-			starttimer(FROM_A, 100.00);
+			starttimer(FROM_A, TIME_A);
 		}
 	
 		// send packet out
@@ -193,46 +196,38 @@ void A_output(struct msg message) {
 /* called from layer 3, when a packet arrives for layer 4 */
 void A_input(struct pkt packet) {
 
-	printf("A_INPUT: seq_num: %d message: %s\n", packet.seqnum, packet.payload);
+	printf("A_INPUT: ack_num: %d message: %s\n", packet.acknum, packet.payload);
 	
 	// check for valid checksum
 	if (valid_packet(packet)) {
 		printf("packet is valid\n");
 		
 		base = packet.acknum + 1;
-		if (base == next_seqnum) {
-			stoptimer(FROM_A);
-		} else {
-			starttimer(FROM_A);
+		
+		stoptimer(FROM_A);
+		if (base < next_seqnum) {
+			starttimer(FROM_A, TIME_A);
 		}
 		
-       /* send new packets */ 
-       while ( ( ! message_buffer.is_empty()) && (next_seqnum < base + WINDOW_SIZE) ) 
+       // send buffered messages as long as window isn't full
+       while ( ( ! message_buffer.is_empty()) && ( ! window.is_full() ) ) 
 		 {
 	    
 			struct pkt new_packet;
 			
 			build_packet_a(&new_packet, message_buffer.pop_message());
 			
-            /* start timeout */
-            if ( base == nextnum )
-				{
-		 		starttimer(A,RTT);
+            if ( base == next_seqnum ) {
+		 		starttimer(FROM_A, TIME_A);
 		 		printf ("send packets\n");
             }
-            /* send packet */
-            tolayer3 (A, sendpkt);
 
-            /* copy the packet */
-            winend = (winend+1)%WINDOWSIZE;
-            winbuf[winend] = sendpkt;
-	    		pktnum ++;
+            tolayer3(FROM_A, new_packet);
+
+            window.add_packet(new_packet);
 				
-	   		 /* increment nextnum */
-	   		nextnum = nextnum+1; 
-				       
-	   		 /* lower number of messages */
-            msgnum --;
+	   		 next_seqnum ++;
+			
        }   
 		
 	} else {
@@ -248,9 +243,13 @@ void A_input(struct pkt packet) {
 void A_timerinterrupt() {
 
 	// timer went off, resend packet and restart timer
-	printf("A_TIMER: resending packets");
-	for (int i = base; i < next_seqnum; i++) {
-		tolayer3(FROM_A, window.)
+	printf("A_TIMER: resending packets\n");
+	
+	starttimer(FROM_A, TIME_A);
+	
+	for (int i = 0; i < window.packet_count; i++) {
+		struct pkt current_packet = window.get_packet((window.start_index + i) % WINDOW_SIZE);
+		tolayer3(FROM_A, current_packet);
 	}
 	
 }
@@ -261,8 +260,8 @@ void A_timerinterrupt() {
 void A_init() {
 
 	printf("a init just called\n");
-	base = 1;
-	next_seqnum = 1;
+	base = 0;
+	next_seqnum = 0;
 	
 }
 
@@ -274,6 +273,33 @@ void B_input(struct pkt packet) {
 
 	printf("B_INPUT: seq_num: %d message: %s\n", packet.seqnum, packet.payload);
 	
+	if (valid_packet(packet)) {
+		printf("B_INPUT: received valid packet from A\n");
+		
+		if (expected_seqnum == packet.seqnum) {
+			printf("B_INPUT: packet has expected sequence number\n");
+			
+			struct pkt response_packet;
+			response_packet.acknum = expected_seqnum;
+			response_packet.seqnum = -1;
+			for (int i = 0; i < 20; i++) {
+				response_packet.payload[i] = '0';
+			} 
+			
+			response_packet.checksum = generate_checksum(response_packet);
+			
+			tolayer3(FROM_B, response_packet);
+			
+			// expect next sequence number
+			expected_seqnum ++;
+			
+		} else {
+			printf("B_INPUT: received packet with unexpected sequence number\n");
+		}
+	} else {
+		printf("B_INPUT: received packet with invalid checksum\n");
+	}
+	
 }
 
 
@@ -282,5 +308,6 @@ void B_input(struct pkt packet) {
 void B_init() {
 
 	printf("b init just called\n");
+	expected_seqnum = 0;
 	
 }
