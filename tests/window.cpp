@@ -17,8 +17,9 @@ public:
 	struct pkt window[WINDOW_SIZE];
 	int start_index;
 	int end_index;
+	int size;
 	
-	Window();
+	Window(int size);
 	
 	void insert_packet(struct pkt packet);
 	
@@ -29,31 +30,48 @@ public:
 };
 
 
-Window::Window() {
-	this->start_index = 0;
-	this->end_index = 0;
+Window::Window(int size) {
+	this->start_index = -1;
+	this->end_index = -1;
 }
+
 
 void Window::insert_packet(struct pkt packet) {
-	this->window[this->end_index] = packet;
-	this->end_index = (this->end_index + 1) % WINDOW_SIZE;
+	if ( ( end_index + 1 ) % size == start_index ) {
+		std::cout << "\nQueue is full" << std::endl;
+		return;
+	}
+	end_index = ( end_index + 1 ) % size;
+	window[end_index] = packet;
+	if ( start_index == -1 )
+		start_index = 0 ;
 }
+
 
 void Window::advance_window(int steps) {
+	
 	for (int i = 0; i < steps; i++) {
-		if (start_index == end_index) {
-			start_index = (start_index + 1) % WINDOW_SIZE;
-			end_index = (end_index + 1) % WINDOW_SIZE;
-		} else {
-			start_index = (start_index + 1) % WINDOW_SIZE;
+		if ( start_index == -1 ) {
+			std::cout << "\nQueue is empty" ;
+			return;
 		}
+ 
+		//delete window[start_index];
+		
+		if ( start_index == end_index ) {
+			start_index = -1 ;
+			end_index = -1 ;
+		} else
+			start_index = ( start_index + 1 ) % size;
 	}
-	start_index = (start_index + steps) % WINDOW_SIZE;
+	
 }
 
+
 int Window::is_full() {
-	return (this->start_index == ( (this->end_index + 1) % WINDOW_SIZE) );
+	return (start_index == ( (end_index + 1) % size) );
 }
+
 
 struct pkt gen_packet(int seq) {
 	
@@ -66,78 +84,44 @@ struct pkt gen_packet(int seq) {
 
 void print_window_contents(Window window) {
 	
-	for (int i = window.start_index; i < window.end_index; i++) {
-		std::cout << window.window[i].seqnum;
+	if (window.start_index != window.end_index) {
+		for (int i = window.start_index; i != window.end_index; i = (i + 1) % window.size) {
+			std::cout << window.window[i].seqnum;
+		}
+		std::cout << "    start: " << window.start_index << " end: " << window.end_index << std::endl;
+	} else {
+		std::cout << "window is empty" << std::endl;
 	}
-	std::cout << std::endl;
+	
 	
 }
 
 
 int main() {
 	
-	Window window;
+	Window window(WINDOW_SIZE);
 	
 	print_window_contents(window);
 	
-	if ( ! window.is_full() ) {
-		window.insert_packet(gen_packet(1));
-	} else {
-		std::cout << "window full" << std::endl;
+	
+	for (int i = 1; i < 6; i++) {
+		
+		if ( ! window.is_full() ) {
+			window.insert_packet(gen_packet(i));
+		} else {
+			std::cout << "window full" << std::endl;
+		}
+	
+		print_window_contents(window);
+		
 	}
 	
-	print_window_contents(window);
-	
-	if ( ! window.is_full() ) {
-		window.insert_packet(gen_packet(2));
-	} else {
-		std::cout << "window full" << std::endl;
-	}
+	window.advance_window(2);
 	
 	print_window_contents(window);
 	
 	if ( ! window.is_full() ) {
-		window.insert_packet(gen_packet(3));
-	} else {
-		std::cout << "window full" << std::endl;
-	}
-	
-	print_window_contents(window);
-	
-	if ( ! window.is_full() ) {
-		window.insert_packet(gen_packet(4));
-	} else {
-		std::cout << "window full" << std::endl;
-	}
-	
-	print_window_contents(window);
-	
-	if ( ! window.is_full() ) {
-		window.insert_packet(gen_packet(5));
-	} else {
-		std::cout << "window full" << std::endl;
-	}
-	
-	print_window_contents(window);
-	
-	if ( ! window.is_full() ) {
-		window.insert_packet(gen_packet(6));
-	} else {
-		std::cout << "window full" << std::endl;
-	}
-	
-	print_window_contents(window);
-	
-	if ( ! window.is_full() ) {
-		window.insert_packet(gen_packet(7));
-	} else {
-		std::cout << "window full" << std::endl;
-	}
-	
-	print_window_contents(window);
-	
-	if ( ! window.is_full() ) {
-		window.insert_packet(gen_packet(8));
+		window.insert_packet(gen_packet(13));
 	} else {
 		std::cout << "window full" << std::endl;
 	}
