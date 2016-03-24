@@ -12,8 +12,15 @@
     </TabInfo>
     <TabInfo>
       <wxString Value="/home/david/Documents/cse489/cse489_pa2/davidtow/src/gbn.cpp" Name="FileName"/>
-      <int Value="36" Name="FirstVisibleLine"/>
-      <int Value="58" Name="CurrentLine"/>
+      <int Value="86" Name="FirstVisibleLine"/>
+      <int Value="84" Name="CurrentLine"/>
+      <wxArrayString Name="Bookmarks"/>
+      <IntVector Name="CollapsedFolds"/>
+    </TabInfo>
+    <TabInfo>
+      <wxString Value="/home/david/Documents/cse489/cse489_pa2/tests/window.cpp" Name="FileName"/>
+      <int Value="79" Name="FirstVisibleLine"/>
+      <int Value="95" Name="CurrentLine"/>
       <wxArrayString Name="Bookmarks"/>
       <IntVector Name="CollapsedFolds"/>
     </TabInfo>

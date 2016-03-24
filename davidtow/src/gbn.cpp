@@ -15,6 +15,7 @@
 
 /********* STUDENTS WRITE THE NEXT SEVEN ROUTINES *********/
 
+#include <iostream>
 #include <stdio.h>
 #include <queue>
 
@@ -36,7 +37,106 @@ int expected_seqnum;
 #define MESSAGE_BUFFERSIZE 100
 
 
-struct Window {
+class Window {
+	
+public:
+	
+	struct pkt window[WINDOW_SIZE];
+	int start_index;
+	int end_index;
+	int size;
+	int packet_count;
+	
+	Window(int size);
+	
+	void insert_packet(struct pkt packet);
+	
+	void advance_window(int steps);
+	
+	int is_full();
+	
+	struct pkt get_packet(int index);
+	
+};
+
+
+Window::Window(int size) {
+	this->start_index = -1;
+	this->end_index = -1;
+	this->packet_count = 0;
+}
+
+
+void Window::insert_packet(struct pkt packet) {
+	if ( ( end_index + 1 ) % size == start_index ) {
+		std::cout << "\nQueue is full" << std::endl;
+		return;
+	}
+	end_index = ( end_index + 1 ) % size;
+	window[end_index] = packet;
+	packet_count++;
+	if ( start_index == -1 )
+		start_index = 0;
+}
+
+
+void Window::advance_window(int steps) {
+	
+	for (int i = 0; i < steps; i++) {
+		if ( start_index == -1 ) {
+			std::cout << "\nQueue is empty";
+			packet_count = 0;
+			return;
+		}
+ 
+		//delete window[start_index];
+		
+		if ( start_index == end_index ) {
+			start_index = -1 ;
+			end_index = -1 ;
+			packet_count = 0;
+		} else
+			start_index = ( start_index + 1 ) % size;
+			packet_count --;
+	}
+	
+}
+
+
+int Window::is_full() {
+	return (start_index == ( (end_index + 1) % size) );
+}
+
+
+struct pkt Window::get_packet(int index) {
+	return window[start_index + index];
+}
+
+
+struct pkt gen_packet(int seq) {
+	
+	struct pkt new_pkt;
+	new_pkt.seqnum = seq;
+	return new_pkt;
+	
+}
+
+
+void print_window_contents(Window window) {
+	
+	if (window.start_index != window.end_index) {
+		for (int i = window.start_index; i != window.end_index; i = (i + 1) % window.size) {
+			std::cout << window.window[i].seqnum;
+		}
+		std::cout << "    start: " << window.start_index << " end: " << window.end_index << std::endl;
+	} else {
+		std::cout << "window is empty" << std::endl;
+	}
+	
+}
+
+
+/*struct Window {
 	struct pkt window[WINDOW_SIZE];
 	int start_index;
 	int end_index;
@@ -60,7 +160,7 @@ struct Window {
 		return ( ! (next_seqnum < (base + WINDOW_SIZE)) );
 	}
 	
-};
+};*/
 
 
 struct Message_buffer {
@@ -95,7 +195,8 @@ struct Message_buffer {
 };
 
 
-struct Window window;
+//struct Window window;
+Window* window;
 struct Message_buffer message_buffer;
 
 
@@ -155,7 +256,7 @@ void A_output(struct msg message) {
 	struct pkt outgoing_packet;
 
 	/* if window is not full */
-	if ( ! window.is_full() ) {
+	if ( ! window->is_full() ) {
 		
 		build_packet_a(&outgoing_packet, message);
 	
@@ -169,7 +270,7 @@ void A_output(struct msg message) {
 		tolayer3(FROM_A, outgoing_packet);
 
 		// copy packet to buffer
-		window.add_packet(outgoing_packet);
+		window->insert_packet(outgoing_packet);
 		
 		// increment sequence number
 		next_seqnum ++;
@@ -202,6 +303,10 @@ void A_input(struct pkt packet) {
 	if (valid_packet(packet)) {
 		printf("packet is valid\n");
 		
+		// move window up past last ack
+		window->advance_window( (packet.acknum + 1) - base);
+		
+		// update new base
 		base = packet.acknum + 1;
 		
 		stoptimer(FROM_A);
@@ -210,7 +315,7 @@ void A_input(struct pkt packet) {
 		}
 		
        // send buffered messages as long as window isn't full
-       while ( ( ! message_buffer.is_empty()) && ( ! window.is_full() ) ) 
+       while ( ( ! message_buffer.is_empty()) && ( ! window->is_full() ) ) 
 		 {
 	    
 			struct pkt new_packet;
@@ -224,9 +329,9 @@ void A_input(struct pkt packet) {
 
             tolayer3(FROM_A, new_packet);
 
-            window.add_packet(new_packet);
+            window->insert_packet(new_packet);
 				
-	   		 next_seqnum ++;
+			next_seqnum ++;
 			
        }   
 		
@@ -247,8 +352,8 @@ void A_timerinterrupt() {
 	
 	starttimer(FROM_A, TIME_A);
 	
-	for (int i = 0; i < window.packet_count; i++) {
-		struct pkt current_packet = window.get_packet((window.start_index + i) % WINDOW_SIZE);
+	for (int i = 0; i < window->packet_count; i++) {
+		struct pkt current_packet = window->get_packet(i % WINDOW_SIZE);
 		tolayer3(FROM_A, current_packet);
 	}
 	
@@ -262,6 +367,7 @@ void A_init() {
 	printf("a init just called\n");
 	base = 0;
 	next_seqnum = 0;
+	window = new Window(WINDOW_SIZE);
 	
 }
 

@@ -93,7 +93,6 @@ void print_window_contents(Window window) {
 		std::cout << "window is empty" << std::endl;
 	}
 	
-	
 }
 
 
