@@ -41,7 +41,7 @@ class Window {
 	
 public:
 	
-	struct pkt window[WINDOW_SIZE];
+	struct pkt* window;
 	int start_index;
 	int end_index;
 	int size;
@@ -64,6 +64,8 @@ Window::Window(int size) {
 	this->start_index = -1;
 	this->end_index = -1;
 	this->packet_count = 0;
+	this->window = new pkt[size];
+	this->size = size;
 }
 
 
@@ -124,43 +126,25 @@ struct pkt gen_packet(int seq) {
 
 void print_window_contents(Window window) {
 	
-	if (window.start_index != window.end_index) {
-		for (int i = window.start_index; i != window.end_index; i = (i + 1) % window.size) {
-			std::cout << window.window[i].seqnum;
-		}
-		std::cout << "    start: " << window.start_index << " end: " << window.end_index << std::endl;
-	} else {
-		std::cout << "window is empty" << std::endl;
+	if (window.start_index == -1 && window.end_index == -1) {
+		std::cout << "WINDOW CONTENTS: window is empty" << std::endl;
+		return;
 	}
+	
+	std::cout << "WINDOW CONTENTS: ";
+	for (int i = 0; i <= window.size; i++) {
+		int pos = (window.start_index + i) % window.size;
+		std::cout << window.window[pos].seqnum << " ";
+		
+		if (pos == window.end_index) {
+			std::cout << "    start: " << window.start_index << " end: " << window.end_index << std::endl;
+			return;
+		}
+	}
+	
+	std::cout << "    start: " << window.start_index << " end: " << window.end_index << std::endl;
 	
 }
-
-
-/*struct Window {
-	struct pkt window[WINDOW_SIZE];
-	int start_index;
-	int end_index;
-	int packet_count;
-	
-	Window() : start_index(0), end_index(0), packet_count(0) {
-		
-	}
-	
-	void add_packet(struct pkt new_packet) {
-		packet_count ++;
-		end_index = (end_index + 1) % WINDOW_SIZE;
-		window[end_index] = new_packet;
-	}
-	
-	struct pkt get_packet(int index) {
-		return window[index];
-	}
-	
-	int is_full() {
-		return ( ! (next_seqnum < (base + WINDOW_SIZE)) );
-	}
-	
-};*/
 
 
 struct Message_buffer {
@@ -275,6 +259,8 @@ void A_output(struct msg message) {
 		// increment sequence number
 		next_seqnum ++;
 		
+		print_window_contents(*window);
+		
 	} else {
 		printf("A_output send window is full\n");
 
@@ -314,6 +300,8 @@ void A_input(struct pkt packet) {
 			starttimer(FROM_A, TIME_A);
 		}
 		
+		print_window_contents(*window);
+		
        // send buffered messages as long as window isn't full
        while ( ( ! message_buffer.is_empty()) && ( ! window->is_full() ) ) 
 		 {
@@ -332,6 +320,8 @@ void A_input(struct pkt packet) {
             window->insert_packet(new_packet);
 				
 			next_seqnum ++;
+			
+			print_window_contents(*window);
 			
        }   
 		
@@ -367,7 +357,7 @@ void A_init() {
 	printf("a init just called\n");
 	base = 0;
 	next_seqnum = 0;
-	window = new Window(WINDOW_SIZE);
+	window = new Window(getwinsize());
 	
 }
 
@@ -395,7 +385,7 @@ void B_input(struct pkt packet) {
 			response_packet.checksum = generate_checksum(response_packet);
 			
 			tolayer3(FROM_B, response_packet);
-			
+			tolayer5(FROM_B, response_packet.payload);
 			// expect next sequence number
 			expected_seqnum ++;
 			
