@@ -13,7 +13,7 @@ CurrentFileName        :=
 CurrentFilePath        :=
 CurrentFileFullPath    :=
 User                   :=David Towson
-Date                   :=24/03/16
+Date                   :=25/03/16
 CodeLitePath           :="/home/david/.codelite"
 LinkerName             :=g++
 SharedObjectLinkerName :=g++ -shared -fPIC
@@ -60,7 +60,7 @@ AS       := as
 ## User defined environment variables
 ##
 CodeLiteDir:=/usr/share/codelite
-Objects0=$(IntermediateDirectory)/window.cpp$(ObjectSuffix) 
+Objects0=$(IntermediateDirectory)/test_list.cpp$(ObjectSuffix) 
 
 
 
@@ -91,13 +91,13 @@ PreBuild:
 ##
 ## Objects
 ##
-$(IntermediateDirectory)/window.cpp$(ObjectSuffix): window.cpp $(IntermediateDirectory)/window.cpp$(DependSuffix)
-	$(CXX) $(IncludePCH) $(SourceSwitch) "/home/david/Documents/cse489/cse489_pa2/tests/window.cpp" $(CXXFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/window.cpp$(ObjectSuffix) $(IncludePath)
-$(IntermediateDirectory)/window.cpp$(DependSuffix): window.cpp
-	@$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) -MG -MP -MT$(IntermediateDirectory)/window.cpp$(ObjectSuffix) -MF$(IntermediateDirectory)/window.cpp$(DependSuffix) -MM "window.cpp"
+$(IntermediateDirectory)/test_list.cpp$(ObjectSuffix): test_list.cpp $(IntermediateDirectory)/test_list.cpp$(DependSuffix)
+	$(CXX) $(IncludePCH) $(SourceSwitch) "/home/david/Documents/cse489/cse489_pa2/tests/test_list.cpp" $(CXXFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/test_list.cpp$(ObjectSuffix) $(IncludePath)
+$(IntermediateDirectory)/test_list.cpp$(DependSuffix): test_list.cpp
+	@$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) -MG -MP -MT$(IntermediateDirectory)/test_list.cpp$(ObjectSuffix) -MF$(IntermediateDirectory)/test_list.cpp$(DependSuffix) -MM "test_list.cpp"
 
-$(IntermediateDirectory)/window.cpp$(PreprocessSuffix): window.cpp
-	$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/window.cpp$(PreprocessSuffix) "window.cpp"
+$(IntermediateDirectory)/test_list.cpp$(PreprocessSuffix): test_list.cpp
+	$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/test_list.cpp$(PreprocessSuffix) "test_list.cpp"
 
 
 -include $(IntermediateDirectory)/*$(DependSuffix)

@@ -91,6 +91,11 @@
     </Configuration>
   </Settings>
   <VirtualDirectory Name="src">
-    <File Name="window.cpp"/>
+    <File Name="test_list.cpp"/>
   </VirtualDirectory>
+  <VirtualDirectory Name="Debug">
+    <File Name="Debug/tests"/>
+  </VirtualDirectory>
+  <Dependencies Name="Debug"/>
+  <Dependencies Name="Release"/>
 </CodeLite_Project>

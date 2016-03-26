@@ -77,8 +77,10 @@ void Window::insert_packet(struct pkt packet) {
 	end_index = ( end_index + 1 ) % size;
 	window[end_index] = packet;
 	packet_count++;
-	if ( start_index == -1 )
+	if ( start_index == -1 ) {
 		start_index = 0;
+	}
+	
 }
 
 

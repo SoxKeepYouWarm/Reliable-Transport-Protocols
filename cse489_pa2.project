@@ -73,5 +73,18 @@
     <File Name="scripts/run_experiments"/>
     <File Name="scripts/sanity_tests"/>
   </VirtualDirectory>
-  <VirtualDirectory Name="tests"/>
+  <VirtualDirectory Name="tests">
+    <VirtualDirectory Name="Debug">
+      <File Name="tests/Debug/tests"/>
+    </VirtualDirectory>
+    <File Name="tests/test"/>
+    <File Name="tests/window.cpp"/>
+    <File Name="tests/simulator.cpp"/>
+    <File Name="tests/simulator.h"/>
+    <File Name="tests/timer.cpp"/>
+  </VirtualDirectory>
+  <Dependencies Name="Debug"/>
+  <VirtualDirectory Name="cse489_pa2">
+    <File Name="Makefile"/>
+  </VirtualDirectory>
 </CodeLite_Project>

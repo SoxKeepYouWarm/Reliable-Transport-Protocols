@@ -96,11 +96,7 @@ void print_window_contents(Window window) {
 }
 
 
-int main() {
-	
-	struct pkt* test;
-	
-	test = new pkt[5];
+//int main() {
 	
 	/*
 	Window window(WINDOW_SIZE);
@@ -133,5 +129,5 @@ int main() {
 	print_window_contents(window);
 	*/
 	
-	return 0;
-}
+	//return 0;
+//}
