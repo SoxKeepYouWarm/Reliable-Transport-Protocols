@@ -33,9 +33,7 @@ int next_seqnum;
 
 int expected_seqnum;  
 
-
-#define WINDOW_SIZE 10
-#define MESSAGE_BUFFERSIZE 100
+#define MESSAGE_BUFFERSIZE 1000
 
 
 class Window {
@@ -184,7 +182,7 @@ struct Message_buffer {
 
 struct Event {
 	float alarm_time;
-	int sequence_number;
+	struct pkt packet; // CHANGE THIS LATER
 };
 
 class Timer {
@@ -198,7 +196,7 @@ public:
 	
 	Timer();
 	
-	void schedule_alarm(float time, int seq_num);
+	void schedule_alarm(float time, struct pkt packet);
 	void handle_next_event_alarm();
 	void remove_alarm(int seq_num);
 	
@@ -210,20 +208,25 @@ Timer::Timer() {
 }
 
 
-void Timer::schedule_alarm(float time, int seq_num) {
-	
+void Timer::schedule_alarm(float time, struct pkt sent_packet) {
+	// TODO switch to using packets
 	float alarm_time = get_sim_time() + time;
 	
 	struct Event new_event;
 	new_event.alarm_time = alarm_time;
-	new_event.sequence_number = seq_num;
+	new_event.packet = sent_packet;
 	
 	// check if this is the only event 
 	if (timed_events.empty()) {
 		
-		// if no events scheduled already, push and handle immediately
+		// if no events scheduled already, push and start timer immediately
 		timed_events.push_back(new_event);
-		handle_next_event_alarm();
+		set_timer_for_next_event();
+		
+	} else {
+		
+		// push event to the back of the queue
+		timed_events.push_back(new_event);
 		
 	}
 
@@ -242,14 +245,30 @@ void Timer::set_timer_for_next_event() {
 void Timer::handle_next_event_alarm() {
 	
 	// get event, and pop from queue
-	Event triggered_event = timed_events.front();
-	timed_events.pop_front();
-	
-	std::cout << "HANDLE_EVENT: seq_num: " << triggered_event.sequence_number << std::endl;
-	
 	if ( ! timed_events.empty() ) {
-		set_timer_for_next_event();
+		Event triggered_event = timed_events.front();
+		timed_events.pop_front();
+		
+		std::cout << "HANDLE_EVENT: seq_num: " << triggered_event.packet.seqnum << std::endl;
+		
+		// set alarm for packet
+		schedule_alarm(TIME_A, triggered_event.packet);
+	
+		// send packet out
+		printf("A_OUTPUT: resending packet %d\n", triggered_event.packet.seqnum);
+		tolayer3(FROM_A, triggered_event.packet);
+		
+		//print_window_contents(*window);
+		
+		if ( ! timed_events.empty() ) {
+			set_timer_for_next_event();
+		}
+	} else {
+		printf("event queue empty, no event to be handled :(\n");
 	}
+	
+	
+	
 	
 }
 
@@ -258,7 +277,7 @@ void Timer::remove_alarm(int seq_num) {
 	
 	for (std::list<struct Event>::iterator iter = timed_events.begin(); iter != timed_events.end(); std::advance(iter, 1)) {
 	
-		if (iter->sequence_number == seq_num) {
+		if (iter->packet.seqnum == seq_num) {
 			iter = timed_events.erase(iter);
 			iter --;
 		}
@@ -331,11 +350,9 @@ void A_output(struct msg message) {
 	if ( ! window->is_full() ) {
 		
 		build_packet_a(&outgoing_packet, message);
-	
-		// if first in window, start timer
-		if (next_seqnum == base) {
-			starttimer(FROM_A, TIME_A);
-		}
+		
+		// set alarm for packet
+		timer->schedule_alarm(TIME_A, outgoing_packet);
 	
 		// send packet out
 		printf("A_OUTPUT: packet leaving A\n");
