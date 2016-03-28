@@ -198,7 +198,6 @@ int generate_checksum(struct pkt packet) {
 
 	}
 
-	checksum ^= checksum;
 	return checksum;
 
 }

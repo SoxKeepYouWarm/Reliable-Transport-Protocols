@@ -62,7 +62,6 @@ int generate_checksum(struct pkt packet) {
 
 	}
 
-	checksum ^= checksum;
 	return checksum;
 
 }
@@ -80,6 +79,25 @@ int valid_packet(struct pkt packet) {
 }
 
 
+void build_packet_a(struct pkt* outgoing_packet, struct msg message) {
+	
+	// load message into packet
+	for (int i = 0; i < 20; i++) {
+		outgoing_packet->payload[i] = message.data[i];
+	}
+	
+	// default ack_num
+	outgoing_packet->acknum = -1;
+	
+	// set packet sequence number
+	outgoing_packet->seqnum = sequence_num_a;
+	
+	// set packet checksum
+	outgoing_packet->checksum = generate_checksum(*outgoing_packet);
+	
+}
+
+
 int IN_TRANSIT;
 /* called from layer 5, passed the data to be sent to other side */
 void A_output(struct msg message) {
@@ -93,17 +111,7 @@ void A_output(struct msg message) {
 	}
 	
 	struct pkt outgoing_packet;
-	
-	// load message into packet
-	for (int i = 0; i < 20; i++) {
-		outgoing_packet.payload[i] = message.data[i];
-	}
-	
-	// set packet sequence number
-	outgoing_packet.seqnum = sequence_num_a;
-	
-	// set packet checksum
-	outgoing_packet.checksum = generate_checksum(outgoing_packet);
+	build_packet_a(&outgoing_packet, message);
 	
 	// save current packet
 	current_packet = outgoing_packet;
@@ -113,7 +121,8 @@ void A_output(struct msg message) {
 	
 	// send packet out
 	IN_TRANSIT = TRUE;
-	printf("A_OUTPUT: packet leaving A\n");
+	printf("A_OUTPUT: packet leaving A: seq: %d ack: %d msg: %s\n", 
+			current_packet.seqnum, current_packet.acknum, current_packet.payload);
 	tolayer3(FROM_A, outgoing_packet);
 	
 }
@@ -122,7 +131,7 @@ void A_output(struct msg message) {
 /* called from layer 3, when a packet arrives for layer 4 */
 void A_input(struct pkt packet) {
 
-	printf("A_INPUT: seq_num: %d message: %s\n", packet.seqnum, packet.payload);
+	printf("A_INPUT: seq: %d ack: %d message: %s\n", packet.seqnum, packet.acknum, packet.payload);
 	
 	// check for valid checksum
 	if (valid_packet(packet)) {
@@ -155,7 +164,7 @@ void A_input(struct pkt packet) {
 void A_timerinterrupt() {
 
 	// timer went off, resend packet and restart timer
-	printf("A_TIMER: resending packet");
+	printf("A_TIMER: resending packet\n");
 	starttimer(FROM_A, 100.00);
 	tolayer3(FROM_A, current_packet);
 	
@@ -178,20 +187,30 @@ void A_init() {
 /* called from layer 3, when a packet arrives for layer 4 at B*/
 void B_input(struct pkt packet) {
 
-	printf("B_INPUT: seq_num: %d message: %s\n", packet.seqnum, packet.payload);
+	printf("B_INPUT: seq: %d ack: %d message: %s\n", packet.seqnum, packet.acknum, packet.payload);
 	
 	if (packet.seqnum == sequence_num_b) {
 		// correct packet received
 		printf("B_INPUT: correct packet received\n");
-		packet.acknum = sequence_num_b;
-		packet.seqnum = -1;
 		
-		// send packet back with ACK
-		tolayer3(FROM_B, packet);
-		tolayer5(FROM_B, packet.payload);
+		if (valid_packet(packet)) {
+			
+			printf("B_INPUT: packet is valid\n");
+			packet.acknum = sequence_num_b;
+			packet.seqnum = -1;
+			
+			// send packet back with ACK
+			tolayer3(FROM_B, packet);
+			tolayer5(FROM_B, packet.payload);
+			
+			// flip sequence for next packet
+			flip_sequence_bit_b();
+			
+		} else {
+			printf("B_INPUT: packet is not valid, incorrect checksum\n");
+		}
 		
-		// flip sequence for next packet
-		flip_sequence_bit_b();
+		
 	} else {
 		// wrong seq number, drop packet
 		printf("B_INPUT: wrong packet received\n");
