@@ -387,6 +387,7 @@ void B_input(struct pkt packet) {
 			
 			tolayer3(FROM_B, response_packet);
 			tolayer5(FROM_B, response_packet.payload);
+			printf("B_APPLICATION_OUTPUT: %s\n", packet.payload);
 			// expect next sequence number
 			expected_seqnum ++;
 			

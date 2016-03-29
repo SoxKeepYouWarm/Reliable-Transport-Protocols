@@ -23,6 +23,8 @@
 #define FROM_A 0
 #define FROM_B 1
 
+#define TIMEOUT 50
+
 int sequence_num_a;
 int sequence_num_b;
 
@@ -117,9 +119,10 @@ void A_output(struct msg message) {
 	current_packet = outgoing_packet;
 	
 	// start timer
-	starttimer(FROM_A, 100.00);
+	starttimer(FROM_A, TIMEOUT);
 	
 	// send packet out
+	printf("IN_TRANSIT: setting TRUE\n");
 	IN_TRANSIT = TRUE;
 	printf("A_OUTPUT: packet leaving A: seq: %d ack: %d msg: %s\n", 
 			current_packet.seqnum, current_packet.acknum, current_packet.payload);
@@ -144,6 +147,7 @@ void A_input(struct pkt packet) {
 			flip_sequence_bit_a();
 			
 			// allow another message to come from above
+			printf("IN_TRANSIT: setting FALSE\n");
 			IN_TRANSIT = FALSE;
 			
 		} else {
@@ -165,7 +169,7 @@ void A_timerinterrupt() {
 
 	// timer went off, resend packet and restart timer
 	printf("A_TIMER: resending packet\n");
-	starttimer(FROM_A, 100.00);
+	starttimer(FROM_A, TIMEOUT);
 	tolayer3(FROM_A, current_packet);
 	
 }
@@ -189,32 +193,41 @@ void B_input(struct pkt packet) {
 
 	printf("B_INPUT: seq: %d ack: %d message: %s\n", packet.seqnum, packet.acknum, packet.payload);
 	
-	if (packet.seqnum == sequence_num_b) {
-		// correct packet received
-		printf("B_INPUT: correct packet received\n");
+	
+	if (valid_packet(packet)) {
+		printf("B_INPUT: packet is valid\n");
 		
-		if (valid_packet(packet)) {
-			
-			printf("B_INPUT: packet is valid\n");
+		if (packet.seqnum == sequence_num_b) {
+			printf("B_INPUT: correct packet received\n");
 			packet.acknum = sequence_num_b;
 			packet.seqnum = -1;
 			
 			// send packet back with ACK
 			tolayer3(FROM_B, packet);
 			tolayer5(FROM_B, packet.payload);
+			printf("B_APPLICATION_OUTPUT: %s\n", packet.payload);
 			
 			// flip sequence for next packet
 			flip_sequence_bit_b();
 			
 		} else {
-			printf("B_INPUT: packet is not valid, incorrect checksum\n");
+			printf("B_INPUT: duplicate packet received, resend ack\n");
+			flip_sequence_bit_b();
+			packet.acknum = sequence_num_b;
+			packet.seqnum = -1;
+			
+			packet.checksum = generate_checksum(packet);
+			
+			// send packet back with old ACK
+			tolayer3(FROM_B, packet);
+			
+			// flip sequence for next packet
+			flip_sequence_bit_b();
+			
 		}
 		
-		
 	} else {
-		// wrong seq number, drop packet
-		printf("B_INPUT: wrong packet received\n");
-		return;
+		printf("B_INPUT: packet is not valid, incorrect checksum\n");
 	}
 	
 }
