@@ -29,6 +29,7 @@
 #define TIME_A 100
 
 int base; 
+int receiver_base;
 int next_seqnum; 
 
 int expected_seqnum;  
@@ -288,6 +289,7 @@ void Timer::remove_alarm(int seq_num) {
 
 
 Window* window;
+Window* receiver_window;
 Timer* timer;
 struct Message_buffer message_buffer;
 
@@ -505,6 +507,6 @@ void B_input(struct pkt packet) {
 void B_init() {
 
 	printf("b init just called\n");
-	expected_seqnum = 0;
+	receiver_window = new Window(getwinsize());
 	
 }

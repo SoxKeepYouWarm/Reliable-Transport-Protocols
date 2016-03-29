@@ -393,6 +393,16 @@ void B_input(struct pkt packet) {
 			
 		} else {
 			printf("B_INPUT: received packet with unexpected sequence number\n");
+			struct pkt response_packet;
+			response_packet.acknum = expected_seqnum;
+			response_packet.seqnum = -1;
+			for (int i = 0; i < 20; i++) {
+				response_packet.payload[i] = '0';
+			} 
+			
+			response_packet.checksum = generate_checksum(response_packet);
+			printf("B_INPUT: sending ACK: %d\n", response_packet.acknum);
+			tolayer3(FROM_B, response_packet);
 		}
 	} else {
 		printf("B_INPUT: received packet with invalid checksum\n");
