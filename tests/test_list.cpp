@@ -21,56 +21,147 @@ struct msg {
   char data[20];
 };
 
-int generate_checksum(struct pkt packet) {
-
-	int checksum = 0;
-	checksum += packet.seqnum;
-	checksum += packet.acknum;
-
-	for (int i = 0; i < 20; i++) {
-
-		checksum += (int) packet.payload[i];
-
+/*struct Window {
+	int* window;
+	int base;
+	int size;
+	int start_index;
+	int end_index;
+	
+	void attempt_advance() {
+		int advancements = 0;
+		for (int i = 0; i < size; i++) {
+			if (window[i] == TRUE) {
+				advancements ++;
+			} else {
+				break;
+			}
+		}
+		
 	}
+	
+	void set_received(int seq) {
+		window[seq - base] = TRUE;
+	}
+};*/
 
-	printf("checksum is %d\n", checksum);
-	return checksum;
 
+
+class Window {
+	
+public:
+	
+	int* window;
+	int base;
+	int start_index;
+	int end_index;
+	int size;
+	
+	Window(int size);
+	
+	void record_packet(int seqnum);
+	
+	void attempt_advance();
+	
+	//void advance_window(int steps);
+	
+};
+
+
+Window::Window(int size) {
+	this->base = 0;
+	this->start_index = 0;
+	this->end_index = size - 1;
+	this->window = new int[size]();
+	this->size = size;
 }
 
 
-
-int valid_packet(struct pkt packet) {
+void Window::record_packet(int seqnum) {
 	
-	if (packet.checksum == generate_checksum(packet)) {
-		return TRUE;
-	} else {
-		return FALSE;
-	}
+	window[seqnum - base] = TRUE;
+	attempt_advance();
 	
 }
+
+
+void Window::attempt_advance() {
+	int advancements = 0;
+	for (int i = 0; i < size; i++) {
+		if (window[i] == TRUE) {
+			advancements ++;
+		} else {
+			break;
+		}
+	}
+	
+	for (int i = 0; i < advancements; i++) {
+		window[start_index] = FALSE;
+		start_index = (start_index + 1) % size;
+		end_index = (end_index + 1) % size;
+	}
+	
+	base += advancements;
+	
+}
+
+
+/*void Window::advance_window(int steps) {
+	
+	for (int i = 0; i < steps; i++) {
+		if ( start_index == -1 ) {
+			std::cout << "\nQueue is empty";
+			packet_count = 0;
+			return;
+		}
+ 
+		//delete window[start_index];
+		
+		if ( start_index == end_index ) {
+			start_index = -1 ;
+			end_index = -1 ;
+			packet_count = 0;
+		} else
+			start_index = ( start_index + 1 ) % size;
+			packet_count --;
+	}
+	
+}*/
+
+
+
+
+void print_window_contents(Window window) {
+	
+	printf("base: %d\n", window.base);
+	
+	for (int i = 0; i < window.size; i++) {
+		int pos = (window.start_index + i) % window.size;
+		printf("%d ", window.window[pos]);
+	}
+	printf("\n");
+	
+}
+
+
 
 
 int main() {
 	
-	struct msg message;
-	memcpy(message.data, "1234567890123456789", 20);
+	int window_size = 5;
+	Window window(window_size);
 	
-	struct pkt new_packet;
-	new_packet.acknum = 0;
-	new_packet.seqnum = 0;
-	for (int i = 0; i < 20; i++) {
-		new_packet.payload[i] = message.data[i];
-	}
-	new_packet.checksum = generate_checksum(new_packet);
+	printf("initial window\n");
+	print_window_contents(window);
 	
-	new_packet.payload[0] = 'z';
+	window.record_packet(2);
+	print_window_contents(window);
 	
-	if (valid_packet(new_packet)) {
-		printf("valid packet\n");
-	} else {
-		printf("invalid packet\n");
-	}
+	window.record_packet(1);
+	print_window_contents(window);
+	
+	window.record_packet(0);
+	print_window_contents(window);
 	
 	/*
 	std::list<Event> vals;

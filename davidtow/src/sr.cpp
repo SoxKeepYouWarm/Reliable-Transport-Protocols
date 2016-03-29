@@ -37,11 +37,17 @@ int expected_seqnum;
 #define MESSAGE_BUFFERSIZE 1000
 
 
+struct Window_frame {
+	struct pkt packet;
+	int packet_received;
+};
+
+
 class Window {
 	
 public:
 	
-	struct pkt* window;
+	struct Window_frame* window;
 	int start_index;
 	int end_index;
 	int size;
@@ -64,7 +70,7 @@ Window::Window(int size) {
 	this->start_index = -1;
 	this->end_index = -1;
 	this->packet_count = 0;
-	this->window = new pkt[size];
+	this->window = new Window_frame[size];
 	this->size = size;
 }
 
@@ -75,7 +81,11 @@ void Window::insert_packet(struct pkt packet) {
 		return;
 	}
 	end_index = ( end_index + 1 ) % size;
-	window[end_index] = packet;
+	
+	// set window frame
+	window[end_index].packet = packet;
+	window[end_index].packet_received = TRUE;
+	
 	packet_count++;
 	if ( start_index == -1 ) {
 		start_index = 0;
@@ -113,7 +123,7 @@ int Window::is_full() {
 
 
 struct pkt Window::get_packet(int index) {
-	return window[start_index + index];
+	return window[start_index + index].packet;
 }
 
 
@@ -136,7 +146,7 @@ void print_window_contents(Window window) {
 	std::cout << "WINDOW CONTENTS: ";
 	for (int i = 0; i <= window.size; i++) {
 		int pos = (window.start_index + i) % window.size;
-		std::cout << window.window[pos].seqnum << " ";
+		std::cout << window.window[pos].packet.seqnum << " ";
 		
 		if (pos == window.end_index) {
 			std::cout << "    start: " << window.start_index << " end: " << window.end_index << std::endl;
@@ -475,7 +485,9 @@ void B_input(struct pkt packet) {
 	if (valid_packet(packet)) {
 		printf("B_INPUT: received valid packet from A\n");
 		
-		if (expected_seqnum == packet.seqnum) {
+		
+		
+		/*if (expected_seqnum == packet.seqnum) {
 			printf("B_INPUT: packet has expected sequence number\n");
 			
 			struct pkt response_packet;
@@ -494,7 +506,8 @@ void B_input(struct pkt packet) {
 			
 		} else {
 			printf("B_INPUT: received packet with unexpected sequence number\n");
-		}
+		}*/
+		
 	} else {
 		printf("B_INPUT: received packet with invalid checksum\n");
 	}
