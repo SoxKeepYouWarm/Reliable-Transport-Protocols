@@ -21,45 +21,23 @@ struct msg {
   char data[20];
 };
 
-/*struct Window {
-	int* window;
-	int base;
-	int size;
-	int start_index;
-	int end_index;
-	
-	void attempt_advance() {
-		int advancements = 0;
-		for (int i = 0; i < size; i++) {
-			if (window[i] == TRUE) {
-				advancements ++;
-			} else {
-				break;
-			}
-		}
-		
-	}
-	
-	void set_received(int seq) {
-		window[seq - base] = TRUE;
-	}
-};*/
 
 
 
-class Window {
+
+class Receiver_Window {
 	
 public:
 	
-	int* window;
+	struct pkt* window;
 	int base;
 	int start_index;
 	int end_index;
 	int size;
 	
-	Window(int size);
+	Receiver_Window(int size);
 	
-	void record_packet(int seqnum);
+	void record_packet(struct pkt packet);
 	
 	void attempt_advance();
 	
@@ -68,27 +46,49 @@ public:
 };
 
 
-Window::Window(int size) {
-	this->base = 0;
-	this->start_index = 0;
-	this->end_index = size - 1;
-	this->window = new int[size]();
-	this->size = size;
+void print_receiver_window_contents(Receiver_Window window) {
+	
+	printf("base: %d\n", window.base);
+	
+	for (int i = 0; i < window.size; i++) {
+		int pos = (window.start_index + i) % window.size;
+		printf("%d ", window.window[pos].seqnum);
+	}
+	printf("\n");
+	
 }
 
 
-void Window::record_packet(int seqnum) {
+Receiver_Window::Receiver_Window(int size) {
+	this->base = 0;
+	this->start_index = 0;
+	this->end_index = size - 1;
+	this->window = new struct pkt[size]();
+	this->size = size;
 	
-	window[seqnum - base] = TRUE;
+	for (int i = 0; i < size; i++) {
+		window[i].seqnum = -1;
+		window[i].acknum = -1;
+		window[i].checksum = -1;
+	}
+	
+	print_receiver_window_contents(*this);
+	
+}
+
+
+void Receiver_Window::record_packet(struct pkt packet) {
+	
+	window[packet.seqnum - base] = packet;
 	attempt_advance();
 	
 }
 
 
-void Window::attempt_advance() {
+void Receiver_Window::attempt_advance() {
 	int advancements = 0;
 	for (int i = 0; i < size; i++) {
-		if (window[i] == TRUE) {
+		if (window[i].seqnum != -1) {
 			advancements ++;
 		} else {
 			break;
@@ -96,7 +96,8 @@ void Window::attempt_advance() {
 	}
 	
 	for (int i = 0; i < advancements; i++) {
-		window[start_index] = FALSE;
+		printf("delivering seq_num %d\n", window[start_index].seqnum);
+		window[start_index].seqnum = -1;
 		start_index = (start_index + 1) % size;
 		end_index = (end_index + 1) % size;
 	}
@@ -106,62 +107,30 @@ void Window::attempt_advance() {
 }
 
 
-/*void Window::advance_window(int steps) {
-	
-	for (int i = 0; i < steps; i++) {
-		if ( start_index == -1 ) {
-			std::cout << "\nQueue is empty";
-			packet_count = 0;
-			return;
-		}
- 
-		//delete window[start_index];
-		
-		if ( start_index == end_index ) {
-			start_index = -1 ;
-			end_index = -1 ;
-			packet_count = 0;
-		} else
-			start_index = ( start_index + 1 ) % size;
-			packet_count --;
-	}
-	
-}*/
-
-
-
-
-void print_window_contents(Window window) {
-	
-	printf("base: %d\n", window.base);
-	
-	for (int i = 0; i < window.size; i++) {
-		int pos = (window.start_index + i) % window.size;
-		printf("%d ", window.window[pos]);
-	}
-	printf("\n");
-	
-}
-
 
 
 
 int main() {
 	
 	int window_size = 5;
-	Window window(window_size);
+	Receiver_Window window(window_size);
+	
+	struct pkt example;
+	example.seqnum = 1;
 	
 	printf("initial window\n");
-	print_window_contents(window);
+	print_receiver_window_contents(window);
 	
-	window.record_packet(2);
-	print_window_contents(window);
+	window.record_packet(example);
+	print_receiver_window_contents(window);
 	
-	window.record_packet(1);
-	print_window_contents(window);
+	example.seqnum = 0;
 	
-	window.record_packet(0);
-	print_window_contents(window);
+	window.record_packet(example);
+	print_receiver_window_contents(window);
+	
+	window.record_packet(example);
+	print_receiver_window_contents(window);
 	
 	/*
 	std::list<Event> vals;

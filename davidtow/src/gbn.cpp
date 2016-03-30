@@ -236,7 +236,7 @@ void build_packet_a(struct pkt* outgoing_packet, struct msg message) {
 /* called from layer 5, passed the data to be sent to other side */
 void A_output(struct msg message) {
 
-	printf("A_OUTPUT called: %s\n", message.data);
+	printf("A_OUTPUT called: %.*s\n", 20, message.data);
 	
 	struct pkt outgoing_packet;
 
@@ -284,7 +284,7 @@ void A_output(struct msg message) {
 /* called from layer 3, when a packet arrives for layer 4 */
 void A_input(struct pkt packet) {
 
-	printf("A_INPUT: ack_num: %d message: %s\n", packet.acknum, packet.payload);
+	printf("A_INPUT: ack_num: %d message: %.*s\n", packet.acknum, 20, packet.payload);
 	
 	// check for valid checksum
 	if (valid_packet(packet)) {
@@ -368,7 +368,7 @@ void A_init() {
 /* called from layer 3, when a packet arrives for layer 4 at B*/
 void B_input(struct pkt packet) {
 
-	printf("B_INPUT: seq_num: %d message: %s\n", packet.seqnum, packet.payload);
+	printf("B_INPUT: seq_num: %d message: %.*s\n", packet.seqnum, 20, packet.payload);
 	
 	if (valid_packet(packet)) {
 		printf("B_INPUT: received valid packet from A\n");
@@ -387,7 +387,7 @@ void B_input(struct pkt packet) {
 			
 			tolayer3(FROM_B, response_packet);
 			tolayer5(FROM_B, response_packet.payload);
-			printf("B_APPLICATION_OUTPUT: %s\n", packet.payload);
+			printf("B_APPLICATION_OUTPUT: %.*s\n", 20, packet.payload);
 			// expect next sequence number
 			expected_seqnum ++;
 			

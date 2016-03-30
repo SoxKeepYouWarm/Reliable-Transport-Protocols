@@ -28,8 +28,9 @@
 
 #define TIME_A 100
 
+#define ACK_RETURNED -2
+
 int base; 
-int receiver_base;
 int next_seqnum; 
 
 int expected_seqnum;  
@@ -61,7 +62,7 @@ public:
 	
 	int is_full();
 	
-	struct pkt get_packet(int index);
+	struct Window_frame* get_window_frame_by_seqnum(int seqnum);
 	
 };
 
@@ -98,7 +99,7 @@ void Window::advance_window(int steps) {
 	
 	for (int i = 0; i < steps; i++) {
 		if ( start_index == -1 ) {
-			std::cout << "\nQueue is empty";
+			std::cout << "\nQueue is empty\n";
 			packet_count = 0;
 			return;
 		}
@@ -122,8 +123,9 @@ int Window::is_full() {
 }
 
 
-struct pkt Window::get_packet(int index) {
-	return window[start_index + index].packet;
+struct Window_frame* Window::get_window_frame_by_seqnum(int seqnum) {
+	int frame_index = seqnum - base;
+	return &window[start_index + frame_index];
 }
 
 
@@ -155,6 +157,98 @@ void print_window_contents(Window window) {
 	}
 	
 	std::cout << "    start: " << window.start_index << " end: " << window.end_index << std::endl;
+	
+}
+
+
+class Receiver_Window {
+	
+public:
+	
+	struct pkt* window;
+	int base;
+	int start_index;
+	int end_index;
+	int size;
+	
+	Receiver_Window(int size);
+	
+	void record_packet(struct pkt packet);
+	
+	void attempt_advance();
+	
+	//void advance_window(int steps);
+	
+};
+
+
+void print_receiver_window_contents(Receiver_Window window) {
+	
+	printf("base: %d\n", window.base);
+	
+	for (int i = 0; i < window.size; i++) {
+		int pos = (window.start_index + i) % window.size;
+		printf("%d ", window.window[pos].seqnum);
+	}
+	printf("\n");
+	
+}
+
+
+Receiver_Window::Receiver_Window(int size) {
+	this->base = 0;
+	this->start_index = 0;
+	this->end_index = size - 1;
+	this->window = new struct pkt[size]();
+	this->size = size;
+	
+	for (int i = 0; i < size; i++) {
+		window[i].seqnum = -1;
+		window[i].acknum = -1;
+		window[i].checksum = -1;
+	}
+	
+	print_receiver_window_contents(*this);
+	
+}
+
+
+void Receiver_Window::record_packet(struct pkt packet) {
+	
+	int position = packet.seqnum - base + start_index;
+	printf("RECORD_PACKET: position: %d seqnum: %d base: %d start_index: %d end_index %d\n", 
+			position, packet.seqnum, base, start_index, end_index);
+	
+	window[position] = packet;
+	attempt_advance();
+	
+}
+
+
+void Receiver_Window::attempt_advance() {
+	int advancements = 0;
+	for (int i = 0; i < size; i++) {
+		
+		int position = (start_index + i) % size;
+		if (window[position].seqnum != -1) {
+			advancements ++;
+		} else {
+			break;
+		}
+		
+	}
+	
+	printf("ATTEMPT_ADVANCE: steps: %d\n", advancements);
+	
+	for (int i = 0; i < advancements; i++) {
+		printf("B_INPUT: delivering seq_num %d\n", window[start_index].seqnum);
+		tolayer5(FROM_B, window[start_index].payload);
+		window[start_index].seqnum = -1;
+		start_index = (start_index + 1) % size;
+		end_index = (end_index + 1) % size;
+	}
+	
+	base += advancements;
 	
 }
 
@@ -225,6 +319,8 @@ void Timer::schedule_alarm(float time, struct pkt sent_packet) {
 	
 	struct Event new_event;
 	new_event.alarm_time = alarm_time;
+	
+	
 	new_event.packet = sent_packet;
 	
 	// check if this is the only event 
@@ -269,37 +365,53 @@ void Timer::handle_next_event_alarm() {
 		printf("A_OUTPUT: resending packet %d\n", triggered_event.packet.seqnum);
 		tolayer3(FROM_A, triggered_event.packet);
 		
-		//print_window_contents(*window);
-		
-		if ( ! timed_events.empty() ) {
-			set_timer_for_next_event();
-		}
 	} else {
 		printf("event queue empty, no event to be handled :(\n");
 	}
-	
-	
-	
 	
 }
 
 
 void Timer::remove_alarm(int seq_num) {
 	
+	printf("REMOVE_ALARM: seqnum: %d\n", seq_num);
+	
 	for (std::list<struct Event>::iterator iter = timed_events.begin(); iter != timed_events.end(); std::advance(iter, 1)) {
 	
 		if (iter->packet.seqnum == seq_num) {
+			printf("REMOVE_ALARM: SUCCESS\n");
 			iter = timed_events.erase(iter);
 			iter --;
+			
+			// check if this packet is associated with the current alarm
+			if ( ! timed_events.empty() ) {
+				
+				Event current_event = timed_events.front();
+				if (current_event.packet.seqnum == seq_num) {
+					// if so, stop the alarm
+					printf("REMOVE_ALARM: returned packet is associated with current timer alarm, stopping timer\n");
+					stoptimer(FROM_A);
+					if ( ! timed_events.empty() ) {
+						set_timer_for_next_event();
+					} 
+				} else {
+					printf("REMOVE_ALARM: returned packet alarm event removed from queue\n");
+				}
+			
+			}
+			
+			return;
 		}
 	
 	}
+	
+	printf("REMOVE_ALARM: FAILED\n");
 
 }
 
 
 Window* window;
-Window* receiver_window;
+Receiver_Window* receiver_window;
 Timer* timer;
 struct Message_buffer message_buffer;
 
@@ -354,7 +466,7 @@ void build_packet_a(struct pkt* outgoing_packet, struct msg message) {
 /* called from layer 5, passed the data to be sent to other side */
 void A_output(struct msg message) {
 
-	printf("A_OUTPUT called: %s\n", message.data);
+	printf("A_OUTPUT called: %.*s\n", 20, message.data);
 	
 	struct pkt outgoing_packet;
 
@@ -400,29 +512,39 @@ void A_output(struct msg message) {
 /* called from layer 3, when a packet arrives for layer 4 */
 void A_input(struct pkt packet) {
 
-	printf("A_INPUT: ack_num: %d message: %s\n", packet.acknum, packet.payload);
+	printf("A_INPUT: ack_num: %d message: %.*s\n", packet.acknum, 20, packet.payload);
 	
 	// check for valid checksum
 	if (valid_packet(packet)) {
-		printf("packet is valid\n");
+		printf("A_INPUT: packet is valid\n");
+		
+		struct Window_frame* frame = window->get_window_frame_by_seqnum(packet.acknum);
+		frame->packet_received = TRUE;
 		
 		// move window up past last ack
-		window->advance_window( (packet.acknum + 1) - base);
+		int advancements = 0;
+		for (int i = 0; i < window->size; i++) {
+			if (window->window[window->start_index + i].packet_received) {
+				advancements ++;
+			} else {
+				break;
+			}
+		}
+	
+		window->advance_window(advancements);
 		
 		// update new base
-		base = packet.acknum + 1;
+		base += advancements;
 		
-		stoptimer(FROM_A);
-		if (base < next_seqnum) {
-			starttimer(FROM_A, TIME_A);
-		}
+		// stop frame timer
+		timer->remove_alarm(packet.acknum);
 		
 		print_window_contents(*window);
 		
        // send buffered messages as long as window isn't full
        while ( ( ! message_buffer.is_empty()) && ( ! window->is_full() ) ) 
 		 {
-	    
+			printf("A_INPUT: sending buffered messages\n");
 			struct pkt new_packet;
 			
 			build_packet_a(&new_packet, message_buffer.pop_message());
@@ -475,38 +597,25 @@ void A_init() {
 }
 
 
+
+
 /* Note that with simplex transfer from a-to-B, there is no B_output() */
 
 /* called from layer 3, when a packet arrives for layer 4 at B*/
 void B_input(struct pkt packet) {
 
-	printf("B_INPUT: seq_num: %d message: %s\n", packet.seqnum, packet.payload);
+	printf("B_INPUT: seq_num: %d message: %.*s\n", packet.seqnum, 20, packet.payload);
 	
 	if (valid_packet(packet)) {
 		printf("B_INPUT: received valid packet from A\n");
 		
+		receiver_window->record_packet(packet);
 		
+		packet.acknum = packet.seqnum;
 		
-		/*if (expected_seqnum == packet.seqnum) {
-			printf("B_INPUT: packet has expected sequence number\n");
-			
-			struct pkt response_packet;
-			response_packet.acknum = expected_seqnum;
-			response_packet.seqnum = -1;
-			for (int i = 0; i < 20; i++) {
-				response_packet.payload[i] = '0';
-			} 
-			
-			response_packet.checksum = generate_checksum(response_packet);
-			
-			tolayer3(FROM_B, response_packet);
-			tolayer5(FROM_B, response_packet.payload);
-			// expect next sequence number
-			expected_seqnum ++;
-			
-		} else {
-			printf("B_INPUT: received packet with unexpected sequence number\n");
-		}*/
+		packet.checksum = generate_checksum(packet);
+		
+		tolayer3(FROM_B, packet);
 		
 	} else {
 		printf("B_INPUT: received packet with invalid checksum\n");
@@ -520,6 +629,6 @@ void B_input(struct pkt packet) {
 void B_init() {
 
 	printf("b init just called\n");
-	receiver_window = new Window(getwinsize());
+	receiver_window = new Receiver_Window(getwinsize());
 	
 }

@@ -104,7 +104,7 @@ int IN_TRANSIT;
 /* called from layer 5, passed the data to be sent to other side */
 void A_output(struct msg message) {
 
-	printf("A_OUTPUT called: %s\n", message.data);
+	printf("A_OUTPUT called: %.*s\n", 20, message.data);
 	
 	// check if packet already in transit
 	if (IN_TRANSIT) {
@@ -124,8 +124,8 @@ void A_output(struct msg message) {
 	// send packet out
 	printf("IN_TRANSIT: setting TRUE\n");
 	IN_TRANSIT = TRUE;
-	printf("A_OUTPUT: packet leaving A: seq: %d ack: %d msg: %s\n", 
-			current_packet.seqnum, current_packet.acknum, current_packet.payload);
+	printf("A_OUTPUT: packet leaving A: seq: %d ack: %d msg: %.*s\n", 
+			current_packet.seqnum, current_packet.acknum, 20, current_packet.payload);
 	tolayer3(FROM_A, outgoing_packet);
 	
 }
@@ -134,7 +134,7 @@ void A_output(struct msg message) {
 /* called from layer 3, when a packet arrives for layer 4 */
 void A_input(struct pkt packet) {
 
-	printf("A_INPUT: seq: %d ack: %d message: %s\n", packet.seqnum, packet.acknum, packet.payload);
+	printf("A_INPUT: seq: %d ack: %d message: %.*s\n", packet.seqnum, packet.acknum, 20, packet.payload);
 	
 	// check for valid checksum
 	if (valid_packet(packet)) {
@@ -191,7 +191,7 @@ void A_init() {
 /* called from layer 3, when a packet arrives for layer 4 at B*/
 void B_input(struct pkt packet) {
 
-	printf("B_INPUT: seq: %d ack: %d message: %s\n", packet.seqnum, packet.acknum, packet.payload);
+	printf("B_INPUT: seq: %d ack: %d message: %.*s\n", packet.seqnum, packet.acknum, 20, packet.payload);
 	
 	
 	if (valid_packet(packet)) {
@@ -205,7 +205,7 @@ void B_input(struct pkt packet) {
 			// send packet back with ACK
 			tolayer3(FROM_B, packet);
 			tolayer5(FROM_B, packet.payload);
-			printf("B_APPLICATION_OUTPUT: %s\n", packet.payload);
+			printf("B_APPLICATION_OUTPUT: %.*s\n", 20, packet.payload);
 			
 			// flip sequence for next packet
 			flip_sequence_bit_b();
