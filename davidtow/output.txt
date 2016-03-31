@@ -1,948 +1,1041 @@
           GENERATE NEXT ARRIVAL: creating new arrival
             INSERTEVENT: time is 0.000000
-            INSERTEVENT: future time will be 96.495964
+            INSERTEVENT: future time will be 91.447929
 a init just called
 b init just called
 base: 0
--1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 
+-1 -1 -1 -1 -1 
 
-EVENT time: 96.495964,  type: 1, fromlayer5  entity: 0
+EVENT time: 91.447929,  type: 1, fromlayer5  entity: 0
           GENERATE NEXT ARRIVAL: creating new arrival
-            INSERTEVENT: time is 96.495964
-            INSERTEVENT: future time will be 151.187683
+            INSERTEVENT: time is 91.447929
+            INSERTEVENT: future time will be 219.521484
           MAINLOOP: data given to student: aaaaaaaaaaaaaaaaaaaa
 A_OUTPUT called: aaaaaaaaaaaaaaaaaaaa
-          START TIMER: starting timer at 96.495964
-            INSERTEVENT: time is 96.495964
-            INSERTEVENT: future time will be 196.495972
+          START TIMER: starting timer at 91.447929
+            INSERTEVENT: time is 91.447929
+            INSERTEVENT: future time will be 191.447937
 A_OUTPUT: packet leaving A
-          TOLAYER3: seq: 0, ack -1, check: 1939 aaaaaaaaaaaaaaaaaaaa
-          TOLAYER3: scheduling arrival on other side
-            INSERTEVENT: time is 96.495964
-            INSERTEVENT: future time will be 101.513901
+          TOLAYER3: packet being lost
 WINDOW CONTENTS: 0     start: 0 end: 0
 
-EVENT time: 101.513901,  type: 2, fromlayer3  entity: 1
-B_INPUT: seq_num: 0 message: aaaaaaaaaaaaaaaaaaaa
-B_INPUT: received valid packet from A
-RECORD_PACKET: position: 0 seqnum: 0 base: 0 start_index: 0 end_index 49
-ATTEMPT_ADVANCE: steps: 1
-B_INPUT: delivering seq_num 0
-          TOLAYER5: data received: aaaaaaaaaaaaaaaaaaaa
-          TOLAYER3: seq: 0, ack 0, check: 1940 aaaaaaaaaaaaaaaaaaaa
-          TOLAYER3: scheduling arrival on other side
-            INSERTEVENT: time is 101.513901
-            INSERTEVENT: future time will be 111.346512
+EVENT time: 191.447937,  type: 0, timerinterrupt   entity: 0
+HANDLE_EVENT: seq_num: 0
+          START TIMER: starting timer at 191.447937
+            INSERTEVENT: time is 191.447937
+            INSERTEVENT: future time will be 291.447937
+A_OUTPUT: resending packet 0
+          TOLAYER3: packet being lost
 
-EVENT time: 111.346512,  type: 2, fromlayer3  entity: 0
-A_INPUT: ack_num: 0 message: aaaaaaaaaaaaaaaaaaaa
-A_INPUT: packet is valid
-SUSPECT CODE: parameter seqnum: 0
-SUSPECT CODE: base: 0 size: 50 frame_index: 0 position: 0
-A_INPUT: ABOUT TO RUN SUSPECT CODE
-A_INPUT: packet_received: 1 position: 0 seqnum: 0 acknum: -1 payload: aaaaaaaaaaaaaaaaaaaa
-A_INPUT: making advancement due to seqnum: 0 at position 0
-A_INPUT: packet_received: 0 position: 1 seqnum: -1 acknum: 0 payload: 
-SUSPECT CODE: base: 0 += advancements: 1
-REMOVE_ALARM: seqnum: 0
-REMOVE_ALARM: alarm found
-REMOVE_ALARM: timer needs to be stopped for removed alarm
-          STOP TIMER: stopping timer at 111.346512
-REMOVE_ALARM: event queue is empty, timer will not be restarted
-DEBUGGING: just returned from remove_alarm
-WINDOW CONTENTS: window is empty
-DEBUGGING: just returned from print_window_contents
-DEBUGGING: about to finish a_input call
-
-EVENT time: 151.187683,  type: 1, fromlayer5  entity: 0
+EVENT time: 219.521484,  type: 1, fromlayer5  entity: 0
           GENERATE NEXT ARRIVAL: creating new arrival
-            INSERTEVENT: time is 151.187683
-            INSERTEVENT: future time will be 196.383438
+            INSERTEVENT: time is 219.521484
+            INSERTEVENT: future time will be 327.749390
           MAINLOOP: data given to student: bbbbbbbbbbbbbbbbbbbb
 A_OUTPUT called: bbbbbbbbbbbbbbbbbbbb
-          START TIMER: starting timer at 151.187683
-            INSERTEVENT: time is 151.187683
-            INSERTEVENT: future time will be 251.187683
 A_OUTPUT: packet leaving A
-          TOLAYER3: seq: 1, ack -1, check: 1960 bbbbbbbbbbbbbbbbbbbb
-          TOLAYER3: scheduling arrival on other side
-            INSERTEVENT: time is 151.187683
-            INSERTEVENT: future time will be 159.142761
-WINDOW CONTENTS: 1     start: 0 end: 0
+          TOLAYER3: packet being lost
+WINDOW CONTENTS: 0 1     start: 0 end: 1
 
-EVENT time: 159.142761,  type: 2, fromlayer3  entity: 1
-B_INPUT: seq_num: 1 message: bbbbbbbbbbbbbbbbbbbb
-B_INPUT: received valid packet from A
-RECORD_PACKET: position: 1 seqnum: 1 base: 1 start_index: 1 end_index 0
-ATTEMPT_ADVANCE: steps: 1
-B_INPUT: delivering seq_num 1
-          TOLAYER5: data received: bbbbbbbbbbbbbbbbbbbb
-          TOLAYER3: seq: 1, ack 1, check: 1962 bbbbbbbbbbbbbbbbbbbb
-          TOLAYER3: scheduling arrival on other side
-            INSERTEVENT: time is 159.142761
-            INSERTEVENT: future time will be 164.288116
+EVENT time: 291.447937,  type: 0, timerinterrupt   entity: 0
+HANDLE_EVENT: seq_num: 0
+          START TIMER: starting timer at 291.447937
+            INSERTEVENT: time is 291.447937
+            INSERTEVENT: future time will be 319.521484
+A_OUTPUT: resending packet 0
+          TOLAYER3: packet being lost
 
-EVENT time: 164.288116,  type: 2, fromlayer3  entity: 0
-A_INPUT: ack_num: 1 message: bbbbbbbbbbbbbbbbbbbb
-A_INPUT: packet is valid
-SUSPECT CODE: parameter seqnum: 1
-SUSPECT CODE: base: 1 size: 50 frame_index: 0 position: 0
-A_INPUT: ABOUT TO RUN SUSPECT CODE
-A_INPUT: packet_received: 1 position: 0 seqnum: 1 acknum: -1 payload: bbbbbbbbbbbbbbbbbbbb
-A_INPUT: making advancement due to seqnum: 1 at position 0
-A_INPUT: packet_received: 0 position: 1 seqnum: -1 acknum: 0 payload: 
-SUSPECT CODE: base: 1 += advancements: 1
-REMOVE_ALARM: seqnum: 1
-REMOVE_ALARM: alarm found
-REMOVE_ALARM: timer needs to be stopped for removed alarm
-          STOP TIMER: stopping timer at 164.288116
-REMOVE_ALARM: event queue is empty, timer will not be restarted
-DEBUGGING: just returned from remove_alarm
-WINDOW CONTENTS: window is empty
-DEBUGGING: just returned from print_window_contents
-DEBUGGING: about to finish a_input call
+EVENT time: 319.521484,  type: 0, timerinterrupt   entity: 0
+HANDLE_EVENT: seq_num: 1
+          START TIMER: starting timer at 319.521484
+            INSERTEVENT: time is 319.521484
+            INSERTEVENT: future time will be 391.447937
+A_OUTPUT: resending packet 1
+          TOLAYER3: packet being lost
 
-EVENT time: 196.383438,  type: 1, fromlayer5  entity: 0
+EVENT time: 327.749390,  type: 1, fromlayer5  entity: 0
           GENERATE NEXT ARRIVAL: creating new arrival
-            INSERTEVENT: time is 196.383438
-            INSERTEVENT: future time will be 260.910339
+            INSERTEVENT: time is 327.749390
+            INSERTEVENT: future time will be 466.423462
           MAINLOOP: data given to student: cccccccccccccccccccc
 A_OUTPUT called: cccccccccccccccccccc
-          START TIMER: starting timer at 196.383438
-            INSERTEVENT: time is 196.383438
-            INSERTEVENT: future time will be 296.383423
 A_OUTPUT: packet leaving A
-          TOLAYER3: seq: 2, ack -1, check: 1981 cccccccccccccccccccc
-          TOLAYER3: scheduling arrival on other side
-            INSERTEVENT: time is 196.383438
-            INSERTEVENT: future time will be 206.130005
-WINDOW CONTENTS: 2     start: 0 end: 0
+          TOLAYER3: packet being lost
+WINDOW CONTENTS: 0 1 2     start: 0 end: 2
 
-EVENT time: 206.130005,  type: 2, fromlayer3  entity: 1
-B_INPUT: seq_num: 2 message: cccccccccccccccccccc
-B_INPUT: received valid packet from A
-RECORD_PACKET: position: 2 seqnum: 2 base: 2 start_index: 2 end_index 1
-ATTEMPT_ADVANCE: steps: 1
-B_INPUT: delivering seq_num 2
-          TOLAYER5: data received: cccccccccccccccccccc
-          TOLAYER3: seq: 2, ack 2, check: 1984 cccccccccccccccccccc
-          TOLAYER3: scheduling arrival on other side
-            INSERTEVENT: time is 206.130005
-            INSERTEVENT: future time will be 212.631256
+EVENT time: 391.447937,  type: 0, timerinterrupt   entity: 0
+HANDLE_EVENT: seq_num: 0
+          START TIMER: starting timer at 391.447937
+            INSERTEVENT: time is 391.447937
+            INSERTEVENT: future time will be 419.521484
+A_OUTPUT: resending packet 0
+          TOLAYER3: packet being lost
 
-EVENT time: 212.631256,  type: 2, fromlayer3  entity: 0
-A_INPUT: ack_num: 2 message: cccccccccccccccccccc
-A_INPUT: packet is valid
-SUSPECT CODE: parameter seqnum: 2
-SUSPECT CODE: base: 2 size: 50 frame_index: 0 position: 0
-A_INPUT: ABOUT TO RUN SUSPECT CODE
-A_INPUT: packet_received: 1 position: 0 seqnum: 2 acknum: -1 payload: cccccccccccccccccccc
-A_INPUT: making advancement due to seqnum: 2 at position 0
-A_INPUT: packet_received: 0 position: 1 seqnum: -1 acknum: 0 payload: 
-SUSPECT CODE: base: 2 += advancements: 1
-REMOVE_ALARM: seqnum: 2
-REMOVE_ALARM: alarm found
-REMOVE_ALARM: timer needs to be stopped for removed alarm
-          STOP TIMER: stopping timer at 212.631256
-REMOVE_ALARM: event queue is empty, timer will not be restarted
-DEBUGGING: just returned from remove_alarm
-WINDOW CONTENTS: window is empty
-DEBUGGING: just returned from print_window_contents
-DEBUGGING: about to finish a_input call
+EVENT time: 419.521484,  type: 0, timerinterrupt   entity: 0
+HANDLE_EVENT: seq_num: 1
+          START TIMER: starting timer at 419.521484
+            INSERTEVENT: time is 419.521484
+            INSERTEVENT: future time will be 427.749390
+A_OUTPUT: resending packet 1
+          TOLAYER3: packet being lost
 
-EVENT time: 260.910339,  type: 1, fromlayer5  entity: 0
+EVENT time: 427.749390,  type: 0, timerinterrupt   entity: 0
+HANDLE_EVENT: seq_num: 2
+          START TIMER: starting timer at 427.749390
+            INSERTEVENT: time is 427.749390
+            INSERTEVENT: future time will be 491.447937
+A_OUTPUT: resending packet 2
+          TOLAYER3: packet being lost
+
+EVENT time: 466.423462,  type: 1, fromlayer5  entity: 0
           GENERATE NEXT ARRIVAL: creating new arrival
-            INSERTEVENT: time is 260.910339
-            INSERTEVENT: future time will be 308.255310
+            INSERTEVENT: time is 466.423462
+            INSERTEVENT: future time will be 536.288269
           MAINLOOP: data given to student: dddddddddddddddddddd
 A_OUTPUT called: dddddddddddddddddddd
-          START TIMER: starting timer at 260.910339
-            INSERTEVENT: time is 260.910339
-            INSERTEVENT: future time will be 360.910339
 A_OUTPUT: packet leaving A
-          TOLAYER3: seq: 3, ack -1, check: 2002 dddddddddddddddddddd
-          TOLAYER3: scheduling arrival on other side
-            INSERTEVENT: time is 260.910339
-            INSERTEVENT: future time will be 269.665985
-WINDOW CONTENTS: 3     start: 0 end: 0
+          TOLAYER3: packet being lost
+WINDOW CONTENTS: 0 1 2 3     start: 0 end: 3
 
-EVENT time: 269.665985,  type: 2, fromlayer3  entity: 1
-B_INPUT: seq_num: 3 message: dddddddddddddddddddd
-B_INPUT: received valid packet from A
-RECORD_PACKET: position: 3 seqnum: 3 base: 3 start_index: 3 end_index 2
-ATTEMPT_ADVANCE: steps: 1
-B_INPUT: delivering seq_num 3
-          TOLAYER5: data received: dddddddddddddddddddd
-          TOLAYER3: seq: 3, ack 3, check: 2006 dddddddddddddddddddd
-          TOLAYER3: scheduling arrival on other side
-            INSERTEVENT: time is 269.665985
-            INSERTEVENT: future time will be 275.593536
+EVENT time: 491.447937,  type: 0, timerinterrupt   entity: 0
+HANDLE_EVENT: seq_num: 0
+          START TIMER: starting timer at 491.447937
+            INSERTEVENT: time is 491.447937
+            INSERTEVENT: future time will be 519.521484
+A_OUTPUT: resending packet 0
+          TOLAYER3: packet being lost
 
-EVENT time: 275.593536,  type: 2, fromlayer3  entity: 0
-A_INPUT: ack_num: 3 message: dddddddddddddddddddd
-A_INPUT: packet is valid
-SUSPECT CODE: parameter seqnum: 3
-SUSPECT CODE: base: 3 size: 50 frame_index: 0 position: 0
-A_INPUT: ABOUT TO RUN SUSPECT CODE
-A_INPUT: packet_received: 1 position: 0 seqnum: 3 acknum: -1 payload: dddddddddddddddddddd
-A_INPUT: making advancement due to seqnum: 3 at position 0
-A_INPUT: packet_received: 0 position: 1 seqnum: -1 acknum: 0 payload: 
-SUSPECT CODE: base: 3 += advancements: 1
-REMOVE_ALARM: seqnum: 3
-REMOVE_ALARM: alarm found
-REMOVE_ALARM: timer needs to be stopped for removed alarm
-          STOP TIMER: stopping timer at 275.593536
-REMOVE_ALARM: event queue is empty, timer will not be restarted
-DEBUGGING: just returned from remove_alarm
-WINDOW CONTENTS: window is empty
-DEBUGGING: just returned from print_window_contents
-DEBUGGING: about to finish a_input call
+EVENT time: 519.521484,  type: 0, timerinterrupt   entity: 0
+HANDLE_EVENT: seq_num: 1
+          START TIMER: starting timer at 519.521484
+            INSERTEVENT: time is 519.521484
+            INSERTEVENT: future time will be 527.749390
+A_OUTPUT: resending packet 1
+          TOLAYER3: packet being lost
 
-EVENT time: 308.255310,  type: 1, fromlayer5  entity: 0
+EVENT time: 527.749390,  type: 0, timerinterrupt   entity: 0
+HANDLE_EVENT: seq_num: 2
+          START TIMER: starting timer at 527.749390
+            INSERTEVENT: time is 527.749390
+            INSERTEVENT: future time will be 566.423462
+A_OUTPUT: resending packet 2
+          TOLAYER3: packet being lost
+
+EVENT time: 536.288269,  type: 1, fromlayer5  entity: 0
           GENERATE NEXT ARRIVAL: creating new arrival
-            INSERTEVENT: time is 308.255310
-            INSERTEVENT: future time will be 400.775452
+            INSERTEVENT: time is 536.288269
+            INSERTEVENT: future time will be 555.152222
           MAINLOOP: data given to student: eeeeeeeeeeeeeeeeeeee
 A_OUTPUT called: eeeeeeeeeeeeeeeeeeee
-          START TIMER: starting timer at 308.255310
-            INSERTEVENT: time is 308.255310
-            INSERTEVENT: future time will be 408.255310
 A_OUTPUT: packet leaving A
           TOLAYER3: seq: 4, ack -1, check: 2023 eeeeeeeeeeeeeeeeeeee
           TOLAYER3: scheduling arrival on other side
-            INSERTEVENT: time is 308.255310
-            INSERTEVENT: future time will be 312.136505
-WINDOW CONTENTS: 4     start: 0 end: 0
+            INSERTEVENT: time is 536.288269
+            INSERTEVENT: future time will be 545.199402
+WINDOW CONTENTS: 0 1 2 3 4     start: 0 end: 4
 
-EVENT time: 312.136505,  type: 2, fromlayer3  entity: 1
+EVENT time: 545.199402,  type: 2, fromlayer3  entity: 1
 B_INPUT: seq_num: 4 message: eeeeeeeeeeeeeeeeeeee
 B_INPUT: received valid packet from A
-RECORD_PACKET: position: 4 seqnum: 4 base: 4 start_index: 4 end_index 3
-ATTEMPT_ADVANCE: steps: 1
-B_INPUT: delivering seq_num 4
-          TOLAYER5: data received: eeeeeeeeeeeeeeeeeeee
-          TOLAYER3: seq: 4, ack 4, check: 2028 eeeeeeeeeeeeeeeeeeee
-          TOLAYER3: scheduling arrival on other side
-            INSERTEVENT: time is 312.136505
-            INSERTEVENT: future time will be 320.035645
+RECORD_PACKET: position: 4 seqnum: 4 base: 0 start_index: 0 end_index 4
+ATTEMPT_ADVANCE: steps: 0
+          TOLAYER3: packet being lost
 
-EVENT time: 320.035645,  type: 2, fromlayer3  entity: 0
-A_INPUT: ack_num: 4 message: eeeeeeeeeeeeeeeeeeee
-A_INPUT: packet is valid
-SUSPECT CODE: parameter seqnum: 4
-SUSPECT CODE: base: 4 size: 50 frame_index: 0 position: 0
-A_INPUT: ABOUT TO RUN SUSPECT CODE
-A_INPUT: packet_received: 1 position: 0 seqnum: 4 acknum: -1 payload: eeeeeeeeeeeeeeeeeeee
-A_INPUT: making advancement due to seqnum: 4 at position 0
-A_INPUT: packet_received: 0 position: 1 seqnum: -1 acknum: 0 payload: 
-SUSPECT CODE: base: 4 += advancements: 1
-REMOVE_ALARM: seqnum: 4
-REMOVE_ALARM: alarm found
-REMOVE_ALARM: timer needs to be stopped for removed alarm
-          STOP TIMER: stopping timer at 320.035645
-REMOVE_ALARM: event queue is empty, timer will not be restarted
-DEBUGGING: just returned from remove_alarm
-WINDOW CONTENTS: window is empty
-DEBUGGING: just returned from print_window_contents
-DEBUGGING: about to finish a_input call
-
-EVENT time: 400.775452,  type: 1, fromlayer5  entity: 0
+EVENT time: 555.152222,  type: 1, fromlayer5  entity: 0
           GENERATE NEXT ARRIVAL: creating new arrival
-            INSERTEVENT: time is 400.775452
-            INSERTEVENT: future time will be 421.765747
+            INSERTEVENT: time is 555.152222
+            INSERTEVENT: future time will be 612.008179
           MAINLOOP: data given to student: ffffffffffffffffffff
 A_OUTPUT called: ffffffffffffffffffff
-          START TIMER: starting timer at 400.775452
-            INSERTEVENT: time is 400.775452
-            INSERTEVENT: future time will be 500.775452
-A_OUTPUT: packet leaving A
+A_output send window is full
+buffering message
+
+EVENT time: 566.423462,  type: 0, timerinterrupt   entity: 0
+HANDLE_EVENT: seq_num: 3
+          START TIMER: starting timer at 566.423462
+            INSERTEVENT: time is 566.423462
+            INSERTEVENT: future time will be 591.447937
+A_OUTPUT: resending packet 3
+          TOLAYER3: packet being lost
+
+EVENT time: 591.447937,  type: 0, timerinterrupt   entity: 0
+HANDLE_EVENT: seq_num: 0
+          START TIMER: starting timer at 591.447937
+            INSERTEVENT: time is 591.447937
+            INSERTEVENT: future time will be 619.521484
+A_OUTPUT: resending packet 0
+          TOLAYER3: packet being lost
+
+EVENT time: 612.008179,  type: 1, fromlayer5  entity: 0
+          GENERATE NEXT ARRIVAL: creating new arrival
+            INSERTEVENT: time is 612.008179
+            INSERTEVENT: future time will be 699.806274
+          MAINLOOP: data given to student: gggggggggggggggggggg
+A_OUTPUT called: gggggggggggggggggggg
+A_output send window is full
+buffering message
+
+EVENT time: 619.521484,  type: 0, timerinterrupt   entity: 0
+HANDLE_EVENT: seq_num: 1
+          START TIMER: starting timer at 619.521484
+            INSERTEVENT: time is 619.521484
+            INSERTEVENT: future time will be 627.749390
+A_OUTPUT: resending packet 1
+          TOLAYER3: seq: 1, ack -1, check: 1960 bbbbbbbbbbbbbbbbbbbb
+          TOLAYER3: scheduling arrival on other side
+            INSERTEVENT: time is 619.521484
+            INSERTEVENT: future time will be 626.669373
+
+EVENT time: 626.669373,  type: 2, fromlayer3  entity: 1
+B_INPUT: seq_num: 1 message: bbbbbbbbbbbbbbbbbbbb
+B_INPUT: received valid packet from A
+RECORD_PACKET: position: 1 seqnum: 1 base: 0 start_index: 0 end_index 4
+ATTEMPT_ADVANCE: steps: 0
+          TOLAYER3: packet being lost
+
+EVENT time: 627.749390,  type: 0, timerinterrupt   entity: 0
+HANDLE_EVENT: seq_num: 2
+          START TIMER: starting timer at 627.749390
+            INSERTEVENT: time is 627.749390
+            INSERTEVENT: future time will be 636.288269
+A_OUTPUT: resending packet 2
+          TOLAYER3: packet being lost
+
+EVENT time: 636.288269,  type: 0, timerinterrupt   entity: 0
+HANDLE_EVENT: seq_num: 4
+          START TIMER: starting timer at 636.288269
+            INSERTEVENT: time is 636.288269
+            INSERTEVENT: future time will be 666.423462
+A_OUTPUT: resending packet 4
+          TOLAYER3: packet being lost
+
+EVENT time: 666.423462,  type: 0, timerinterrupt   entity: 0
+HANDLE_EVENT: seq_num: 3
+          START TIMER: starting timer at 666.423462
+            INSERTEVENT: time is 666.423462
+            INSERTEVENT: future time will be 691.447937
+A_OUTPUT: resending packet 3
+          TOLAYER3: packet being lost
+
+EVENT time: 691.447937,  type: 0, timerinterrupt   entity: 0
+HANDLE_EVENT: seq_num: 0
+          START TIMER: starting timer at 691.447937
+            INSERTEVENT: time is 691.447937
+            INSERTEVENT: future time will be 719.521484
+A_OUTPUT: resending packet 0
+          TOLAYER3: packet being lost
+
+EVENT time: 699.806274,  type: 1, fromlayer5  entity: 0
+          GENERATE NEXT ARRIVAL: creating new arrival
+            INSERTEVENT: time is 699.806274
+            INSERTEVENT: future time will be 893.345093
+          MAINLOOP: data given to student: hhhhhhhhhhhhhhhhhhhh
+A_OUTPUT called: hhhhhhhhhhhhhhhhhhhh
+A_output send window is full
+buffering message
+
+EVENT time: 719.521484,  type: 0, timerinterrupt   entity: 0
+HANDLE_EVENT: seq_num: 1
+          START TIMER: starting timer at 719.521484
+            INSERTEVENT: time is 719.521484
+            INSERTEVENT: future time will be 727.749390
+A_OUTPUT: resending packet 1
+          TOLAYER3: packet being lost
+
+EVENT time: 727.749390,  type: 0, timerinterrupt   entity: 0
+HANDLE_EVENT: seq_num: 2
+          START TIMER: starting timer at 727.749390
+            INSERTEVENT: time is 727.749390
+            INSERTEVENT: future time will be 736.288269
+A_OUTPUT: resending packet 2
+          TOLAYER3: seq: 2, ack -1, check: 1981 cccccccccccccccccccc
+          TOLAYER3: scheduling arrival on other side
+            INSERTEVENT: time is 727.749390
+            INSERTEVENT: future time will be 730.183289
+
+EVENT time: 730.183289,  type: 2, fromlayer3  entity: 1
+B_INPUT: seq_num: 2 message: cccccccccccccccccccc
+B_INPUT: received valid packet from A
+RECORD_PACKET: position: 2 seqnum: 2 base: 0 start_index: 0 end_index 4
+ATTEMPT_ADVANCE: steps: 0
+          TOLAYER3: packet being lost
+
+EVENT time: 736.288269,  type: 0, timerinterrupt   entity: 0
+HANDLE_EVENT: seq_num: 4
+          START TIMER: starting timer at 736.288269
+            INSERTEVENT: time is 736.288269
+            INSERTEVENT: future time will be 766.423462
+A_OUTPUT: resending packet 4
+          TOLAYER3: packet being lost
+
+EVENT time: 766.423462,  type: 0, timerinterrupt   entity: 0
+HANDLE_EVENT: seq_num: 3
+          START TIMER: starting timer at 766.423462
+            INSERTEVENT: time is 766.423462
+            INSERTEVENT: future time will be 791.447937
+A_OUTPUT: resending packet 3
+          TOLAYER3: packet being lost
+
+EVENT time: 791.447937,  type: 0, timerinterrupt   entity: 0
+HANDLE_EVENT: seq_num: 0
+          START TIMER: starting timer at 791.447937
+            INSERTEVENT: time is 791.447937
+            INSERTEVENT: future time will be 819.521484
+A_OUTPUT: resending packet 0
+          TOLAYER3: packet being lost
+
+EVENT time: 819.521484,  type: 0, timerinterrupt   entity: 0
+HANDLE_EVENT: seq_num: 1
+          START TIMER: starting timer at 819.521484
+            INSERTEVENT: time is 819.521484
+            INSERTEVENT: future time will be 827.749390
+A_OUTPUT: resending packet 1
+          TOLAYER3: packet being lost
+
+EVENT time: 827.749390,  type: 0, timerinterrupt   entity: 0
+HANDLE_EVENT: seq_num: 2
+          START TIMER: starting timer at 827.749390
+            INSERTEVENT: time is 827.749390
+            INSERTEVENT: future time will be 836.288269
+A_OUTPUT: resending packet 2
+          TOLAYER3: seq: 2, ack -1, check: 1981 cccccccccccccccccccc
+          TOLAYER3: scheduling arrival on other side
+            INSERTEVENT: time is 827.749390
+            INSERTEVENT: future time will be 837.378174
+
+EVENT time: 836.288269,  type: 0, timerinterrupt   entity: 0
+HANDLE_EVENT: seq_num: 4
+          START TIMER: starting timer at 836.288269
+            INSERTEVENT: time is 836.288269
+            INSERTEVENT: future time will be 866.423462
+A_OUTPUT: resending packet 4
+          TOLAYER3: packet being lost
+
+EVENT time: 837.378174,  type: 2, fromlayer3  entity: 1
+B_INPUT: seq_num: 2 message: cccccccccccccccccccc
+B_INPUT: received valid packet from A
+RECORD_PACKET: position: 2 seqnum: 2 base: 0 start_index: 0 end_index 4
+ATTEMPT_ADVANCE: steps: 0
+          TOLAYER3: packet being lost
+
+EVENT time: 866.423462,  type: 0, timerinterrupt   entity: 0
+HANDLE_EVENT: seq_num: 3
+          START TIMER: starting timer at 866.423462
+            INSERTEVENT: time is 866.423462
+            INSERTEVENT: future time will be 891.447937
+A_OUTPUT: resending packet 3
+          TOLAYER3: seq: 3, ack -1, check: 2002 dddddddddddddddddddd
+          TOLAYER3: scheduling arrival on other side
+            INSERTEVENT: time is 866.423462
+            INSERTEVENT: future time will be 875.519165
+
+EVENT time: 875.519165,  type: 2, fromlayer3  entity: 1
+B_INPUT: seq_num: 3 message: dddddddddddddddddddd
+B_INPUT: received valid packet from A
+RECORD_PACKET: position: 3 seqnum: 3 base: 0 start_index: 0 end_index 4
+ATTEMPT_ADVANCE: steps: 0
+          TOLAYER3: packet being lost
+
+EVENT time: 891.447937,  type: 0, timerinterrupt   entity: 0
+HANDLE_EVENT: seq_num: 0
+          START TIMER: starting timer at 891.447937
+            INSERTEVENT: time is 891.447937
+            INSERTEVENT: future time will be 919.521484
+A_OUTPUT: resending packet 0
+          TOLAYER3: packet being lost
+
+EVENT time: 893.345093,  type: 1, fromlayer5  entity: 0
+          GENERATE NEXT ARRIVAL: creating new arrival
+            INSERTEVENT: time is 893.345093
+            INSERTEVENT: future time will be 937.315796
+          MAINLOOP: data given to student: iiiiiiiiiiiiiiiiiiii
+A_OUTPUT called: iiiiiiiiiiiiiiiiiiii
+A_output send window is full
+buffering message
+
+EVENT time: 919.521484,  type: 0, timerinterrupt   entity: 0
+HANDLE_EVENT: seq_num: 1
+          START TIMER: starting timer at 919.521484
+            INSERTEVENT: time is 919.521484
+            INSERTEVENT: future time will be 927.749390
+A_OUTPUT: resending packet 1
+          TOLAYER3: packet being lost
+
+EVENT time: 927.749390,  type: 0, timerinterrupt   entity: 0
+HANDLE_EVENT: seq_num: 2
+          START TIMER: starting timer at 927.749390
+            INSERTEVENT: time is 927.749390
+            INSERTEVENT: future time will be 936.288269
+A_OUTPUT: resending packet 2
+          TOLAYER3: packet being lost
+
+EVENT time: 936.288269,  type: 0, timerinterrupt   entity: 0
+HANDLE_EVENT: seq_num: 4
+          START TIMER: starting timer at 936.288269
+            INSERTEVENT: time is 936.288269
+            INSERTEVENT: future time will be 966.423462
+A_OUTPUT: resending packet 4
+          TOLAYER3: packet being lost
+
+EVENT time: 937.315796,  type: 1, fromlayer5  entity: 0
+          GENERATE NEXT ARRIVAL: creating new arrival
+            INSERTEVENT: time is 937.315796
+            INSERTEVENT: future time will be 1029.613525
+          MAINLOOP: data given to student: jjjjjjjjjjjjjjjjjjjj
+A_OUTPUT called: jjjjjjjjjjjjjjjjjjjj
+A_output send window is full
+buffering message
+
+EVENT time: 966.423462,  type: 0, timerinterrupt   entity: 0
+HANDLE_EVENT: seq_num: 3
+          START TIMER: starting timer at 966.423462
+            INSERTEVENT: time is 966.423462
+            INSERTEVENT: future time will be 991.447937
+A_OUTPUT: resending packet 3
+          TOLAYER3: packet being lost
+
+EVENT time: 991.447937,  type: 0, timerinterrupt   entity: 0
+HANDLE_EVENT: seq_num: 0
+          START TIMER: starting timer at 991.447937
+            INSERTEVENT: time is 991.447937
+            INSERTEVENT: future time will be 1019.521484
+A_OUTPUT: resending packet 0
+          TOLAYER3: packet being lost
+
+EVENT time: 1019.521484,  type: 0, timerinterrupt   entity: 0
+HANDLE_EVENT: seq_num: 1
+          START TIMER: starting timer at 1019.521484
+            INSERTEVENT: time is 1019.521484
+            INSERTEVENT: future time will be 1027.749390
+A_OUTPUT: resending packet 1
+          TOLAYER3: packet being lost
+
+EVENT time: 1027.749390,  type: 0, timerinterrupt   entity: 0
+HANDLE_EVENT: seq_num: 2
+          START TIMER: starting timer at 1027.749390
+            INSERTEVENT: time is 1027.749390
+            INSERTEVENT: future time will be 1036.288330
+A_OUTPUT: resending packet 2
+          TOLAYER3: seq: 2, ack -1, check: 1981 cccccccccccccccccccc
+          TOLAYER3: scheduling arrival on other side
+            INSERTEVENT: time is 1027.749390
+            INSERTEVENT: future time will be 1033.819336
+
+EVENT time: 1029.613525,  type: 1, fromlayer5  entity: 0
+          GENERATE NEXT ARRIVAL: creating new arrival
+            INSERTEVENT: time is 1029.613525
+            INSERTEVENT: future time will be 1190.258911
+          MAINLOOP: data given to student: kkkkkkkkkkkkkkkkkkkk
+A_OUTPUT called: kkkkkkkkkkkkkkkkkkkk
+A_output send window is full
+buffering message
+
+EVENT time: 1033.819336,  type: 2, fromlayer3  entity: 1
+B_INPUT: seq_num: 2 message: cccccccccccccccccccc
+B_INPUT: received valid packet from A
+RECORD_PACKET: position: 2 seqnum: 2 base: 0 start_index: 0 end_index 4
+ATTEMPT_ADVANCE: steps: 0
+          TOLAYER3: packet being lost
+
+EVENT time: 1036.288330,  type: 0, timerinterrupt   entity: 0
+HANDLE_EVENT: seq_num: 4
+          START TIMER: starting timer at 1036.288330
+            INSERTEVENT: time is 1036.288330
+            INSERTEVENT: future time will be 1066.423462
+A_OUTPUT: resending packet 4
+          TOLAYER3: packet being lost
+
+EVENT time: 1066.423462,  type: 0, timerinterrupt   entity: 0
+HANDLE_EVENT: seq_num: 3
+          START TIMER: starting timer at 1066.423462
+            INSERTEVENT: time is 1066.423462
+            INSERTEVENT: future time will be 1091.447998
+A_OUTPUT: resending packet 3
+          TOLAYER3: seq: 3, ack -1, check: 2002 dddddddddddddddddddd
+          TOLAYER3: scheduling arrival on other side
+            INSERTEVENT: time is 1066.423462
+            INSERTEVENT: future time will be 1071.699951
+
+EVENT time: 1071.699951,  type: 2, fromlayer3  entity: 1
+B_INPUT: seq_num: 3 message: dddddddddddddddddddd
+B_INPUT: received valid packet from A
+RECORD_PACKET: position: 3 seqnum: 3 base: 0 start_index: 0 end_index 4
+ATTEMPT_ADVANCE: steps: 0
+          TOLAYER3: packet being lost
+
+EVENT time: 1091.447998,  type: 0, timerinterrupt   entity: 0
+HANDLE_EVENT: seq_num: 0
+          START TIMER: starting timer at 1091.447998
+            INSERTEVENT: time is 1091.447998
+            INSERTEVENT: future time will be 1119.521484
+A_OUTPUT: resending packet 0
+          TOLAYER3: seq: 0, ack -1, check: 1939 aaaaaaaaaaaaaaaaaaaa
+          TOLAYER3: scheduling arrival on other side
+            INSERTEVENT: time is 1091.447998
+            INSERTEVENT: future time will be 1100.699707
+
+EVENT time: 1100.699707,  type: 2, fromlayer3  entity: 1
+B_INPUT: seq_num: 0 message: aaaaaaaaaaaaaaaaaaaa
+B_INPUT: received valid packet from A
+RECORD_PACKET: position: 0 seqnum: 0 base: 0 start_index: 0 end_index 4
+ATTEMPT_ADVANCE: steps: 5
+B_INPUT: delivering seq_num 0
+          TOLAYER5: data received: aaaaaaaaaaaaaaaaaaaa
+B_INPUT: delivering seq_num 1
+          TOLAYER5: data received: bbbbbbbbbbbbbbbbbbbb
+B_INPUT: delivering seq_num 2
+          TOLAYER5: data received: cccccccccccccccccccc
+B_INPUT: delivering seq_num 3
+          TOLAYER5: data received: dddddddddddddddddddd
+B_INPUT: delivering seq_num 4
+          TOLAYER5: data received: eeeeeeeeeeeeeeeeeeee
+          TOLAYER3: seq: 0, ack 0, check: 1940 aaaaaaaaaaaaaaaaaaaa
+          TOLAYER3: scheduling arrival on other side
+            INSERTEVENT: time is 1100.699707
+            INSERTEVENT: future time will be 1109.580200
+
+EVENT time: 1109.580200,  type: 2, fromlayer3  entity: 0
+A_INPUT: ack_num: 0 message: aaaaaaaaaaaaaaaaaaaa
+A_INPUT: packet is valid
+SUSPECT CODE: parameter seqnum: 0
+SUSPECT CODE: base: 0 size: 5 frame_index: 0 position: 0
+A_INPUT: ABOUT TO RUN SUSPECT CODE
+A_INPUT: packet_received: 1 position: 0 seqnum: 0 acknum: -1 payload: aaaaaaaaaaaaaaaaaaaa
+A_INPUT: making advancement due to seqnum: 0 at position 0
+A_INPUT: packet_received: 0 position: 1 seqnum: 1 acknum: -1 payload: bbbbbbbbbbbbbbbbbbbb
+ADVANCE_WINDOW: cleared received flag
+SUSPECT CODE: base: 0 += advancements: 1
+REMOVE_ALARM: seqnum: 0
+REMOVE_ALARM: alarm found
+REMOVE_ALARM: timer does not need to be reset
+DEBUGGING: just returned from remove_alarm
+WINDOW CONTENTS: 1 2 3 4     start: 1 end: 4
+DEBUGGING: just returned from print_window_contents
+A_INPUT: sending buffered messages
           TOLAYER3: seq: 5, ack -1, check: 2044 ffffffffffffffffffff
           TOLAYER3: scheduling arrival on other side
-            INSERTEVENT: time is 400.775452
-            INSERTEVENT: future time will be 402.706787
-WINDOW CONTENTS: 5     start: 0 end: 0
+            INSERTEVENT: time is 1109.580200
+            INSERTEVENT: future time will be 1118.938354
+WINDOW CONTENTS: 1 2 3 4 5     start: 1 end: 0
+DEBUGGING: about to finish a_input call
 
-EVENT time: 402.706787,  type: 2, fromlayer3  entity: 1
+EVENT time: 1118.938354,  type: 2, fromlayer3  entity: 1
 B_INPUT: seq_num: 5 message: ffffffffffffffffffff
 B_INPUT: received valid packet from A
-RECORD_PACKET: position: 5 seqnum: 5 base: 5 start_index: 5 end_index 4
+RECORD_PACKET: position: 0 seqnum: 5 base: 5 start_index: 0 end_index 4
 ATTEMPT_ADVANCE: steps: 1
 B_INPUT: delivering seq_num 5
           TOLAYER5: data received: ffffffffffffffffffff
           TOLAYER3: seq: 5, ack 5, check: 2050 ffffffffffffffffffff
           TOLAYER3: scheduling arrival on other side
-            INSERTEVENT: time is 402.706787
-            INSERTEVENT: future time will be 411.593170
+            INSERTEVENT: time is 1118.938354
+            INSERTEVENT: future time will be 1128.653931
 
-EVENT time: 411.593170,  type: 2, fromlayer3  entity: 0
+EVENT time: 1119.521484,  type: 0, timerinterrupt   entity: 0
+HANDLE_EVENT: seq_num: 1
+          START TIMER: starting timer at 1119.521484
+            INSERTEVENT: time is 1119.521484
+            INSERTEVENT: future time will be 1127.749390
+A_OUTPUT: resending packet 1
+          TOLAYER3: packet being lost
+
+EVENT time: 1127.749390,  type: 0, timerinterrupt   entity: 0
+HANDLE_EVENT: seq_num: 2
+          START TIMER: starting timer at 1127.749390
+            INSERTEVENT: time is 1127.749390
+            INSERTEVENT: future time will be 1136.288330
+A_OUTPUT: resending packet 2
+          TOLAYER3: packet being lost
+
+EVENT time: 1128.653931,  type: 2, fromlayer3  entity: 0
 A_INPUT: ack_num: 5 message: ffffffffffffffffffff
 A_INPUT: packet is valid
 SUSPECT CODE: parameter seqnum: 5
-SUSPECT CODE: base: 5 size: 50 frame_index: 0 position: 0
+SUSPECT CODE: base: 1 size: 5 frame_index: 4 position: 0
 A_INPUT: ABOUT TO RUN SUSPECT CODE
-A_INPUT: packet_received: 1 position: 0 seqnum: 5 acknum: -1 payload: ffffffffffffffffffff
-A_INPUT: making advancement due to seqnum: 5 at position 0
-A_INPUT: packet_received: 0 position: 1 seqnum: -1 acknum: 0 payload: 
-SUSPECT CODE: base: 5 += advancements: 1
+A_INPUT: packet_received: 0 position: 1 seqnum: 1 acknum: -1 payload: bbbbbbbbbbbbbbbbbbbb
+SUSPECT CODE: base: 1 += advancements: 0
 REMOVE_ALARM: seqnum: 5
-REMOVE_ALARM: alarm found
-REMOVE_ALARM: timer needs to be stopped for removed alarm
-          STOP TIMER: stopping timer at 411.593170
-REMOVE_ALARM: event queue is empty, timer will not be restarted
+REMOVE_ALARM: FAILED
 DEBUGGING: just returned from remove_alarm
-WINDOW CONTENTS: window is empty
+WINDOW CONTENTS: 1 2 3 4 5     start: 1 end: 0
 DEBUGGING: just returned from print_window_contents
 DEBUGGING: about to finish a_input call
 
-EVENT time: 421.765747,  type: 1, fromlayer5  entity: 0
+EVENT time: 1136.288330,  type: 0, timerinterrupt   entity: 0
+HANDLE_EVENT: seq_num: 4
+          START TIMER: starting timer at 1136.288330
+            INSERTEVENT: time is 1136.288330
+            INSERTEVENT: future time will be 1166.423462
+A_OUTPUT: resending packet 4
+          TOLAYER3: packet being lost
+
+EVENT time: 1166.423462,  type: 0, timerinterrupt   entity: 0
+HANDLE_EVENT: seq_num: 3
+          START TIMER: starting timer at 1166.423462
+            INSERTEVENT: time is 1166.423462
+            INSERTEVENT: future time will be 1219.521484
+A_OUTPUT: resending packet 3
+          TOLAYER3: packet being lost
+
+EVENT time: 1190.258911,  type: 1, fromlayer5  entity: 0
           GENERATE NEXT ARRIVAL: creating new arrival
-            INSERTEVENT: time is 421.765747
-            INSERTEVENT: future time will be 437.033997
-          MAINLOOP: data given to student: gggggggggggggggggggg
-A_OUTPUT called: gggggggggggggggggggg
-          START TIMER: starting timer at 421.765747
-            INSERTEVENT: time is 421.765747
-            INSERTEVENT: future time will be 521.765747
-A_OUTPUT: packet leaving A
-          TOLAYER3: seq: 6, ack -1, check: 2065 gggggggggggggggggggg
-          TOLAYER3: scheduling arrival on other side
-            INSERTEVENT: time is 421.765747
-            INSERTEVENT: future time will be 423.972687
-WINDOW CONTENTS: 6     start: 0 end: 0
-
-EVENT time: 423.972687,  type: 2, fromlayer3  entity: 1
-B_INPUT: seq_num: 6 message: gggggggggggggggggggg
-B_INPUT: received valid packet from A
-RECORD_PACKET: position: 6 seqnum: 6 base: 6 start_index: 6 end_index 5
-ATTEMPT_ADVANCE: steps: 1
-B_INPUT: delivering seq_num 6
-          TOLAYER5: data received: gggggggggggggggggggg
-          TOLAYER3: seq: 6, ack 6, check: 2072 gggggggggggggggggggg
-          TOLAYER3: scheduling arrival on other side
-            INSERTEVENT: time is 423.972687
-            INSERTEVENT: future time will be 425.926178
-
-EVENT time: 425.926178,  type: 2, fromlayer3  entity: 0
-A_INPUT: ack_num: 6 message: gggggggggggggggggggg
-A_INPUT: packet is valid
-SUSPECT CODE: parameter seqnum: 6
-SUSPECT CODE: base: 6 size: 50 frame_index: 0 position: 0
-A_INPUT: ABOUT TO RUN SUSPECT CODE
-A_INPUT: packet_received: 1 position: 0 seqnum: 6 acknum: -1 payload: gggggggggggggggggggg
-A_INPUT: making advancement due to seqnum: 6 at position 0
-A_INPUT: packet_received: 0 position: 1 seqnum: -1 acknum: 0 payload: 
-SUSPECT CODE: base: 6 += advancements: 1
-REMOVE_ALARM: seqnum: 6
-REMOVE_ALARM: alarm found
-REMOVE_ALARM: timer needs to be stopped for removed alarm
-          STOP TIMER: stopping timer at 425.926178
-REMOVE_ALARM: event queue is empty, timer will not be restarted
-DEBUGGING: just returned from remove_alarm
-WINDOW CONTENTS: window is empty
-DEBUGGING: just returned from print_window_contents
-DEBUGGING: about to finish a_input call
-
-EVENT time: 437.033997,  type: 1, fromlayer5  entity: 0
-          GENERATE NEXT ARRIVAL: creating new arrival
-            INSERTEVENT: time is 437.033997
-            INSERTEVENT: future time will be 507.305054
-          MAINLOOP: data given to student: hhhhhhhhhhhhhhhhhhhh
-A_OUTPUT called: hhhhhhhhhhhhhhhhhhhh
-          START TIMER: starting timer at 437.033997
-            INSERTEVENT: time is 437.033997
-            INSERTEVENT: future time will be 537.033997
-A_OUTPUT: packet leaving A
-          TOLAYER3: seq: 7, ack -1, check: 2086 hhhhhhhhhhhhhhhhhhhh
-          TOLAYER3: scheduling arrival on other side
-            INSERTEVENT: time is 437.033997
-            INSERTEVENT: future time will be 441.833588
-WINDOW CONTENTS: 7     start: 0 end: 0
-
-EVENT time: 441.833588,  type: 2, fromlayer3  entity: 1
-B_INPUT: seq_num: 7 message: hhhhhhhhhhhhhhhhhhhh
-B_INPUT: received valid packet from A
-RECORD_PACKET: position: 7 seqnum: 7 base: 7 start_index: 7 end_index 6
-ATTEMPT_ADVANCE: steps: 1
-B_INPUT: delivering seq_num 7
-          TOLAYER5: data received: hhhhhhhhhhhhhhhhhhhh
-          TOLAYER3: seq: 7, ack 7, check: 2094 hhhhhhhhhhhhhhhhhhhh
-          TOLAYER3: scheduling arrival on other side
-            INSERTEVENT: time is 441.833588
-            INSERTEVENT: future time will be 445.388824
-
-EVENT time: 445.388824,  type: 2, fromlayer3  entity: 0
-A_INPUT: ack_num: 7 message: hhhhhhhhhhhhhhhhhhhh
-A_INPUT: packet is valid
-SUSPECT CODE: parameter seqnum: 7
-SUSPECT CODE: base: 7 size: 50 frame_index: 0 position: 0
-A_INPUT: ABOUT TO RUN SUSPECT CODE
-A_INPUT: packet_received: 1 position: 0 seqnum: 7 acknum: -1 payload: hhhhhhhhhhhhhhhhhhhh
-A_INPUT: making advancement due to seqnum: 7 at position 0
-A_INPUT: packet_received: 0 position: 1 seqnum: -1 acknum: 0 payload: 
-SUSPECT CODE: base: 7 += advancements: 1
-REMOVE_ALARM: seqnum: 7
-REMOVE_ALARM: alarm found
-REMOVE_ALARM: timer needs to be stopped for removed alarm
-          STOP TIMER: stopping timer at 445.388824
-REMOVE_ALARM: event queue is empty, timer will not be restarted
-DEBUGGING: just returned from remove_alarm
-WINDOW CONTENTS: window is empty
-DEBUGGING: just returned from print_window_contents
-DEBUGGING: about to finish a_input call
-
-EVENT time: 507.305054,  type: 1, fromlayer5  entity: 0
-          GENERATE NEXT ARRIVAL: creating new arrival
-            INSERTEVENT: time is 507.305054
-            INSERTEVENT: future time will be 578.245789
-          MAINLOOP: data given to student: iiiiiiiiiiiiiiiiiiii
-A_OUTPUT called: iiiiiiiiiiiiiiiiiiii
-          START TIMER: starting timer at 507.305054
-            INSERTEVENT: time is 507.305054
-            INSERTEVENT: future time will be 607.305054
-A_OUTPUT: packet leaving A
-          TOLAYER3: seq: 8, ack -1, check: 2107 iiiiiiiiiiiiiiiiiiii
-          TOLAYER3: scheduling arrival on other side
-            INSERTEVENT: time is 507.305054
-            INSERTEVENT: future time will be 510.736786
-WINDOW CONTENTS: 8     start: 0 end: 0
-
-EVENT time: 510.736786,  type: 2, fromlayer3  entity: 1
-B_INPUT: seq_num: 8 message: iiiiiiiiiiiiiiiiiiii
-B_INPUT: received valid packet from A
-RECORD_PACKET: position: 8 seqnum: 8 base: 8 start_index: 8 end_index 7
-ATTEMPT_ADVANCE: steps: 1
-B_INPUT: delivering seq_num 8
-          TOLAYER5: data received: iiiiiiiiiiiiiiiiiiii
-          TOLAYER3: seq: 8, ack 8, check: 2116 iiiiiiiiiiiiiiiiiiii
-          TOLAYER3: scheduling arrival on other side
-            INSERTEVENT: time is 510.736786
-            INSERTEVENT: future time will be 517.049683
-
-EVENT time: 517.049683,  type: 2, fromlayer3  entity: 0
-A_INPUT: ack_num: 8 message: iiiiiiiiiiiiiiiiiiii
-A_INPUT: packet is valid
-SUSPECT CODE: parameter seqnum: 8
-SUSPECT CODE: base: 8 size: 50 frame_index: 0 position: 0
-A_INPUT: ABOUT TO RUN SUSPECT CODE
-A_INPUT: packet_received: 1 position: 0 seqnum: 8 acknum: -1 payload: iiiiiiiiiiiiiiiiiiii
-A_INPUT: making advancement due to seqnum: 8 at position 0
-A_INPUT: packet_received: 0 position: 1 seqnum: -1 acknum: 0 payload: 
-SUSPECT CODE: base: 8 += advancements: 1
-REMOVE_ALARM: seqnum: 8
-REMOVE_ALARM: alarm found
-REMOVE_ALARM: timer needs to be stopped for removed alarm
-          STOP TIMER: stopping timer at 517.049683
-REMOVE_ALARM: event queue is empty, timer will not be restarted
-DEBUGGING: just returned from remove_alarm
-WINDOW CONTENTS: window is empty
-DEBUGGING: just returned from print_window_contents
-DEBUGGING: about to finish a_input call
-
-EVENT time: 578.245789,  type: 1, fromlayer5  entity: 0
-          GENERATE NEXT ARRIVAL: creating new arrival
-            INSERTEVENT: time is 578.245789
-            INSERTEVENT: future time will be 582.395569
-          MAINLOOP: data given to student: jjjjjjjjjjjjjjjjjjjj
-A_OUTPUT called: jjjjjjjjjjjjjjjjjjjj
-          START TIMER: starting timer at 578.245789
-            INSERTEVENT: time is 578.245789
-            INSERTEVENT: future time will be 678.245789
-A_OUTPUT: packet leaving A
-          TOLAYER3: seq: 9, ack -1, check: 2128 jjjjjjjjjjjjjjjjjjjj
-          TOLAYER3: scheduling arrival on other side
-            INSERTEVENT: time is 578.245789
-            INSERTEVENT: future time will be 579.698425
-WINDOW CONTENTS: 9     start: 0 end: 0
-
-EVENT time: 579.698425,  type: 2, fromlayer3  entity: 1
-B_INPUT: seq_num: 9 message: jjjjjjjjjjjjjjjjjjjj
-B_INPUT: received valid packet from A
-RECORD_PACKET: position: 9 seqnum: 9 base: 9 start_index: 9 end_index 8
-ATTEMPT_ADVANCE: steps: 1
-B_INPUT: delivering seq_num 9
-          TOLAYER5: data received: jjjjjjjjjjjjjjjjjjjj
-          TOLAYER3: seq: 9, ack 9, check: 2138 jjjjjjjjjjjjjjjjjjjj
-          TOLAYER3: scheduling arrival on other side
-            INSERTEVENT: time is 579.698425
-            INSERTEVENT: future time will be 582.082336
-
-EVENT time: 582.082336,  type: 2, fromlayer3  entity: 0
-A_INPUT: ack_num: 9 message: jjjjjjjjjjjjjjjjjjjj
-A_INPUT: packet is valid
-SUSPECT CODE: parameter seqnum: 9
-SUSPECT CODE: base: 9 size: 50 frame_index: 0 position: 0
-A_INPUT: ABOUT TO RUN SUSPECT CODE
-A_INPUT: packet_received: 1 position: 0 seqnum: 9 acknum: -1 payload: jjjjjjjjjjjjjjjjjjjj
-A_INPUT: making advancement due to seqnum: 9 at position 0
-A_INPUT: packet_received: 0 position: 1 seqnum: -1 acknum: 0 payload: 
-SUSPECT CODE: base: 9 += advancements: 1
-REMOVE_ALARM: seqnum: 9
-REMOVE_ALARM: alarm found
-REMOVE_ALARM: timer needs to be stopped for removed alarm
-          STOP TIMER: stopping timer at 582.082336
-REMOVE_ALARM: event queue is empty, timer will not be restarted
-DEBUGGING: just returned from remove_alarm
-WINDOW CONTENTS: window is empty
-DEBUGGING: just returned from print_window_contents
-DEBUGGING: about to finish a_input call
-
-EVENT time: 582.395569,  type: 1, fromlayer5  entity: 0
-          GENERATE NEXT ARRIVAL: creating new arrival
-            INSERTEVENT: time is 582.395569
-            INSERTEVENT: future time will be 664.536987
-          MAINLOOP: data given to student: kkkkkkkkkkkkkkkkkkkk
-A_OUTPUT called: kkkkkkkkkkkkkkkkkkkk
-          START TIMER: starting timer at 582.395569
-            INSERTEVENT: time is 582.395569
-            INSERTEVENT: future time will be 682.395569
-A_OUTPUT: packet leaving A
-          TOLAYER3: seq: 10, ack -1, check: 2149 kkkkkkkkkkkkkkkkkkkk
-          TOLAYER3: scheduling arrival on other side
-            INSERTEVENT: time is 582.395569
-            INSERTEVENT: future time will be 587.734253
-WINDOW CONTENTS: 10     start: 0 end: 0
-
-EVENT time: 587.734253,  type: 2, fromlayer3  entity: 1
-B_INPUT: seq_num: 10 message: kkkkkkkkkkkkkkkkkkkk
-B_INPUT: received valid packet from A
-RECORD_PACKET: position: 10 seqnum: 10 base: 10 start_index: 10 end_index 9
-ATTEMPT_ADVANCE: steps: 1
-B_INPUT: delivering seq_num 10
-          TOLAYER5: data received: kkkkkkkkkkkkkkkkkkkk
-          TOLAYER3: seq: 10, ack 10, check: 2160 kkkkkkkkkkkkkkkkkkkk
-          TOLAYER3: scheduling arrival on other side
-            INSERTEVENT: time is 587.734253
-            INSERTEVENT: future time will be 594.279846
-
-EVENT time: 594.279846,  type: 2, fromlayer3  entity: 0
-A_INPUT: ack_num: 10 message: kkkkkkkkkkkkkkkkkkkk
-A_INPUT: packet is valid
-SUSPECT CODE: parameter seqnum: 10
-SUSPECT CODE: base: 10 size: 50 frame_index: 0 position: 0
-A_INPUT: ABOUT TO RUN SUSPECT CODE
-A_INPUT: packet_received: 1 position: 0 seqnum: 10 acknum: -1 payload: kkkkkkkkkkkkkkkkkkkk
-A_INPUT: making advancement due to seqnum: 10 at position 0
-A_INPUT: packet_received: 0 position: 1 seqnum: -1 acknum: 0 payload: 
-SUSPECT CODE: base: 10 += advancements: 1
-REMOVE_ALARM: seqnum: 10
-REMOVE_ALARM: alarm found
-REMOVE_ALARM: timer needs to be stopped for removed alarm
-          STOP TIMER: stopping timer at 594.279846
-REMOVE_ALARM: event queue is empty, timer will not be restarted
-DEBUGGING: just returned from remove_alarm
-WINDOW CONTENTS: window is empty
-DEBUGGING: just returned from print_window_contents
-DEBUGGING: about to finish a_input call
-
-EVENT time: 664.536987,  type: 1, fromlayer5  entity: 0
-          GENERATE NEXT ARRIVAL: creating new arrival
-            INSERTEVENT: time is 664.536987
-            INSERTEVENT: future time will be 701.049927
+            INSERTEVENT: time is 1190.258911
+            INSERTEVENT: future time will be 1242.636108
           MAINLOOP: data given to student: llllllllllllllllllll
 A_OUTPUT called: llllllllllllllllllll
-          START TIMER: starting timer at 664.536987
-            INSERTEVENT: time is 664.536987
-            INSERTEVENT: future time will be 764.536987
-A_OUTPUT: packet leaving A
-          TOLAYER3: seq: 11, ack -1, check: 2170 llllllllllllllllllll
-          TOLAYER3: scheduling arrival on other side
-            INSERTEVENT: time is 664.536987
-            INSERTEVENT: future time will be 673.084045
-WINDOW CONTENTS: 11     start: 0 end: 0
+A_output send window is full
+buffering message
 
-EVENT time: 673.084045,  type: 2, fromlayer3  entity: 1
-B_INPUT: seq_num: 11 message: llllllllllllllllllll
-B_INPUT: received valid packet from A
-RECORD_PACKET: position: 11 seqnum: 11 base: 11 start_index: 11 end_index 10
-ATTEMPT_ADVANCE: steps: 1
-B_INPUT: delivering seq_num 11
-          TOLAYER5: data received: llllllllllllllllllll
-          TOLAYER3: seq: 11, ack 11, check: 2182 llllllllllllllllllll
-          TOLAYER3: scheduling arrival on other side
-            INSERTEVENT: time is 673.084045
-            INSERTEVENT: future time will be 676.430664
+EVENT time: 1219.521484,  type: 0, timerinterrupt   entity: 0
+HANDLE_EVENT: seq_num: 1
+          START TIMER: starting timer at 1219.521484
+            INSERTEVENT: time is 1219.521484
+            INSERTEVENT: future time will be 1227.749390
+A_OUTPUT: resending packet 1
+          TOLAYER3: packet being lost
 
-EVENT time: 676.430664,  type: 2, fromlayer3  entity: 0
-A_INPUT: ack_num: 11 message: llllllllllllllllllll
-A_INPUT: packet is valid
-SUSPECT CODE: parameter seqnum: 11
-SUSPECT CODE: base: 11 size: 50 frame_index: 0 position: 0
-A_INPUT: ABOUT TO RUN SUSPECT CODE
-A_INPUT: packet_received: 1 position: 0 seqnum: 11 acknum: -1 payload: llllllllllllllllllll
-A_INPUT: making advancement due to seqnum: 11 at position 0
-A_INPUT: packet_received: 0 position: 1 seqnum: -1 acknum: 0 payload: 
-SUSPECT CODE: base: 11 += advancements: 1
-REMOVE_ALARM: seqnum: 11
-REMOVE_ALARM: alarm found
-REMOVE_ALARM: timer needs to be stopped for removed alarm
-          STOP TIMER: stopping timer at 676.430664
-REMOVE_ALARM: event queue is empty, timer will not be restarted
-DEBUGGING: just returned from remove_alarm
-WINDOW CONTENTS: window is empty
-DEBUGGING: just returned from print_window_contents
-DEBUGGING: about to finish a_input call
+EVENT time: 1227.749390,  type: 0, timerinterrupt   entity: 0
+HANDLE_EVENT: seq_num: 2
+          START TIMER: starting timer at 1227.749390
+            INSERTEVENT: time is 1227.749390
+            INSERTEVENT: future time will be 1236.288330
+A_OUTPUT: resending packet 2
+          TOLAYER3: packet being lost
 
-EVENT time: 701.049927,  type: 1, fromlayer5  entity: 0
+EVENT time: 1236.288330,  type: 0, timerinterrupt   entity: 0
+HANDLE_EVENT: seq_num: 4
+          START TIMER: starting timer at 1236.288330
+            INSERTEVENT: time is 1236.288330
+            INSERTEVENT: future time will be 1266.423462
+A_OUTPUT: resending packet 4
+          TOLAYER3: packet being lost
+
+EVENT time: 1242.636108,  type: 1, fromlayer5  entity: 0
           GENERATE NEXT ARRIVAL: creating new arrival
-            INSERTEVENT: time is 701.049927
-            INSERTEVENT: future time will be 741.612244
+            INSERTEVENT: time is 1242.636108
+            INSERTEVENT: future time will be 1312.737183
           MAINLOOP: data given to student: mmmmmmmmmmmmmmmmmmmm
 A_OUTPUT called: mmmmmmmmmmmmmmmmmmmm
-          START TIMER: starting timer at 701.049927
-            INSERTEVENT: time is 701.049927
-            INSERTEVENT: future time will be 801.049927
-A_OUTPUT: packet leaving A
-          TOLAYER3: seq: 12, ack -1, check: 2191 mmmmmmmmmmmmmmmmmmmm
-          TOLAYER3: scheduling arrival on other side
-            INSERTEVENT: time is 701.049927
-            INSERTEVENT: future time will be 703.481079
-WINDOW CONTENTS: 12     start: 0 end: 0
+A_output send window is full
+buffering message
 
-EVENT time: 703.481079,  type: 2, fromlayer3  entity: 1
-B_INPUT: seq_num: 12 message: mmmmmmmmmmmmmmmmmmmm
+EVENT time: 1266.423462,  type: 0, timerinterrupt   entity: 0
+HANDLE_EVENT: seq_num: 3
+          START TIMER: starting timer at 1266.423462
+            INSERTEVENT: time is 1266.423462
+            INSERTEVENT: future time will be 1319.521484
+A_OUTPUT: resending packet 3
+          TOLAYER3: seq: 3, ack -1, check: 2002 dddddddddddddddddddd
+          TOLAYER3: scheduling arrival on other side
+            INSERTEVENT: time is 1266.423462
+            INSERTEVENT: future time will be 1269.989746
+
+EVENT time: 1269.989746,  type: 2, fromlayer3  entity: 1
+B_INPUT: seq_num: 3 message: dddddddddddddddddddd
 B_INPUT: received valid packet from A
-RECORD_PACKET: position: 12 seqnum: 12 base: 12 start_index: 12 end_index 11
-ATTEMPT_ADVANCE: steps: 1
-B_INPUT: delivering seq_num 12
-          TOLAYER5: data received: mmmmmmmmmmmmmmmmmmmm
-          TOLAYER3: seq: 12, ack 12, check: 2204 mmmmmmmmmmmmmmmmmmmm
-          TOLAYER3: scheduling arrival on other side
-            INSERTEVENT: time is 703.481079
-            INSERTEVENT: future time will be 708.343933
+RECORD_PACKET: seqnum: 3 has already been recorded
+          TOLAYER3: packet being lost
 
-EVENT time: 708.343933,  type: 2, fromlayer3  entity: 0
-A_INPUT: ack_num: 12 message: mmmmmmmmmmmmmmmmmmmm
-A_INPUT: packet is valid
-SUSPECT CODE: parameter seqnum: 12
-SUSPECT CODE: base: 12 size: 50 frame_index: 0 position: 0
-A_INPUT: ABOUT TO RUN SUSPECT CODE
-A_INPUT: packet_received: 1 position: 0 seqnum: 12 acknum: -1 payload: mmmmmmmmmmmmmmmmmmmm
-A_INPUT: making advancement due to seqnum: 12 at position 0
-A_INPUT: packet_received: 0 position: 1 seqnum: -1 acknum: 0 payload: 
-SUSPECT CODE: base: 12 += advancements: 1
-REMOVE_ALARM: seqnum: 12
-REMOVE_ALARM: alarm found
-REMOVE_ALARM: timer needs to be stopped for removed alarm
-          STOP TIMER: stopping timer at 708.343933
-REMOVE_ALARM: event queue is empty, timer will not be restarted
-DEBUGGING: just returned from remove_alarm
-WINDOW CONTENTS: window is empty
-DEBUGGING: just returned from print_window_contents
-DEBUGGING: about to finish a_input call
-
-EVENT time: 741.612244,  type: 1, fromlayer5  entity: 0
+EVENT time: 1312.737183,  type: 1, fromlayer5  entity: 0
           GENERATE NEXT ARRIVAL: creating new arrival
-            INSERTEVENT: time is 741.612244
-            INSERTEVENT: future time will be 749.838623
+            INSERTEVENT: time is 1312.737183
+            INSERTEVENT: future time will be 1504.279053
           MAINLOOP: data given to student: nnnnnnnnnnnnnnnnnnnn
 A_OUTPUT called: nnnnnnnnnnnnnnnnnnnn
-          START TIMER: starting timer at 741.612244
-            INSERTEVENT: time is 741.612244
-            INSERTEVENT: future time will be 841.612244
-A_OUTPUT: packet leaving A
-          TOLAYER3: seq: 13, ack -1, check: 2212 nnnnnnnnnnnnnnnnnnnn
-          TOLAYER3: scheduling arrival on other side
-            INSERTEVENT: time is 741.612244
-            INSERTEVENT: future time will be 750.319519
-WINDOW CONTENTS: 13     start: 0 end: 0
+A_output send window is full
+buffering message
 
-EVENT time: 749.838623,  type: 1, fromlayer5  entity: 0
+EVENT time: 1319.521484,  type: 0, timerinterrupt   entity: 0
+HANDLE_EVENT: seq_num: 1
+          START TIMER: starting timer at 1319.521484
+            INSERTEVENT: time is 1319.521484
+            INSERTEVENT: future time will be 1327.749390
+A_OUTPUT: resending packet 1
+          TOLAYER3: packet being lost
+
+EVENT time: 1327.749390,  type: 0, timerinterrupt   entity: 0
+HANDLE_EVENT: seq_num: 2
+          START TIMER: starting timer at 1327.749390
+            INSERTEVENT: time is 1327.749390
+            INSERTEVENT: future time will be 1336.288330
+A_OUTPUT: resending packet 2
+          TOLAYER3: packet being lost
+
+EVENT time: 1336.288330,  type: 0, timerinterrupt   entity: 0
+HANDLE_EVENT: seq_num: 4
+          START TIMER: starting timer at 1336.288330
+            INSERTEVENT: time is 1336.288330
+            INSERTEVENT: future time will be 1366.423462
+A_OUTPUT: resending packet 4
+          TOLAYER3: packet being lost
+
+EVENT time: 1366.423462,  type: 0, timerinterrupt   entity: 0
+HANDLE_EVENT: seq_num: 3
+          START TIMER: starting timer at 1366.423462
+            INSERTEVENT: time is 1366.423462
+            INSERTEVENT: future time will be 1419.521484
+A_OUTPUT: resending packet 3
+          TOLAYER3: packet being lost
+
+EVENT time: 1419.521484,  type: 0, timerinterrupt   entity: 0
+HANDLE_EVENT: seq_num: 1
+          START TIMER: starting timer at 1419.521484
+            INSERTEVENT: time is 1419.521484
+            INSERTEVENT: future time will be 1427.749390
+A_OUTPUT: resending packet 1
+          TOLAYER3: seq: 1, ack -1, check: 1960 bbbbbbbbbbbbbbbbbbbb
+          TOLAYER3: scheduling arrival on other side
+            INSERTEVENT: time is 1419.521484
+            INSERTEVENT: future time will be 1423.795044
+
+EVENT time: 1423.795044,  type: 2, fromlayer3  entity: 1
+B_INPUT: seq_num: 1 message: bbbbbbbbbbbbbbbbbbbb
+B_INPUT: received valid packet from A
+RECORD_PACKET: seqnum: 1 has already been recorded
+          TOLAYER3: packet being lost
+
+EVENT time: 1427.749390,  type: 0, timerinterrupt   entity: 0
+HANDLE_EVENT: seq_num: 2
+          START TIMER: starting timer at 1427.749390
+            INSERTEVENT: time is 1427.749390
+            INSERTEVENT: future time will be 1436.288330
+A_OUTPUT: resending packet 2
+          TOLAYER3: packet being lost
+
+EVENT time: 1436.288330,  type: 0, timerinterrupt   entity: 0
+HANDLE_EVENT: seq_num: 4
+          START TIMER: starting timer at 1436.288330
+            INSERTEVENT: time is 1436.288330
+            INSERTEVENT: future time will be 1466.423462
+A_OUTPUT: resending packet 4
+          TOLAYER3: seq: 4, ack -1, check: 2023 eeeeeeeeeeeeeeeeeeee
+          TOLAYER3: scheduling arrival on other side
+            INSERTEVENT: time is 1436.288330
+            INSERTEVENT: future time will be 1439.907837
+
+EVENT time: 1439.907837,  type: 2, fromlayer3  entity: 1
+B_INPUT: seq_num: 4 message: eeeeeeeeeeeeeeeeeeee
+B_INPUT: received valid packet from A
+RECORD_PACKET: seqnum: 4 has already been recorded
+          TOLAYER3: packet being lost
+
+EVENT time: 1466.423462,  type: 0, timerinterrupt   entity: 0
+HANDLE_EVENT: seq_num: 3
+          START TIMER: starting timer at 1466.423462
+            INSERTEVENT: time is 1466.423462
+            INSERTEVENT: future time will be 1519.521484
+A_OUTPUT: resending packet 3
+          TOLAYER3: packet being lost
+
+EVENT time: 1504.279053,  type: 1, fromlayer5  entity: 0
           GENERATE NEXT ARRIVAL: creating new arrival
-            INSERTEVENT: time is 749.838623
-            INSERTEVENT: future time will be 787.481445
+            INSERTEVENT: time is 1504.279053
+            INSERTEVENT: future time will be 1505.669922
           MAINLOOP: data given to student: oooooooooooooooooooo
 A_OUTPUT called: oooooooooooooooooooo
-A_OUTPUT: packet leaving A
-          TOLAYER3: seq: 14, ack -1, check: 2233 oooooooooooooooooooo
-          TOLAYER3: scheduling arrival on other side
-            INSERTEVENT: time is 749.838623
-            INSERTEVENT: future time will be 754.695984
-WINDOW CONTENTS: 13 14     start: 0 end: 1
+A_output send window is full
+buffering message
 
-EVENT time: 750.319519,  type: 2, fromlayer3  entity: 1
-B_INPUT: seq_num: 13 message: nnnnnnnnnnnnnnnnnnnn
-B_INPUT: received valid packet from A
-RECORD_PACKET: position: 13 seqnum: 13 base: 13 start_index: 13 end_index 12
-ATTEMPT_ADVANCE: steps: 1
-B_INPUT: delivering seq_num 13
-          TOLAYER5: data received: nnnnnnnnnnnnnnnnnnnn
-          TOLAYER3: seq: 13, ack 13, check: 2226 nnnnnnnnnnnnnnnnnnnn
-          TOLAYER3: scheduling arrival on other side
-            INSERTEVENT: time is 750.319519
-            INSERTEVENT: future time will be 753.915344
-
-EVENT time: 753.915344,  type: 2, fromlayer3  entity: 0
-A_INPUT: ack_num: 13 message: nnnnnnnnnnnnnnnnnnnn
-A_INPUT: packet is valid
-SUSPECT CODE: parameter seqnum: 13
-SUSPECT CODE: base: 13 size: 50 frame_index: 0 position: 0
-A_INPUT: ABOUT TO RUN SUSPECT CODE
-A_INPUT: packet_received: 1 position: 0 seqnum: 13 acknum: -1 payload: nnnnnnnnnnnnnnnnnnnn
-A_INPUT: making advancement due to seqnum: 13 at position 0
-A_INPUT: packet_received: 0 position: 1 seqnum: 14 acknum: -1 payload: oooooooooooooooooooo
-SUSPECT CODE: base: 13 += advancements: 1
-REMOVE_ALARM: seqnum: 13
-REMOVE_ALARM: alarm found
-REMOVE_ALARM: timer needs to be stopped for removed alarm
-          STOP TIMER: stopping timer at 753.915344
-REMOVE_ALARM: timer needs to be set for next event
-          START TIMER: starting timer at 753.915344
-            INSERTEVENT: time is 753.915344
-            INSERTEVENT: future time will be 849.838623
-DEBUGGING: just returned from remove_alarm
-WINDOW CONTENTS: 14     start: 1 end: 1
-DEBUGGING: just returned from print_window_contents
-DEBUGGING: about to finish a_input call
-
-EVENT time: 754.695984,  type: 2, fromlayer3  entity: 1
-B_INPUT: seq_num: 14 message: oooooooooooooooooooo
-B_INPUT: received valid packet from A
-RECORD_PACKET: position: 14 seqnum: 14 base: 14 start_index: 14 end_index 13
-ATTEMPT_ADVANCE: steps: 1
-B_INPUT: delivering seq_num 14
-          TOLAYER5: data received: oooooooooooooooooooo
-          TOLAYER3: seq: 14, ack 14, check: 2248 oooooooooooooooooooo
-          TOLAYER3: scheduling arrival on other side
-            INSERTEVENT: time is 754.695984
-            INSERTEVENT: future time will be 762.630432
-
-EVENT time: 762.630432,  type: 2, fromlayer3  entity: 0
-A_INPUT: ack_num: 14 message: oooooooooooooooooooo
-A_INPUT: packet is valid
-SUSPECT CODE: parameter seqnum: 14
-SUSPECT CODE: base: 14 size: 50 frame_index: 0 position: 1
-A_INPUT: ABOUT TO RUN SUSPECT CODE
-A_INPUT: packet_received: 1 position: 1 seqnum: 14 acknum: -1 payload: oooooooooooooooooooo
-A_INPUT: making advancement due to seqnum: 14 at position 1
-A_INPUT: packet_received: 0 position: 2 seqnum: -1 acknum: 0 payload: 
-SUSPECT CODE: base: 14 += advancements: 1
-REMOVE_ALARM: seqnum: 14
-REMOVE_ALARM: alarm found
-REMOVE_ALARM: timer needs to be stopped for removed alarm
-          STOP TIMER: stopping timer at 762.630432
-REMOVE_ALARM: event queue is empty, timer will not be restarted
-DEBUGGING: just returned from remove_alarm
-WINDOW CONTENTS: window is empty
-DEBUGGING: just returned from print_window_contents
-DEBUGGING: about to finish a_input call
-
-EVENT time: 787.481445,  type: 1, fromlayer5  entity: 0
+EVENT time: 1505.669922,  type: 1, fromlayer5  entity: 0
           GENERATE NEXT ARRIVAL: creating new arrival
-            INSERTEVENT: time is 787.481445
-            INSERTEVENT: future time will be 833.217957
+            INSERTEVENT: time is 1505.669922
+            INSERTEVENT: future time will be 1645.289185
           MAINLOOP: data given to student: pppppppppppppppppppp
 A_OUTPUT called: pppppppppppppppppppp
-          START TIMER: starting timer at 787.481445
-            INSERTEVENT: time is 787.481445
-            INSERTEVENT: future time will be 887.481445
-A_OUTPUT: packet leaving A
-          TOLAYER3: seq: 15, ack -1, check: 2254 pppppppppppppppppppp
-          TOLAYER3: scheduling arrival on other side
-            INSERTEVENT: time is 787.481445
-            INSERTEVENT: future time will be 788.921143
-WINDOW CONTENTS: 15     start: 0 end: 0
+A_output send window is full
+buffering message
 
-EVENT time: 788.921143,  type: 2, fromlayer3  entity: 1
-B_INPUT: seq_num: 15 message: pppppppppppppppppppp
+EVENT time: 1519.521484,  type: 0, timerinterrupt   entity: 0
+HANDLE_EVENT: seq_num: 1
+          START TIMER: starting timer at 1519.521484
+            INSERTEVENT: time is 1519.521484
+            INSERTEVENT: future time will be 1527.749390
+A_OUTPUT: resending packet 1
+          TOLAYER3: seq: 1, ack -1, check: 1960 bbbbbbbbbbbbbbbbbbbb
+          TOLAYER3: scheduling arrival on other side
+            INSERTEVENT: time is 1519.521484
+            INSERTEVENT: future time will be 1520.626587
+
+EVENT time: 1520.626587,  type: 2, fromlayer3  entity: 1
+B_INPUT: seq_num: 1 message: bbbbbbbbbbbbbbbbbbbb
 B_INPUT: received valid packet from A
-RECORD_PACKET: position: 15 seqnum: 15 base: 15 start_index: 15 end_index 14
-ATTEMPT_ADVANCE: steps: 1
-B_INPUT: delivering seq_num 15
-          TOLAYER5: data received: pppppppppppppppppppp
-          TOLAYER3: seq: 15, ack 15, check: 2270 pppppppppppppppppppp
+RECORD_PACKET: seqnum: 1 has already been recorded
+          TOLAYER3: packet being lost
+
+EVENT time: 1527.749390,  type: 0, timerinterrupt   entity: 0
+HANDLE_EVENT: seq_num: 2
+          START TIMER: starting timer at 1527.749390
+            INSERTEVENT: time is 1527.749390
+            INSERTEVENT: future time will be 1536.288330
+A_OUTPUT: resending packet 2
+          TOLAYER3: packet being lost
+
+EVENT time: 1536.288330,  type: 0, timerinterrupt   entity: 0
+HANDLE_EVENT: seq_num: 4
+          START TIMER: starting timer at 1536.288330
+            INSERTEVENT: time is 1536.288330
+            INSERTEVENT: future time will be 1566.423462
+A_OUTPUT: resending packet 4
+          TOLAYER3: packet being lost
+
+EVENT time: 1566.423462,  type: 0, timerinterrupt   entity: 0
+HANDLE_EVENT: seq_num: 3
+          START TIMER: starting timer at 1566.423462
+            INSERTEVENT: time is 1566.423462
+            INSERTEVENT: future time will be 1619.521484
+A_OUTPUT: resending packet 3
+          TOLAYER3: seq: 3, ack -1, check: 2002 dddddddddddddddddddd
           TOLAYER3: scheduling arrival on other side
-            INSERTEVENT: time is 788.921143
-            INSERTEVENT: future time will be 797.907898
+            INSERTEVENT: time is 1566.423462
+            INSERTEVENT: future time will be 1573.504761
 
-EVENT time: 797.907898,  type: 2, fromlayer3  entity: 0
-A_INPUT: ack_num: 15 message: pppppppppppppppppppp
-A_INPUT: packet is valid
-SUSPECT CODE: parameter seqnum: 15
-SUSPECT CODE: base: 15 size: 50 frame_index: 0 position: 0
-A_INPUT: ABOUT TO RUN SUSPECT CODE
-A_INPUT: packet_received: 1 position: 0 seqnum: 15 acknum: -1 payload: pppppppppppppppppppp
-A_INPUT: making advancement due to seqnum: 15 at position 0
-A_INPUT: packet_received: 1 position: 1 seqnum: 14 acknum: -1 payload: oooooooooooooooooooo
-A_INPUT: making advancement due to seqnum: 14 at position 1
-A_INPUT: packet_received: 0 position: 2 seqnum: -1 acknum: 0 payload: 
+EVENT time: 1573.504761,  type: 2, fromlayer3  entity: 1
+B_INPUT: seq_num: 3 message: dddddddddddddddddddd
+B_INPUT: received valid packet from A
+RECORD_PACKET: seqnum: 3 has already been recorded
+          TOLAYER3: packet being lost
 
-Queue is empty
-SUSPECT CODE: base: 15 += advancements: 2
-REMOVE_ALARM: seqnum: 15
-REMOVE_ALARM: alarm found
-REMOVE_ALARM: timer needs to be stopped for removed alarm
-          STOP TIMER: stopping timer at 797.907898
-REMOVE_ALARM: event queue is empty, timer will not be restarted
-DEBUGGING: just returned from remove_alarm
-WINDOW CONTENTS: window is empty
-DEBUGGING: just returned from print_window_contents
-DEBUGGING: about to finish a_input call
+EVENT time: 1619.521484,  type: 0, timerinterrupt   entity: 0
+HANDLE_EVENT: seq_num: 1
+          START TIMER: starting timer at 1619.521484
+            INSERTEVENT: time is 1619.521484
+            INSERTEVENT: future time will be 1627.749390
+A_OUTPUT: resending packet 1
+          TOLAYER3: packet being lost
 
-EVENT time: 833.217957,  type: 1, fromlayer5  entity: 0
+EVENT time: 1627.749390,  type: 0, timerinterrupt   entity: 0
+HANDLE_EVENT: seq_num: 2
+          START TIMER: starting timer at 1627.749390
+            INSERTEVENT: time is 1627.749390
+            INSERTEVENT: future time will be 1636.288330
+A_OUTPUT: resending packet 2
+          TOLAYER3: packet being lost
+
+EVENT time: 1636.288330,  type: 0, timerinterrupt   entity: 0
+HANDLE_EVENT: seq_num: 4
+          START TIMER: starting timer at 1636.288330
+            INSERTEVENT: time is 1636.288330
+            INSERTEVENT: future time will be 1666.423462
+A_OUTPUT: resending packet 4
+          TOLAYER3: seq: 4, ack -1, check: 2023 eeeeeeeeeeeeeeeeeeee
+          TOLAYER3: scheduling arrival on other side
+            INSERTEVENT: time is 1636.288330
+            INSERTEVENT: future time will be 1639.295166
+
+EVENT time: 1639.295166,  type: 2, fromlayer3  entity: 1
+B_INPUT: seq_num: 4 message: eeeeeeeeeeeeeeeeeeee
+B_INPUT: received valid packet from A
+RECORD_PACKET: seqnum: 4 has already been recorded
+          TOLAYER3: packet being lost
+
+EVENT time: 1645.289185,  type: 1, fromlayer5  entity: 0
           GENERATE NEXT ARRIVAL: creating new arrival
-            INSERTEVENT: time is 833.217957
-            INSERTEVENT: future time will be 888.028931
+            INSERTEVENT: time is 1645.289185
+            INSERTEVENT: future time will be 1817.446045
           MAINLOOP: data given to student: qqqqqqqqqqqqqqqqqqqq
 A_OUTPUT called: qqqqqqqqqqqqqqqqqqqq
-          START TIMER: starting timer at 833.217957
-            INSERTEVENT: time is 833.217957
-            INSERTEVENT: future time will be 933.217957
-A_OUTPUT: packet leaving A
-          TOLAYER3: seq: 16, ack -1, check: 2275 qqqqqqqqqqqqqqqqqqqq
-          TOLAYER3: scheduling arrival on other side
-            INSERTEVENT: time is 833.217957
-            INSERTEVENT: future time will be 835.427002
-WINDOW CONTENTS: 16     start: 0 end: 0
+A_output send window is full
+buffering message
 
-EVENT time: 835.427002,  type: 2, fromlayer3  entity: 1
-B_INPUT: seq_num: 16 message: qqqqqqqqqqqqqqqqqqqq
+EVENT time: 1666.423462,  type: 0, timerinterrupt   entity: 0
+HANDLE_EVENT: seq_num: 3
+          START TIMER: starting timer at 1666.423462
+            INSERTEVENT: time is 1666.423462
+            INSERTEVENT: future time will be 1719.521484
+A_OUTPUT: resending packet 3
+          TOLAYER3: packet being lost
+
+EVENT time: 1719.521484,  type: 0, timerinterrupt   entity: 0
+HANDLE_EVENT: seq_num: 1
+          START TIMER: starting timer at 1719.521484
+            INSERTEVENT: time is 1719.521484
+            INSERTEVENT: future time will be 1727.749390
+A_OUTPUT: resending packet 1
+          TOLAYER3: packet being lost
+
+EVENT time: 1727.749390,  type: 0, timerinterrupt   entity: 0
+HANDLE_EVENT: seq_num: 2
+          START TIMER: starting timer at 1727.749390
+            INSERTEVENT: time is 1727.749390
+            INSERTEVENT: future time will be 1736.288330
+A_OUTPUT: resending packet 2
+          TOLAYER3: seq: 2, ack -1, check: 1981 cccccccccccccccccccc
+          TOLAYER3: scheduling arrival on other side
+            INSERTEVENT: time is 1727.749390
+            INSERTEVENT: future time will be 1736.934937
+
+EVENT time: 1736.288330,  type: 0, timerinterrupt   entity: 0
+HANDLE_EVENT: seq_num: 4
+          START TIMER: starting timer at 1736.288330
+            INSERTEVENT: time is 1736.288330
+            INSERTEVENT: future time will be 1766.423462
+A_OUTPUT: resending packet 4
+          TOLAYER3: seq: 4, ack -1, check: 2023 eeeeeeeeeeeeeeeeeeee
+          TOLAYER3: scheduling arrival on other side
+            INSERTEVENT: time is 1736.288330
+            INSERTEVENT: future time will be 1739.502197
+
+EVENT time: 1736.934937,  type: 2, fromlayer3  entity: 1
+B_INPUT: seq_num: 2 message: cccccccccccccccccccc
 B_INPUT: received valid packet from A
-RECORD_PACKET: position: 16 seqnum: 16 base: 16 start_index: 16 end_index 15
-ATTEMPT_ADVANCE: steps: 1
-B_INPUT: delivering seq_num 16
-          TOLAYER5: data received: qqqqqqqqqqqqqqqqqqqq
-          TOLAYER3: seq: 16, ack 16, check: 2292 qqqqqqqqqqqqqqqqqqqq
+RECORD_PACKET: seqnum: 2 has already been recorded
+          TOLAYER3: packet being lost
+
+EVENT time: 1739.502197,  type: 2, fromlayer3  entity: 1
+B_INPUT: seq_num: 4 message: eeeeeeeeeeeeeeeeeeee
+B_INPUT: received valid packet from A
+RECORD_PACKET: seqnum: 4 has already been recorded
+          TOLAYER3: packet being lost
+
+EVENT time: 1766.423462,  type: 0, timerinterrupt   entity: 0
+HANDLE_EVENT: seq_num: 3
+          START TIMER: starting timer at 1766.423462
+            INSERTEVENT: time is 1766.423462
+            INSERTEVENT: future time will be 1819.521484
+A_OUTPUT: resending packet 3
+          TOLAYER3: seq: 3, ack -1, check: 2002 dddddddddddddddddddd
           TOLAYER3: scheduling arrival on other side
-            INSERTEVENT: time is 835.427002
-            INSERTEVENT: future time will be 839.067200
+            INSERTEVENT: time is 1766.423462
+            INSERTEVENT: future time will be 1773.074341
 
-EVENT time: 839.067200,  type: 2, fromlayer3  entity: 0
-A_INPUT: ack_num: 16 message: qqqqqqqqqqqqqqqqqqqq
-A_INPUT: packet is valid
-SUSPECT CODE: parameter seqnum: 16
-SUSPECT CODE: base: 17 size: 50 frame_index: -1 position: -1
-A_INPUT: ABOUT TO RUN SUSPECT CODE
-A_INPUT: packet_received: 0 position: 0 seqnum: 16 acknum: -1 payload: qqqqqqqqqqqqqqqqqqqq
-SUSPECT CODE: base: 17 += advancements: 0
-REMOVE_ALARM: seqnum: 16
-REMOVE_ALARM: alarm found
-REMOVE_ALARM: timer needs to be stopped for removed alarm
-          STOP TIMER: stopping timer at 839.067200
-REMOVE_ALARM: event queue is empty, timer will not be restarted
-DEBUGGING: just returned from remove_alarm
-WINDOW CONTENTS: 16     start: 0 end: 0
-DEBUGGING: just returned from print_window_contents
-DEBUGGING: about to finish a_input call
+EVENT time: 1773.074341,  type: 2, fromlayer3  entity: 1
+B_INPUT: seq_num: 3 message: dddddddddddddddddddd
+B_INPUT: received valid packet from A
+RECORD_PACKET: seqnum: 3 has already been recorded
+          TOLAYER3: packet being lost
 
-EVENT time: 888.028931,  type: 1, fromlayer5  entity: 0
+EVENT time: 1817.446045,  type: 1, fromlayer5  entity: 0
           GENERATE NEXT ARRIVAL: creating new arrival
-            INSERTEVENT: time is 888.028931
-            INSERTEVENT: future time will be 894.917053
+            INSERTEVENT: time is 1817.446045
+            INSERTEVENT: future time will be 1920.924194
           MAINLOOP: data given to student: rrrrrrrrrrrrrrrrrrrr
 A_OUTPUT called: rrrrrrrrrrrrrrrrrrrr
-          START TIMER: starting timer at 888.028931
-            INSERTEVENT: time is 888.028931
-            INSERTEVENT: future time will be 988.028931
-A_OUTPUT: packet leaving A
-          TOLAYER3: seq: 17, ack -1, check: 2296 rrrrrrrrrrrrrrrrrrrr
-          TOLAYER3: scheduling arrival on other side
-            INSERTEVENT: time is 888.028931
-            INSERTEVENT: future time will be 896.394531
-WINDOW CONTENTS: 16 17     start: 0 end: 1
+A_output send window is full
+buffering message
 
-EVENT time: 894.917053,  type: 1, fromlayer5  entity: 0
+EVENT time: 1819.521484,  type: 0, timerinterrupt   entity: 0
+HANDLE_EVENT: seq_num: 1
+          START TIMER: starting timer at 1819.521484
+            INSERTEVENT: time is 1819.521484
+            INSERTEVENT: future time will be 1827.749390
+A_OUTPUT: resending packet 1
+          TOLAYER3: packet being lost
+
+EVENT time: 1827.749390,  type: 0, timerinterrupt   entity: 0
+HANDLE_EVENT: seq_num: 2
+          START TIMER: starting timer at 1827.749390
+            INSERTEVENT: time is 1827.749390
+            INSERTEVENT: future time will be 1836.288330
+A_OUTPUT: resending packet 2
+          TOLAYER3: packet being lost
+
+EVENT time: 1836.288330,  type: 0, timerinterrupt   entity: 0
+HANDLE_EVENT: seq_num: 4
+          START TIMER: starting timer at 1836.288330
+            INSERTEVENT: time is 1836.288330
+            INSERTEVENT: future time will be 1866.423462
+A_OUTPUT: resending packet 4
+          TOLAYER3: packet being lost
+
+EVENT time: 1866.423462,  type: 0, timerinterrupt   entity: 0
+HANDLE_EVENT: seq_num: 3
+          START TIMER: starting timer at 1866.423462
+            INSERTEVENT: time is 1866.423462
+            INSERTEVENT: future time will be 1919.521484
+A_OUTPUT: resending packet 3
+          TOLAYER3: packet being lost
+
+EVENT time: 1919.521484,  type: 0, timerinterrupt   entity: 0
+HANDLE_EVENT: seq_num: 1
+          START TIMER: starting timer at 1919.521484
+            INSERTEVENT: time is 1919.521484
+            INSERTEVENT: future time will be 1927.749390
+A_OUTPUT: resending packet 1
+          TOLAYER3: packet being lost
+
+EVENT time: 1920.924194,  type: 1, fromlayer5  entity: 0
           GENERATE NEXT ARRIVAL: creating new arrival
-            INSERTEVENT: time is 894.917053
-            INSERTEVENT: future time will be 969.126526
+            INSERTEVENT: time is 1920.924194
+            INSERTEVENT: future time will be 2044.818115
           MAINLOOP: data given to student: ssssssssssssssssssss
 A_OUTPUT called: ssssssssssssssssssss
-A_OUTPUT: packet leaving A
-          TOLAYER3: seq: 18, ack -1, check: 2317 ssssssssssssssssssss
-          TOLAYER3: scheduling arrival on other side
-            INSERTEVENT: time is 894.917053
-            INSERTEVENT: future time will be 899.868713
-WINDOW CONTENTS: 16 17 18     start: 0 end: 2
+A_output send window is full
+buffering message
 
-EVENT time: 896.394531,  type: 2, fromlayer3  entity: 1
-B_INPUT: seq_num: 17 message: rrrrrrrrrrrrrrrrrrrr
+EVENT time: 1927.749390,  type: 0, timerinterrupt   entity: 0
+HANDLE_EVENT: seq_num: 2
+          START TIMER: starting timer at 1927.749390
+            INSERTEVENT: time is 1927.749390
+            INSERTEVENT: future time will be 1936.288330
+A_OUTPUT: resending packet 2
+          TOLAYER3: packet being lost
+
+EVENT time: 1936.288330,  type: 0, timerinterrupt   entity: 0
+HANDLE_EVENT: seq_num: 4
+          START TIMER: starting timer at 1936.288330
+            INSERTEVENT: time is 1936.288330
+            INSERTEVENT: future time will be 1966.423462
+A_OUTPUT: resending packet 4
+          TOLAYER3: packet being lost
+
+EVENT time: 1966.423462,  type: 0, timerinterrupt   entity: 0
+HANDLE_EVENT: seq_num: 3
+          START TIMER: starting timer at 1966.423462
+            INSERTEVENT: time is 1966.423462
+            INSERTEVENT: future time will be 2019.521484
+A_OUTPUT: resending packet 3
+          TOLAYER3: seq: 3, ack -1, check: 2002 dddddddddddddddddddd
+          TOLAYER3: scheduling arrival on other side
+            INSERTEVENT: time is 1966.423462
+            INSERTEVENT: future time will be 1969.596191
+
+EVENT time: 1969.596191,  type: 2, fromlayer3  entity: 1
+B_INPUT: seq_num: 3 message: dddddddddddddddddddd
 B_INPUT: received valid packet from A
-RECORD_PACKET: position: 17 seqnum: 17 base: 17 start_index: 17 end_index 16
-ATTEMPT_ADVANCE: steps: 1
-B_INPUT: delivering seq_num 17
-          TOLAYER5: data received: rrrrrrrrrrrrrrrrrrrr
-          TOLAYER3: seq: 17, ack 17, check: 2314 rrrrrrrrrrrrrrrrrrrr
-          TOLAYER3: scheduling arrival on other side
-            INSERTEVENT: time is 896.394531
-            INSERTEVENT: future time will be 903.245178
+RECORD_PACKET: seqnum: 3 has already been recorded
+          TOLAYER3: packet being lost
 
-EVENT time: 899.868713,  type: 2, fromlayer3  entity: 1
-B_INPUT: seq_num: 18 message: ssssssssssssssssssss
-B_INPUT: received valid packet from A
-RECORD_PACKET: position: 18 seqnum: 18 base: 18 start_index: 18 end_index 17
-ATTEMPT_ADVANCE: steps: 1
-B_INPUT: delivering seq_num 18
-          TOLAYER5: data received: ssssssssssssssssssss
-          TOLAYER3: seq: 18, ack 18, check: 2336 ssssssssssssssssssss
-          TOLAYER3: scheduling arrival on other side
-            INSERTEVENT: time is 899.868713
-            INSERTEVENT: future time will be 912.691589
+EVENT time: 2019.521484,  type: 0, timerinterrupt   entity: 0
+HANDLE_EVENT: seq_num: 1
+          START TIMER: starting timer at 2019.521484
+            INSERTEVENT: time is 2019.521484
+            INSERTEVENT: future time will be 2027.749390
+A_OUTPUT: resending packet 1
+          TOLAYER3: packet being lost
 
-EVENT time: 903.245178,  type: 2, fromlayer3  entity: 0
-A_INPUT: ack_num: 17 message: rrrrrrrrrrrrrrrrrrrr
-A_INPUT: packet is valid
-SUSPECT CODE: parameter seqnum: 17
-SUSPECT CODE: base: 17 size: 50 frame_index: 0 position: 0
-A_INPUT: ABOUT TO RUN SUSPECT CODE
-A_INPUT: packet_received: 1 position: 0 seqnum: 16 acknum: -1 payload: qqqqqqqqqqqqqqqqqqqq
-A_INPUT: making advancement due to seqnum: 16 at position 0
-A_INPUT: packet_received: 0 position: 1 seqnum: 17 acknum: -1 payload: rrrrrrrrrrrrrrrrrrrr
-SUSPECT CODE: base: 17 += advancements: 1
-REMOVE_ALARM: seqnum: 17
-REMOVE_ALARM: alarm found
-REMOVE_ALARM: timer needs to be stopped for removed alarm
-          STOP TIMER: stopping timer at 903.245178
-REMOVE_ALARM: timer needs to be set for next event
-          START TIMER: starting timer at 903.245178
-            INSERTEVENT: time is 903.245178
-            INSERTEVENT: future time will be 994.917053
-DEBUGGING: just returned from remove_alarm
-WINDOW CONTENTS: 17 18     start: 1 end: 2
-DEBUGGING: just returned from print_window_contents
-DEBUGGING: about to finish a_input call
+EVENT time: 2027.749390,  type: 0, timerinterrupt   entity: 0
+HANDLE_EVENT: seq_num: 2
+          START TIMER: starting timer at 2027.749390
+            INSERTEVENT: time is 2027.749390
+            INSERTEVENT: future time will be 2036.288330
+A_OUTPUT: resending packet 2
+          TOLAYER3: packet being lost
 
-EVENT time: 912.691589,  type: 2, fromlayer3  entity: 0
-A_INPUT: ack_num: 18 message: ssssssssssssssssssss
-A_INPUT: packet is valid
-SUSPECT CODE: parameter seqnum: 18
-SUSPECT CODE: base: 18 size: 50 frame_index: 0 position: 1
-A_INPUT: ABOUT TO RUN SUSPECT CODE
-A_INPUT: packet_received: 1 position: 1 seqnum: 17 acknum: -1 payload: rrrrrrrrrrrrrrrrrrrr
-A_INPUT: making advancement due to seqnum: 17 at position 1
-A_INPUT: packet_received: 0 position: 2 seqnum: 18 acknum: -1 payload: ssssssssssssssssssss
-SUSPECT CODE: base: 18 += advancements: 1
-REMOVE_ALARM: seqnum: 18
-REMOVE_ALARM: alarm found
-REMOVE_ALARM: timer needs to be stopped for removed alarm
-          STOP TIMER: stopping timer at 912.691589
-REMOVE_ALARM: event queue is empty, timer will not be restarted
-DEBUGGING: just returned from remove_alarm
-WINDOW CONTENTS: 18     start: 2 end: 2
-DEBUGGING: just returned from print_window_contents
-DEBUGGING: about to finish a_input call
+EVENT time: 2036.288330,  type: 0, timerinterrupt   entity: 0
+HANDLE_EVENT: seq_num: 4
+          START TIMER: starting timer at 2036.288330
+            INSERTEVENT: time is 2036.288330
+            INSERTEVENT: future time will be 2066.423340
+A_OUTPUT: resending packet 4
+          TOLAYER3: packet being lost
 
-EVENT time: 969.126526,  type: 1, fromlayer5  entity: 0
+EVENT time: 2044.818115,  type: 1, fromlayer5  entity: 0
           GENERATE NEXT ARRIVAL: creating new arrival
-            INSERTEVENT: time is 969.126526
-            INSERTEVENT: future time will be 1042.358521
+            INSERTEVENT: time is 2044.818115
+            INSERTEVENT: future time will be 2109.853516
           MAINLOOP: data given to student: tttttttttttttttttttt
 A_OUTPUT called: tttttttttttttttttttt
-          START TIMER: starting timer at 969.126526
-            INSERTEVENT: time is 969.126526
-            INSERTEVENT: future time will be 1069.126465
-A_OUTPUT: packet leaving A
-          TOLAYER3: seq: 19, ack -1, check: 2338 tttttttttttttttttttt
-          TOLAYER3: scheduling arrival on other side
-            INSERTEVENT: time is 969.126526
-            INSERTEVENT: future time will be 971.740540
-WINDOW CONTENTS: 18 19     start: 2 end: 3
+A_output send window is full
+buffering message
 
-EVENT time: 971.740540,  type: 2, fromlayer3  entity: 1
- Simulator terminated at time 971.740540
+EVENT time: 2066.423340,  type: 0, timerinterrupt   entity: 0
+ Simulator terminated at time 2066.423340
  after sending 20 msgs from layer5
 
 [PA2]20 packets sent from the Application Layer of Sender A[/PA2]
-[PA2]20 packets sent from the Transport Layer of Sender A[/PA2]
+[PA2]81 packets sent from the Transport Layer of Sender A[/PA2]
 [PA2]19 packets received at the Transport layer of Receiver B[/PA2]
-[PA2]19 packets received at the Application layer of Receiver B[/PA2]
-[PA2]Total time: 971.740540 time units[/PA2]
-[PA2]Throughput: 0.019553 packets/time units[/PA2]
+[PA2]6 packets received at the Application layer of Receiver B[/PA2]
+[PA2]Total time: 2066.423340 time units[/PA2]
+[PA2]Throughput: 0.002904 packets/time units[/PA2]

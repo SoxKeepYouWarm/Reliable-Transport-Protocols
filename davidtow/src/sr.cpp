@@ -233,6 +233,12 @@ Receiver_Window::Receiver_Window(int size) {
 
 void Receiver_Window::record_packet(struct pkt packet) {
 	
+	// catch packets that have already been acknowledged
+	if (packet.seqnum < base) {
+		printf("RECORD_PACKET: seqnum: %d has already been recorded\n", packet.seqnum);
+		return;
+	}
+	
 	int position = packet.seqnum - base + start_index;
 	printf("RECORD_PACKET: position: %d seqnum: %d base: %d start_index: %d end_index %d\n", 
 			position, packet.seqnum, base, start_index, end_index);
@@ -248,8 +254,9 @@ void Receiver_Window::attempt_advance() {
 	for (int i = 0; i < size; i++) {
 		
 		int position = (start_index + i) % size;
-		if (window[position].seqnum != -1) {
+		if (window[position].seqnum == base) {
 			advancements ++;
+			base++;
 		} else {
 			break;
 		}
@@ -266,7 +273,7 @@ void Receiver_Window::attempt_advance() {
 		end_index = (end_index + 1) % size;
 	}
 	
-	base += advancements;
+	//base += advancements;
 	
 }
 
@@ -375,6 +382,14 @@ void Timer::handle_next_event_alarm() {
 		timed_events.pop_front();
 		
 		std::cout << "HANDLE_EVENT: seq_num: " << triggered_event.packet.seqnum << std::endl;
+		
+		// if another event is ahead of the timeout, start timer.
+		if ( ! timed_events.empty() ) {
+			set_timer_for_next_event();
+		}
+		
+		// otherwise schedule alarm will trigger this event 
+		// upon noticing that the queue is empty
 		
 		// set alarm for packet
 		schedule_alarm(TIME_A, triggered_event.packet);
