@@ -17,6 +17,7 @@
 
 #include <iostream>
 #include <stdio.h>
+#include <string.h>
 #include <queue>
 #include <list>
 
@@ -73,6 +74,14 @@ Window::Window(int size) {
 	this->packet_count = 0;
 	this->window = new Window_frame[size];
 	this->size = size;
+	
+	for (int i = 0; i < size; i++) {
+		this->window[i].packet.seqnum = -1;
+		this->window[i].packet.acknum = 0; 
+		strcpy(this->window[i].packet.payload, "");
+		this->window[i].packet_received = FALSE;
+	}
+	
 }
 
 
@@ -85,7 +94,7 @@ void Window::insert_packet(struct pkt packet) {
 	
 	// set window frame
 	window[end_index].packet = packet;
-	window[end_index].packet_received = TRUE;
+	window[end_index].packet_received = FALSE;
 	
 	packet_count++;
 	if ( start_index == -1 ) {
@@ -107,12 +116,18 @@ void Window::advance_window(int steps) {
 		//delete window[start_index];
 		
 		if ( start_index == end_index ) {
+			window[start_index].packet_received = FALSE;
 			start_index = -1 ;
 			end_index = -1 ;
 			packet_count = 0;
-		} else
+			printf("ADVANCE_WINDOW: reset indeces to -1, cleared flags\n");
+		} else {
+			window[start_index].packet_received = FALSE;
 			start_index = ( start_index + 1 ) % size;
 			packet_count --;
+			printf("ADVANCE_WINDOW: cleared received flag\n");
+		}
+	
 	}
 	
 }
@@ -124,8 +139,11 @@ int Window::is_full() {
 
 
 struct Window_frame* Window::get_window_frame_by_seqnum(int seqnum) {
+	printf("SUSPECT CODE: parameter seqnum: %d\n", seqnum);
 	int frame_index = seqnum - base;
-	return &window[start_index + frame_index];
+	int position = (frame_index + start_index) % size;
+	printf("SUSPECT CODE: base: %d size: %d frame_index: %d position: %d\n", base, size, frame_index, position);
+	return &window[position];
 }
 
 
@@ -376,15 +394,35 @@ void Timer::remove_alarm(int seq_num) {
 	
 	printf("REMOVE_ALARM: seqnum: %d\n", seq_num);
 	
+	int i = 0;
 	for (std::list<struct Event>::iterator iter = timed_events.begin(); iter != timed_events.end(); std::advance(iter, 1)) {
 	
 		if (iter->packet.seqnum == seq_num) {
-			printf("REMOVE_ALARM: SUCCESS\n");
+			printf("REMOVE_ALARM: alarm found\n");
+			
+			// if the timer is running this alarm, need to set timer to next event
+			int reset_timer = (i == 0);
+			
 			iter = timed_events.erase(iter);
 			iter --;
 			
+			if (reset_timer) {
+				printf("REMOVE_ALARM: timer needs to be stopped for removed alarm\n");
+				stoptimer(FROM_A);
+					
+				if ( ! timed_events.empty() ) {
+					printf("REMOVE_ALARM: timer needs to be set for next event\n");
+					set_timer_for_next_event();
+				} else {
+					printf("REMOVE_ALARM: event queue is empty, timer will not be restarted\n");
+				}
+			} else {
+				printf("REMOVE_ALARM: timer does not need to be reset\n");
+			}
+			
+			
 			// check if this packet is associated with the current alarm
-			if ( ! timed_events.empty() ) {
+			/*if ( ! timed_events.empty() ) {
 				
 				Event current_event = timed_events.front();
 				if (current_event.packet.seqnum == seq_num) {
@@ -398,11 +436,13 @@ void Timer::remove_alarm(int seq_num) {
 					printf("REMOVE_ALARM: returned packet alarm event removed from queue\n");
 				}
 			
-			}
+			}*/
 			
 			return;
 		}
-	
+		
+		i++;
+		
 	}
 	
 	printf("REMOVE_ALARM: FAILED\n");
@@ -519,31 +559,47 @@ void A_input(struct pkt packet) {
 		printf("A_INPUT: packet is valid\n");
 		
 		struct Window_frame* frame = window->get_window_frame_by_seqnum(packet.acknum);
+		printf("A_INPUT: ABOUT TO RUN SUSPECT CODE\n");
 		frame->packet_received = TRUE;
 		
 		// move window up past last ack
 		int advancements = 0;
 		for (int i = 0; i < window->size; i++) {
-			if (window->window[window->start_index + i].packet_received) {
+			
+			int position = (window->start_index + i) % window->size;
+			printf("A_INPUT: packet_received: %d position: %d seqnum: %d acknum: %d payload: %.*s\n", 
+					window->window[position].packet_received,
+					position,
+					window->window[position].packet.seqnum,
+					window->window[position].packet.acknum,
+					20,
+					window->window[position].packet.payload);
+			
+			if (window->window[position].packet_received) {
+				printf("A_INPUT: making advancement due to seqnum: %d at position %d\n", 
+						window->window[position].packet.seqnum, position);
 				advancements ++;
 			} else {
 				break;
 			}
+		
 		}
 	
 		window->advance_window(advancements);
 		
 		// update new base
+		printf("SUSPECT CODE: base: %d += advancements: %d\n", base, advancements);
 		base += advancements;
 		
 		// stop frame timer
 		timer->remove_alarm(packet.acknum);
+		printf("DEBUGGING: just returned from remove_alarm\n");
 		
 		print_window_contents(*window);
+		printf("DEBUGGING: just returned from print_window_contents\n");
 		
-       // send buffered messages as long as window isn't full
-       while ( ( ! message_buffer.is_empty()) && ( ! window->is_full() ) ) 
-		 {
+		// send buffered messages as long as window isn't full
+		while ( ( ! message_buffer.is_empty()) && ( ! window->is_full() ) ) {
 			printf("A_INPUT: sending buffered messages\n");
 			struct pkt new_packet;
 			
@@ -562,7 +618,9 @@ void A_input(struct pkt packet) {
 			
 			print_window_contents(*window);
 			
-       }   
+		}
+		
+		printf("DEBUGGING: about to finish a_input call\n");
 		
 	} else {
 		// packet is not valid, drop it.
