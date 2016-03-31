@@ -1,0 +1,4140 @@
+          GENERATE NEXT ARRIVAL: creating new arrival
+            INSERTEVENT: time is 0.000000
+            INSERTEVENT: future time will be 914.479309
+a init just called
+b init just called
+
+EVENT time: 914.479309,  type: 1, fromlayer5  entity: 0
+          GENERATE NEXT ARRIVAL: creating new arrival
+            INSERTEVENT: time is 914.479309
+            INSERTEVENT: future time will be 2195.214844
+          MAINLOOP: data given to student: aaaaaaaaaaaaaaaaaaaa
+A_OUTPUT called: aaaaaaaaaaaaaaaaaaaa
+          START TIMER: starting timer at 914.479309
+            INSERTEVENT: time is 914.479309
+            INSERTEVENT: future time will be 964.479309
+IN_TRANSIT: setting TRUE
+A_OUTPUT: packet leaving A: seq: 0 ack: -1 msg: aaaaaaaaaaaaaaaaaaaa
+          TOLAYER3: seq: 0, ack -1, check: 1939 aaaaaaaaaaaaaaaaaaaa
+          TOLAYER3: packet being corrupted
+          TOLAYER3: scheduling arrival on other side
+            INSERTEVENT: time is 914.479309
+            INSERTEVENT: future time will be 919.619934
+
+EVENT time: 919.619934,  type: 2, fromlayer3  entity: 1
+B_INPUT: seq: 0 ack: -1 message: Zaaaaaaaaaaaaaaaaaaa
+B_INPUT: packet is not valid, incorrect checksum
+
+EVENT time: 964.479309,  type: 0, timerinterrupt   entity: 0
+A_TIMER: resending packet
+          START TIMER: starting timer at 964.479309
+            INSERTEVENT: time is 964.479309
+            INSERTEVENT: future time will be 1014.479309
+          TOLAYER3: seq: 0, ack -1, check: 1939 aaaaaaaaaaaaaaaaaaaa
+          TOLAYER3: packet being corrupted
+          TOLAYER3: scheduling arrival on other side
+            INSERTEVENT: time is 964.479309
+            INSERTEVENT: future time will be 967.203979
+
+EVENT time: 967.203979,  type: 2, fromlayer3  entity: 1
+B_INPUT: seq: 0 ack: -1 message: Zaaaaaaaaaaaaaaaaaaa
+B_INPUT: packet is not valid, incorrect checksum
+
+EVENT time: 1014.479309,  type: 0, timerinterrupt   entity: 0
+A_TIMER: resending packet
+          START TIMER: starting timer at 1014.479309
+            INSERTEVENT: time is 1014.479309
+            INSERTEVENT: future time will be 1064.479248
+          TOLAYER3: seq: 0, ack -1, check: 1939 aaaaaaaaaaaaaaaaaaaa
+          TOLAYER3: packet being corrupted
+          TOLAYER3: scheduling arrival on other side
+            INSERTEVENT: time is 1014.479309
+            INSERTEVENT: future time will be 1021.357117
+
+EVENT time: 1021.357117,  type: 2, fromlayer3  entity: 1
+B_INPUT: seq: 0 ack: -1 message: Zaaaaaaaaaaaaaaaaaaa
+B_INPUT: packet is not valid, incorrect checksum
+
+EVENT time: 1064.479248,  type: 0, timerinterrupt   entity: 0
+A_TIMER: resending packet
+          START TIMER: starting timer at 1064.479248
+            INSERTEVENT: time is 1064.479248
+            INSERTEVENT: future time will be 1114.479248
+          TOLAYER3: seq: 0, ack -1, check: 1939 aaaaaaaaaaaaaaaaaaaa
+          TOLAYER3: packet being corrupted
+          TOLAYER3: scheduling arrival on other side
+            INSERTEVENT: time is 1064.479248
+            INSERTEVENT: future time will be 1069.316895
+
+EVENT time: 1069.316895,  type: 2, fromlayer3  entity: 1
+B_INPUT: seq: 0 ack: -1 message: Zaaaaaaaaaaaaaaaaaaa
+B_INPUT: packet is not valid, incorrect checksum
+
+EVENT time: 1114.479248,  type: 0, timerinterrupt   entity: 0
+A_TIMER: resending packet
+          START TIMER: starting timer at 1114.479248
+            INSERTEVENT: time is 1114.479248
+            INSERTEVENT: future time will be 1164.479248
+          TOLAYER3: seq: 0, ack -1, check: 1939 aaaaaaaaaaaaaaaaaaaa
+          TOLAYER3: scheduling arrival on other side
+            INSERTEVENT: time is 1114.479248
+            INSERTEVENT: future time will be 1122.763428
+
+EVENT time: 1122.763428,  type: 2, fromlayer3  entity: 1
+B_INPUT: seq: 0 ack: -1 message: aaaaaaaaaaaaaaaaaaaa
+B_INPUT: packet is valid
+B_INPUT: correct packet received
+          TOLAYER3: seq: -1, ack 0, check: 1939 aaaaaaaaaaaaaaaaaaaa
+          TOLAYER3: packet being corrupted
+          TOLAYER3: scheduling arrival on other side
+            INSERTEVENT: time is 1122.763428
+            INSERTEVENT: future time will be 1128.454834
+          TOLAYER5: data received: aaaaaaaaaaaaaaaaaaaa
+B_APPLICATION_OUTPUT: aaaaaaaaaaaaaaaaaaaa
+
+EVENT time: 1128.454834,  type: 2, fromlayer3  entity: 0
+A_INPUT: seq: -1 ack: 0 message: Zaaaaaaaaaaaaaaaaaaa
+packet is not valid
+
+EVENT time: 1164.479248,  type: 0, timerinterrupt   entity: 0
+A_TIMER: resending packet
+          START TIMER: starting timer at 1164.479248
+            INSERTEVENT: time is 1164.479248
+            INSERTEVENT: future time will be 1214.479248
+          TOLAYER3: seq: 0, ack -1, check: 1939 aaaaaaaaaaaaaaaaaaaa
+          TOLAYER3: scheduling arrival on other side
+            INSERTEVENT: time is 1164.479248
+            INSERTEVENT: future time will be 1169.430176
+
+EVENT time: 1169.430176,  type: 2, fromlayer3  entity: 1
+B_INPUT: seq: 0 ack: -1 message: aaaaaaaaaaaaaaaaaaaa
+B_INPUT: packet is valid
+B_INPUT: duplicate packet received, resend ack
+          TOLAYER3: seq: -1, ack 0, check: 1939 aaaaaaaaaaaaaaaaaaaa
+          TOLAYER3: packet being corrupted
+          TOLAYER3: scheduling arrival on other side
+            INSERTEVENT: time is 1169.430176
+            INSERTEVENT: future time will be 1177.505859
+
+EVENT time: 1177.505859,  type: 2, fromlayer3  entity: 0
+A_INPUT: seq: -1 ack: 0 message: Zaaaaaaaaaaaaaaaaaaa
+packet is not valid
+
+EVENT time: 1214.479248,  type: 0, timerinterrupt   entity: 0
+A_TIMER: resending packet
+          START TIMER: starting timer at 1214.479248
+            INSERTEVENT: time is 1214.479248
+            INSERTEVENT: future time will be 1264.479248
+          TOLAYER3: seq: 0, ack -1, check: 1939 aaaaaaaaaaaaaaaaaaaa
+          TOLAYER3: packet being corrupted
+          TOLAYER3: scheduling arrival on other side
+            INSERTEVENT: time is 1214.479248
+            INSERTEVENT: future time will be 1216.409790
+
+EVENT time: 1216.409790,  type: 2, fromlayer3  entity: 1
+B_INPUT: seq: 0 ack: 999999 message: aaaaaaaaaaaaaaaaaaaa
+B_INPUT: packet is not valid, incorrect checksum
+
+EVENT time: 1264.479248,  type: 0, timerinterrupt   entity: 0
+A_TIMER: resending packet
+          START TIMER: starting timer at 1264.479248
+            INSERTEVENT: time is 1264.479248
+            INSERTEVENT: future time will be 1314.479248
+          TOLAYER3: seq: 0, ack -1, check: 1939 aaaaaaaaaaaaaaaaaaaa
+          TOLAYER3: packet being corrupted
+          TOLAYER3: scheduling arrival on other side
+            INSERTEVENT: time is 1264.479248
+            INSERTEVENT: future time will be 1273.301025
+
+EVENT time: 1273.301025,  type: 2, fromlayer3  entity: 1
+B_INPUT: seq: 999999 ack: -1 message: aaaaaaaaaaaaaaaaaaaa
+B_INPUT: packet is not valid, incorrect checksum
+
+EVENT time: 1314.479248,  type: 0, timerinterrupt   entity: 0
+A_TIMER: resending packet
+          START TIMER: starting timer at 1314.479248
+            INSERTEVENT: time is 1314.479248
+            INSERTEVENT: future time will be 1364.479248
+          TOLAYER3: seq: 0, ack -1, check: 1939 aaaaaaaaaaaaaaaaaaaa
+          TOLAYER3: packet being corrupted
+          TOLAYER3: scheduling arrival on other side
+            INSERTEVENT: time is 1314.479248
+            INSERTEVENT: future time will be 1319.040405
+
+EVENT time: 1319.040405,  type: 2, fromlayer3  entity: 1
+B_INPUT: seq: 0 ack: -1 message: Zaaaaaaaaaaaaaaaaaaa
+B_INPUT: packet is not valid, incorrect checksum
+
+EVENT time: 1364.479248,  type: 0, timerinterrupt   entity: 0
+A_TIMER: resending packet
+          START TIMER: starting timer at 1364.479248
+            INSERTEVENT: time is 1364.479248
+            INSERTEVENT: future time will be 1414.479248
+          TOLAYER3: seq: 0, ack -1, check: 1939 aaaaaaaaaaaaaaaaaaaa
+          TOLAYER3: scheduling arrival on other side
+            INSERTEVENT: time is 1364.479248
+            INSERTEVENT: future time will be 1374.209595
+
+EVENT time: 1374.209595,  type: 2, fromlayer3  entity: 1
+B_INPUT: seq: 0 ack: -1 message: aaaaaaaaaaaaaaaaaaaa
+B_INPUT: packet is valid
+B_INPUT: duplicate packet received, resend ack
+          TOLAYER3: seq: -1, ack 0, check: 1939 aaaaaaaaaaaaaaaaaaaa
+          TOLAYER3: packet being corrupted
+          TOLAYER3: scheduling arrival on other side
+            INSERTEVENT: time is 1374.209595
+            INSERTEVENT: future time will be 1375.394165
+
+EVENT time: 1375.394165,  type: 2, fromlayer3  entity: 0
+A_INPUT: seq: -1 ack: 999999 message: aaaaaaaaaaaaaaaaaaaa
+packet is not valid
+
+EVENT time: 1414.479248,  type: 0, timerinterrupt   entity: 0
+A_TIMER: resending packet
+          START TIMER: starting timer at 1414.479248
+            INSERTEVENT: time is 1414.479248
+            INSERTEVENT: future time will be 1464.479248
+          TOLAYER3: seq: 0, ack -1, check: 1939 aaaaaaaaaaaaaaaaaaaa
+          TOLAYER3: packet being corrupted
+          TOLAYER3: scheduling arrival on other side
+            INSERTEVENT: time is 1414.479248
+            INSERTEVENT: future time will be 1415.836670
+
+EVENT time: 1415.836670,  type: 2, fromlayer3  entity: 1
+B_INPUT: seq: 0 ack: -1 message: Zaaaaaaaaaaaaaaaaaaa
+B_INPUT: packet is not valid, incorrect checksum
+
+EVENT time: 1464.479248,  type: 0, timerinterrupt   entity: 0
+A_TIMER: resending packet
+          START TIMER: starting timer at 1464.479248
+            INSERTEVENT: time is 1464.479248
+            INSERTEVENT: future time will be 1514.479248
+          TOLAYER3: seq: 0, ack -1, check: 1939 aaaaaaaaaaaaaaaaaaaa
+          TOLAYER3: packet being corrupted
+          TOLAYER3: scheduling arrival on other side
+            INSERTEVENT: time is 1464.479248
+            INSERTEVENT: future time will be 1472.484741
+
+EVENT time: 1472.484741,  type: 2, fromlayer3  entity: 1
+B_INPUT: seq: 0 ack: -1 message: Zaaaaaaaaaaaaaaaaaaa
+B_INPUT: packet is not valid, incorrect checksum
+
+EVENT time: 1514.479248,  type: 0, timerinterrupt   entity: 0
+A_TIMER: resending packet
+          START TIMER: starting timer at 1514.479248
+            INSERTEVENT: time is 1514.479248
+            INSERTEVENT: future time will be 1564.479248
+          TOLAYER3: seq: 0, ack -1, check: 1939 aaaaaaaaaaaaaaaaaaaa
+          TOLAYER3: packet being corrupted
+          TOLAYER3: scheduling arrival on other side
+            INSERTEVENT: time is 1514.479248
+            INSERTEVENT: future time will be 1519.160034
+
+EVENT time: 1519.160034,  type: 2, fromlayer3  entity: 1
+B_INPUT: seq: 0 ack: -1 message: Zaaaaaaaaaaaaaaaaaaa
+B_INPUT: packet is not valid, incorrect checksum
+
+EVENT time: 1564.479248,  type: 0, timerinterrupt   entity: 0
+A_TIMER: resending packet
+          START TIMER: starting timer at 1564.479248
+            INSERTEVENT: time is 1564.479248
+            INSERTEVENT: future time will be 1614.479248
+          TOLAYER3: seq: 0, ack -1, check: 1939 aaaaaaaaaaaaaaaaaaaa
+          TOLAYER3: packet being corrupted
+          TOLAYER3: scheduling arrival on other side
+            INSERTEVENT: time is 1564.479248
+            INSERTEVENT: future time will be 1570.549194
+
+EVENT time: 1570.549194,  type: 2, fromlayer3  entity: 1
+B_INPUT: seq: 999999 ack: -1 message: aaaaaaaaaaaaaaaaaaaa
+B_INPUT: packet is not valid, incorrect checksum
+
+EVENT time: 1614.479248,  type: 0, timerinterrupt   entity: 0
+A_TIMER: resending packet
+          START TIMER: starting timer at 1614.479248
+            INSERTEVENT: time is 1614.479248
+            INSERTEVENT: future time will be 1664.479248
+          TOLAYER3: seq: 0, ack -1, check: 1939 aaaaaaaaaaaaaaaaaaaa
+          TOLAYER3: scheduling arrival on other side
+            INSERTEVENT: time is 1614.479248
+            INSERTEVENT: future time will be 1616.121094
+
+EVENT time: 1616.121094,  type: 2, fromlayer3  entity: 1
+B_INPUT: seq: 0 ack: -1 message: aaaaaaaaaaaaaaaaaaaa
+B_INPUT: packet is valid
+B_INPUT: duplicate packet received, resend ack
+          TOLAYER3: seq: -1, ack 0, check: 1939 aaaaaaaaaaaaaaaaaaaa
+          TOLAYER3: packet being corrupted
+          TOLAYER3: scheduling arrival on other side
+            INSERTEVENT: time is 1616.121094
+            INSERTEVENT: future time will be 1620.581665
+
+EVENT time: 1620.581665,  type: 2, fromlayer3  entity: 0
+A_INPUT: seq: -1 ack: 999999 message: aaaaaaaaaaaaaaaaaaaa
+packet is not valid
+
+EVENT time: 1664.479248,  type: 0, timerinterrupt   entity: 0
+A_TIMER: resending packet
+          START TIMER: starting timer at 1664.479248
+            INSERTEVENT: time is 1664.479248
+            INSERTEVENT: future time will be 1714.479248
+          TOLAYER3: seq: 0, ack -1, check: 1939 aaaaaaaaaaaaaaaaaaaa
+          TOLAYER3: scheduling arrival on other side
+            INSERTEVENT: time is 1664.479248
+            INSERTEVENT: future time will be 1666.408447
+
+EVENT time: 1666.408447,  type: 2, fromlayer3  entity: 1
+B_INPUT: seq: 0 ack: -1 message: aaaaaaaaaaaaaaaaaaaa
+B_INPUT: packet is valid
+B_INPUT: duplicate packet received, resend ack
+          TOLAYER3: seq: -1, ack 0, check: 1939 aaaaaaaaaaaaaaaaaaaa
+          TOLAYER3: scheduling arrival on other side
+            INSERTEVENT: time is 1666.408447
+            INSERTEVENT: future time will be 1669.134399
+
+EVENT time: 1669.134399,  type: 2, fromlayer3  entity: 0
+A_INPUT: seq: -1 ack: 0 message: aaaaaaaaaaaaaaaaaaaa
+packet is valid
+correct sequence number
+          STOP TIMER: stopping timer at 1669.134399
+IN_TRANSIT: setting FALSE
+
+EVENT time: 2195.214844,  type: 1, fromlayer5  entity: 0
+          GENERATE NEXT ARRIVAL: creating new arrival
+            INSERTEVENT: time is 2195.214844
+            INSERTEVENT: future time will be 4052.570312
+          MAINLOOP: data given to student: bbbbbbbbbbbbbbbbbbbb
+A_OUTPUT called: bbbbbbbbbbbbbbbbbbbb
+          START TIMER: starting timer at 2195.214844
+            INSERTEVENT: time is 2195.214844
+            INSERTEVENT: future time will be 2245.214844
+IN_TRANSIT: setting TRUE
+A_OUTPUT: packet leaving A: seq: 1 ack: -1 msg: bbbbbbbbbbbbbbbbbbbb
+          TOLAYER3: seq: 1, ack -1, check: 1960 bbbbbbbbbbbbbbbbbbbb
+          TOLAYER3: scheduling arrival on other side
+            INSERTEVENT: time is 2195.214844
+            INSERTEVENT: future time will be 2203.603271
+
+EVENT time: 2203.603271,  type: 2, fromlayer3  entity: 1
+B_INPUT: seq: 1 ack: -1 message: bbbbbbbbbbbbbbbbbbbb
+B_INPUT: packet is valid
+B_INPUT: correct packet received
+          TOLAYER3: seq: -1, ack 1, check: 1960 bbbbbbbbbbbbbbbbbbbb
+          TOLAYER3: packet being corrupted
+          TOLAYER3: scheduling arrival on other side
+            INSERTEVENT: time is 2203.603271
+            INSERTEVENT: future time will be 2204.645752
+          TOLAYER5: data received: bbbbbbbbbbbbbbbbbbbb
+B_APPLICATION_OUTPUT: bbbbbbbbbbbbbbbbbbbb
+
+EVENT time: 2204.645752,  type: 2, fromlayer3  entity: 0
+A_INPUT: seq: -1 ack: 1 message: Zbbbbbbbbbbbbbbbbbbb
+packet is not valid
+
+EVENT time: 2245.214844,  type: 0, timerinterrupt   entity: 0
+A_TIMER: resending packet
+          START TIMER: starting timer at 2245.214844
+            INSERTEVENT: time is 2245.214844
+            INSERTEVENT: future time will be 2295.214844
+          TOLAYER3: seq: 1, ack -1, check: 1960 bbbbbbbbbbbbbbbbbbbb
+          TOLAYER3: packet being corrupted
+          TOLAYER3: scheduling arrival on other side
+            INSERTEVENT: time is 2245.214844
+            INSERTEVENT: future time will be 2248.571777
+
+EVENT time: 2248.571777,  type: 2, fromlayer3  entity: 1
+B_INPUT: seq: 1 ack: -1 message: Zbbbbbbbbbbbbbbbbbbb
+B_INPUT: packet is not valid, incorrect checksum
+
+EVENT time: 2295.214844,  type: 0, timerinterrupt   entity: 0
+A_TIMER: resending packet
+          START TIMER: starting timer at 2295.214844
+            INSERTEVENT: time is 2295.214844
+            INSERTEVENT: future time will be 2345.214844
+          TOLAYER3: seq: 1, ack -1, check: 1960 bbbbbbbbbbbbbbbbbbbb
+          TOLAYER3: scheduling arrival on other side
+            INSERTEVENT: time is 2295.214844
+            INSERTEVENT: future time will be 2299.369385
+
+EVENT time: 2299.369385,  type: 2, fromlayer3  entity: 1
+B_INPUT: seq: 1 ack: -1 message: bbbbbbbbbbbbbbbbbbbb
+B_INPUT: packet is valid
+B_INPUT: duplicate packet received, resend ack
+          TOLAYER3: seq: -1, ack 1, check: 1960 bbbbbbbbbbbbbbbbbbbb
+          TOLAYER3: packet being corrupted
+          TOLAYER3: scheduling arrival on other side
+            INSERTEVENT: time is 2299.369385
+            INSERTEVENT: future time will be 2305.343994
+
+EVENT time: 2305.343994,  type: 2, fromlayer3  entity: 0
+A_INPUT: seq: -1 ack: 999999 message: bbbbbbbbbbbbbbbbbbbb
+packet is not valid
+
+EVENT time: 2345.214844,  type: 0, timerinterrupt   entity: 0
+A_TIMER: resending packet
+          START TIMER: starting timer at 2345.214844
+            INSERTEVENT: time is 2345.214844
+            INSERTEVENT: future time will be 2395.214844
+          TOLAYER3: seq: 1, ack -1, check: 1960 bbbbbbbbbbbbbbbbbbbb
+          TOLAYER3: packet being corrupted
+          TOLAYER3: scheduling arrival on other side
+            INSERTEVENT: time is 2345.214844
+            INSERTEVENT: future time will be 2351.955078
+
+EVENT time: 2351.955078,  type: 2, fromlayer3  entity: 1
+B_INPUT: seq: 1 ack: -1 message: Zbbbbbbbbbbbbbbbbbbb
+B_INPUT: packet is not valid, incorrect checksum
+
+EVENT time: 2395.214844,  type: 0, timerinterrupt   entity: 0
+A_TIMER: resending packet
+          START TIMER: starting timer at 2395.214844
+            INSERTEVENT: time is 2395.214844
+            INSERTEVENT: future time will be 2445.214844
+          TOLAYER3: seq: 1, ack -1, check: 1960 bbbbbbbbbbbbbbbbbbbb
+          TOLAYER3: scheduling arrival on other side
+            INSERTEVENT: time is 2395.214844
+            INSERTEVENT: future time will be 2399.488281
+
+EVENT time: 2399.488281,  type: 2, fromlayer3  entity: 1
+B_INPUT: seq: 1 ack: -1 message: bbbbbbbbbbbbbbbbbbbb
+B_INPUT: packet is valid
+B_INPUT: duplicate packet received, resend ack
+          TOLAYER3: seq: -1, ack 1, check: 1960 bbbbbbbbbbbbbbbbbbbb
+          TOLAYER3: scheduling arrival on other side
+            INSERTEVENT: time is 2399.488281
+            INSERTEVENT: future time will be 2402.869873
+
+EVENT time: 2402.869873,  type: 2, fromlayer3  entity: 0
+A_INPUT: seq: -1 ack: 1 message: bbbbbbbbbbbbbbbbbbbb
+packet is valid
+correct sequence number
+          STOP TIMER: stopping timer at 2402.869873
+IN_TRANSIT: setting FALSE
+
+EVENT time: 4052.570312,  type: 1, fromlayer5  entity: 0
+          GENERATE NEXT ARRIVAL: creating new arrival
+            INSERTEVENT: time is 4052.570312
+            INSERTEVENT: future time will be 4634.684082
+          MAINLOOP: data given to student: cccccccccccccccccccc
+A_OUTPUT called: cccccccccccccccccccc
+          START TIMER: starting timer at 4052.570312
+            INSERTEVENT: time is 4052.570312
+            INSERTEVENT: future time will be 4102.570312
+IN_TRANSIT: setting TRUE
+A_OUTPUT: packet leaving A: seq: 0 ack: -1 msg: cccccccccccccccccccc
+          TOLAYER3: seq: 0, ack -1, check: 1979 cccccccccccccccccccc
+          TOLAYER3: packet being corrupted
+          TOLAYER3: scheduling arrival on other side
+            INSERTEVENT: time is 4052.570312
+            INSERTEVENT: future time will be 4060.137695
+
+EVENT time: 4060.137695,  type: 2, fromlayer3  entity: 1
+B_INPUT: seq: 0 ack: -1 message: Zccccccccccccccccccc
+B_INPUT: packet is not valid, incorrect checksum
+
+EVENT time: 4102.570312,  type: 0, timerinterrupt   entity: 0
+A_TIMER: resending packet
+          START TIMER: starting timer at 4102.570312
+            INSERTEVENT: time is 4102.570312
+            INSERTEVENT: future time will be 4152.570312
+          TOLAYER3: seq: 0, ack -1, check: 1979 cccccccccccccccccccc
+          TOLAYER3: packet being corrupted
+          TOLAYER3: scheduling arrival on other side
+            INSERTEVENT: time is 4102.570312
+            INSERTEVENT: future time will be 4111.575684
+
+EVENT time: 4111.575684,  type: 2, fromlayer3  entity: 1
+B_INPUT: seq: 0 ack: 999999 message: cccccccccccccccccccc
+B_INPUT: packet is not valid, incorrect checksum
+
+EVENT time: 4152.570312,  type: 0, timerinterrupt   entity: 0
+A_TIMER: resending packet
+          START TIMER: starting timer at 4152.570312
+            INSERTEVENT: time is 4152.570312
+            INSERTEVENT: future time will be 4202.570312
+          TOLAYER3: seq: 0, ack -1, check: 1979 cccccccccccccccccccc
+          TOLAYER3: packet being corrupted
+          TOLAYER3: scheduling arrival on other side
+            INSERTEVENT: time is 4152.570312
+            INSERTEVENT: future time will be 4159.323242
+
+EVENT time: 4159.323242,  type: 2, fromlayer3  entity: 1
+B_INPUT: seq: 0 ack: 999999 message: cccccccccccccccccccc
+B_INPUT: packet is not valid, incorrect checksum
+
+EVENT time: 4202.570312,  type: 0, timerinterrupt   entity: 0
+A_TIMER: resending packet
+          START TIMER: starting timer at 4202.570312
+            INSERTEVENT: time is 4202.570312
+            INSERTEVENT: future time will be 4252.570312
+          TOLAYER3: seq: 0, ack -1, check: 1979 cccccccccccccccccccc
+          TOLAYER3: packet being corrupted
+          TOLAYER3: scheduling arrival on other side
+            INSERTEVENT: time is 4202.570312
+            INSERTEVENT: future time will be 4211.400879
+
+EVENT time: 4211.400879,  type: 2, fromlayer3  entity: 1
+B_INPUT: seq: 0 ack: -1 message: Zccccccccccccccccccc
+B_INPUT: packet is not valid, incorrect checksum
+
+EVENT time: 4252.570312,  type: 0, timerinterrupt   entity: 0
+A_TIMER: resending packet
+          START TIMER: starting timer at 4252.570312
+            INSERTEVENT: time is 4252.570312
+            INSERTEVENT: future time will be 4302.570312
+          TOLAYER3: seq: 0, ack -1, check: 1979 cccccccccccccccccccc
+          TOLAYER3: packet being corrupted
+          TOLAYER3: scheduling arrival on other side
+            INSERTEVENT: time is 4252.570312
+            INSERTEVENT: future time will be 4261.027832
+
+EVENT time: 4261.027832,  type: 2, fromlayer3  entity: 1
+B_INPUT: seq: 0 ack: -1 message: Zccccccccccccccccccc
+B_INPUT: packet is not valid, incorrect checksum
+
+EVENT time: 4302.570312,  type: 0, timerinterrupt   entity: 0
+A_TIMER: resending packet
+          START TIMER: starting timer at 4302.570312
+            INSERTEVENT: time is 4302.570312
+            INSERTEVENT: future time will be 4352.570312
+          TOLAYER3: seq: 0, ack -1, check: 1979 cccccccccccccccccccc
+          TOLAYER3: packet being corrupted
+          TOLAYER3: scheduling arrival on other side
+            INSERTEVENT: time is 4302.570312
+            INSERTEVENT: future time will be 4311.317383
+
+EVENT time: 4311.317383,  type: 2, fromlayer3  entity: 1
+B_INPUT: seq: 0 ack: -1 message: Zccccccccccccccccccc
+B_INPUT: packet is not valid, incorrect checksum
+
+EVENT time: 4352.570312,  type: 0, timerinterrupt   entity: 0
+A_TIMER: resending packet
+          START TIMER: starting timer at 4352.570312
+            INSERTEVENT: time is 4352.570312
+            INSERTEVENT: future time will be 4402.570312
+          TOLAYER3: seq: 0, ack -1, check: 1979 cccccccccccccccccccc
+          TOLAYER3: packet being corrupted
+          TOLAYER3: scheduling arrival on other side
+            INSERTEVENT: time is 4352.570312
+            INSERTEVENT: future time will be 4361.755859
+
+EVENT time: 4361.755859,  type: 2, fromlayer3  entity: 1
+B_INPUT: seq: 0 ack: 999999 message: cccccccccccccccccccc
+B_INPUT: packet is not valid, incorrect checksum
+
+EVENT time: 4402.570312,  type: 0, timerinterrupt   entity: 0
+A_TIMER: resending packet
+          START TIMER: starting timer at 4402.570312
+            INSERTEVENT: time is 4402.570312
+            INSERTEVENT: future time will be 4452.570312
+          TOLAYER3: seq: 0, ack -1, check: 1979 cccccccccccccccccccc
+          TOLAYER3: packet being corrupted
+          TOLAYER3: scheduling arrival on other side
+            INSERTEVENT: time is 4402.570312
+            INSERTEVENT: future time will be 4405.259766
+
+EVENT time: 4405.259766,  type: 2, fromlayer3  entity: 1
+B_INPUT: seq: 0 ack: -1 message: Zccccccccccccccccccc
+B_INPUT: packet is not valid, incorrect checksum
+
+EVENT time: 4452.570312,  type: 0, timerinterrupt   entity: 0
+A_TIMER: resending packet
+          START TIMER: starting timer at 4452.570312
+            INSERTEVENT: time is 4452.570312
+            INSERTEVENT: future time will be 4502.570312
+          TOLAYER3: seq: 0, ack -1, check: 1979 cccccccccccccccccccc
+          TOLAYER3: packet being corrupted
+          TOLAYER3: scheduling arrival on other side
+            INSERTEVENT: time is 4452.570312
+            INSERTEVENT: future time will be 4459.221191
+
+EVENT time: 4459.221191,  type: 2, fromlayer3  entity: 1
+B_INPUT: seq: 0 ack: -1 message: Zccccccccccccccccccc
+B_INPUT: packet is not valid, incorrect checksum
+
+EVENT time: 4502.570312,  type: 0, timerinterrupt   entity: 0
+A_TIMER: resending packet
+          START TIMER: starting timer at 4502.570312
+            INSERTEVENT: time is 4502.570312
+            INSERTEVENT: future time will be 4552.570312
+          TOLAYER3: seq: 0, ack -1, check: 1979 cccccccccccccccccccc
+          TOLAYER3: packet being corrupted
+          TOLAYER3: scheduling arrival on other side
+            INSERTEVENT: time is 4502.570312
+            INSERTEVENT: future time will be 4506.979492
+
+EVENT time: 4506.979492,  type: 2, fromlayer3  entity: 1
+B_INPUT: seq: 0 ack: -1 message: Zccccccccccccccccccc
+B_INPUT: packet is not valid, incorrect checksum
+
+EVENT time: 4552.570312,  type: 0, timerinterrupt   entity: 0
+A_TIMER: resending packet
+          START TIMER: starting timer at 4552.570312
+            INSERTEVENT: time is 4552.570312
+            INSERTEVENT: future time will be 4602.570312
+          TOLAYER3: seq: 0, ack -1, check: 1979 cccccccccccccccccccc
+          TOLAYER3: packet being corrupted
+          TOLAYER3: scheduling arrival on other side
+            INSERTEVENT: time is 4552.570312
+            INSERTEVENT: future time will be 4559.420898
+
+EVENT time: 4559.420898,  type: 2, fromlayer3  entity: 1
+B_INPUT: seq: 0 ack: -1 message: Zccccccccccccccccccc
+B_INPUT: packet is not valid, incorrect checksum
+
+EVENT time: 4602.570312,  type: 0, timerinterrupt   entity: 0
+A_TIMER: resending packet
+          START TIMER: starting timer at 4602.570312
+            INSERTEVENT: time is 4602.570312
+            INSERTEVENT: future time will be 4652.570312
+          TOLAYER3: seq: 0, ack -1, check: 1979 cccccccccccccccccccc
+          TOLAYER3: packet being corrupted
+          TOLAYER3: scheduling arrival on other side
+            INSERTEVENT: time is 4602.570312
+            INSERTEVENT: future time will be 4611.628418
+
+EVENT time: 4611.628418,  type: 2, fromlayer3  entity: 1
+B_INPUT: seq: 0 ack: -1 message: Zccccccccccccccccccc
+B_INPUT: packet is not valid, incorrect checksum
+
+EVENT time: 4634.684082,  type: 1, fromlayer5  entity: 0
+          GENERATE NEXT ARRIVAL: creating new arrival
+            INSERTEVENT: time is 4634.684082
+            INSERTEVENT: future time will be 6082.634766
+          MAINLOOP: data given to student: dddddddddddddddddddd
+A_OUTPUT called: dddddddddddddddddddd
+A_OUTPUT: message in_transit, returning
+
+EVENT time: 4652.570312,  type: 0, timerinterrupt   entity: 0
+A_TIMER: resending packet
+          START TIMER: starting timer at 4652.570312
+            INSERTEVENT: time is 4652.570312
+            INSERTEVENT: future time will be 4702.570312
+          TOLAYER3: seq: 0, ack -1, check: 1979 cccccccccccccccccccc
+          TOLAYER3: packet being corrupted
+          TOLAYER3: scheduling arrival on other side
+            INSERTEVENT: time is 4652.570312
+            INSERTEVENT: future time will be 4660.664551
+
+EVENT time: 4660.664551,  type: 2, fromlayer3  entity: 1
+B_INPUT: seq: 0 ack: -1 message: Zccccccccccccccccccc
+B_INPUT: packet is not valid, incorrect checksum
+
+EVENT time: 4702.570312,  type: 0, timerinterrupt   entity: 0
+A_TIMER: resending packet
+          START TIMER: starting timer at 4702.570312
+            INSERTEVENT: time is 4702.570312
+            INSERTEVENT: future time will be 4752.570312
+          TOLAYER3: seq: 0, ack -1, check: 1979 cccccccccccccccccccc
+          TOLAYER3: packet being corrupted
+          TOLAYER3: scheduling arrival on other side
+            INSERTEVENT: time is 4702.570312
+            INSERTEVENT: future time will be 4709.311523
+
+EVENT time: 4709.311523,  type: 2, fromlayer3  entity: 1
+B_INPUT: seq: 0 ack: -1 message: Zccccccccccccccccccc
+B_INPUT: packet is not valid, incorrect checksum
+
+EVENT time: 4752.570312,  type: 0, timerinterrupt   entity: 0
+A_TIMER: resending packet
+          START TIMER: starting timer at 4752.570312
+            INSERTEVENT: time is 4752.570312
+            INSERTEVENT: future time will be 4802.570312
+          TOLAYER3: seq: 0, ack -1, check: 1979 cccccccccccccccccccc
+          TOLAYER3: packet being corrupted
+          TOLAYER3: scheduling arrival on other side
+            INSERTEVENT: time is 4752.570312
+            INSERTEVENT: future time will be 4754.813477
+
+EVENT time: 4754.813477,  type: 2, fromlayer3  entity: 1
+B_INPUT: seq: 0 ack: -1 message: Zccccccccccccccccccc
+B_INPUT: packet is not valid, incorrect checksum
+
+EVENT time: 4802.570312,  type: 0, timerinterrupt   entity: 0
+A_TIMER: resending packet
+          START TIMER: starting timer at 4802.570312
+            INSERTEVENT: time is 4802.570312
+            INSERTEVENT: future time will be 4852.570312
+          TOLAYER3: seq: 0, ack -1, check: 1979 cccccccccccccccccccc
+          TOLAYER3: packet being corrupted
+          TOLAYER3: scheduling arrival on other side
+            INSERTEVENT: time is 4802.570312
+            INSERTEVENT: future time will be 4810.570801
+
+EVENT time: 4810.570801,  type: 2, fromlayer3  entity: 1
+B_INPUT: seq: 0 ack: -1 message: Zccccccccccccccccccc
+B_INPUT: packet is not valid, incorrect checksum
+
+EVENT time: 4852.570312,  type: 0, timerinterrupt   entity: 0
+A_TIMER: resending packet
+          START TIMER: starting timer at 4852.570312
+            INSERTEVENT: time is 4852.570312
+            INSERTEVENT: future time will be 4902.570312
+          TOLAYER3: seq: 0, ack -1, check: 1979 cccccccccccccccccccc
+          TOLAYER3: packet being corrupted
+          TOLAYER3: scheduling arrival on other side
+            INSERTEVENT: time is 4852.570312
+            INSERTEVENT: future time will be 4860.276855
+
+EVENT time: 4860.276855,  type: 2, fromlayer3  entity: 1
+B_INPUT: seq: 0 ack: -1 message: Zccccccccccccccccccc
+B_INPUT: packet is not valid, incorrect checksum
+
+EVENT time: 4902.570312,  type: 0, timerinterrupt   entity: 0
+A_TIMER: resending packet
+          START TIMER: starting timer at 4902.570312
+            INSERTEVENT: time is 4902.570312
+            INSERTEVENT: future time will be 4952.570312
+          TOLAYER3: seq: 0, ack -1, check: 1979 cccccccccccccccccccc
+          TOLAYER3: packet being corrupted
+          TOLAYER3: scheduling arrival on other side
+            INSERTEVENT: time is 4902.570312
+            INSERTEVENT: future time will be 4905.592285
+
+EVENT time: 4905.592285,  type: 2, fromlayer3  entity: 1
+B_INPUT: seq: 0 ack: 999999 message: cccccccccccccccccccc
+B_INPUT: packet is not valid, incorrect checksum
+
+EVENT time: 4952.570312,  type: 0, timerinterrupt   entity: 0
+A_TIMER: resending packet
+          START TIMER: starting timer at 4952.570312
+            INSERTEVENT: time is 4952.570312
+            INSERTEVENT: future time will be 5002.570312
+          TOLAYER3: seq: 0, ack -1, check: 1979 cccccccccccccccccccc
+          TOLAYER3: packet being corrupted
+          TOLAYER3: scheduling arrival on other side
+            INSERTEVENT: time is 4952.570312
+            INSERTEVENT: future time will be 4955.689453
+
+EVENT time: 4955.689453,  type: 2, fromlayer3  entity: 1
+B_INPUT: seq: 0 ack: -1 message: Zccccccccccccccccccc
+B_INPUT: packet is not valid, incorrect checksum
+
+EVENT time: 5002.570312,  type: 0, timerinterrupt   entity: 0
+A_TIMER: resending packet
+          START TIMER: starting timer at 5002.570312
+            INSERTEVENT: time is 5002.570312
+            INSERTEVENT: future time will be 5052.570312
+          TOLAYER3: seq: 0, ack -1, check: 1979 cccccccccccccccccccc
+          TOLAYER3: packet being corrupted
+          TOLAYER3: scheduling arrival on other side
+            INSERTEVENT: time is 5002.570312
+            INSERTEVENT: future time will be 5004.402832
+
+EVENT time: 5004.402832,  type: 2, fromlayer3  entity: 1
+B_INPUT: seq: 0 ack: 999999 message: cccccccccccccccccccc
+B_INPUT: packet is not valid, incorrect checksum
+
+EVENT time: 5052.570312,  type: 0, timerinterrupt   entity: 0
+A_TIMER: resending packet
+          START TIMER: starting timer at 5052.570312
+            INSERTEVENT: time is 5052.570312
+            INSERTEVENT: future time will be 5102.570312
+          TOLAYER3: seq: 0, ack -1, check: 1979 cccccccccccccccccccc
+          TOLAYER3: packet being corrupted
+          TOLAYER3: scheduling arrival on other side
+            INSERTEVENT: time is 5052.570312
+            INSERTEVENT: future time will be 5059.331055
+
+EVENT time: 5059.331055,  type: 2, fromlayer3  entity: 1
+B_INPUT: seq: 0 ack: -1 message: Zccccccccccccccccccc
+B_INPUT: packet is not valid, incorrect checksum
+
+EVENT time: 5102.570312,  type: 0, timerinterrupt   entity: 0
+A_TIMER: resending packet
+          START TIMER: starting timer at 5102.570312
+            INSERTEVENT: time is 5102.570312
+            INSERTEVENT: future time will be 5152.570312
+          TOLAYER3: seq: 0, ack -1, check: 1979 cccccccccccccccccccc
+          TOLAYER3: packet being corrupted
+          TOLAYER3: scheduling arrival on other side
+            INSERTEVENT: time is 5102.570312
+            INSERTEVENT: future time will be 5107.605957
+
+EVENT time: 5107.605957,  type: 2, fromlayer3  entity: 1
+B_INPUT: seq: 0 ack: -1 message: Zccccccccccccccccccc
+B_INPUT: packet is not valid, incorrect checksum
+
+EVENT time: 5152.570312,  type: 0, timerinterrupt   entity: 0
+A_TIMER: resending packet
+          START TIMER: starting timer at 5152.570312
+            INSERTEVENT: time is 5152.570312
+            INSERTEVENT: future time will be 5202.570312
+          TOLAYER3: seq: 0, ack -1, check: 1979 cccccccccccccccccccc
+          TOLAYER3: packet being corrupted
+          TOLAYER3: scheduling arrival on other side
+            INSERTEVENT: time is 5152.570312
+            INSERTEVENT: future time will be 5161.453613
+
+EVENT time: 5161.453613,  type: 2, fromlayer3  entity: 1
+B_INPUT: seq: 0 ack: 999999 message: cccccccccccccccccccc
+B_INPUT: packet is not valid, incorrect checksum
+
+EVENT time: 5202.570312,  type: 0, timerinterrupt   entity: 0
+A_TIMER: resending packet
+          START TIMER: starting timer at 5202.570312
+            INSERTEVENT: time is 5202.570312
+            INSERTEVENT: future time will be 5252.570312
+          TOLAYER3: seq: 0, ack -1, check: 1979 cccccccccccccccccccc
+          TOLAYER3: scheduling arrival on other side
+            INSERTEVENT: time is 5202.570312
+            INSERTEVENT: future time will be 5209.371094
+
+EVENT time: 5209.371094,  type: 2, fromlayer3  entity: 1
+B_INPUT: seq: 0 ack: -1 message: cccccccccccccccccccc
+B_INPUT: packet is valid
+B_INPUT: correct packet received
+          TOLAYER3: seq: -1, ack 0, check: 1979 cccccccccccccccccccc
+          TOLAYER3: packet being corrupted
+          TOLAYER3: scheduling arrival on other side
+            INSERTEVENT: time is 5209.371094
+            INSERTEVENT: future time will be 5213.877930
+          TOLAYER5: data received: cccccccccccccccccccc
+B_APPLICATION_OUTPUT: cccccccccccccccccccc
+
+EVENT time: 5213.877930,  type: 2, fromlayer3  entity: 0
+A_INPUT: seq: -1 ack: 0 message: Zccccccccccccccccccc
+packet is not valid
+
+EVENT time: 5252.570312,  type: 0, timerinterrupt   entity: 0
+A_TIMER: resending packet
+          START TIMER: starting timer at 5252.570312
+            INSERTEVENT: time is 5252.570312
+            INSERTEVENT: future time will be 5302.570312
+          TOLAYER3: seq: 0, ack -1, check: 1979 cccccccccccccccccccc
+          TOLAYER3: scheduling arrival on other side
+            INSERTEVENT: time is 5252.570312
+            INSERTEVENT: future time will be 5260.231934
+
+EVENT time: 5260.231934,  type: 2, fromlayer3  entity: 1
+B_INPUT: seq: 0 ack: -1 message: cccccccccccccccccccc
+B_INPUT: packet is valid
+B_INPUT: duplicate packet received, resend ack
+          TOLAYER3: seq: -1, ack 0, check: 1979 cccccccccccccccccccc
+          TOLAYER3: packet being corrupted
+          TOLAYER3: scheduling arrival on other side
+            INSERTEVENT: time is 5260.231934
+            INSERTEVENT: future time will be 5266.490723
+
+EVENT time: 5266.490723,  type: 2, fromlayer3  entity: 0
+A_INPUT: seq: -1 ack: 999999 message: cccccccccccccccccccc
+packet is not valid
+
+EVENT time: 5302.570312,  type: 0, timerinterrupt   entity: 0
+A_TIMER: resending packet
+          START TIMER: starting timer at 5302.570312
+            INSERTEVENT: time is 5302.570312
+            INSERTEVENT: future time will be 5352.570312
+          TOLAYER3: seq: 0, ack -1, check: 1979 cccccccccccccccccccc
+          TOLAYER3: packet being corrupted
+          TOLAYER3: scheduling arrival on other side
+            INSERTEVENT: time is 5302.570312
+            INSERTEVENT: future time will be 5308.758789
+
+EVENT time: 5308.758789,  type: 2, fromlayer3  entity: 1
+B_INPUT: seq: 999999 ack: -1 message: cccccccccccccccccccc
+B_INPUT: packet is not valid, incorrect checksum
+
+EVENT time: 5352.570312,  type: 0, timerinterrupt   entity: 0
+A_TIMER: resending packet
+          START TIMER: starting timer at 5352.570312
+            INSERTEVENT: time is 5352.570312
+            INSERTEVENT: future time will be 5402.570312
+          TOLAYER3: seq: 0, ack -1, check: 1979 cccccccccccccccccccc
+          TOLAYER3: packet being corrupted
+          TOLAYER3: scheduling arrival on other side
+            INSERTEVENT: time is 5352.570312
+            INSERTEVENT: future time will be 5361.887207
+
+EVENT time: 5361.887207,  type: 2, fromlayer3  entity: 1
+B_INPUT: seq: 999999 ack: -1 message: cccccccccccccccccccc
+B_INPUT: packet is not valid, incorrect checksum
+
+EVENT time: 5402.570312,  type: 0, timerinterrupt   entity: 0
+A_TIMER: resending packet
+          START TIMER: starting timer at 5402.570312
+            INSERTEVENT: time is 5402.570312
+            INSERTEVENT: future time will be 5452.570312
+          TOLAYER3: seq: 0, ack -1, check: 1979 cccccccccccccccccccc
+          TOLAYER3: packet being corrupted
+          TOLAYER3: scheduling arrival on other side
+            INSERTEVENT: time is 5402.570312
+            INSERTEVENT: future time will be 5409.917969
+
+EVENT time: 5409.917969,  type: 2, fromlayer3  entity: 1
+B_INPUT: seq: 0 ack: -1 message: Zccccccccccccccccccc
+B_INPUT: packet is not valid, incorrect checksum
+
+EVENT time: 5452.570312,  type: 0, timerinterrupt   entity: 0
+A_TIMER: resending packet
+          START TIMER: starting timer at 5452.570312
+            INSERTEVENT: time is 5452.570312
+            INSERTEVENT: future time will be 5502.570312
+          TOLAYER3: seq: 0, ack -1, check: 1979 cccccccccccccccccccc
+          TOLAYER3: packet being corrupted
+          TOLAYER3: scheduling arrival on other side
+            INSERTEVENT: time is 5452.570312
+            INSERTEVENT: future time will be 5460.942383
+
+EVENT time: 5460.942383,  type: 2, fromlayer3  entity: 1
+B_INPUT: seq: 0 ack: -1 message: Zccccccccccccccccccc
+B_INPUT: packet is not valid, incorrect checksum
+
+EVENT time: 5502.570312,  type: 0, timerinterrupt   entity: 0
+A_TIMER: resending packet
+          START TIMER: starting timer at 5502.570312
+            INSERTEVENT: time is 5502.570312
+            INSERTEVENT: future time will be 5552.570312
+          TOLAYER3: seq: 0, ack -1, check: 1979 cccccccccccccccccccc
+          TOLAYER3: packet being corrupted
+          TOLAYER3: scheduling arrival on other side
+            INSERTEVENT: time is 5502.570312
+            INSERTEVENT: future time will be 5504.711426
+
+EVENT time: 5504.711426,  type: 2, fromlayer3  entity: 1
+B_INPUT: seq: 999999 ack: -1 message: cccccccccccccccccccc
+B_INPUT: packet is not valid, incorrect checksum
+
+EVENT time: 5552.570312,  type: 0, timerinterrupt   entity: 0
+A_TIMER: resending packet
+          START TIMER: starting timer at 5552.570312
+            INSERTEVENT: time is 5552.570312
+            INSERTEVENT: future time will be 5602.570312
+          TOLAYER3: seq: 0, ack -1, check: 1979 cccccccccccccccccccc
+          TOLAYER3: packet being corrupted
+          TOLAYER3: scheduling arrival on other side
+            INSERTEVENT: time is 5552.570312
+            INSERTEVENT: future time will be 5558.582520
+
+EVENT time: 5558.582520,  type: 2, fromlayer3  entity: 1
+B_INPUT: seq: 0 ack: -1 message: Zccccccccccccccccccc
+B_INPUT: packet is not valid, incorrect checksum
+
+EVENT time: 5602.570312,  type: 0, timerinterrupt   entity: 0
+A_TIMER: resending packet
+          START TIMER: starting timer at 5602.570312
+            INSERTEVENT: time is 5602.570312
+            INSERTEVENT: future time will be 5652.570312
+          TOLAYER3: seq: 0, ack -1, check: 1979 cccccccccccccccccccc
+          TOLAYER3: packet being corrupted
+          TOLAYER3: scheduling arrival on other side
+            INSERTEVENT: time is 5602.570312
+            INSERTEVENT: future time will be 5603.854980
+
+EVENT time: 5603.854980,  type: 2, fromlayer3  entity: 1
+B_INPUT: seq: 0 ack: -1 message: Zccccccccccccccccccc
+B_INPUT: packet is not valid, incorrect checksum
+
+EVENT time: 5652.570312,  type: 0, timerinterrupt   entity: 0
+A_TIMER: resending packet
+          START TIMER: starting timer at 5652.570312
+            INSERTEVENT: time is 5652.570312
+            INSERTEVENT: future time will be 5702.570312
+          TOLAYER3: seq: 0, ack -1, check: 1979 cccccccccccccccccccc
+          TOLAYER3: packet being corrupted
+          TOLAYER3: scheduling arrival on other side
+            INSERTEVENT: time is 5652.570312
+            INSERTEVENT: future time will be 5655.476562
+
+EVENT time: 5655.476562,  type: 2, fromlayer3  entity: 1
+B_INPUT: seq: 0 ack: 999999 message: cccccccccccccccccccc
+B_INPUT: packet is not valid, incorrect checksum
+
+EVENT time: 5702.570312,  type: 0, timerinterrupt   entity: 0
+A_TIMER: resending packet
+          START TIMER: starting timer at 5702.570312
+            INSERTEVENT: time is 5702.570312
+            INSERTEVENT: future time will be 5752.570312
+          TOLAYER3: seq: 0, ack -1, check: 1979 cccccccccccccccccccc
+          TOLAYER3: packet being corrupted
+          TOLAYER3: scheduling arrival on other side
+            INSERTEVENT: time is 5702.570312
+            INSERTEVENT: future time will be 5710.063965
+
+EVENT time: 5710.063965,  type: 2, fromlayer3  entity: 1
+B_INPUT: seq: 0 ack: -1 message: Zccccccccccccccccccc
+B_INPUT: packet is not valid, incorrect checksum
+
+EVENT time: 5752.570312,  type: 0, timerinterrupt   entity: 0
+A_TIMER: resending packet
+          START TIMER: starting timer at 5752.570312
+            INSERTEVENT: time is 5752.570312
+            INSERTEVENT: future time will be 5802.570312
+          TOLAYER3: seq: 0, ack -1, check: 1979 cccccccccccccccccccc
+          TOLAYER3: packet being corrupted
+          TOLAYER3: scheduling arrival on other side
+            INSERTEVENT: time is 5752.570312
+            INSERTEVENT: future time will be 5754.957520
+
+EVENT time: 5754.957520,  type: 2, fromlayer3  entity: 1
+B_INPUT: seq: 999999 ack: -1 message: cccccccccccccccccccc
+B_INPUT: packet is not valid, incorrect checksum
+
+EVENT time: 5802.570312,  type: 0, timerinterrupt   entity: 0
+A_TIMER: resending packet
+          START TIMER: starting timer at 5802.570312
+            INSERTEVENT: time is 5802.570312
+            INSERTEVENT: future time will be 5852.570312
+          TOLAYER3: seq: 0, ack -1, check: 1979 cccccccccccccccccccc
+          TOLAYER3: packet being corrupted
+          TOLAYER3: scheduling arrival on other side
+            INSERTEVENT: time is 5802.570312
+            INSERTEVENT: future time will be 5806.474609
+
+EVENT time: 5806.474609,  type: 2, fromlayer3  entity: 1
+B_INPUT: seq: 999999 ack: -1 message: cccccccccccccccccccc
+B_INPUT: packet is not valid, incorrect checksum
+
+EVENT time: 5852.570312,  type: 0, timerinterrupt   entity: 0
+A_TIMER: resending packet
+          START TIMER: starting timer at 5852.570312
+            INSERTEVENT: time is 5852.570312
+            INSERTEVENT: future time will be 5902.570312
+          TOLAYER3: seq: 0, ack -1, check: 1979 cccccccccccccccccccc
+          TOLAYER3: packet being corrupted
+          TOLAYER3: scheduling arrival on other side
+            INSERTEVENT: time is 5852.570312
+            INSERTEVENT: future time will be 5861.262207
+
+EVENT time: 5861.262207,  type: 2, fromlayer3  entity: 1
+B_INPUT: seq: 0 ack: 999999 message: cccccccccccccccccccc
+B_INPUT: packet is not valid, incorrect checksum
+
+EVENT time: 5902.570312,  type: 0, timerinterrupt   entity: 0
+A_TIMER: resending packet
+          START TIMER: starting timer at 5902.570312
+            INSERTEVENT: time is 5902.570312
+            INSERTEVENT: future time will be 5952.570312
+          TOLAYER3: seq: 0, ack -1, check: 1979 cccccccccccccccccccc
+          TOLAYER3: packet being corrupted
+          TOLAYER3: scheduling arrival on other side
+            INSERTEVENT: time is 5902.570312
+            INSERTEVENT: future time will be 5908.585938
+
+EVENT time: 5908.585938,  type: 2, fromlayer3  entity: 1
+B_INPUT: seq: 0 ack: 999999 message: cccccccccccccccccccc
+B_INPUT: packet is not valid, incorrect checksum
+
+EVENT time: 5952.570312,  type: 0, timerinterrupt   entity: 0
+A_TIMER: resending packet
+          START TIMER: starting timer at 5952.570312
+            INSERTEVENT: time is 5952.570312
+            INSERTEVENT: future time will be 6002.570312
+          TOLAYER3: seq: 0, ack -1, check: 1979 cccccccccccccccccccc
+          TOLAYER3: packet being corrupted
+          TOLAYER3: scheduling arrival on other side
+            INSERTEVENT: time is 5952.570312
+            INSERTEVENT: future time will be 5953.570801
+
+EVENT time: 5953.570801,  type: 2, fromlayer3  entity: 1
+B_INPUT: seq: 0 ack: -1 message: Zccccccccccccccccccc
+B_INPUT: packet is not valid, incorrect checksum
+
+EVENT time: 6002.570312,  type: 0, timerinterrupt   entity: 0
+A_TIMER: resending packet
+          START TIMER: starting timer at 6002.570312
+            INSERTEVENT: time is 6002.570312
+            INSERTEVENT: future time will be 6052.570312
+          TOLAYER3: seq: 0, ack -1, check: 1979 cccccccccccccccccccc
+          TOLAYER3: packet being corrupted
+          TOLAYER3: scheduling arrival on other side
+            INSERTEVENT: time is 6002.570312
+            INSERTEVENT: future time will be 6005.974121
+
+EVENT time: 6005.974121,  type: 2, fromlayer3  entity: 1
+B_INPUT: seq: 0 ack: -1 message: Zccccccccccccccccccc
+B_INPUT: packet is not valid, incorrect checksum
+
+EVENT time: 6052.570312,  type: 0, timerinterrupt   entity: 0
+A_TIMER: resending packet
+          START TIMER: starting timer at 6052.570312
+            INSERTEVENT: time is 6052.570312
+            INSERTEVENT: future time will be 6102.570312
+          TOLAYER3: seq: 0, ack -1, check: 1979 cccccccccccccccccccc
+          TOLAYER3: packet being corrupted
+          TOLAYER3: scheduling arrival on other side
+            INSERTEVENT: time is 6052.570312
+            INSERTEVENT: future time will be 6059.989258
+
+EVENT time: 6059.989258,  type: 2, fromlayer3  entity: 1
+B_INPUT: seq: 0 ack: -1 message: Zccccccccccccccccccc
+B_INPUT: packet is not valid, incorrect checksum
+
+EVENT time: 6082.634766,  type: 1, fromlayer5  entity: 0
+          GENERATE NEXT ARRIVAL: creating new arrival
+            INSERTEVENT: time is 6082.634766
+            INSERTEVENT: future time will be 6952.114746
+          MAINLOOP: data given to student: eeeeeeeeeeeeeeeeeeee
+A_OUTPUT called: eeeeeeeeeeeeeeeeeeee
+A_OUTPUT: message in_transit, returning
+
+EVENT time: 6102.570312,  type: 0, timerinterrupt   entity: 0
+A_TIMER: resending packet
+          START TIMER: starting timer at 6102.570312
+            INSERTEVENT: time is 6102.570312
+            INSERTEVENT: future time will be 6152.570312
+          TOLAYER3: seq: 0, ack -1, check: 1979 cccccccccccccccccccc
+          TOLAYER3: packet being corrupted
+          TOLAYER3: scheduling arrival on other side
+            INSERTEVENT: time is 6102.570312
+            INSERTEVENT: future time will be 6108.728516
+
+EVENT time: 6108.728516,  type: 2, fromlayer3  entity: 1
+B_INPUT: seq: 0 ack: -1 message: Zccccccccccccccccccc
+B_INPUT: packet is not valid, incorrect checksum
+
+EVENT time: 6152.570312,  type: 0, timerinterrupt   entity: 0
+A_TIMER: resending packet
+          START TIMER: starting timer at 6152.570312
+            INSERTEVENT: time is 6152.570312
+            INSERTEVENT: future time will be 6202.570312
+          TOLAYER3: seq: 0, ack -1, check: 1979 cccccccccccccccccccc
+          TOLAYER3: packet being corrupted
+          TOLAYER3: scheduling arrival on other side
+            INSERTEVENT: time is 6152.570312
+            INSERTEVENT: future time will be 6161.354004
+
+EVENT time: 6161.354004,  type: 2, fromlayer3  entity: 1
+B_INPUT: seq: 0 ack: 999999 message: cccccccccccccccccccc
+B_INPUT: packet is not valid, incorrect checksum
+
+EVENT time: 6202.570312,  type: 0, timerinterrupt   entity: 0
+A_TIMER: resending packet
+          START TIMER: starting timer at 6202.570312
+            INSERTEVENT: time is 6202.570312
+            INSERTEVENT: future time will be 6252.570312
+          TOLAYER3: seq: 0, ack -1, check: 1979 cccccccccccccccccccc
+          TOLAYER3: packet being corrupted
+          TOLAYER3: scheduling arrival on other side
+            INSERTEVENT: time is 6202.570312
+            INSERTEVENT: future time will be 6205.324707
+
+EVENT time: 6205.324707,  type: 2, fromlayer3  entity: 1
+B_INPUT: seq: 0 ack: -1 message: Zccccccccccccccccccc
+B_INPUT: packet is not valid, incorrect checksum
+
+EVENT time: 6252.570312,  type: 0, timerinterrupt   entity: 0
+A_TIMER: resending packet
+          START TIMER: starting timer at 6252.570312
+            INSERTEVENT: time is 6252.570312
+            INSERTEVENT: future time will be 6302.570312
+          TOLAYER3: seq: 0, ack -1, check: 1979 cccccccccccccccccccc
+          TOLAYER3: packet being corrupted
+          TOLAYER3: scheduling arrival on other side
+            INSERTEVENT: time is 6252.570312
+            INSERTEVENT: future time will be 6254.114258
+
+EVENT time: 6254.114258,  type: 2, fromlayer3  entity: 1
+B_INPUT: seq: 0 ack: -1 message: Zccccccccccccccccccc
+B_INPUT: packet is not valid, incorrect checksum
+
+EVENT time: 6302.570312,  type: 0, timerinterrupt   entity: 0
+A_TIMER: resending packet
+          START TIMER: starting timer at 6302.570312
+            INSERTEVENT: time is 6302.570312
+            INSERTEVENT: future time will be 6352.570312
+          TOLAYER3: seq: 0, ack -1, check: 1979 cccccccccccccccccccc
+          TOLAYER3: packet being corrupted
+          TOLAYER3: scheduling arrival on other side
+            INSERTEVENT: time is 6302.570312
+            INSERTEVENT: future time will be 6312.476074
+
+EVENT time: 6312.476074,  type: 2, fromlayer3  entity: 1
+B_INPUT: seq: 999999 ack: -1 message: cccccccccccccccccccc
+B_INPUT: packet is not valid, incorrect checksum
+
+EVENT time: 6352.570312,  type: 0, timerinterrupt   entity: 0
+A_TIMER: resending packet
+          START TIMER: starting timer at 6352.570312
+            INSERTEVENT: time is 6352.570312
+            INSERTEVENT: future time will be 6402.570312
+          TOLAYER3: seq: 0, ack -1, check: 1979 cccccccccccccccccccc
+          TOLAYER3: scheduling arrival on other side
+            INSERTEVENT: time is 6352.570312
+            INSERTEVENT: future time will be 6358.648438
+
+EVENT time: 6358.648438,  type: 2, fromlayer3  entity: 1
+B_INPUT: seq: 0 ack: -1 message: cccccccccccccccccccc
+B_INPUT: packet is valid
+B_INPUT: duplicate packet received, resend ack
+          TOLAYER3: seq: -1, ack 0, check: 1979 cccccccccccccccccccc
+          TOLAYER3: packet being corrupted
+          TOLAYER3: scheduling arrival on other side
+            INSERTEVENT: time is 6358.648438
+            INSERTEVENT: future time will be 6365.041992
+
+EVENT time: 6365.041992,  type: 2, fromlayer3  entity: 0
+A_INPUT: seq: -1 ack: 999999 message: cccccccccccccccccccc
+packet is not valid
+
+EVENT time: 6402.570312,  type: 0, timerinterrupt   entity: 0
+A_TIMER: resending packet
+          START TIMER: starting timer at 6402.570312
+            INSERTEVENT: time is 6402.570312
+            INSERTEVENT: future time will be 6452.570312
+          TOLAYER3: seq: 0, ack -1, check: 1979 cccccccccccccccccccc
+          TOLAYER3: packet being corrupted
+          TOLAYER3: scheduling arrival on other side
+            INSERTEVENT: time is 6402.570312
+            INSERTEVENT: future time will be 6403.890137
+
+EVENT time: 6403.890137,  type: 2, fromlayer3  entity: 1
+B_INPUT: seq: 0 ack: -1 message: Zccccccccccccccccccc
+B_INPUT: packet is not valid, incorrect checksum
+
+EVENT time: 6452.570312,  type: 0, timerinterrupt   entity: 0
+A_TIMER: resending packet
+          START TIMER: starting timer at 6452.570312
+            INSERTEVENT: time is 6452.570312
+            INSERTEVENT: future time will be 6502.570312
+          TOLAYER3: seq: 0, ack -1, check: 1979 cccccccccccccccccccc
+          TOLAYER3: scheduling arrival on other side
+            INSERTEVENT: time is 6452.570312
+            INSERTEVENT: future time will be 6460.146484
+
+EVENT time: 6460.146484,  type: 2, fromlayer3  entity: 1
+B_INPUT: seq: 0 ack: -1 message: cccccccccccccccccccc
+B_INPUT: packet is valid
+B_INPUT: duplicate packet received, resend ack
+          TOLAYER3: seq: -1, ack 0, check: 1979 cccccccccccccccccccc
+          TOLAYER3: packet being corrupted
+          TOLAYER3: scheduling arrival on other side
+            INSERTEVENT: time is 6460.146484
+            INSERTEVENT: future time will be 6464.691895
+
+EVENT time: 6464.691895,  type: 2, fromlayer3  entity: 0
+A_INPUT: seq: -1 ack: 0 message: Zccccccccccccccccccc
+packet is not valid
+
+EVENT time: 6502.570312,  type: 0, timerinterrupt   entity: 0
+A_TIMER: resending packet
+          START TIMER: starting timer at 6502.570312
+            INSERTEVENT: time is 6502.570312
+            INSERTEVENT: future time will be 6552.570312
+          TOLAYER3: seq: 0, ack -1, check: 1979 cccccccccccccccccccc
+          TOLAYER3: packet being corrupted
+          TOLAYER3: scheduling arrival on other side
+            INSERTEVENT: time is 6502.570312
+            INSERTEVENT: future time will be 6512.020996
+
+EVENT time: 6512.020996,  type: 2, fromlayer3  entity: 1
+B_INPUT: seq: 0 ack: -1 message: Zccccccccccccccccccc
+B_INPUT: packet is not valid, incorrect checksum
+
+EVENT time: 6552.570312,  type: 0, timerinterrupt   entity: 0
+A_TIMER: resending packet
+          START TIMER: starting timer at 6552.570312
+            INSERTEVENT: time is 6552.570312
+            INSERTEVENT: future time will be 6602.570312
+          TOLAYER3: seq: 0, ack -1, check: 1979 cccccccccccccccccccc
+          TOLAYER3: packet being corrupted
+          TOLAYER3: scheduling arrival on other side
+            INSERTEVENT: time is 6552.570312
+            INSERTEVENT: future time will be 6561.897949
+
+EVENT time: 6561.897949,  type: 2, fromlayer3  entity: 1
+B_INPUT: seq: 0 ack: -1 message: Zccccccccccccccccccc
+B_INPUT: packet is not valid, incorrect checksum
+
+EVENT time: 6602.570312,  type: 0, timerinterrupt   entity: 0
+A_TIMER: resending packet
+          START TIMER: starting timer at 6602.570312
+            INSERTEVENT: time is 6602.570312
+            INSERTEVENT: future time will be 6652.570312
+          TOLAYER3: seq: 0, ack -1, check: 1979 cccccccccccccccccccc
+          TOLAYER3: packet being corrupted
+          TOLAYER3: scheduling arrival on other side
+            INSERTEVENT: time is 6602.570312
+            INSERTEVENT: future time will be 6606.604492
+
+EVENT time: 6606.604492,  type: 2, fromlayer3  entity: 1
+B_INPUT: seq: 0 ack: -1 message: Zccccccccccccccccccc
+B_INPUT: packet is not valid, incorrect checksum
+
+EVENT time: 6652.570312,  type: 0, timerinterrupt   entity: 0
+A_TIMER: resending packet
+          START TIMER: starting timer at 6652.570312
+            INSERTEVENT: time is 6652.570312
+            INSERTEVENT: future time will be 6702.570312
+          TOLAYER3: seq: 0, ack -1, check: 1979 cccccccccccccccccccc
+          TOLAYER3: scheduling arrival on other side
+            INSERTEVENT: time is 6652.570312
+            INSERTEVENT: future time will be 6655.880371
+
+EVENT time: 6655.880371,  type: 2, fromlayer3  entity: 1
+B_INPUT: seq: 0 ack: -1 message: cccccccccccccccccccc
+B_INPUT: packet is valid
+B_INPUT: duplicate packet received, resend ack
+          TOLAYER3: seq: -1, ack 0, check: 1979 cccccccccccccccccccc
+          TOLAYER3: packet being corrupted
+          TOLAYER3: scheduling arrival on other side
+            INSERTEVENT: time is 6655.880371
+            INSERTEVENT: future time will be 6662.894531
+
+EVENT time: 6662.894531,  type: 2, fromlayer3  entity: 0
+A_INPUT: seq: -1 ack: 0 message: Zccccccccccccccccccc
+packet is not valid
+
+EVENT time: 6702.570312,  type: 0, timerinterrupt   entity: 0
+A_TIMER: resending packet
+          START TIMER: starting timer at 6702.570312
+            INSERTEVENT: time is 6702.570312
+            INSERTEVENT: future time will be 6752.570312
+          TOLAYER3: seq: 0, ack -1, check: 1979 cccccccccccccccccccc
+          TOLAYER3: packet being corrupted
+          TOLAYER3: scheduling arrival on other side
+            INSERTEVENT: time is 6702.570312
+            INSERTEVENT: future time will be 6710.771484
+
+EVENT time: 6710.771484,  type: 2, fromlayer3  entity: 1
+B_INPUT: seq: 0 ack: -1 message: Zccccccccccccccccccc
+B_INPUT: packet is not valid, incorrect checksum
+
+EVENT time: 6752.570312,  type: 0, timerinterrupt   entity: 0
+A_TIMER: resending packet
+          START TIMER: starting timer at 6752.570312
+            INSERTEVENT: time is 6752.570312
+            INSERTEVENT: future time will be 6802.570312
+          TOLAYER3: seq: 0, ack -1, check: 1979 cccccccccccccccccccc
+          TOLAYER3: packet being corrupted
+          TOLAYER3: scheduling arrival on other side
+            INSERTEVENT: time is 6752.570312
+            INSERTEVENT: future time will be 6760.234375
+
+EVENT time: 6760.234375,  type: 2, fromlayer3  entity: 1
+B_INPUT: seq: 0 ack: -1 message: Zccccccccccccccccccc
+B_INPUT: packet is not valid, incorrect checksum
+
+EVENT time: 6802.570312,  type: 0, timerinterrupt   entity: 0
+A_TIMER: resending packet
+          START TIMER: starting timer at 6802.570312
+            INSERTEVENT: time is 6802.570312
+            INSERTEVENT: future time will be 6852.570312
+          TOLAYER3: seq: 0, ack -1, check: 1979 cccccccccccccccccccc
+          TOLAYER3: packet being corrupted
+          TOLAYER3: scheduling arrival on other side
+            INSERTEVENT: time is 6802.570312
+            INSERTEVENT: future time will be 6811.137695
+
+EVENT time: 6811.137695,  type: 2, fromlayer3  entity: 1
+B_INPUT: seq: 0 ack: -1 message: Zccccccccccccccccccc
+B_INPUT: packet is not valid, incorrect checksum
+
+EVENT time: 6852.570312,  type: 0, timerinterrupt   entity: 0
+A_TIMER: resending packet
+          START TIMER: starting timer at 6852.570312
+            INSERTEVENT: time is 6852.570312
+            INSERTEVENT: future time will be 6902.570312
+          TOLAYER3: seq: 0, ack -1, check: 1979 cccccccccccccccccccc
+          TOLAYER3: packet being corrupted
+          TOLAYER3: scheduling arrival on other side
+            INSERTEVENT: time is 6852.570312
+            INSERTEVENT: future time will be 6853.627930
+
+EVENT time: 6853.627930,  type: 2, fromlayer3  entity: 1
+B_INPUT: seq: 0 ack: -1 message: Zccccccccccccccccccc
+B_INPUT: packet is not valid, incorrect checksum
+
+EVENT time: 6902.570312,  type: 0, timerinterrupt   entity: 0
+A_TIMER: resending packet
+          START TIMER: starting timer at 6902.570312
+            INSERTEVENT: time is 6902.570312
+            INSERTEVENT: future time will be 6952.570312
+          TOLAYER3: seq: 0, ack -1, check: 1979 cccccccccccccccccccc
+          TOLAYER3: packet being corrupted
+          TOLAYER3: scheduling arrival on other side
+            INSERTEVENT: time is 6902.570312
+            INSERTEVENT: future time will be 6912.292969
+
+EVENT time: 6912.292969,  type: 2, fromlayer3  entity: 1
+B_INPUT: seq: 0 ack: -1 message: Zccccccccccccccccccc
+B_INPUT: packet is not valid, incorrect checksum
+
+EVENT time: 6952.114746,  type: 1, fromlayer5  entity: 0
+          GENERATE NEXT ARRIVAL: creating new arrival
+            INSERTEVENT: time is 6952.114746
+            INSERTEVENT: future time will be 7025.750000
+          MAINLOOP: data given to student: ffffffffffffffffffff
+A_OUTPUT called: ffffffffffffffffffff
+A_OUTPUT: message in_transit, returning
+
+EVENT time: 6952.570312,  type: 0, timerinterrupt   entity: 0
+A_TIMER: resending packet
+          START TIMER: starting timer at 6952.570312
+            INSERTEVENT: time is 6952.570312
+            INSERTEVENT: future time will be 7002.570312
+          TOLAYER3: seq: 0, ack -1, check: 1979 cccccccccccccccccccc
+          TOLAYER3: packet being corrupted
+          TOLAYER3: scheduling arrival on other side
+            INSERTEVENT: time is 6952.570312
+            INSERTEVENT: future time will be 6956.102539
+
+EVENT time: 6956.102539,  type: 2, fromlayer3  entity: 1
+B_INPUT: seq: 0 ack: -1 message: Zccccccccccccccccccc
+B_INPUT: packet is not valid, incorrect checksum
+
+EVENT time: 7002.570312,  type: 0, timerinterrupt   entity: 0
+A_TIMER: resending packet
+          START TIMER: starting timer at 7002.570312
+            INSERTEVENT: time is 7002.570312
+            INSERTEVENT: future time will be 7052.570312
+          TOLAYER3: seq: 0, ack -1, check: 1979 cccccccccccccccccccc
+          TOLAYER3: packet being corrupted
+          TOLAYER3: scheduling arrival on other side
+            INSERTEVENT: time is 7002.570312
+            INSERTEVENT: future time will be 7005.813477
+
+EVENT time: 7005.813477,  type: 2, fromlayer3  entity: 1
+B_INPUT: seq: 0 ack: -1 message: Zccccccccccccccccccc
+B_INPUT: packet is not valid, incorrect checksum
+
+EVENT time: 7025.750000,  type: 1, fromlayer5  entity: 0
+          GENERATE NEXT ARRIVAL: creating new arrival
+            INSERTEVENT: time is 7025.750000
+            INSERTEVENT: future time will be 8499.551758
+          MAINLOOP: data given to student: gggggggggggggggggggg
+A_OUTPUT called: gggggggggggggggggggg
+A_OUTPUT: message in_transit, returning
+
+EVENT time: 7052.570312,  type: 0, timerinterrupt   entity: 0
+A_TIMER: resending packet
+          START TIMER: starting timer at 7052.570312
+            INSERTEVENT: time is 7052.570312
+            INSERTEVENT: future time will be 7102.570312
+          TOLAYER3: seq: 0, ack -1, check: 1979 cccccccccccccccccccc
+          TOLAYER3: packet being corrupted
+          TOLAYER3: scheduling arrival on other side
+            INSERTEVENT: time is 7052.570312
+            INSERTEVENT: future time will be 7060.454590
+
+EVENT time: 7060.454590,  type: 2, fromlayer3  entity: 1
+B_INPUT: seq: 0 ack: -1 message: Zccccccccccccccccccc
+B_INPUT: packet is not valid, incorrect checksum
+
+EVENT time: 7102.570312,  type: 0, timerinterrupt   entity: 0
+A_TIMER: resending packet
+          START TIMER: starting timer at 7102.570312
+            INSERTEVENT: time is 7102.570312
+            INSERTEVENT: future time will be 7152.570312
+          TOLAYER3: seq: 0, ack -1, check: 1979 cccccccccccccccccccc
+          TOLAYER3: packet being corrupted
+          TOLAYER3: scheduling arrival on other side
+            INSERTEVENT: time is 7102.570312
+            INSERTEVENT: future time will be 7104.329590
+
+EVENT time: 7104.329590,  type: 2, fromlayer3  entity: 1
+B_INPUT: seq: 0 ack: 999999 message: cccccccccccccccccccc
+B_INPUT: packet is not valid, incorrect checksum
+
+EVENT time: 7152.570312,  type: 0, timerinterrupt   entity: 0
+A_TIMER: resending packet
+          START TIMER: starting timer at 7152.570312
+            INSERTEVENT: time is 7152.570312
+            INSERTEVENT: future time will be 7202.570312
+          TOLAYER3: seq: 0, ack -1, check: 1979 cccccccccccccccccccc
+          TOLAYER3: packet being corrupted
+          TOLAYER3: scheduling arrival on other side
+            INSERTEVENT: time is 7152.570312
+            INSERTEVENT: future time will be 7159.795898
+
+EVENT time: 7159.795898,  type: 2, fromlayer3  entity: 1
+B_INPUT: seq: 0 ack: -1 message: Zccccccccccccccccccc
+B_INPUT: packet is not valid, incorrect checksum
+
+EVENT time: 7202.570312,  type: 0, timerinterrupt   entity: 0
+A_TIMER: resending packet
+          START TIMER: starting timer at 7202.570312
+            INSERTEVENT: time is 7202.570312
+            INSERTEVENT: future time will be 7252.570312
+          TOLAYER3: seq: 0, ack -1, check: 1979 cccccccccccccccccccc
+          TOLAYER3: packet being corrupted
+          TOLAYER3: scheduling arrival on other side
+            INSERTEVENT: time is 7202.570312
+            INSERTEVENT: future time will be 7212.475586
+
+EVENT time: 7212.475586,  type: 2, fromlayer3  entity: 1
+B_INPUT: seq: 0 ack: -1 message: Zccccccccccccccccccc
+B_INPUT: packet is not valid, incorrect checksum
+
+EVENT time: 7252.570312,  type: 0, timerinterrupt   entity: 0
+A_TIMER: resending packet
+          START TIMER: starting timer at 7252.570312
+            INSERTEVENT: time is 7252.570312
+            INSERTEVENT: future time will be 7302.570312
+          TOLAYER3: seq: 0, ack -1, check: 1979 cccccccccccccccccccc
+          TOLAYER3: packet being corrupted
+          TOLAYER3: scheduling arrival on other side
+            INSERTEVENT: time is 7252.570312
+            INSERTEVENT: future time will be 7258.788086
+
+EVENT time: 7258.788086,  type: 2, fromlayer3  entity: 1
+B_INPUT: seq: 0 ack: -1 message: Zccccccccccccccccccc
+B_INPUT: packet is not valid, incorrect checksum
+
+EVENT time: 7302.570312,  type: 0, timerinterrupt   entity: 0
+A_TIMER: resending packet
+          START TIMER: starting timer at 7302.570312
+            INSERTEVENT: time is 7302.570312
+            INSERTEVENT: future time will be 7352.570312
+          TOLAYER3: seq: 0, ack -1, check: 1979 cccccccccccccccccccc
+          TOLAYER3: packet being corrupted
+          TOLAYER3: scheduling arrival on other side
+            INSERTEVENT: time is 7302.570312
+            INSERTEVENT: future time will be 7307.577637
+
+EVENT time: 7307.577637,  type: 2, fromlayer3  entity: 1
+B_INPUT: seq: 0 ack: -1 message: Zccccccccccccccccccc
+B_INPUT: packet is not valid, incorrect checksum
+
+EVENT time: 7352.570312,  type: 0, timerinterrupt   entity: 0
+A_TIMER: resending packet
+          START TIMER: starting timer at 7352.570312
+            INSERTEVENT: time is 7352.570312
+            INSERTEVENT: future time will be 7402.570312
+          TOLAYER3: seq: 0, ack -1, check: 1979 cccccccccccccccccccc
+          TOLAYER3: packet being corrupted
+          TOLAYER3: scheduling arrival on other side
+            INSERTEVENT: time is 7352.570312
+            INSERTEVENT: future time will be 7357.057617
+
+EVENT time: 7357.057617,  type: 2, fromlayer3  entity: 1
+B_INPUT: seq: 0 ack: -1 message: Zccccccccccccccccccc
+B_INPUT: packet is not valid, incorrect checksum
+
+EVENT time: 7402.570312,  type: 0, timerinterrupt   entity: 0
+A_TIMER: resending packet
+          START TIMER: starting timer at 7402.570312
+            INSERTEVENT: time is 7402.570312
+            INSERTEVENT: future time will be 7452.570312
+          TOLAYER3: seq: 0, ack -1, check: 1979 cccccccccccccccccccc
+          TOLAYER3: packet being corrupted
+          TOLAYER3: scheduling arrival on other side
+            INSERTEVENT: time is 7402.570312
+            INSERTEVENT: future time will be 7410.542480
+
+EVENT time: 7410.542480,  type: 2, fromlayer3  entity: 1
+B_INPUT: seq: 0 ack: -1 message: Zccccccccccccccccccc
+B_INPUT: packet is not valid, incorrect checksum
+
+EVENT time: 7452.570312,  type: 0, timerinterrupt   entity: 0
+A_TIMER: resending packet
+          START TIMER: starting timer at 7452.570312
+            INSERTEVENT: time is 7452.570312
+            INSERTEVENT: future time will be 7502.570312
+          TOLAYER3: seq: 0, ack -1, check: 1979 cccccccccccccccccccc
+          TOLAYER3: packet being corrupted
+          TOLAYER3: scheduling arrival on other side
+            INSERTEVENT: time is 7452.570312
+            INSERTEVENT: future time will be 7456.534180
+
+EVENT time: 7456.534180,  type: 2, fromlayer3  entity: 1
+B_INPUT: seq: 0 ack: -1 message: Zccccccccccccccccccc
+B_INPUT: packet is not valid, incorrect checksum
+
+EVENT time: 7502.570312,  type: 0, timerinterrupt   entity: 0
+A_TIMER: resending packet
+          START TIMER: starting timer at 7502.570312
+            INSERTEVENT: time is 7502.570312
+            INSERTEVENT: future time will be 7552.570312
+          TOLAYER3: seq: 0, ack -1, check: 1979 cccccccccccccccccccc
+          TOLAYER3: scheduling arrival on other side
+            INSERTEVENT: time is 7502.570312
+            INSERTEVENT: future time will be 7508.638672
+
+EVENT time: 7508.638672,  type: 2, fromlayer3  entity: 1
+B_INPUT: seq: 0 ack: -1 message: cccccccccccccccccccc
+B_INPUT: packet is valid
+B_INPUT: duplicate packet received, resend ack
+          TOLAYER3: seq: -1, ack 0, check: 1979 cccccccccccccccccccc
+          TOLAYER3: packet being corrupted
+          TOLAYER3: scheduling arrival on other side
+            INSERTEVENT: time is 7508.638672
+            INSERTEVENT: future time will be 7511.932617
+
+EVENT time: 7511.932617,  type: 2, fromlayer3  entity: 0
+A_INPUT: seq: -1 ack: 0 message: Zccccccccccccccccccc
+packet is not valid
+
+EVENT time: 7552.570312,  type: 0, timerinterrupt   entity: 0
+A_TIMER: resending packet
+          START TIMER: starting timer at 7552.570312
+            INSERTEVENT: time is 7552.570312
+            INSERTEVENT: future time will be 7602.570312
+          TOLAYER3: seq: 0, ack -1, check: 1979 cccccccccccccccccccc
+          TOLAYER3: scheduling arrival on other side
+            INSERTEVENT: time is 7552.570312
+            INSERTEVENT: future time will be 7559.933105
+
+EVENT time: 7559.933105,  type: 2, fromlayer3  entity: 1
+B_INPUT: seq: 0 ack: -1 message: cccccccccccccccccccc
+B_INPUT: packet is valid
+B_INPUT: duplicate packet received, resend ack
+          TOLAYER3: seq: -1, ack 0, check: 1979 cccccccccccccccccccc
+          TOLAYER3: packet being corrupted
+          TOLAYER3: scheduling arrival on other side
+            INSERTEVENT: time is 7559.933105
+            INSERTEVENT: future time will be 7564.755859
+
+EVENT time: 7564.755859,  type: 2, fromlayer3  entity: 0
+A_INPUT: seq: -1 ack: 0 message: Zccccccccccccccccccc
+packet is not valid
+
+EVENT time: 7602.570312,  type: 0, timerinterrupt   entity: 0
+A_TIMER: resending packet
+          START TIMER: starting timer at 7602.570312
+            INSERTEVENT: time is 7602.570312
+            INSERTEVENT: future time will be 7652.570312
+          TOLAYER3: seq: 0, ack -1, check: 1979 cccccccccccccccccccc
+          TOLAYER3: scheduling arrival on other side
+            INSERTEVENT: time is 7602.570312
+            INSERTEVENT: future time will be 7605.927246
+
+EVENT time: 7605.927246,  type: 2, fromlayer3  entity: 1
+B_INPUT: seq: 0 ack: -1 message: cccccccccccccccccccc
+B_INPUT: packet is valid
+B_INPUT: duplicate packet received, resend ack
+          TOLAYER3: seq: -1, ack 0, check: 1979 cccccccccccccccccccc
+          TOLAYER3: packet being corrupted
+          TOLAYER3: scheduling arrival on other side
+            INSERTEVENT: time is 7605.927246
+            INSERTEVENT: future time will be 7609.557129
+
+EVENT time: 7609.557129,  type: 2, fromlayer3  entity: 0
+A_INPUT: seq: -1 ack: 0 message: Zccccccccccccccccccc
+packet is not valid
+
+EVENT time: 7652.570312,  type: 0, timerinterrupt   entity: 0
+A_TIMER: resending packet
+          START TIMER: starting timer at 7652.570312
+            INSERTEVENT: time is 7652.570312
+            INSERTEVENT: future time will be 7702.570312
+          TOLAYER3: seq: 0, ack -1, check: 1979 cccccccccccccccccccc
+          TOLAYER3: packet being corrupted
+          TOLAYER3: scheduling arrival on other side
+            INSERTEVENT: time is 7652.570312
+            INSERTEVENT: future time will be 7660.812012
+
+EVENT time: 7660.812012,  type: 2, fromlayer3  entity: 1
+B_INPUT: seq: 0 ack: -1 message: Zccccccccccccccccccc
+B_INPUT: packet is not valid, incorrect checksum
+
+EVENT time: 7702.570312,  type: 0, timerinterrupt   entity: 0
+A_TIMER: resending packet
+          START TIMER: starting timer at 7702.570312
+            INSERTEVENT: time is 7702.570312
+            INSERTEVENT: future time will be 7752.570312
+          TOLAYER3: seq: 0, ack -1, check: 1979 cccccccccccccccccccc
+          TOLAYER3: packet being corrupted
+          TOLAYER3: scheduling arrival on other side
+            INSERTEVENT: time is 7702.570312
+            INSERTEVENT: future time will be 7708.474121
+
+EVENT time: 7708.474121,  type: 2, fromlayer3  entity: 1
+B_INPUT: seq: 0 ack: 999999 message: cccccccccccccccccccc
+B_INPUT: packet is not valid, incorrect checksum
+
+EVENT time: 7752.570312,  type: 0, timerinterrupt   entity: 0
+A_TIMER: resending packet
+          START TIMER: starting timer at 7752.570312
+            INSERTEVENT: time is 7752.570312
+            INSERTEVENT: future time will be 7802.570312
+          TOLAYER3: seq: 0, ack -1, check: 1979 cccccccccccccccccccc
+          TOLAYER3: packet being corrupted
+          TOLAYER3: scheduling arrival on other side
+            INSERTEVENT: time is 7752.570312
+            INSERTEVENT: future time will be 7755.330078
+
+EVENT time: 7755.330078,  type: 2, fromlayer3  entity: 1
+B_INPUT: seq: 0 ack: -1 message: Zccccccccccccccccccc
+B_INPUT: packet is not valid, incorrect checksum
+
+EVENT time: 7802.570312,  type: 0, timerinterrupt   entity: 0
+A_TIMER: resending packet
+          START TIMER: starting timer at 7802.570312
+            INSERTEVENT: time is 7802.570312
+            INSERTEVENT: future time will be 7852.570312
+          TOLAYER3: seq: 0, ack -1, check: 1979 cccccccccccccccccccc
+          TOLAYER3: packet being corrupted
+          TOLAYER3: scheduling arrival on other side
+            INSERTEVENT: time is 7802.570312
+            INSERTEVENT: future time will be 7805.488281
+
+EVENT time: 7805.488281,  type: 2, fromlayer3  entity: 1
+B_INPUT: seq: 999999 ack: -1 message: cccccccccccccccccccc
+B_INPUT: packet is not valid, incorrect checksum
+
+EVENT time: 7852.570312,  type: 0, timerinterrupt   entity: 0
+A_TIMER: resending packet
+          START TIMER: starting timer at 7852.570312
+            INSERTEVENT: time is 7852.570312
+            INSERTEVENT: future time will be 7902.570312
+          TOLAYER3: seq: 0, ack -1, check: 1979 cccccccccccccccccccc
+          TOLAYER3: packet being corrupted
+          TOLAYER3: scheduling arrival on other side
+            INSERTEVENT: time is 7852.570312
+            INSERTEVENT: future time will be 7857.555176
+
+EVENT time: 7857.555176,  type: 2, fromlayer3  entity: 1
+B_INPUT: seq: 0 ack: -1 message: Zccccccccccccccccccc
+B_INPUT: packet is not valid, incorrect checksum
+
+EVENT time: 7902.570312,  type: 0, timerinterrupt   entity: 0
+A_TIMER: resending packet
+          START TIMER: starting timer at 7902.570312
+            INSERTEVENT: time is 7902.570312
+            INSERTEVENT: future time will be 7952.570312
+          TOLAYER3: seq: 0, ack -1, check: 1979 cccccccccccccccccccc
+          TOLAYER3: packet being corrupted
+          TOLAYER3: scheduling arrival on other side
+            INSERTEVENT: time is 7902.570312
+            INSERTEVENT: future time will be 7912.512207
+
+EVENT time: 7912.512207,  type: 2, fromlayer3  entity: 1
+B_INPUT: seq: 0 ack: -1 message: Zccccccccccccccccccc
+B_INPUT: packet is not valid, incorrect checksum
+
+EVENT time: 7952.570312,  type: 0, timerinterrupt   entity: 0
+A_TIMER: resending packet
+          START TIMER: starting timer at 7952.570312
+            INSERTEVENT: time is 7952.570312
+            INSERTEVENT: future time will be 8002.570312
+          TOLAYER3: seq: 0, ack -1, check: 1979 cccccccccccccccccccc
+          TOLAYER3: scheduling arrival on other side
+            INSERTEVENT: time is 7952.570312
+            INSERTEVENT: future time will be 7956.459961
+
+EVENT time: 7956.459961,  type: 2, fromlayer3  entity: 1
+B_INPUT: seq: 0 ack: -1 message: cccccccccccccccccccc
+B_INPUT: packet is valid
+B_INPUT: duplicate packet received, resend ack
+          TOLAYER3: seq: -1, ack 0, check: 1979 cccccccccccccccccccc
+          TOLAYER3: packet being corrupted
+          TOLAYER3: scheduling arrival on other side
+            INSERTEVENT: time is 7956.459961
+            INSERTEVENT: future time will be 7962.979492
+
+EVENT time: 7962.979492,  type: 2, fromlayer3  entity: 0
+A_INPUT: seq: -1 ack: 999999 message: cccccccccccccccccccc
+packet is not valid
+
+EVENT time: 8002.570312,  type: 0, timerinterrupt   entity: 0
+A_TIMER: resending packet
+          START TIMER: starting timer at 8002.570312
+            INSERTEVENT: time is 8002.570312
+            INSERTEVENT: future time will be 8052.570312
+          TOLAYER3: seq: 0, ack -1, check: 1979 cccccccccccccccccccc
+          TOLAYER3: packet being corrupted
+          TOLAYER3: scheduling arrival on other side
+            INSERTEVENT: time is 8002.570312
+            INSERTEVENT: future time will be 8008.313477
+
+EVENT time: 8008.313477,  type: 2, fromlayer3  entity: 1
+B_INPUT: seq: 0 ack: -1 message: Zccccccccccccccccccc
+B_INPUT: packet is not valid, incorrect checksum
+
+EVENT time: 8052.570312,  type: 0, timerinterrupt   entity: 0
+A_TIMER: resending packet
+          START TIMER: starting timer at 8052.570312
+            INSERTEVENT: time is 8052.570312
+            INSERTEVENT: future time will be 8102.570312
+          TOLAYER3: seq: 0, ack -1, check: 1979 cccccccccccccccccccc
+          TOLAYER3: packet being corrupted
+          TOLAYER3: scheduling arrival on other side
+            INSERTEVENT: time is 8052.570312
+            INSERTEVENT: future time will be 8053.987793
+
+EVENT time: 8053.987793,  type: 2, fromlayer3  entity: 1
+B_INPUT: seq: 0 ack: -1 message: Zccccccccccccccccccc
+B_INPUT: packet is not valid, incorrect checksum
+
+EVENT time: 8102.570312,  type: 0, timerinterrupt   entity: 0
+A_TIMER: resending packet
+          START TIMER: starting timer at 8102.570312
+            INSERTEVENT: time is 8102.570312
+            INSERTEVENT: future time will be 8152.570312
+          TOLAYER3: seq: 0, ack -1, check: 1979 cccccccccccccccccccc
+          TOLAYER3: packet being corrupted
+          TOLAYER3: scheduling arrival on other side
+            INSERTEVENT: time is 8102.570312
+            INSERTEVENT: future time will be 8107.885254
+
+EVENT time: 8107.885254,  type: 2, fromlayer3  entity: 1
+B_INPUT: seq: 0 ack: -1 message: Zccccccccccccccccccc
+B_INPUT: packet is not valid, incorrect checksum
+
+EVENT time: 8152.570312,  type: 0, timerinterrupt   entity: 0
+A_TIMER: resending packet
+          START TIMER: starting timer at 8152.570312
+            INSERTEVENT: time is 8152.570312
+            INSERTEVENT: future time will be 8202.570312
+          TOLAYER3: seq: 0, ack -1, check: 1979 cccccccccccccccccccc
+          TOLAYER3: packet being corrupted
+          TOLAYER3: scheduling arrival on other side
+            INSERTEVENT: time is 8152.570312
+            INSERTEVENT: future time will be 8159.000977
+
+EVENT time: 8159.000977,  type: 2, fromlayer3  entity: 1
+B_INPUT: seq: 0 ack: -1 message: Zccccccccccccccccccc
+B_INPUT: packet is not valid, incorrect checksum
+
+EVENT time: 8202.570312,  type: 0, timerinterrupt   entity: 0
+A_TIMER: resending packet
+          START TIMER: starting timer at 8202.570312
+            INSERTEVENT: time is 8202.570312
+            INSERTEVENT: future time will be 8252.570312
+          TOLAYER3: seq: 0, ack -1, check: 1979 cccccccccccccccccccc
+          TOLAYER3: packet being corrupted
+          TOLAYER3: scheduling arrival on other side
+            INSERTEVENT: time is 8202.570312
+            INSERTEVENT: future time will be 8210.714844
+
+EVENT time: 8210.714844,  type: 2, fromlayer3  entity: 1
+B_INPUT: seq: 999999 ack: -1 message: cccccccccccccccccccc
+B_INPUT: packet is not valid, incorrect checksum
+
+EVENT time: 8252.570312,  type: 0, timerinterrupt   entity: 0
+A_TIMER: resending packet
+          START TIMER: starting timer at 8252.570312
+            INSERTEVENT: time is 8252.570312
+            INSERTEVENT: future time will be 8302.570312
+          TOLAYER3: seq: 0, ack -1, check: 1979 cccccccccccccccccccc
+          TOLAYER3: scheduling arrival on other side
+            INSERTEVENT: time is 8252.570312
+            INSERTEVENT: future time will be 8254.000000
+
+EVENT time: 8254.000000,  type: 2, fromlayer3  entity: 1
+B_INPUT: seq: 0 ack: -1 message: cccccccccccccccccccc
+B_INPUT: packet is valid
+B_INPUT: duplicate packet received, resend ack
+          TOLAYER3: seq: -1, ack 0, check: 1979 cccccccccccccccccccc
+          TOLAYER3: packet being corrupted
+          TOLAYER3: scheduling arrival on other side
+            INSERTEVENT: time is 8254.000000
+            INSERTEVENT: future time will be 8259.321289
+
+EVENT time: 8259.321289,  type: 2, fromlayer3  entity: 0
+A_INPUT: seq: -1 ack: 0 message: Zccccccccccccccccccc
+packet is not valid
+
+EVENT time: 8302.570312,  type: 0, timerinterrupt   entity: 0
+A_TIMER: resending packet
+          START TIMER: starting timer at 8302.570312
+            INSERTEVENT: time is 8302.570312
+            INSERTEVENT: future time will be 8352.570312
+          TOLAYER3: seq: 0, ack -1, check: 1979 cccccccccccccccccccc
+          TOLAYER3: packet being corrupted
+          TOLAYER3: scheduling arrival on other side
+            INSERTEVENT: time is 8302.570312
+            INSERTEVENT: future time will be 8310.375977
+
+EVENT time: 8310.375977,  type: 2, fromlayer3  entity: 1
+B_INPUT: seq: 0 ack: 999999 message: cccccccccccccccccccc
+B_INPUT: packet is not valid, incorrect checksum
+
+EVENT time: 8352.570312,  type: 0, timerinterrupt   entity: 0
+A_TIMER: resending packet
+          START TIMER: starting timer at 8352.570312
+            INSERTEVENT: time is 8352.570312
+            INSERTEVENT: future time will be 8402.570312
+          TOLAYER3: seq: 0, ack -1, check: 1979 cccccccccccccccccccc
+          TOLAYER3: packet being corrupted
+          TOLAYER3: scheduling arrival on other side
+            INSERTEVENT: time is 8352.570312
+            INSERTEVENT: future time will be 8358.778320
+
+EVENT time: 8358.778320,  type: 2, fromlayer3  entity: 1
+B_INPUT: seq: 0 ack: -1 message: Zccccccccccccccccccc
+B_INPUT: packet is not valid, incorrect checksum
+
+EVENT time: 8402.570312,  type: 0, timerinterrupt   entity: 0
+A_TIMER: resending packet
+          START TIMER: starting timer at 8402.570312
+            INSERTEVENT: time is 8402.570312
+            INSERTEVENT: future time will be 8452.570312
+          TOLAYER3: seq: 0, ack -1, check: 1979 cccccccccccccccccccc
+          TOLAYER3: packet being corrupted
+          TOLAYER3: scheduling arrival on other side
+            INSERTEVENT: time is 8402.570312
+            INSERTEVENT: future time will be 8408.431641
+
+EVENT time: 8408.431641,  type: 2, fromlayer3  entity: 1
+B_INPUT: seq: 999999 ack: -1 message: cccccccccccccccccccc
+B_INPUT: packet is not valid, incorrect checksum
+
+EVENT time: 8452.570312,  type: 0, timerinterrupt   entity: 0
+A_TIMER: resending packet
+          START TIMER: starting timer at 8452.570312
+            INSERTEVENT: time is 8452.570312
+            INSERTEVENT: future time will be 8502.570312
+          TOLAYER3: seq: 0, ack -1, check: 1979 cccccccccccccccccccc
+          TOLAYER3: packet being corrupted
+          TOLAYER3: scheduling arrival on other side
+            INSERTEVENT: time is 8452.570312
+            INSERTEVENT: future time will be 8454.492188
+
+EVENT time: 8454.492188,  type: 2, fromlayer3  entity: 1
+B_INPUT: seq: 0 ack: -1 message: Zccccccccccccccccccc
+B_INPUT: packet is not valid, incorrect checksum
+
+EVENT time: 8499.551758,  type: 1, fromlayer5  entity: 0
+          GENERATE NEXT ARRIVAL: creating new arrival
+            INSERTEVENT: time is 8499.551758
+            INSERTEVENT: future time will be 9951.839844
+          MAINLOOP: data given to student: hhhhhhhhhhhhhhhhhhhh
+A_OUTPUT called: hhhhhhhhhhhhhhhhhhhh
+A_OUTPUT: message in_transit, returning
+
+EVENT time: 8502.570312,  type: 0, timerinterrupt   entity: 0
+A_TIMER: resending packet
+          START TIMER: starting timer at 8502.570312
+            INSERTEVENT: time is 8502.570312
+            INSERTEVENT: future time will be 8552.570312
+          TOLAYER3: seq: 0, ack -1, check: 1979 cccccccccccccccccccc
+          TOLAYER3: packet being corrupted
+          TOLAYER3: scheduling arrival on other side
+            INSERTEVENT: time is 8502.570312
+            INSERTEVENT: future time will be 8507.806641
+
+EVENT time: 8507.806641,  type: 2, fromlayer3  entity: 1
+B_INPUT: seq: 0 ack: 999999 message: cccccccccccccccccccc
+B_INPUT: packet is not valid, incorrect checksum
+
+EVENT time: 8552.570312,  type: 0, timerinterrupt   entity: 0
+A_TIMER: resending packet
+          START TIMER: starting timer at 8552.570312
+            INSERTEVENT: time is 8552.570312
+            INSERTEVENT: future time will be 8602.570312
+          TOLAYER3: seq: 0, ack -1, check: 1979 cccccccccccccccccccc
+          TOLAYER3: packet being corrupted
+          TOLAYER3: scheduling arrival on other side
+            INSERTEVENT: time is 8552.570312
+            INSERTEVENT: future time will be 8555.962891
+
+EVENT time: 8555.962891,  type: 2, fromlayer3  entity: 1
+B_INPUT: seq: 0 ack: -1 message: Zccccccccccccccccccc
+B_INPUT: packet is not valid, incorrect checksum
+
+EVENT time: 8602.570312,  type: 0, timerinterrupt   entity: 0
+A_TIMER: resending packet
+          START TIMER: starting timer at 8602.570312
+            INSERTEVENT: time is 8602.570312
+            INSERTEVENT: future time will be 8652.570312
+          TOLAYER3: seq: 0, ack -1, check: 1979 cccccccccccccccccccc
+          TOLAYER3: scheduling arrival on other side
+            INSERTEVENT: time is 8602.570312
+            INSERTEVENT: future time will be 8608.499023
+
+EVENT time: 8608.499023,  type: 2, fromlayer3  entity: 1
+B_INPUT: seq: 0 ack: -1 message: cccccccccccccccccccc
+B_INPUT: packet is valid
+B_INPUT: duplicate packet received, resend ack
+          TOLAYER3: seq: -1, ack 0, check: 1979 cccccccccccccccccccc
+          TOLAYER3: packet being corrupted
+          TOLAYER3: scheduling arrival on other side
+            INSERTEVENT: time is 8608.499023
+            INSERTEVENT: future time will be 8615.713867
+
+EVENT time: 8615.713867,  type: 2, fromlayer3  entity: 0
+A_INPUT: seq: 999999 ack: 0 message: cccccccccccccccccccc
+packet is not valid
+
+EVENT time: 8652.570312,  type: 0, timerinterrupt   entity: 0
+A_TIMER: resending packet
+          START TIMER: starting timer at 8652.570312
+            INSERTEVENT: time is 8652.570312
+            INSERTEVENT: future time will be 8702.570312
+          TOLAYER3: seq: 0, ack -1, check: 1979 cccccccccccccccccccc
+          TOLAYER3: packet being corrupted
+          TOLAYER3: scheduling arrival on other side
+            INSERTEVENT: time is 8652.570312
+            INSERTEVENT: future time will be 8656.520508
+
+EVENT time: 8656.520508,  type: 2, fromlayer3  entity: 1
+B_INPUT: seq: 0 ack: -1 message: Zccccccccccccccccccc
+B_INPUT: packet is not valid, incorrect checksum
+
+EVENT time: 8702.570312,  type: 0, timerinterrupt   entity: 0
+A_TIMER: resending packet
+          START TIMER: starting timer at 8702.570312
+            INSERTEVENT: time is 8702.570312
+            INSERTEVENT: future time will be 8752.570312
+          TOLAYER3: seq: 0, ack -1, check: 1979 cccccccccccccccccccc
+          TOLAYER3: packet being corrupted
+          TOLAYER3: scheduling arrival on other side
+            INSERTEVENT: time is 8702.570312
+            INSERTEVENT: future time will be 8706.083008
+
+EVENT time: 8706.083008,  type: 2, fromlayer3  entity: 1
+B_INPUT: seq: 0 ack: -1 message: Zccccccccccccccccccc
+B_INPUT: packet is not valid, incorrect checksum
+
+EVENT time: 8752.570312,  type: 0, timerinterrupt   entity: 0
+A_TIMER: resending packet
+          START TIMER: starting timer at 8752.570312
+            INSERTEVENT: time is 8752.570312
+            INSERTEVENT: future time will be 8802.570312
+          TOLAYER3: seq: 0, ack -1, check: 1979 cccccccccccccccccccc
+          TOLAYER3: packet being corrupted
+          TOLAYER3: scheduling arrival on other side
+            INSERTEVENT: time is 8752.570312
+            INSERTEVENT: future time will be 8759.318359
+
+EVENT time: 8759.318359,  type: 2, fromlayer3  entity: 1
+B_INPUT: seq: 0 ack: -1 message: Zccccccccccccccccccc
+B_INPUT: packet is not valid, incorrect checksum
+
+EVENT time: 8802.570312,  type: 0, timerinterrupt   entity: 0
+A_TIMER: resending packet
+          START TIMER: starting timer at 8802.570312
+            INSERTEVENT: time is 8802.570312
+            INSERTEVENT: future time will be 8852.570312
+          TOLAYER3: seq: 0, ack -1, check: 1979 cccccccccccccccccccc
+          TOLAYER3: packet being corrupted
+          TOLAYER3: scheduling arrival on other side
+            INSERTEVENT: time is 8802.570312
+            INSERTEVENT: future time will be 8808.118164
+
+EVENT time: 8808.118164,  type: 2, fromlayer3  entity: 1
+B_INPUT: seq: 0 ack: -1 message: Zccccccccccccccccccc
+B_INPUT: packet is not valid, incorrect checksum
+
+EVENT time: 8852.570312,  type: 0, timerinterrupt   entity: 0
+A_TIMER: resending packet
+          START TIMER: starting timer at 8852.570312
+            INSERTEVENT: time is 8852.570312
+            INSERTEVENT: future time will be 8902.570312
+          TOLAYER3: seq: 0, ack -1, check: 1979 cccccccccccccccccccc
+          TOLAYER3: packet being corrupted
+          TOLAYER3: scheduling arrival on other side
+            INSERTEVENT: time is 8852.570312
+            INSERTEVENT: future time will be 8862.306641
+
+EVENT time: 8862.306641,  type: 2, fromlayer3  entity: 1
+B_INPUT: seq: 0 ack: -1 message: Zccccccccccccccccccc
+B_INPUT: packet is not valid, incorrect checksum
+
+EVENT time: 8902.570312,  type: 0, timerinterrupt   entity: 0
+A_TIMER: resending packet
+          START TIMER: starting timer at 8902.570312
+            INSERTEVENT: time is 8902.570312
+            INSERTEVENT: future time will be 8952.570312
+          TOLAYER3: seq: 0, ack -1, check: 1979 cccccccccccccccccccc
+          TOLAYER3: scheduling arrival on other side
+            INSERTEVENT: time is 8902.570312
+            INSERTEVENT: future time will be 8912.072266
+
+EVENT time: 8912.072266,  type: 2, fromlayer3  entity: 1
+B_INPUT: seq: 0 ack: -1 message: cccccccccccccccccccc
+B_INPUT: packet is valid
+B_INPUT: duplicate packet received, resend ack
+          TOLAYER3: seq: -1, ack 0, check: 1979 cccccccccccccccccccc
+          TOLAYER3: packet being corrupted
+          TOLAYER3: scheduling arrival on other side
+            INSERTEVENT: time is 8912.072266
+            INSERTEVENT: future time will be 8915.396484
+
+EVENT time: 8915.396484,  type: 2, fromlayer3  entity: 0
+A_INPUT: seq: 999999 ack: 0 message: cccccccccccccccccccc
+packet is not valid
+
+EVENT time: 8952.570312,  type: 0, timerinterrupt   entity: 0
+A_TIMER: resending packet
+          START TIMER: starting timer at 8952.570312
+            INSERTEVENT: time is 8952.570312
+            INSERTEVENT: future time will be 9002.570312
+          TOLAYER3: seq: 0, ack -1, check: 1979 cccccccccccccccccccc
+          TOLAYER3: packet being corrupted
+          TOLAYER3: scheduling arrival on other side
+            INSERTEVENT: time is 8952.570312
+            INSERTEVENT: future time will be 8955.180664
+
+EVENT time: 8955.180664,  type: 2, fromlayer3  entity: 1
+B_INPUT: seq: 999999 ack: -1 message: cccccccccccccccccccc
+B_INPUT: packet is not valid, incorrect checksum
+
+EVENT time: 9002.570312,  type: 0, timerinterrupt   entity: 0
+A_TIMER: resending packet
+          START TIMER: starting timer at 9002.570312
+            INSERTEVENT: time is 9002.570312
+            INSERTEVENT: future time will be 9052.570312
+          TOLAYER3: seq: 0, ack -1, check: 1979 cccccccccccccccccccc
+          TOLAYER3: packet being corrupted
+          TOLAYER3: scheduling arrival on other side
+            INSERTEVENT: time is 9002.570312
+            INSERTEVENT: future time will be 9006.959961
+
+EVENT time: 9006.959961,  type: 2, fromlayer3  entity: 1
+B_INPUT: seq: 0 ack: -1 message: Zccccccccccccccccccc
+B_INPUT: packet is not valid, incorrect checksum
+
+EVENT time: 9052.570312,  type: 0, timerinterrupt   entity: 0
+A_TIMER: resending packet
+          START TIMER: starting timer at 9052.570312
+            INSERTEVENT: time is 9052.570312
+            INSERTEVENT: future time will be 9102.570312
+          TOLAYER3: seq: 0, ack -1, check: 1979 cccccccccccccccccccc
+          TOLAYER3: packet being corrupted
+          TOLAYER3: scheduling arrival on other side
+            INSERTEVENT: time is 9052.570312
+            INSERTEVENT: future time will be 9061.755859
+
+EVENT time: 9061.755859,  type: 2, fromlayer3  entity: 1
+B_INPUT: seq: 0 ack: 999999 message: cccccccccccccccccccc
+B_INPUT: packet is not valid, incorrect checksum
+
+EVENT time: 9102.570312,  type: 0, timerinterrupt   entity: 0
+A_TIMER: resending packet
+          START TIMER: starting timer at 9102.570312
+            INSERTEVENT: time is 9102.570312
+            INSERTEVENT: future time will be 9152.570312
+          TOLAYER3: seq: 0, ack -1, check: 1979 cccccccccccccccccccc
+          TOLAYER3: packet being corrupted
+          TOLAYER3: scheduling arrival on other side
+            INSERTEVENT: time is 9102.570312
+            INSERTEVENT: future time will be 9112.179688
+
+EVENT time: 9112.179688,  type: 2, fromlayer3  entity: 1
+B_INPUT: seq: 0 ack: -1 message: Zccccccccccccccccccc
+B_INPUT: packet is not valid, incorrect checksum
+
+EVENT time: 9152.570312,  type: 0, timerinterrupt   entity: 0
+A_TIMER: resending packet
+          START TIMER: starting timer at 9152.570312
+            INSERTEVENT: time is 9152.570312
+            INSERTEVENT: future time will be 9202.570312
+          TOLAYER3: seq: 0, ack -1, check: 1979 cccccccccccccccccccc
+          TOLAYER3: packet being corrupted
+          TOLAYER3: scheduling arrival on other side
+            INSERTEVENT: time is 9152.570312
+            INSERTEVENT: future time will be 9160.408203
+
+EVENT time: 9160.408203,  type: 2, fromlayer3  entity: 1
+B_INPUT: seq: 0 ack: -1 message: Zccccccccccccccccccc
+B_INPUT: packet is not valid, incorrect checksum
+
+EVENT time: 9202.570312,  type: 0, timerinterrupt   entity: 0
+A_TIMER: resending packet
+          START TIMER: starting timer at 9202.570312
+            INSERTEVENT: time is 9202.570312
+            INSERTEVENT: future time will be 9252.570312
+          TOLAYER3: seq: 0, ack -1, check: 1979 cccccccccccccccccccc
+          TOLAYER3: scheduling arrival on other side
+            INSERTEVENT: time is 9202.570312
+            INSERTEVENT: future time will be 9208.791016
+
+EVENT time: 9208.791016,  type: 2, fromlayer3  entity: 1
+B_INPUT: seq: 0 ack: -1 message: cccccccccccccccccccc
+B_INPUT: packet is valid
+B_INPUT: duplicate packet received, resend ack
+          TOLAYER3: seq: -1, ack 0, check: 1979 cccccccccccccccccccc
+          TOLAYER3: packet being corrupted
+          TOLAYER3: scheduling arrival on other side
+            INSERTEVENT: time is 9208.791016
+            INSERTEVENT: future time will be 9217.128906
+
+EVENT time: 9217.128906,  type: 2, fromlayer3  entity: 0
+A_INPUT: seq: -1 ack: 0 message: Zccccccccccccccccccc
+packet is not valid
+
+EVENT time: 9252.570312,  type: 0, timerinterrupt   entity: 0
+A_TIMER: resending packet
+          START TIMER: starting timer at 9252.570312
+            INSERTEVENT: time is 9252.570312
+            INSERTEVENT: future time will be 9302.570312
+          TOLAYER3: seq: 0, ack -1, check: 1979 cccccccccccccccccccc
+          TOLAYER3: packet being corrupted
+          TOLAYER3: scheduling arrival on other side
+            INSERTEVENT: time is 9252.570312
+            INSERTEVENT: future time will be 9253.992188
+
+EVENT time: 9253.992188,  type: 2, fromlayer3  entity: 1
+B_INPUT: seq: 0 ack: -1 message: Zccccccccccccccccccc
+B_INPUT: packet is not valid, incorrect checksum
+
+EVENT time: 9302.570312,  type: 0, timerinterrupt   entity: 0
+A_TIMER: resending packet
+          START TIMER: starting timer at 9302.570312
+            INSERTEVENT: time is 9302.570312
+            INSERTEVENT: future time will be 9352.570312
+          TOLAYER3: seq: 0, ack -1, check: 1979 cccccccccccccccccccc
+          TOLAYER3: packet being corrupted
+          TOLAYER3: scheduling arrival on other side
+            INSERTEVENT: time is 9302.570312
+            INSERTEVENT: future time will be 9311.085938
+
+EVENT time: 9311.085938,  type: 2, fromlayer3  entity: 1
+B_INPUT: seq: 0 ack: 999999 message: cccccccccccccccccccc
+B_INPUT: packet is not valid, incorrect checksum
+
+EVENT time: 9352.570312,  type: 0, timerinterrupt   entity: 0
+A_TIMER: resending packet
+          START TIMER: starting timer at 9352.570312
+            INSERTEVENT: time is 9352.570312
+            INSERTEVENT: future time will be 9402.570312
+          TOLAYER3: seq: 0, ack -1, check: 1979 cccccccccccccccccccc
+          TOLAYER3: packet being corrupted
+          TOLAYER3: scheduling arrival on other side
+            INSERTEVENT: time is 9352.570312
+            INSERTEVENT: future time will be 9361.124023
+
+EVENT time: 9361.124023,  type: 2, fromlayer3  entity: 1
+B_INPUT: seq: 999999 ack: -1 message: cccccccccccccccccccc
+B_INPUT: packet is not valid, incorrect checksum
+
+EVENT time: 9402.570312,  type: 0, timerinterrupt   entity: 0
+A_TIMER: resending packet
+          START TIMER: starting timer at 9402.570312
+            INSERTEVENT: time is 9402.570312
+            INSERTEVENT: future time will be 9452.570312
+          TOLAYER3: seq: 0, ack -1, check: 1979 cccccccccccccccccccc
+          TOLAYER3: packet being corrupted
+          TOLAYER3: scheduling arrival on other side
+            INSERTEVENT: time is 9402.570312
+            INSERTEVENT: future time will be 9407.923828
+
+EVENT time: 9407.923828,  type: 2, fromlayer3  entity: 1
+B_INPUT: seq: 0 ack: -1 message: Zccccccccccccccccccc
+B_INPUT: packet is not valid, incorrect checksum
+
+EVENT time: 9452.570312,  type: 0, timerinterrupt   entity: 0
+A_TIMER: resending packet
+          START TIMER: starting timer at 9452.570312
+            INSERTEVENT: time is 9452.570312
+            INSERTEVENT: future time will be 9502.570312
+          TOLAYER3: seq: 0, ack -1, check: 1979 cccccccccccccccccccc
+          TOLAYER3: packet being corrupted
+          TOLAYER3: scheduling arrival on other side
+            INSERTEVENT: time is 9452.570312
+            INSERTEVENT: future time will be 9453.907227
+
+EVENT time: 9453.907227,  type: 2, fromlayer3  entity: 1
+B_INPUT: seq: 0 ack: -1 message: Zccccccccccccccccccc
+B_INPUT: packet is not valid, incorrect checksum
+
+EVENT time: 9502.570312,  type: 0, timerinterrupt   entity: 0
+A_TIMER: resending packet
+          START TIMER: starting timer at 9502.570312
+            INSERTEVENT: time is 9502.570312
+            INSERTEVENT: future time will be 9552.570312
+          TOLAYER3: seq: 0, ack -1, check: 1979 cccccccccccccccccccc
+          TOLAYER3: scheduling arrival on other side
+            INSERTEVENT: time is 9502.570312
+            INSERTEVENT: future time will be 9503.831055
+
+EVENT time: 9503.831055,  type: 2, fromlayer3  entity: 1
+B_INPUT: seq: 0 ack: -1 message: cccccccccccccccccccc
+B_INPUT: packet is valid
+B_INPUT: duplicate packet received, resend ack
+          TOLAYER3: seq: -1, ack 0, check: 1979 cccccccccccccccccccc
+          TOLAYER3: packet being corrupted
+          TOLAYER3: scheduling arrival on other side
+            INSERTEVENT: time is 9503.831055
+            INSERTEVENT: future time will be 9505.198242
+
+EVENT time: 9505.198242,  type: 2, fromlayer3  entity: 0
+A_INPUT: seq: -1 ack: 0 message: Zccccccccccccccccccc
+packet is not valid
+
+EVENT time: 9552.570312,  type: 0, timerinterrupt   entity: 0
+A_TIMER: resending packet
+          START TIMER: starting timer at 9552.570312
+            INSERTEVENT: time is 9552.570312
+            INSERTEVENT: future time will be 9602.570312
+          TOLAYER3: seq: 0, ack -1, check: 1979 cccccccccccccccccccc
+          TOLAYER3: packet being corrupted
+          TOLAYER3: scheduling arrival on other side
+            INSERTEVENT: time is 9552.570312
+            INSERTEVENT: future time will be 9556.510742
+
+EVENT time: 9556.510742,  type: 2, fromlayer3  entity: 1
+B_INPUT: seq: 0 ack: -1 message: Zccccccccccccccccccc
+B_INPUT: packet is not valid, incorrect checksum
+
+EVENT time: 9602.570312,  type: 0, timerinterrupt   entity: 0
+A_TIMER: resending packet
+          START TIMER: starting timer at 9602.570312
+            INSERTEVENT: time is 9602.570312
+            INSERTEVENT: future time will be 9652.570312
+          TOLAYER3: seq: 0, ack -1, check: 1979 cccccccccccccccccccc
+          TOLAYER3: packet being corrupted
+          TOLAYER3: scheduling arrival on other side
+            INSERTEVENT: time is 9602.570312
+            INSERTEVENT: future time will be 9608.786133
+
+EVENT time: 9608.786133,  type: 2, fromlayer3  entity: 1
+B_INPUT: seq: 0 ack: -1 message: Zccccccccccccccccccc
+B_INPUT: packet is not valid, incorrect checksum
+
+EVENT time: 9652.570312,  type: 0, timerinterrupt   entity: 0
+A_TIMER: resending packet
+          START TIMER: starting timer at 9652.570312
+            INSERTEVENT: time is 9652.570312
+            INSERTEVENT: future time will be 9702.570312
+          TOLAYER3: seq: 0, ack -1, check: 1979 cccccccccccccccccccc
+          TOLAYER3: scheduling arrival on other side
+            INSERTEVENT: time is 9652.570312
+            INSERTEVENT: future time will be 9661.907227
+
+EVENT time: 9661.907227,  type: 2, fromlayer3  entity: 1
+B_INPUT: seq: 0 ack: -1 message: cccccccccccccccccccc
+B_INPUT: packet is valid
+B_INPUT: duplicate packet received, resend ack
+          TOLAYER3: seq: -1, ack 0, check: 1979 cccccccccccccccccccc
+          TOLAYER3: packet being corrupted
+          TOLAYER3: scheduling arrival on other side
+            INSERTEVENT: time is 9661.907227
+            INSERTEVENT: future time will be 9666.390625
+
+EVENT time: 9666.390625,  type: 2, fromlayer3  entity: 0
+A_INPUT: seq: -1 ack: 0 message: Zccccccccccccccccccc
+packet is not valid
+
+EVENT time: 9702.570312,  type: 0, timerinterrupt   entity: 0
+A_TIMER: resending packet
+          START TIMER: starting timer at 9702.570312
+            INSERTEVENT: time is 9702.570312
+            INSERTEVENT: future time will be 9752.570312
+          TOLAYER3: seq: 0, ack -1, check: 1979 cccccccccccccccccccc
+          TOLAYER3: packet being corrupted
+          TOLAYER3: scheduling arrival on other side
+            INSERTEVENT: time is 9702.570312
+            INSERTEVENT: future time will be 9710.827148
+
+EVENT time: 9710.827148,  type: 2, fromlayer3  entity: 1
+B_INPUT: seq: 0 ack: -1 message: Zccccccccccccccccccc
+B_INPUT: packet is not valid, incorrect checksum
+
+EVENT time: 9752.570312,  type: 0, timerinterrupt   entity: 0
+A_TIMER: resending packet
+          START TIMER: starting timer at 9752.570312
+            INSERTEVENT: time is 9752.570312
+            INSERTEVENT: future time will be 9802.570312
+          TOLAYER3: seq: 0, ack -1, check: 1979 cccccccccccccccccccc
+          TOLAYER3: packet being corrupted
+          TOLAYER3: scheduling arrival on other side
+            INSERTEVENT: time is 9752.570312
+            INSERTEVENT: future time will be 9761.605469
+
+EVENT time: 9761.605469,  type: 2, fromlayer3  entity: 1
+B_INPUT: seq: 0 ack: -1 message: Zccccccccccccccccccc
+B_INPUT: packet is not valid, incorrect checksum
+
+EVENT time: 9802.570312,  type: 0, timerinterrupt   entity: 0
+A_TIMER: resending packet
+          START TIMER: starting timer at 9802.570312
+            INSERTEVENT: time is 9802.570312
+            INSERTEVENT: future time will be 9852.570312
+          TOLAYER3: seq: 0, ack -1, check: 1979 cccccccccccccccccccc
+          TOLAYER3: packet being corrupted
+          TOLAYER3: scheduling arrival on other side
+            INSERTEVENT: time is 9802.570312
+            INSERTEVENT: future time will be 9803.599609
+
+EVENT time: 9803.599609,  type: 2, fromlayer3  entity: 1
+B_INPUT: seq: 0 ack: -1 message: Zccccccccccccccccccc
+B_INPUT: packet is not valid, incorrect checksum
+
+EVENT time: 9852.570312,  type: 0, timerinterrupt   entity: 0
+A_TIMER: resending packet
+          START TIMER: starting timer at 9852.570312
+            INSERTEVENT: time is 9852.570312
+            INSERTEVENT: future time will be 9902.570312
+          TOLAYER3: seq: 0, ack -1, check: 1979 cccccccccccccccccccc
+          TOLAYER3: packet being corrupted
+          TOLAYER3: scheduling arrival on other side
+            INSERTEVENT: time is 9852.570312
+            INSERTEVENT: future time will be 9855.011719
+
+EVENT time: 9855.011719,  type: 2, fromlayer3  entity: 1
+B_INPUT: seq: 0 ack: -1 message: Zccccccccccccccccccc
+B_INPUT: packet is not valid, incorrect checksum
+
+EVENT time: 9902.570312,  type: 0, timerinterrupt   entity: 0
+A_TIMER: resending packet
+          START TIMER: starting timer at 9902.570312
+            INSERTEVENT: time is 9902.570312
+            INSERTEVENT: future time will be 9952.570312
+          TOLAYER3: seq: 0, ack -1, check: 1979 cccccccccccccccccccc
+          TOLAYER3: packet being corrupted
+          TOLAYER3: scheduling arrival on other side
+            INSERTEVENT: time is 9902.570312
+            INSERTEVENT: future time will be 9912.427734
+
+EVENT time: 9912.427734,  type: 2, fromlayer3  entity: 1
+B_INPUT: seq: 999999 ack: -1 message: cccccccccccccccccccc
+B_INPUT: packet is not valid, incorrect checksum
+
+EVENT time: 9951.839844,  type: 1, fromlayer5  entity: 0
+          GENERATE NEXT ARRIVAL: creating new arrival
+            INSERTEVENT: time is 9951.839844
+            INSERTEVENT: future time will be 11855.979492
+          MAINLOOP: data given to student: iiiiiiiiiiiiiiiiiiii
+A_OUTPUT called: iiiiiiiiiiiiiiiiiiii
+A_OUTPUT: message in_transit, returning
+
+EVENT time: 9952.570312,  type: 0, timerinterrupt   entity: 0
+A_TIMER: resending packet
+          START TIMER: starting timer at 9952.570312
+            INSERTEVENT: time is 9952.570312
+            INSERTEVENT: future time will be 10002.570312
+          TOLAYER3: seq: 0, ack -1, check: 1979 cccccccccccccccccccc
+          TOLAYER3: packet being corrupted
+          TOLAYER3: scheduling arrival on other side
+            INSERTEVENT: time is 9952.570312
+            INSERTEVENT: future time will be 9962.158203
+
+EVENT time: 9962.158203,  type: 2, fromlayer3  entity: 1
+B_INPUT: seq: 0 ack: -1 message: Zccccccccccccccccccc
+B_INPUT: packet is not valid, incorrect checksum
+
+EVENT time: 10002.570312,  type: 0, timerinterrupt   entity: 0
+A_TIMER: resending packet
+          START TIMER: starting timer at 10002.570312
+            INSERTEVENT: time is 10002.570312
+            INSERTEVENT: future time will be 10052.570312
+          TOLAYER3: seq: 0, ack -1, check: 1979 cccccccccccccccccccc
+          TOLAYER3: packet being corrupted
+          TOLAYER3: scheduling arrival on other side
+            INSERTEVENT: time is 10002.570312
+            INSERTEVENT: future time will be 10005.174805
+
+EVENT time: 10005.174805,  type: 2, fromlayer3  entity: 1
+B_INPUT: seq: 0 ack: -1 message: Zccccccccccccccccccc
+B_INPUT: packet is not valid, incorrect checksum
+
+EVENT time: 10052.570312,  type: 0, timerinterrupt   entity: 0
+A_TIMER: resending packet
+          START TIMER: starting timer at 10052.570312
+            INSERTEVENT: time is 10052.570312
+            INSERTEVENT: future time will be 10102.570312
+          TOLAYER3: seq: 0, ack -1, check: 1979 cccccccccccccccccccc
+          TOLAYER3: packet being corrupted
+          TOLAYER3: scheduling arrival on other side
+            INSERTEVENT: time is 10052.570312
+            INSERTEVENT: future time will be 10055.879883
+
+EVENT time: 10055.879883,  type: 2, fromlayer3  entity: 1
+B_INPUT: seq: 0 ack: -1 message: Zccccccccccccccccccc
+B_INPUT: packet is not valid, incorrect checksum
+
+EVENT time: 10102.570312,  type: 0, timerinterrupt   entity: 0
+A_TIMER: resending packet
+          START TIMER: starting timer at 10102.570312
+            INSERTEVENT: time is 10102.570312
+            INSERTEVENT: future time will be 10152.570312
+          TOLAYER3: seq: 0, ack -1, check: 1979 cccccccccccccccccccc
+          TOLAYER3: packet being corrupted
+          TOLAYER3: scheduling arrival on other side
+            INSERTEVENT: time is 10102.570312
+            INSERTEVENT: future time will be 10109.404297
+
+EVENT time: 10109.404297,  type: 2, fromlayer3  entity: 1
+B_INPUT: seq: 999999 ack: -1 message: cccccccccccccccccccc
+B_INPUT: packet is not valid, incorrect checksum
+
+EVENT time: 10152.570312,  type: 0, timerinterrupt   entity: 0
+A_TIMER: resending packet
+          START TIMER: starting timer at 10152.570312
+            INSERTEVENT: time is 10152.570312
+            INSERTEVENT: future time will be 10202.570312
+          TOLAYER3: seq: 0, ack -1, check: 1979 cccccccccccccccccccc
+          TOLAYER3: packet being corrupted
+          TOLAYER3: scheduling arrival on other side
+            INSERTEVENT: time is 10152.570312
+            INSERTEVENT: future time will be 10158.790039
+
+EVENT time: 10158.790039,  type: 2, fromlayer3  entity: 1
+B_INPUT: seq: 0 ack: 999999 message: cccccccccccccccccccc
+B_INPUT: packet is not valid, incorrect checksum
+
+EVENT time: 10202.570312,  type: 0, timerinterrupt   entity: 0
+A_TIMER: resending packet
+          START TIMER: starting timer at 10202.570312
+            INSERTEVENT: time is 10202.570312
+            INSERTEVENT: future time will be 10252.570312
+          TOLAYER3: seq: 0, ack -1, check: 1979 cccccccccccccccccccc
+          TOLAYER3: scheduling arrival on other side
+            INSERTEVENT: time is 10202.570312
+            INSERTEVENT: future time will be 10205.285156
+
+EVENT time: 10205.285156,  type: 2, fromlayer3  entity: 1
+B_INPUT: seq: 0 ack: -1 message: cccccccccccccccccccc
+B_INPUT: packet is valid
+B_INPUT: duplicate packet received, resend ack
+          TOLAYER3: seq: -1, ack 0, check: 1979 cccccccccccccccccccc
+          TOLAYER3: packet being corrupted
+          TOLAYER3: scheduling arrival on other side
+            INSERTEVENT: time is 10205.285156
+            INSERTEVENT: future time will be 10213.916992
+
+EVENT time: 10213.916992,  type: 2, fromlayer3  entity: 0
+A_INPUT: seq: -1 ack: 0 message: Zccccccccccccccccccc
+packet is not valid
+
+EVENT time: 10252.570312,  type: 0, timerinterrupt   entity: 0
+A_TIMER: resending packet
+          START TIMER: starting timer at 10252.570312
+            INSERTEVENT: time is 10252.570312
+            INSERTEVENT: future time will be 10302.570312
+          TOLAYER3: seq: 0, ack -1, check: 1979 cccccccccccccccccccc
+          TOLAYER3: packet being corrupted
+          TOLAYER3: scheduling arrival on other side
+            INSERTEVENT: time is 10252.570312
+            INSERTEVENT: future time will be 10259.423828
+
+EVENT time: 10259.423828,  type: 2, fromlayer3  entity: 1
+B_INPUT: seq: 999999 ack: -1 message: cccccccccccccccccccc
+B_INPUT: packet is not valid, incorrect checksum
+
+EVENT time: 10302.570312,  type: 0, timerinterrupt   entity: 0
+A_TIMER: resending packet
+          START TIMER: starting timer at 10302.570312
+            INSERTEVENT: time is 10302.570312
+            INSERTEVENT: future time will be 10352.570312
+          TOLAYER3: seq: 0, ack -1, check: 1979 cccccccccccccccccccc
+          TOLAYER3: packet being corrupted
+          TOLAYER3: scheduling arrival on other side
+            INSERTEVENT: time is 10302.570312
+            INSERTEVENT: future time will be 10304.509766
+
+EVENT time: 10304.509766,  type: 2, fromlayer3  entity: 1
+B_INPUT: seq: 999999 ack: -1 message: cccccccccccccccccccc
+B_INPUT: packet is not valid, incorrect checksum
+
+EVENT time: 10352.570312,  type: 0, timerinterrupt   entity: 0
+A_TIMER: resending packet
+          START TIMER: starting timer at 10352.570312
+            INSERTEVENT: time is 10352.570312
+            INSERTEVENT: future time will be 10402.570312
+          TOLAYER3: seq: 0, ack -1, check: 1979 cccccccccccccccccccc
+          TOLAYER3: scheduling arrival on other side
+            INSERTEVENT: time is 10352.570312
+            INSERTEVENT: future time will be 10356.238281
+
+EVENT time: 10356.238281,  type: 2, fromlayer3  entity: 1
+B_INPUT: seq: 0 ack: -1 message: cccccccccccccccccccc
+B_INPUT: packet is valid
+B_INPUT: duplicate packet received, resend ack
+          TOLAYER3: seq: -1, ack 0, check: 1979 cccccccccccccccccccc
+          TOLAYER3: packet being corrupted
+          TOLAYER3: scheduling arrival on other side
+            INSERTEVENT: time is 10356.238281
+            INSERTEVENT: future time will be 10358.666016
+
+EVENT time: 10358.666016,  type: 2, fromlayer3  entity: 0
+A_INPUT: seq: -1 ack: 0 message: Zccccccccccccccccccc
+packet is not valid
+
+EVENT time: 10402.570312,  type: 0, timerinterrupt   entity: 0
+A_TIMER: resending packet
+          START TIMER: starting timer at 10402.570312
+            INSERTEVENT: time is 10402.570312
+            INSERTEVENT: future time will be 10452.570312
+          TOLAYER3: seq: 0, ack -1, check: 1979 cccccccccccccccccccc
+          TOLAYER3: packet being corrupted
+          TOLAYER3: scheduling arrival on other side
+            INSERTEVENT: time is 10402.570312
+            INSERTEVENT: future time will be 10404.483398
+
+EVENT time: 10404.483398,  type: 2, fromlayer3  entity: 1
+B_INPUT: seq: 0 ack: -1 message: Zccccccccccccccccccc
+B_INPUT: packet is not valid, incorrect checksum
+
+EVENT time: 10452.570312,  type: 0, timerinterrupt   entity: 0
+A_TIMER: resending packet
+          START TIMER: starting timer at 10452.570312
+            INSERTEVENT: time is 10452.570312
+            INSERTEVENT: future time will be 10502.570312
+          TOLAYER3: seq: 0, ack -1, check: 1979 cccccccccccccccccccc
+          TOLAYER3: scheduling arrival on other side
+            INSERTEVENT: time is 10452.570312
+            INSERTEVENT: future time will be 10455.680664
+
+EVENT time: 10455.680664,  type: 2, fromlayer3  entity: 1
+B_INPUT: seq: 0 ack: -1 message: cccccccccccccccccccc
+B_INPUT: packet is valid
+B_INPUT: duplicate packet received, resend ack
+          TOLAYER3: seq: -1, ack 0, check: 1979 cccccccccccccccccccc
+          TOLAYER3: packet being corrupted
+          TOLAYER3: scheduling arrival on other side
+            INSERTEVENT: time is 10455.680664
+            INSERTEVENT: future time will be 10458.066406
+
+EVENT time: 10458.066406,  type: 2, fromlayer3  entity: 0
+A_INPUT: seq: -1 ack: 0 message: Zccccccccccccccccccc
+packet is not valid
+
+EVENT time: 10502.570312,  type: 0, timerinterrupt   entity: 0
+A_TIMER: resending packet
+          START TIMER: starting timer at 10502.570312
+            INSERTEVENT: time is 10502.570312
+            INSERTEVENT: future time will be 10552.570312
+          TOLAYER3: seq: 0, ack -1, check: 1979 cccccccccccccccccccc
+          TOLAYER3: packet being corrupted
+          TOLAYER3: scheduling arrival on other side
+            INSERTEVENT: time is 10502.570312
+            INSERTEVENT: future time will be 10507.668945
+
+EVENT time: 10507.668945,  type: 2, fromlayer3  entity: 1
+B_INPUT: seq: 0 ack: -1 message: Zccccccccccccccccccc
+B_INPUT: packet is not valid, incorrect checksum
+
+EVENT time: 10552.570312,  type: 0, timerinterrupt   entity: 0
+A_TIMER: resending packet
+          START TIMER: starting timer at 10552.570312
+            INSERTEVENT: time is 10552.570312
+            INSERTEVENT: future time will be 10602.570312
+          TOLAYER3: seq: 0, ack -1, check: 1979 cccccccccccccccccccc
+          TOLAYER3: packet being corrupted
+          TOLAYER3: scheduling arrival on other side
+            INSERTEVENT: time is 10552.570312
+            INSERTEVENT: future time will be 10561.185547
+
+EVENT time: 10561.185547,  type: 2, fromlayer3  entity: 1
+B_INPUT: seq: 0 ack: 999999 message: cccccccccccccccccccc
+B_INPUT: packet is not valid, incorrect checksum
+
+EVENT time: 10602.570312,  type: 0, timerinterrupt   entity: 0
+A_TIMER: resending packet
+          START TIMER: starting timer at 10602.570312
+            INSERTEVENT: time is 10602.570312
+            INSERTEVENT: future time will be 10652.570312
+          TOLAYER3: seq: 0, ack -1, check: 1979 cccccccccccccccccccc
+          TOLAYER3: scheduling arrival on other side
+            INSERTEVENT: time is 10602.570312
+            INSERTEVENT: future time will be 10608.138672
+
+EVENT time: 10608.138672,  type: 2, fromlayer3  entity: 1
+B_INPUT: seq: 0 ack: -1 message: cccccccccccccccccccc
+B_INPUT: packet is valid
+B_INPUT: duplicate packet received, resend ack
+          TOLAYER3: seq: -1, ack 0, check: 1979 cccccccccccccccccccc
+          TOLAYER3: scheduling arrival on other side
+            INSERTEVENT: time is 10608.138672
+            INSERTEVENT: future time will be 10612.337891
+
+EVENT time: 10612.337891,  type: 2, fromlayer3  entity: 0
+A_INPUT: seq: -1 ack: 0 message: cccccccccccccccccccc
+packet is valid
+correct sequence number
+          STOP TIMER: stopping timer at 10612.337891
+IN_TRANSIT: setting FALSE
+
+EVENT time: 11855.979492,  type: 1, fromlayer5  entity: 0
+          GENERATE NEXT ARRIVAL: creating new arrival
+            INSERTEVENT: time is 11855.979492
+            INSERTEVENT: future time will be 11945.961914
+          MAINLOOP: data given to student: jjjjjjjjjjjjjjjjjjjj
+A_OUTPUT called: jjjjjjjjjjjjjjjjjjjj
+          START TIMER: starting timer at 11855.979492
+            INSERTEVENT: time is 11855.979492
+            INSERTEVENT: future time will be 11905.979492
+IN_TRANSIT: setting TRUE
+A_OUTPUT: packet leaving A: seq: 1 ack: -1 msg: jjjjjjjjjjjjjjjjjjjj
+          TOLAYER3: seq: 1, ack -1, check: 2120 jjjjjjjjjjjjjjjjjjjj
+          TOLAYER3: packet being corrupted
+          TOLAYER3: scheduling arrival on other side
+            INSERTEVENT: time is 11855.979492
+            INSERTEVENT: future time will be 11859.089844
+
+EVENT time: 11859.089844,  type: 2, fromlayer3  entity: 1
+B_INPUT: seq: 1 ack: -1 message: Zjjjjjjjjjjjjjjjjjjj
+B_INPUT: packet is not valid, incorrect checksum
+
+EVENT time: 11905.979492,  type: 0, timerinterrupt   entity: 0
+A_TIMER: resending packet
+          START TIMER: starting timer at 11905.979492
+            INSERTEVENT: time is 11905.979492
+            INSERTEVENT: future time will be 11955.979492
+          TOLAYER3: seq: 1, ack -1, check: 2120 jjjjjjjjjjjjjjjjjjjj
+          TOLAYER3: packet being corrupted
+          TOLAYER3: scheduling arrival on other side
+            INSERTEVENT: time is 11905.979492
+            INSERTEVENT: future time will be 11907.254883
+
+EVENT time: 11907.254883,  type: 2, fromlayer3  entity: 1
+B_INPUT: seq: 1 ack: -1 message: Zjjjjjjjjjjjjjjjjjjj
+B_INPUT: packet is not valid, incorrect checksum
+
+EVENT time: 11945.961914,  type: 1, fromlayer5  entity: 0
+          GENERATE NEXT ARRIVAL: creating new arrival
+            INSERTEVENT: time is 11945.961914
+            INSERTEVENT: future time will be 12640.535156
+          MAINLOOP: data given to student: kkkkkkkkkkkkkkkkkkkk
+A_OUTPUT called: kkkkkkkkkkkkkkkkkkkk
+A_OUTPUT: message in_transit, returning
+
+EVENT time: 11955.979492,  type: 0, timerinterrupt   entity: 0
+A_TIMER: resending packet
+          START TIMER: starting timer at 11955.979492
+            INSERTEVENT: time is 11955.979492
+            INSERTEVENT: future time will be 12005.979492
+          TOLAYER3: seq: 1, ack -1, check: 2120 jjjjjjjjjjjjjjjjjjjj
+          TOLAYER3: packet being corrupted
+          TOLAYER3: scheduling arrival on other side
+            INSERTEVENT: time is 11955.979492
+            INSERTEVENT: future time will be 11961.093750
+
+EVENT time: 11961.093750,  type: 2, fromlayer3  entity: 1
+B_INPUT: seq: 1 ack: -1 message: Zjjjjjjjjjjjjjjjjjjj
+B_INPUT: packet is not valid, incorrect checksum
+
+EVENT time: 12005.979492,  type: 0, timerinterrupt   entity: 0
+A_TIMER: resending packet
+          START TIMER: starting timer at 12005.979492
+            INSERTEVENT: time is 12005.979492
+            INSERTEVENT: future time will be 12055.979492
+          TOLAYER3: seq: 1, ack -1, check: 2120 jjjjjjjjjjjjjjjjjjjj
+          TOLAYER3: packet being corrupted
+          TOLAYER3: scheduling arrival on other side
+            INSERTEVENT: time is 12005.979492
+            INSERTEVENT: future time will be 12014.538086
+
+EVENT time: 12014.538086,  type: 2, fromlayer3  entity: 1
+B_INPUT: seq: 1 ack: -1 message: Zjjjjjjjjjjjjjjjjjjj
+B_INPUT: packet is not valid, incorrect checksum
+
+EVENT time: 12055.979492,  type: 0, timerinterrupt   entity: 0
+A_TIMER: resending packet
+          START TIMER: starting timer at 12055.979492
+            INSERTEVENT: time is 12055.979492
+            INSERTEVENT: future time will be 12105.979492
+          TOLAYER3: seq: 1, ack -1, check: 2120 jjjjjjjjjjjjjjjjjjjj
+          TOLAYER3: packet being corrupted
+          TOLAYER3: scheduling arrival on other side
+            INSERTEVENT: time is 12055.979492
+            INSERTEVENT: future time will be 12062.522461
+
+EVENT time: 12062.522461,  type: 2, fromlayer3  entity: 1
+B_INPUT: seq: 1 ack: -1 message: Zjjjjjjjjjjjjjjjjjjj
+B_INPUT: packet is not valid, incorrect checksum
+
+EVENT time: 12105.979492,  type: 0, timerinterrupt   entity: 0
+A_TIMER: resending packet
+          START TIMER: starting timer at 12105.979492
+            INSERTEVENT: time is 12105.979492
+            INSERTEVENT: future time will be 12155.979492
+          TOLAYER3: seq: 1, ack -1, check: 2120 jjjjjjjjjjjjjjjjjjjj
+          TOLAYER3: scheduling arrival on other side
+            INSERTEVENT: time is 12105.979492
+            INSERTEVENT: future time will be 12108.172852
+
+EVENT time: 12108.172852,  type: 2, fromlayer3  entity: 1
+B_INPUT: seq: 1 ack: -1 message: jjjjjjjjjjjjjjjjjjjj
+B_INPUT: packet is valid
+B_INPUT: correct packet received
+          TOLAYER3: seq: -1, ack 1, check: 2120 jjjjjjjjjjjjjjjjjjjj
+          TOLAYER3: scheduling arrival on other side
+            INSERTEVENT: time is 12108.172852
+            INSERTEVENT: future time will be 12114.933594
+          TOLAYER5: data received: jjjjjjjjjjjjjjjjjjjj
+B_APPLICATION_OUTPUT: jjjjjjjjjjjjjjjjjjjj
+
+EVENT time: 12114.933594,  type: 2, fromlayer3  entity: 0
+A_INPUT: seq: -1 ack: 1 message: jjjjjjjjjjjjjjjjjjjj
+packet is valid
+correct sequence number
+          STOP TIMER: stopping timer at 12114.933594
+IN_TRANSIT: setting FALSE
+
+EVENT time: 12640.535156,  type: 1, fromlayer5  entity: 0
+          GENERATE NEXT ARRIVAL: creating new arrival
+            INSERTEVENT: time is 12640.535156
+            INSERTEVENT: future time will be 14322.615234
+          MAINLOOP: data given to student: llllllllllllllllllll
+A_OUTPUT called: llllllllllllllllllll
+          START TIMER: starting timer at 12640.535156
+            INSERTEVENT: time is 12640.535156
+            INSERTEVENT: future time will be 12690.535156
+IN_TRANSIT: setting TRUE
+A_OUTPUT: packet leaving A: seq: 0 ack: -1 msg: llllllllllllllllllll
+          TOLAYER3: seq: 0, ack -1, check: 2159 llllllllllllllllllll
+          TOLAYER3: scheduling arrival on other side
+            INSERTEVENT: time is 12640.535156
+            INSERTEVENT: future time will be 12649.722656
+
+EVENT time: 12649.722656,  type: 2, fromlayer3  entity: 1
+B_INPUT: seq: 0 ack: -1 message: llllllllllllllllllll
+B_INPUT: packet is valid
+B_INPUT: correct packet received
+          TOLAYER3: seq: -1, ack 0, check: 2159 llllllllllllllllllll
+          TOLAYER3: packet being corrupted
+          TOLAYER3: scheduling arrival on other side
+            INSERTEVENT: time is 12649.722656
+            INSERTEVENT: future time will be 12652.020508
+          TOLAYER5: data received: llllllllllllllllllll
+B_APPLICATION_OUTPUT: llllllllllllllllllll
+
+EVENT time: 12652.020508,  type: 2, fromlayer3  entity: 0
+A_INPUT: seq: -1 ack: 0 message: Zlllllllllllllllllll
+packet is not valid
+
+EVENT time: 12690.535156,  type: 0, timerinterrupt   entity: 0
+A_TIMER: resending packet
+          START TIMER: starting timer at 12690.535156
+            INSERTEVENT: time is 12690.535156
+            INSERTEVENT: future time will be 12740.535156
+          TOLAYER3: seq: 0, ack -1, check: 2159 llllllllllllllllllll
+          TOLAYER3: packet being corrupted
+          TOLAYER3: scheduling arrival on other side
+            INSERTEVENT: time is 12690.535156
+            INSERTEVENT: future time will be 12692.617188
+
+EVENT time: 12692.617188,  type: 2, fromlayer3  entity: 1
+B_INPUT: seq: 0 ack: -1 message: Zlllllllllllllllllll
+B_INPUT: packet is not valid, incorrect checksum
+
+EVENT time: 12740.535156,  type: 0, timerinterrupt   entity: 0
+A_TIMER: resending packet
+          START TIMER: starting timer at 12740.535156
+            INSERTEVENT: time is 12740.535156
+            INSERTEVENT: future time will be 12790.535156
+          TOLAYER3: seq: 0, ack -1, check: 2159 llllllllllllllllllll
+          TOLAYER3: packet being corrupted
+          TOLAYER3: scheduling arrival on other side
+            INSERTEVENT: time is 12740.535156
+            INSERTEVENT: future time will be 12747.637695
+
+EVENT time: 12747.637695,  type: 2, fromlayer3  entity: 1
+B_INPUT: seq: 0 ack: -1 message: Zlllllllllllllllllll
+B_INPUT: packet is not valid, incorrect checksum
+
+EVENT time: 12790.535156,  type: 0, timerinterrupt   entity: 0
+A_TIMER: resending packet
+          START TIMER: starting timer at 12790.535156
+            INSERTEVENT: time is 12790.535156
+            INSERTEVENT: future time will be 12840.535156
+          TOLAYER3: seq: 0, ack -1, check: 2159 llllllllllllllllllll
+          TOLAYER3: packet being corrupted
+          TOLAYER3: scheduling arrival on other side
+            INSERTEVENT: time is 12790.535156
+            INSERTEVENT: future time will be 12794.592773
+
+EVENT time: 12794.592773,  type: 2, fromlayer3  entity: 1
+B_INPUT: seq: 0 ack: -1 message: Zlllllllllllllllllll
+B_INPUT: packet is not valid, incorrect checksum
+
+EVENT time: 12840.535156,  type: 0, timerinterrupt   entity: 0
+A_TIMER: resending packet
+          START TIMER: starting timer at 12840.535156
+            INSERTEVENT: time is 12840.535156
+            INSERTEVENT: future time will be 12890.535156
+          TOLAYER3: seq: 0, ack -1, check: 2159 llllllllllllllllllll
+          TOLAYER3: packet being corrupted
+          TOLAYER3: scheduling arrival on other side
+            INSERTEVENT: time is 12840.535156
+            INSERTEVENT: future time will be 12849.154297
+
+EVENT time: 12849.154297,  type: 2, fromlayer3  entity: 1
+B_INPUT: seq: 0 ack: 999999 message: llllllllllllllllllll
+B_INPUT: packet is not valid, incorrect checksum
+
+EVENT time: 12890.535156,  type: 0, timerinterrupt   entity: 0
+A_TIMER: resending packet
+          START TIMER: starting timer at 12890.535156
+            INSERTEVENT: time is 12890.535156
+            INSERTEVENT: future time will be 12940.535156
+          TOLAYER3: seq: 0, ack -1, check: 2159 llllllllllllllllllll
+          TOLAYER3: packet being corrupted
+          TOLAYER3: scheduling arrival on other side
+            INSERTEVENT: time is 12890.535156
+            INSERTEVENT: future time will be 12898.683594
+
+EVENT time: 12898.683594,  type: 2, fromlayer3  entity: 1
+B_INPUT: seq: 999999 ack: -1 message: llllllllllllllllllll
+B_INPUT: packet is not valid, incorrect checksum
+
+EVENT time: 12940.535156,  type: 0, timerinterrupt   entity: 0
+A_TIMER: resending packet
+          START TIMER: starting timer at 12940.535156
+            INSERTEVENT: time is 12940.535156
+            INSERTEVENT: future time will be 12990.535156
+          TOLAYER3: seq: 0, ack -1, check: 2159 llllllllllllllllllll
+          TOLAYER3: packet being corrupted
+          TOLAYER3: scheduling arrival on other side
+            INSERTEVENT: time is 12940.535156
+            INSERTEVENT: future time will be 12948.153320
+
+EVENT time: 12948.153320,  type: 2, fromlayer3  entity: 1
+B_INPUT: seq: 0 ack: -1 message: Zlllllllllllllllllll
+B_INPUT: packet is not valid, incorrect checksum
+
+EVENT time: 12990.535156,  type: 0, timerinterrupt   entity: 0
+A_TIMER: resending packet
+          START TIMER: starting timer at 12990.535156
+            INSERTEVENT: time is 12990.535156
+            INSERTEVENT: future time will be 13040.535156
+          TOLAYER3: seq: 0, ack -1, check: 2159 llllllllllllllllllll
+          TOLAYER3: packet being corrupted
+          TOLAYER3: scheduling arrival on other side
+            INSERTEVENT: time is 12990.535156
+            INSERTEVENT: future time will be 12997.408203
+
+EVENT time: 12997.408203,  type: 2, fromlayer3  entity: 1
+B_INPUT: seq: 0 ack: 999999 message: llllllllllllllllllll
+B_INPUT: packet is not valid, incorrect checksum
+
+EVENT time: 13040.535156,  type: 0, timerinterrupt   entity: 0
+A_TIMER: resending packet
+          START TIMER: starting timer at 13040.535156
+            INSERTEVENT: time is 13040.535156
+            INSERTEVENT: future time will be 13090.535156
+          TOLAYER3: seq: 0, ack -1, check: 2159 llllllllllllllllllll
+          TOLAYER3: packet being corrupted
+          TOLAYER3: scheduling arrival on other side
+            INSERTEVENT: time is 13040.535156
+            INSERTEVENT: future time will be 13047.866211
+
+EVENT time: 13047.866211,  type: 2, fromlayer3  entity: 1
+B_INPUT: seq: 999999 ack: -1 message: llllllllllllllllllll
+B_INPUT: packet is not valid, incorrect checksum
+
+EVENT time: 13090.535156,  type: 0, timerinterrupt   entity: 0
+A_TIMER: resending packet
+          START TIMER: starting timer at 13090.535156
+            INSERTEVENT: time is 13090.535156
+            INSERTEVENT: future time will be 13140.535156
+          TOLAYER3: seq: 0, ack -1, check: 2159 llllllllllllllllllll
+          TOLAYER3: packet being corrupted
+          TOLAYER3: scheduling arrival on other side
+            INSERTEVENT: time is 13090.535156
+            INSERTEVENT: future time will be 13099.589844
+
+EVENT time: 13099.589844,  type: 2, fromlayer3  entity: 1
+B_INPUT: seq: 0 ack: -1 message: Zlllllllllllllllllll
+B_INPUT: packet is not valid, incorrect checksum
+
+EVENT time: 13140.535156,  type: 0, timerinterrupt   entity: 0
+A_TIMER: resending packet
+          START TIMER: starting timer at 13140.535156
+            INSERTEVENT: time is 13140.535156
+            INSERTEVENT: future time will be 13190.535156
+          TOLAYER3: seq: 0, ack -1, check: 2159 llllllllllllllllllll
+          TOLAYER3: packet being corrupted
+          TOLAYER3: scheduling arrival on other side
+            INSERTEVENT: time is 13140.535156
+            INSERTEVENT: future time will be 13149.145508
+
+EVENT time: 13149.145508,  type: 2, fromlayer3  entity: 1
+B_INPUT: seq: 0 ack: -1 message: Zlllllllllllllllllll
+B_INPUT: packet is not valid, incorrect checksum
+
+EVENT time: 13190.535156,  type: 0, timerinterrupt   entity: 0
+A_TIMER: resending packet
+          START TIMER: starting timer at 13190.535156
+            INSERTEVENT: time is 13190.535156
+            INSERTEVENT: future time will be 13240.535156
+          TOLAYER3: seq: 0, ack -1, check: 2159 llllllllllllllllllll
+          TOLAYER3: packet being corrupted
+          TOLAYER3: scheduling arrival on other side
+            INSERTEVENT: time is 13190.535156
+            INSERTEVENT: future time will be 13196.520508
+
+EVENT time: 13196.520508,  type: 2, fromlayer3  entity: 1
+B_INPUT: seq: 0 ack: -1 message: Zlllllllllllllllllll
+B_INPUT: packet is not valid, incorrect checksum
+
+EVENT time: 13240.535156,  type: 0, timerinterrupt   entity: 0
+A_TIMER: resending packet
+          START TIMER: starting timer at 13240.535156
+            INSERTEVENT: time is 13240.535156
+            INSERTEVENT: future time will be 13290.535156
+          TOLAYER3: seq: 0, ack -1, check: 2159 llllllllllllllllllll
+          TOLAYER3: packet being corrupted
+          TOLAYER3: scheduling arrival on other side
+            INSERTEVENT: time is 13240.535156
+            INSERTEVENT: future time will be 13248.156250
+
+EVENT time: 13248.156250,  type: 2, fromlayer3  entity: 1
+B_INPUT: seq: 0 ack: -1 message: Zlllllllllllllllllll
+B_INPUT: packet is not valid, incorrect checksum
+
+EVENT time: 13290.535156,  type: 0, timerinterrupt   entity: 0
+A_TIMER: resending packet
+          START TIMER: starting timer at 13290.535156
+            INSERTEVENT: time is 13290.535156
+            INSERTEVENT: future time will be 13340.535156
+          TOLAYER3: seq: 0, ack -1, check: 2159 llllllllllllllllllll
+          TOLAYER3: packet being corrupted
+          TOLAYER3: scheduling arrival on other side
+            INSERTEVENT: time is 13290.535156
+            INSERTEVENT: future time will be 13293.072266
+
+EVENT time: 13293.072266,  type: 2, fromlayer3  entity: 1
+B_INPUT: seq: 0 ack: -1 message: Zlllllllllllllllllll
+B_INPUT: packet is not valid, incorrect checksum
+
+EVENT time: 13340.535156,  type: 0, timerinterrupt   entity: 0
+A_TIMER: resending packet
+          START TIMER: starting timer at 13340.535156
+            INSERTEVENT: time is 13340.535156
+            INSERTEVENT: future time will be 13390.535156
+          TOLAYER3: seq: 0, ack -1, check: 2159 llllllllllllllllllll
+          TOLAYER3: packet being corrupted
+          TOLAYER3: scheduling arrival on other side
+            INSERTEVENT: time is 13340.535156
+            INSERTEVENT: future time will be 13349.124023
+
+EVENT time: 13349.124023,  type: 2, fromlayer3  entity: 1
+B_INPUT: seq: 0 ack: -1 message: Zlllllllllllllllllll
+B_INPUT: packet is not valid, incorrect checksum
+
+EVENT time: 13390.535156,  type: 0, timerinterrupt   entity: 0
+A_TIMER: resending packet
+          START TIMER: starting timer at 13390.535156
+            INSERTEVENT: time is 13390.535156
+            INSERTEVENT: future time will be 13440.535156
+          TOLAYER3: seq: 0, ack -1, check: 2159 llllllllllllllllllll
+          TOLAYER3: packet being corrupted
+          TOLAYER3: scheduling arrival on other side
+            INSERTEVENT: time is 13390.535156
+            INSERTEVENT: future time will be 13398.359375
+
+EVENT time: 13398.359375,  type: 2, fromlayer3  entity: 1
+B_INPUT: seq: 0 ack: -1 message: Zlllllllllllllllllll
+B_INPUT: packet is not valid, incorrect checksum
+
+EVENT time: 13440.535156,  type: 0, timerinterrupt   entity: 0
+A_TIMER: resending packet
+          START TIMER: starting timer at 13440.535156
+            INSERTEVENT: time is 13440.535156
+            INSERTEVENT: future time will be 13490.535156
+          TOLAYER3: seq: 0, ack -1, check: 2159 llllllllllllllllllll
+          TOLAYER3: packet being corrupted
+          TOLAYER3: scheduling arrival on other side
+            INSERTEVENT: time is 13440.535156
+            INSERTEVENT: future time will be 13444.279297
+
+EVENT time: 13444.279297,  type: 2, fromlayer3  entity: 1
+B_INPUT: seq: 0 ack: -1 message: Zlllllllllllllllllll
+B_INPUT: packet is not valid, incorrect checksum
+
+EVENT time: 13490.535156,  type: 0, timerinterrupt   entity: 0
+A_TIMER: resending packet
+          START TIMER: starting timer at 13490.535156
+            INSERTEVENT: time is 13490.535156
+            INSERTEVENT: future time will be 13540.535156
+          TOLAYER3: seq: 0, ack -1, check: 2159 llllllllllllllllllll
+          TOLAYER3: packet being corrupted
+          TOLAYER3: scheduling arrival on other side
+            INSERTEVENT: time is 13490.535156
+            INSERTEVENT: future time will be 13493.831055
+
+EVENT time: 13493.831055,  type: 2, fromlayer3  entity: 1
+B_INPUT: seq: 999999 ack: -1 message: llllllllllllllllllll
+B_INPUT: packet is not valid, incorrect checksum
+
+EVENT time: 13540.535156,  type: 0, timerinterrupt   entity: 0
+A_TIMER: resending packet
+          START TIMER: starting timer at 13540.535156
+            INSERTEVENT: time is 13540.535156
+            INSERTEVENT: future time will be 13590.535156
+          TOLAYER3: seq: 0, ack -1, check: 2159 llllllllllllllllllll
+          TOLAYER3: packet being corrupted
+          TOLAYER3: scheduling arrival on other side
+            INSERTEVENT: time is 13540.535156
+            INSERTEVENT: future time will be 13546.748047
+
+EVENT time: 13546.748047,  type: 2, fromlayer3  entity: 1
+B_INPUT: seq: 0 ack: -1 message: Zlllllllllllllllllll
+B_INPUT: packet is not valid, incorrect checksum
+
+EVENT time: 13590.535156,  type: 0, timerinterrupt   entity: 0
+A_TIMER: resending packet
+          START TIMER: starting timer at 13590.535156
+            INSERTEVENT: time is 13590.535156
+            INSERTEVENT: future time will be 13640.535156
+          TOLAYER3: seq: 0, ack -1, check: 2159 llllllllllllllllllll
+          TOLAYER3: packet being corrupted
+          TOLAYER3: scheduling arrival on other side
+            INSERTEVENT: time is 13590.535156
+            INSERTEVENT: future time will be 13599.309570
+
+EVENT time: 13599.309570,  type: 2, fromlayer3  entity: 1
+B_INPUT: seq: 0 ack: -1 message: Zlllllllllllllllllll
+B_INPUT: packet is not valid, incorrect checksum
+
+EVENT time: 13640.535156,  type: 0, timerinterrupt   entity: 0
+A_TIMER: resending packet
+          START TIMER: starting timer at 13640.535156
+            INSERTEVENT: time is 13640.535156
+            INSERTEVENT: future time will be 13690.535156
+          TOLAYER3: seq: 0, ack -1, check: 2159 llllllllllllllllllll
+          TOLAYER3: scheduling arrival on other side
+            INSERTEVENT: time is 13640.535156
+            INSERTEVENT: future time will be 13645.807617
+
+EVENT time: 13645.807617,  type: 2, fromlayer3  entity: 1
+B_INPUT: seq: 0 ack: -1 message: llllllllllllllllllll
+B_INPUT: packet is valid
+B_INPUT: duplicate packet received, resend ack
+          TOLAYER3: seq: -1, ack 0, check: 2159 llllllllllllllllllll
+          TOLAYER3: scheduling arrival on other side
+            INSERTEVENT: time is 13645.807617
+            INSERTEVENT: future time will be 13652.617188
+
+EVENT time: 13652.617188,  type: 2, fromlayer3  entity: 0
+A_INPUT: seq: -1 ack: 0 message: llllllllllllllllllll
+packet is valid
+correct sequence number
+          STOP TIMER: stopping timer at 13652.617188
+IN_TRANSIT: setting FALSE
+
+EVENT time: 14322.615234,  type: 1, fromlayer5  entity: 0
+          GENERATE NEXT ARRIVAL: creating new arrival
+            INSERTEVENT: time is 14322.615234
+            INSERTEVENT: future time will be 15415.112305
+          MAINLOOP: data given to student: mmmmmmmmmmmmmmmmmmmm
+A_OUTPUT called: mmmmmmmmmmmmmmmmmmmm
+          START TIMER: starting timer at 14322.615234
+            INSERTEVENT: time is 14322.615234
+            INSERTEVENT: future time will be 14372.615234
+IN_TRANSIT: setting TRUE
+A_OUTPUT: packet leaving A: seq: 1 ack: -1 msg: mmmmmmmmmmmmmmmmmmmm
+          TOLAYER3: seq: 1, ack -1, check: 2180 mmmmmmmmmmmmmmmmmmmm
+          TOLAYER3: packet being corrupted
+          TOLAYER3: scheduling arrival on other side
+            INSERTEVENT: time is 14322.615234
+            INSERTEVENT: future time will be 14330.474609
+
+EVENT time: 14330.474609,  type: 2, fromlayer3  entity: 1
+B_INPUT: seq: 1 ack: -1 message: Zmmmmmmmmmmmmmmmmmmm
+B_INPUT: packet is not valid, incorrect checksum
+
+EVENT time: 14372.615234,  type: 0, timerinterrupt   entity: 0
+A_TIMER: resending packet
+          START TIMER: starting timer at 14372.615234
+            INSERTEVENT: time is 14372.615234
+            INSERTEVENT: future time will be 14422.615234
+          TOLAYER3: seq: 1, ack -1, check: 2180 mmmmmmmmmmmmmmmmmmmm
+          TOLAYER3: scheduling arrival on other side
+            INSERTEVENT: time is 14372.615234
+            INSERTEVENT: future time will be 14377.656250
+
+EVENT time: 14377.656250,  type: 2, fromlayer3  entity: 1
+B_INPUT: seq: 1 ack: -1 message: mmmmmmmmmmmmmmmmmmmm
+B_INPUT: packet is valid
+B_INPUT: correct packet received
+          TOLAYER3: seq: -1, ack 1, check: 2180 mmmmmmmmmmmmmmmmmmmm
+          TOLAYER3: packet being corrupted
+          TOLAYER3: scheduling arrival on other side
+            INSERTEVENT: time is 14377.656250
+            INSERTEVENT: future time will be 14386.852539
+          TOLAYER5: data received: mmmmmmmmmmmmmmmmmmmm
+B_APPLICATION_OUTPUT: mmmmmmmmmmmmmmmmmmmm
+
+EVENT time: 14386.852539,  type: 2, fromlayer3  entity: 0
+A_INPUT: seq: -1 ack: 1 message: Zmmmmmmmmmmmmmmmmmmm
+packet is not valid
+
+EVENT time: 14422.615234,  type: 0, timerinterrupt   entity: 0
+A_TIMER: resending packet
+          START TIMER: starting timer at 14422.615234
+            INSERTEVENT: time is 14422.615234
+            INSERTEVENT: future time will be 14472.615234
+          TOLAYER3: seq: 1, ack -1, check: 2180 mmmmmmmmmmmmmmmmmmmm
+          TOLAYER3: scheduling arrival on other side
+            INSERTEVENT: time is 14422.615234
+            INSERTEVENT: future time will be 14426.501953
+
+EVENT time: 14426.501953,  type: 2, fromlayer3  entity: 1
+B_INPUT: seq: 1 ack: -1 message: mmmmmmmmmmmmmmmmmmmm
+B_INPUT: packet is valid
+B_INPUT: duplicate packet received, resend ack
+          TOLAYER3: seq: -1, ack 1, check: 2180 mmmmmmmmmmmmmmmmmmmm
+          TOLAYER3: packet being corrupted
+          TOLAYER3: scheduling arrival on other side
+            INSERTEVENT: time is 14426.501953
+            INSERTEVENT: future time will be 14428.345703
+
+EVENT time: 14428.345703,  type: 2, fromlayer3  entity: 0
+A_INPUT: seq: -1 ack: 1 message: Zmmmmmmmmmmmmmmmmmmm
+packet is not valid
+
+EVENT time: 14472.615234,  type: 0, timerinterrupt   entity: 0
+A_TIMER: resending packet
+          START TIMER: starting timer at 14472.615234
+            INSERTEVENT: time is 14472.615234
+            INSERTEVENT: future time will be 14522.615234
+          TOLAYER3: seq: 1, ack -1, check: 2180 mmmmmmmmmmmmmmmmmmmm
+          TOLAYER3: packet being corrupted
+          TOLAYER3: scheduling arrival on other side
+            INSERTEVENT: time is 14472.615234
+            INSERTEVENT: future time will be 14476.588867
+
+EVENT time: 14476.588867,  type: 2, fromlayer3  entity: 1
+B_INPUT: seq: 1 ack: -1 message: Zmmmmmmmmmmmmmmmmmmm
+B_INPUT: packet is not valid, incorrect checksum
+
+EVENT time: 14522.615234,  type: 0, timerinterrupt   entity: 0
+A_TIMER: resending packet
+          START TIMER: starting timer at 14522.615234
+            INSERTEVENT: time is 14522.615234
+            INSERTEVENT: future time will be 14572.615234
+          TOLAYER3: seq: 1, ack -1, check: 2180 mmmmmmmmmmmmmmmmmmmm
+          TOLAYER3: packet being corrupted
+          TOLAYER3: scheduling arrival on other side
+            INSERTEVENT: time is 14522.615234
+            INSERTEVENT: future time will be 14523.782227
+
+EVENT time: 14523.782227,  type: 2, fromlayer3  entity: 1
+B_INPUT: seq: 1 ack: -1 message: Zmmmmmmmmmmmmmmmmmmm
+B_INPUT: packet is not valid, incorrect checksum
+
+EVENT time: 14572.615234,  type: 0, timerinterrupt   entity: 0
+A_TIMER: resending packet
+          START TIMER: starting timer at 14572.615234
+            INSERTEVENT: time is 14572.615234
+            INSERTEVENT: future time will be 14622.615234
+          TOLAYER3: seq: 1, ack -1, check: 2180 mmmmmmmmmmmmmmmmmmmm
+          TOLAYER3: scheduling arrival on other side
+            INSERTEVENT: time is 14572.615234
+            INSERTEVENT: future time will be 14574.938477
+
+EVENT time: 14574.938477,  type: 2, fromlayer3  entity: 1
+B_INPUT: seq: 1 ack: -1 message: mmmmmmmmmmmmmmmmmmmm
+B_INPUT: packet is valid
+B_INPUT: duplicate packet received, resend ack
+          TOLAYER3: seq: -1, ack 1, check: 2180 mmmmmmmmmmmmmmmmmmmm
+          TOLAYER3: packet being corrupted
+          TOLAYER3: scheduling arrival on other side
+            INSERTEVENT: time is 14574.938477
+            INSERTEVENT: future time will be 14582.178711
+
+EVENT time: 14582.178711,  type: 2, fromlayer3  entity: 0
+A_INPUT: seq: -1 ack: 1 message: Zmmmmmmmmmmmmmmmmmmm
+packet is not valid
+
+EVENT time: 14622.615234,  type: 0, timerinterrupt   entity: 0
+A_TIMER: resending packet
+          START TIMER: starting timer at 14622.615234
+            INSERTEVENT: time is 14622.615234
+            INSERTEVENT: future time will be 14672.615234
+          TOLAYER3: seq: 1, ack -1, check: 2180 mmmmmmmmmmmmmmmmmmmm
+          TOLAYER3: packet being corrupted
+          TOLAYER3: scheduling arrival on other side
+            INSERTEVENT: time is 14622.615234
+            INSERTEVENT: future time will be 14628.925781
+
+EVENT time: 14628.925781,  type: 2, fromlayer3  entity: 1
+B_INPUT: seq: 999999 ack: -1 message: mmmmmmmmmmmmmmmmmmmm
+B_INPUT: packet is not valid, incorrect checksum
+
+EVENT time: 14672.615234,  type: 0, timerinterrupt   entity: 0
+A_TIMER: resending packet
+          START TIMER: starting timer at 14672.615234
+            INSERTEVENT: time is 14672.615234
+            INSERTEVENT: future time will be 14722.615234
+          TOLAYER3: seq: 1, ack -1, check: 2180 mmmmmmmmmmmmmmmmmmmm
+          TOLAYER3: packet being corrupted
+          TOLAYER3: scheduling arrival on other side
+            INSERTEVENT: time is 14672.615234
+            INSERTEVENT: future time will be 14676.556641
+
+EVENT time: 14676.556641,  type: 2, fromlayer3  entity: 1
+B_INPUT: seq: 1 ack: -1 message: Zmmmmmmmmmmmmmmmmmmm
+B_INPUT: packet is not valid, incorrect checksum
+
+EVENT time: 14722.615234,  type: 0, timerinterrupt   entity: 0
+A_TIMER: resending packet
+          START TIMER: starting timer at 14722.615234
+            INSERTEVENT: time is 14722.615234
+            INSERTEVENT: future time will be 14772.615234
+          TOLAYER3: seq: 1, ack -1, check: 2180 mmmmmmmmmmmmmmmmmmmm
+          TOLAYER3: scheduling arrival on other side
+            INSERTEVENT: time is 14722.615234
+            INSERTEVENT: future time will be 14732.074219
+
+EVENT time: 14732.074219,  type: 2, fromlayer3  entity: 1
+B_INPUT: seq: 1 ack: -1 message: mmmmmmmmmmmmmmmmmmmm
+B_INPUT: packet is valid
+B_INPUT: duplicate packet received, resend ack
+          TOLAYER3: seq: -1, ack 1, check: 2180 mmmmmmmmmmmmmmmmmmmm
+          TOLAYER3: scheduling arrival on other side
+            INSERTEVENT: time is 14732.074219
+            INSERTEVENT: future time will be 14739.487305
+
+EVENT time: 14739.487305,  type: 2, fromlayer3  entity: 0
+A_INPUT: seq: -1 ack: 1 message: mmmmmmmmmmmmmmmmmmmm
+packet is valid
+correct sequence number
+          STOP TIMER: stopping timer at 14739.487305
+IN_TRANSIT: setting FALSE
+
+EVENT time: 15415.112305,  type: 1, fromlayer5  entity: 0
+          GENERATE NEXT ARRIVAL: creating new arrival
+            INSERTEVENT: time is 15415.112305
+            INSERTEVENT: future time will be 15422.028320
+          MAINLOOP: data given to student: nnnnnnnnnnnnnnnnnnnn
+A_OUTPUT called: nnnnnnnnnnnnnnnnnnnn
+          START TIMER: starting timer at 15415.112305
+            INSERTEVENT: time is 15415.112305
+            INSERTEVENT: future time will be 15465.112305
+IN_TRANSIT: setting TRUE
+A_OUTPUT: packet leaving A: seq: 0 ack: -1 msg: nnnnnnnnnnnnnnnnnnnn
+          TOLAYER3: seq: 0, ack -1, check: 2199 nnnnnnnnnnnnnnnnnnnn
+          TOLAYER3: packet being corrupted
+          TOLAYER3: scheduling arrival on other side
+            INSERTEVENT: time is 15415.112305
+            INSERTEVENT: future time will be 15420.571289
+
+EVENT time: 15420.571289,  type: 2, fromlayer3  entity: 1
+B_INPUT: seq: 0 ack: -1 message: Znnnnnnnnnnnnnnnnnnn
+B_INPUT: packet is not valid, incorrect checksum
+
+EVENT time: 15422.028320,  type: 1, fromlayer5  entity: 0
+          GENERATE NEXT ARRIVAL: creating new arrival
+            INSERTEVENT: time is 15422.028320
+            INSERTEVENT: future time will be 17248.738281
+          MAINLOOP: data given to student: oooooooooooooooooooo
+A_OUTPUT called: oooooooooooooooooooo
+A_OUTPUT: message in_transit, returning
+
+EVENT time: 15465.112305,  type: 0, timerinterrupt   entity: 0
+A_TIMER: resending packet
+          START TIMER: starting timer at 15465.112305
+            INSERTEVENT: time is 15465.112305
+            INSERTEVENT: future time will be 15515.112305
+          TOLAYER3: seq: 0, ack -1, check: 2199 nnnnnnnnnnnnnnnnnnnn
+          TOLAYER3: scheduling arrival on other side
+            INSERTEVENT: time is 15465.112305
+            INSERTEVENT: future time will be 15471.222656
+
+EVENT time: 15471.222656,  type: 2, fromlayer3  entity: 1
+B_INPUT: seq: 0 ack: -1 message: nnnnnnnnnnnnnnnnnnnn
+B_INPUT: packet is valid
+B_INPUT: correct packet received
+          TOLAYER3: seq: -1, ack 0, check: 2199 nnnnnnnnnnnnnnnnnnnn
+          TOLAYER3: packet being corrupted
+          TOLAYER3: scheduling arrival on other side
+            INSERTEVENT: time is 15471.222656
+            INSERTEVENT: future time will be 15475.868164
+          TOLAYER5: data received: nnnnnnnnnnnnnnnnnnnn
+B_APPLICATION_OUTPUT: nnnnnnnnnnnnnnnnnnnn
+
+EVENT time: 15475.868164,  type: 2, fromlayer3  entity: 0
+A_INPUT: seq: -1 ack: 0 message: Znnnnnnnnnnnnnnnnnnn
+packet is not valid
+
+EVENT time: 15515.112305,  type: 0, timerinterrupt   entity: 0
+A_TIMER: resending packet
+          START TIMER: starting timer at 15515.112305
+            INSERTEVENT: time is 15515.112305
+            INSERTEVENT: future time will be 15565.112305
+          TOLAYER3: seq: 0, ack -1, check: 2199 nnnnnnnnnnnnnnnnnnnn
+          TOLAYER3: packet being corrupted
+          TOLAYER3: scheduling arrival on other side
+            INSERTEVENT: time is 15515.112305
+            INSERTEVENT: future time will be 15523.053711
+
+EVENT time: 15523.053711,  type: 2, fromlayer3  entity: 1
+B_INPUT: seq: 0 ack: -1 message: Znnnnnnnnnnnnnnnnnnn
+B_INPUT: packet is not valid, incorrect checksum
+
+EVENT time: 15565.112305,  type: 0, timerinterrupt   entity: 0
+A_TIMER: resending packet
+          START TIMER: starting timer at 15565.112305
+            INSERTEVENT: time is 15565.112305
+            INSERTEVENT: future time will be 15615.112305
+          TOLAYER3: seq: 0, ack -1, check: 2199 nnnnnnnnnnnnnnnnnnnn
+          TOLAYER3: packet being corrupted
+          TOLAYER3: scheduling arrival on other side
+            INSERTEVENT: time is 15565.112305
+            INSERTEVENT: future time will be 15567.089844
+
+EVENT time: 15567.089844,  type: 2, fromlayer3  entity: 1
+B_INPUT: seq: 0 ack: 999999 message: nnnnnnnnnnnnnnnnnnnn
+B_INPUT: packet is not valid, incorrect checksum
+
+EVENT time: 15615.112305,  type: 0, timerinterrupt   entity: 0
+A_TIMER: resending packet
+          START TIMER: starting timer at 15615.112305
+            INSERTEVENT: time is 15615.112305
+            INSERTEVENT: future time will be 15665.112305
+          TOLAYER3: seq: 0, ack -1, check: 2199 nnnnnnnnnnnnnnnnnnnn
+          TOLAYER3: packet being corrupted
+          TOLAYER3: scheduling arrival on other side
+            INSERTEVENT: time is 15615.112305
+            INSERTEVENT: future time will be 15623.159180
+
+EVENT time: 15623.159180,  type: 2, fromlayer3  entity: 1
+B_INPUT: seq: 0 ack: -1 message: Znnnnnnnnnnnnnnnnnnn
+B_INPUT: packet is not valid, incorrect checksum
+
+EVENT time: 15665.112305,  type: 0, timerinterrupt   entity: 0
+A_TIMER: resending packet
+          START TIMER: starting timer at 15665.112305
+            INSERTEVENT: time is 15665.112305
+            INSERTEVENT: future time will be 15715.112305
+          TOLAYER3: seq: 0, ack -1, check: 2199 nnnnnnnnnnnnnnnnnnnn
+          TOLAYER3: scheduling arrival on other side
+            INSERTEVENT: time is 15665.112305
+            INSERTEVENT: future time will be 15672.160156
+
+EVENT time: 15672.160156,  type: 2, fromlayer3  entity: 1
+B_INPUT: seq: 0 ack: -1 message: nnnnnnnnnnnnnnnnnnnn
+B_INPUT: packet is valid
+B_INPUT: duplicate packet received, resend ack
+          TOLAYER3: seq: -1, ack 0, check: 2199 nnnnnnnnnnnnnnnnnnnn
+          TOLAYER3: scheduling arrival on other side
+            INSERTEVENT: time is 15672.160156
+            INSERTEVENT: future time will be 15676.621094
+
+EVENT time: 15676.621094,  type: 2, fromlayer3  entity: 0
+A_INPUT: seq: -1 ack: 0 message: nnnnnnnnnnnnnnnnnnnn
+packet is valid
+correct sequence number
+          STOP TIMER: stopping timer at 15676.621094
+IN_TRANSIT: setting FALSE
+
+EVENT time: 17248.738281,  type: 1, fromlayer5  entity: 0
+          GENERATE NEXT ARRIVAL: creating new arrival
+            INSERTEVENT: time is 17248.738281
+            INSERTEVENT: future time will be 18770.794922
+          MAINLOOP: data given to student: pppppppppppppppppppp
+A_OUTPUT called: pppppppppppppppppppp
+          START TIMER: starting timer at 17248.738281
+            INSERTEVENT: time is 17248.738281
+            INSERTEVENT: future time will be 17298.738281
+IN_TRANSIT: setting TRUE
+A_OUTPUT: packet leaving A: seq: 1 ack: -1 msg: pppppppppppppppppppp
+          TOLAYER3: seq: 1, ack -1, check: 2240 pppppppppppppppppppp
+          TOLAYER3: packet being corrupted
+          TOLAYER3: scheduling arrival on other side
+            INSERTEVENT: time is 17248.738281
+            INSERTEVENT: future time will be 17252.667969
+
+EVENT time: 17252.667969,  type: 2, fromlayer3  entity: 1
+B_INPUT: seq: 1 ack: 999999 message: pppppppppppppppppppp
+B_INPUT: packet is not valid, incorrect checksum
+
+EVENT time: 17298.738281,  type: 0, timerinterrupt   entity: 0
+A_TIMER: resending packet
+          START TIMER: starting timer at 17298.738281
+            INSERTEVENT: time is 17298.738281
+            INSERTEVENT: future time will be 17348.738281
+          TOLAYER3: seq: 1, ack -1, check: 2240 pppppppppppppppppppp
+          TOLAYER3: packet being corrupted
+          TOLAYER3: scheduling arrival on other side
+            INSERTEVENT: time is 17298.738281
+            INSERTEVENT: future time will be 17301.164062
+
+EVENT time: 17301.164062,  type: 2, fromlayer3  entity: 1
+B_INPUT: seq: 1 ack: -1 message: Zppppppppppppppppppp
+B_INPUT: packet is not valid, incorrect checksum
+
+EVENT time: 17348.738281,  type: 0, timerinterrupt   entity: 0
+A_TIMER: resending packet
+          START TIMER: starting timer at 17348.738281
+            INSERTEVENT: time is 17348.738281
+            INSERTEVENT: future time will be 17398.738281
+          TOLAYER3: seq: 1, ack -1, check: 2240 pppppppppppppppppppp
+          TOLAYER3: packet being corrupted
+          TOLAYER3: scheduling arrival on other side
+            INSERTEVENT: time is 17348.738281
+            INSERTEVENT: future time will be 17358.478516
+
+EVENT time: 17358.478516,  type: 2, fromlayer3  entity: 1
+B_INPUT: seq: 1 ack: -1 message: Zppppppppppppppppppp
+B_INPUT: packet is not valid, incorrect checksum
+
+EVENT time: 17398.738281,  type: 0, timerinterrupt   entity: 0
+A_TIMER: resending packet
+          START TIMER: starting timer at 17398.738281
+            INSERTEVENT: time is 17398.738281
+            INSERTEVENT: future time will be 17448.738281
+          TOLAYER3: seq: 1, ack -1, check: 2240 pppppppppppppppppppp
+          TOLAYER3: packet being corrupted
+          TOLAYER3: scheduling arrival on other side
+            INSERTEVENT: time is 17398.738281
+            INSERTEVENT: future time will be 17399.908203
+
+EVENT time: 17399.908203,  type: 2, fromlayer3  entity: 1
+B_INPUT: seq: 999999 ack: -1 message: pppppppppppppppppppp
+B_INPUT: packet is not valid, incorrect checksum
+
+EVENT time: 17448.738281,  type: 0, timerinterrupt   entity: 0
+A_TIMER: resending packet
+          START TIMER: starting timer at 17448.738281
+            INSERTEVENT: time is 17448.738281
+            INSERTEVENT: future time will be 17498.738281
+          TOLAYER3: seq: 1, ack -1, check: 2240 pppppppppppppppppppp
+          TOLAYER3: packet being corrupted
+          TOLAYER3: scheduling arrival on other side
+            INSERTEVENT: time is 17448.738281
+            INSERTEVENT: future time will be 17451.271484
+
+EVENT time: 17451.271484,  type: 2, fromlayer3  entity: 1
+B_INPUT: seq: 1 ack: -1 message: Zppppppppppppppppppp
+B_INPUT: packet is not valid, incorrect checksum
+
+EVENT time: 17498.738281,  type: 0, timerinterrupt   entity: 0
+A_TIMER: resending packet
+          START TIMER: starting timer at 17498.738281
+            INSERTEVENT: time is 17498.738281
+            INSERTEVENT: future time will be 17548.738281
+          TOLAYER3: seq: 1, ack -1, check: 2240 pppppppppppppppppppp
+          TOLAYER3: scheduling arrival on other side
+            INSERTEVENT: time is 17498.738281
+            INSERTEVENT: future time will be 17500.201172
+
+EVENT time: 17500.201172,  type: 2, fromlayer3  entity: 1
+B_INPUT: seq: 1 ack: -1 message: pppppppppppppppppppp
+B_INPUT: packet is valid
+B_INPUT: correct packet received
+          TOLAYER3: seq: -1, ack 1, check: 2240 pppppppppppppppppppp
+          TOLAYER3: packet being corrupted
+          TOLAYER3: scheduling arrival on other side
+            INSERTEVENT: time is 17500.201172
+            INSERTEVENT: future time will be 17508.849609
+          TOLAYER5: data received: pppppppppppppppppppp
+B_APPLICATION_OUTPUT: pppppppppppppppppppp
+
+EVENT time: 17508.849609,  type: 2, fromlayer3  entity: 0
+A_INPUT: seq: -1 ack: 1 message: Zppppppppppppppppppp
+packet is not valid
+
+EVENT time: 17548.738281,  type: 0, timerinterrupt   entity: 0
+A_TIMER: resending packet
+          START TIMER: starting timer at 17548.738281
+            INSERTEVENT: time is 17548.738281
+            INSERTEVENT: future time will be 17598.738281
+          TOLAYER3: seq: 1, ack -1, check: 2240 pppppppppppppppppppp
+          TOLAYER3: packet being corrupted
+          TOLAYER3: scheduling arrival on other side
+            INSERTEVENT: time is 17548.738281
+            INSERTEVENT: future time will be 17558.298828
+
+EVENT time: 17558.298828,  type: 2, fromlayer3  entity: 1
+B_INPUT: seq: 1 ack: -1 message: Zppppppppppppppppppp
+B_INPUT: packet is not valid, incorrect checksum
+
+EVENT time: 17598.738281,  type: 0, timerinterrupt   entity: 0
+A_TIMER: resending packet
+          START TIMER: starting timer at 17598.738281
+            INSERTEVENT: time is 17598.738281
+            INSERTEVENT: future time will be 17648.738281
+          TOLAYER3: seq: 1, ack -1, check: 2240 pppppppppppppppppppp
+          TOLAYER3: packet being corrupted
+          TOLAYER3: scheduling arrival on other side
+            INSERTEVENT: time is 17598.738281
+            INSERTEVENT: future time will be 17606.673828
+
+EVENT time: 17606.673828,  type: 2, fromlayer3  entity: 1
+B_INPUT: seq: 1 ack: -1 message: Zppppppppppppppppppp
+B_INPUT: packet is not valid, incorrect checksum
+
+EVENT time: 17648.738281,  type: 0, timerinterrupt   entity: 0
+A_TIMER: resending packet
+          START TIMER: starting timer at 17648.738281
+            INSERTEVENT: time is 17648.738281
+            INSERTEVENT: future time will be 17698.738281
+          TOLAYER3: seq: 1, ack -1, check: 2240 pppppppppppppppppppp
+          TOLAYER3: scheduling arrival on other side
+            INSERTEVENT: time is 17648.738281
+            INSERTEVENT: future time will be 17655.333984
+
+EVENT time: 17655.333984,  type: 2, fromlayer3  entity: 1
+B_INPUT: seq: 1 ack: -1 message: pppppppppppppppppppp
+B_INPUT: packet is valid
+B_INPUT: duplicate packet received, resend ack
+          TOLAYER3: seq: -1, ack 1, check: 2240 pppppppppppppppppppp
+          TOLAYER3: scheduling arrival on other side
+            INSERTEVENT: time is 17655.333984
+            INSERTEVENT: future time will be 17656.761719
+
+EVENT time: 17656.761719,  type: 2, fromlayer3  entity: 0
+A_INPUT: seq: -1 ack: 1 message: pppppppppppppppppppp
+packet is valid
+correct sequence number
+          STOP TIMER: stopping timer at 17656.761719
+IN_TRANSIT: setting FALSE
+
+EVENT time: 18770.794922,  type: 1, fromlayer5  entity: 0
+          GENERATE NEXT ARRIVAL: creating new arrival
+            INSERTEVENT: time is 18770.794922
+            INSERTEVENT: future time will be 19624.601562
+          MAINLOOP: data given to student: qqqqqqqqqqqqqqqqqqqq
+A_OUTPUT called: qqqqqqqqqqqqqqqqqqqq
+          START TIMER: starting timer at 18770.794922
+            INSERTEVENT: time is 18770.794922
+            INSERTEVENT: future time will be 18820.794922
+IN_TRANSIT: setting TRUE
+A_OUTPUT: packet leaving A: seq: 0 ack: -1 msg: qqqqqqqqqqqqqqqqqqqq
+          TOLAYER3: seq: 0, ack -1, check: 2259 qqqqqqqqqqqqqqqqqqqq
+          TOLAYER3: packet being corrupted
+          TOLAYER3: scheduling arrival on other side
+            INSERTEVENT: time is 18770.794922
+            INSERTEVENT: future time will be 18772.404297
+
+EVENT time: 18772.404297,  type: 2, fromlayer3  entity: 1
+B_INPUT: seq: 0 ack: -1 message: Zqqqqqqqqqqqqqqqqqqq
+B_INPUT: packet is not valid, incorrect checksum
+
+EVENT time: 18820.794922,  type: 0, timerinterrupt   entity: 0
+A_TIMER: resending packet
+          START TIMER: starting timer at 18820.794922
+            INSERTEVENT: time is 18820.794922
+            INSERTEVENT: future time will be 18870.794922
+          TOLAYER3: seq: 0, ack -1, check: 2259 qqqqqqqqqqqqqqqqqqqq
+          TOLAYER3: scheduling arrival on other side
+            INSERTEVENT: time is 18820.794922
+            INSERTEVENT: future time will be 18827.375000
+
+EVENT time: 18827.375000,  type: 2, fromlayer3  entity: 1
+B_INPUT: seq: 0 ack: -1 message: qqqqqqqqqqqqqqqqqqqq
+B_INPUT: packet is valid
+B_INPUT: correct packet received
+          TOLAYER3: seq: -1, ack 0, check: 2259 qqqqqqqqqqqqqqqqqqqq
+          TOLAYER3: packet being corrupted
+          TOLAYER3: scheduling arrival on other side
+            INSERTEVENT: time is 18827.375000
+            INSERTEVENT: future time will be 18835.417969
+          TOLAYER5: data received: qqqqqqqqqqqqqqqqqqqq
+B_APPLICATION_OUTPUT: qqqqqqqqqqqqqqqqqqqq
+
+EVENT time: 18835.417969,  type: 2, fromlayer3  entity: 0
+A_INPUT: seq: -1 ack: 0 message: Zqqqqqqqqqqqqqqqqqqq
+packet is not valid
+
+EVENT time: 18870.794922,  type: 0, timerinterrupt   entity: 0
+A_TIMER: resending packet
+          START TIMER: starting timer at 18870.794922
+            INSERTEVENT: time is 18870.794922
+            INSERTEVENT: future time will be 18920.794922
+          TOLAYER3: seq: 0, ack -1, check: 2259 qqqqqqqqqqqqqqqqqqqq
+          TOLAYER3: packet being corrupted
+          TOLAYER3: scheduling arrival on other side
+            INSERTEVENT: time is 18870.794922
+            INSERTEVENT: future time will be 18873.900391
+
+EVENT time: 18873.900391,  type: 2, fromlayer3  entity: 1
+B_INPUT: seq: 0 ack: -1 message: Zqqqqqqqqqqqqqqqqqqq
+B_INPUT: packet is not valid, incorrect checksum
+
+EVENT time: 18920.794922,  type: 0, timerinterrupt   entity: 0
+A_TIMER: resending packet
+          START TIMER: starting timer at 18920.794922
+            INSERTEVENT: time is 18920.794922
+            INSERTEVENT: future time will be 18970.794922
+          TOLAYER3: seq: 0, ack -1, check: 2259 qqqqqqqqqqqqqqqqqqqq
+          TOLAYER3: packet being corrupted
+          TOLAYER3: scheduling arrival on other side
+            INSERTEVENT: time is 18920.794922
+            INSERTEVENT: future time will be 18927.707031
+
+EVENT time: 18927.707031,  type: 2, fromlayer3  entity: 1
+B_INPUT: seq: 0 ack: -1 message: Zqqqqqqqqqqqqqqqqqqq
+B_INPUT: packet is not valid, incorrect checksum
+
+EVENT time: 18970.794922,  type: 0, timerinterrupt   entity: 0
+A_TIMER: resending packet
+          START TIMER: starting timer at 18970.794922
+            INSERTEVENT: time is 18970.794922
+            INSERTEVENT: future time will be 19020.794922
+          TOLAYER3: seq: 0, ack -1, check: 2259 qqqqqqqqqqqqqqqqqqqq
+          TOLAYER3: packet being corrupted
+          TOLAYER3: scheduling arrival on other side
+            INSERTEVENT: time is 18970.794922
+            INSERTEVENT: future time will be 18977.154297
+
+EVENT time: 18977.154297,  type: 2, fromlayer3  entity: 1
+B_INPUT: seq: 0 ack: -1 message: Zqqqqqqqqqqqqqqqqqqq
+B_INPUT: packet is not valid, incorrect checksum
+
+EVENT time: 19020.794922,  type: 0, timerinterrupt   entity: 0
+A_TIMER: resending packet
+          START TIMER: starting timer at 19020.794922
+            INSERTEVENT: time is 19020.794922
+            INSERTEVENT: future time will be 19070.794922
+          TOLAYER3: seq: 0, ack -1, check: 2259 qqqqqqqqqqqqqqqqqqqq
+          TOLAYER3: packet being corrupted
+          TOLAYER3: scheduling arrival on other side
+            INSERTEVENT: time is 19020.794922
+            INSERTEVENT: future time will be 19022.460938
+
+EVENT time: 19022.460938,  type: 2, fromlayer3  entity: 1
+B_INPUT: seq: 0 ack: 999999 message: qqqqqqqqqqqqqqqqqqqq
+B_INPUT: packet is not valid, incorrect checksum
+
+EVENT time: 19070.794922,  type: 0, timerinterrupt   entity: 0
+A_TIMER: resending packet
+          START TIMER: starting timer at 19070.794922
+            INSERTEVENT: time is 19070.794922
+            INSERTEVENT: future time will be 19120.794922
+          TOLAYER3: seq: 0, ack -1, check: 2259 qqqqqqqqqqqqqqqqqqqq
+          TOLAYER3: scheduling arrival on other side
+            INSERTEVENT: time is 19070.794922
+            INSERTEVENT: future time will be 19073.216797
+
+EVENT time: 19073.216797,  type: 2, fromlayer3  entity: 1
+B_INPUT: seq: 0 ack: -1 message: qqqqqqqqqqqqqqqqqqqq
+B_INPUT: packet is valid
+B_INPUT: duplicate packet received, resend ack
+          TOLAYER3: seq: -1, ack 0, check: 2259 qqqqqqqqqqqqqqqqqqqq
+          TOLAYER3: scheduling arrival on other side
+            INSERTEVENT: time is 19073.216797
+            INSERTEVENT: future time will be 19080.955078
+
+EVENT time: 19080.955078,  type: 2, fromlayer3  entity: 0
+A_INPUT: seq: -1 ack: 0 message: qqqqqqqqqqqqqqqqqqqq
+packet is valid
+correct sequence number
+          STOP TIMER: stopping timer at 19080.955078
+IN_TRANSIT: setting FALSE
+
+EVENT time: 19624.601562,  type: 1, fromlayer5  entity: 0
+          GENERATE NEXT ARRIVAL: creating new arrival
+            INSERTEVENT: time is 19624.601562
+            INSERTEVENT: future time will be 19876.634766
+          MAINLOOP: data given to student: rrrrrrrrrrrrrrrrrrrr
+A_OUTPUT called: rrrrrrrrrrrrrrrrrrrr
+          START TIMER: starting timer at 19624.601562
+            INSERTEVENT: time is 19624.601562
+            INSERTEVENT: future time will be 19674.601562
+IN_TRANSIT: setting TRUE
+A_OUTPUT: packet leaving A: seq: 1 ack: -1 msg: rrrrrrrrrrrrrrrrrrrr
+          TOLAYER3: seq: 1, ack -1, check: 2280 rrrrrrrrrrrrrrrrrrrr
+          TOLAYER3: packet being corrupted
+          TOLAYER3: scheduling arrival on other side
+            INSERTEVENT: time is 19624.601562
+            INSERTEVENT: future time will be 19633.169922
+
+EVENT time: 19633.169922,  type: 2, fromlayer3  entity: 1
+B_INPUT: seq: 1 ack: -1 message: Zrrrrrrrrrrrrrrrrrrr
+B_INPUT: packet is not valid, incorrect checksum
+
+EVENT time: 19674.601562,  type: 0, timerinterrupt   entity: 0
+A_TIMER: resending packet
+          START TIMER: starting timer at 19674.601562
+            INSERTEVENT: time is 19674.601562
+            INSERTEVENT: future time will be 19724.601562
+          TOLAYER3: seq: 1, ack -1, check: 2280 rrrrrrrrrrrrrrrrrrrr
+          TOLAYER3: packet being corrupted
+          TOLAYER3: scheduling arrival on other side
+            INSERTEVENT: time is 19674.601562
+            INSERTEVENT: future time will be 19680.359375
+
+EVENT time: 19680.359375,  type: 2, fromlayer3  entity: 1
+B_INPUT: seq: 1 ack: -1 message: Zrrrrrrrrrrrrrrrrrrr
+B_INPUT: packet is not valid, incorrect checksum
+
+EVENT time: 19724.601562,  type: 0, timerinterrupt   entity: 0
+A_TIMER: resending packet
+          START TIMER: starting timer at 19724.601562
+            INSERTEVENT: time is 19724.601562
+            INSERTEVENT: future time will be 19774.601562
+          TOLAYER3: seq: 1, ack -1, check: 2280 rrrrrrrrrrrrrrrrrrrr
+          TOLAYER3: packet being corrupted
+          TOLAYER3: scheduling arrival on other side
+            INSERTEVENT: time is 19724.601562
+            INSERTEVENT: future time will be 19734.294922
+
+EVENT time: 19734.294922,  type: 2, fromlayer3  entity: 1
+B_INPUT: seq: 1 ack: -1 message: Zrrrrrrrrrrrrrrrrrrr
+B_INPUT: packet is not valid, incorrect checksum
+
+EVENT time: 19774.601562,  type: 0, timerinterrupt   entity: 0
+A_TIMER: resending packet
+          START TIMER: starting timer at 19774.601562
+            INSERTEVENT: time is 19774.601562
+            INSERTEVENT: future time will be 19824.601562
+          TOLAYER3: seq: 1, ack -1, check: 2280 rrrrrrrrrrrrrrrrrrrr
+          TOLAYER3: packet being corrupted
+          TOLAYER3: scheduling arrival on other side
+            INSERTEVENT: time is 19774.601562
+            INSERTEVENT: future time will be 19783.658203
+
+EVENT time: 19783.658203,  type: 2, fromlayer3  entity: 1
+B_INPUT: seq: 1 ack: -1 message: Zrrrrrrrrrrrrrrrrrrr
+B_INPUT: packet is not valid, incorrect checksum
+
+EVENT time: 19824.601562,  type: 0, timerinterrupt   entity: 0
+A_TIMER: resending packet
+          START TIMER: starting timer at 19824.601562
+            INSERTEVENT: time is 19824.601562
+            INSERTEVENT: future time will be 19874.601562
+          TOLAYER3: seq: 1, ack -1, check: 2280 rrrrrrrrrrrrrrrrrrrr
+          TOLAYER3: packet being corrupted
+          TOLAYER3: scheduling arrival on other side
+            INSERTEVENT: time is 19824.601562
+            INSERTEVENT: future time will be 19827.769531
+
+EVENT time: 19827.769531,  type: 2, fromlayer3  entity: 1
+B_INPUT: seq: 1 ack: -1 message: Zrrrrrrrrrrrrrrrrrrr
+B_INPUT: packet is not valid, incorrect checksum
+
+EVENT time: 19874.601562,  type: 0, timerinterrupt   entity: 0
+A_TIMER: resending packet
+          START TIMER: starting timer at 19874.601562
+            INSERTEVENT: time is 19874.601562
+            INSERTEVENT: future time will be 19924.601562
+          TOLAYER3: seq: 1, ack -1, check: 2280 rrrrrrrrrrrrrrrrrrrr
+          TOLAYER3: packet being corrupted
+          TOLAYER3: scheduling arrival on other side
+            INSERTEVENT: time is 19874.601562
+            INSERTEVENT: future time will be 19877.828125
+
+EVENT time: 19876.634766,  type: 1, fromlayer5  entity: 0
+          GENERATE NEXT ARRIVAL: creating new arrival
+            INSERTEVENT: time is 19876.634766
+            INSERTEVENT: future time will be 20878.046875
+          MAINLOOP: data given to student: ssssssssssssssssssss
+A_OUTPUT called: ssssssssssssssssssss
+A_OUTPUT: message in_transit, returning
+
+EVENT time: 19877.828125,  type: 2, fromlayer3  entity: 1
+B_INPUT: seq: 1 ack: -1 message: Zrrrrrrrrrrrrrrrrrrr
+B_INPUT: packet is not valid, incorrect checksum
+
+EVENT time: 19924.601562,  type: 0, timerinterrupt   entity: 0
+A_TIMER: resending packet
+          START TIMER: starting timer at 19924.601562
+            INSERTEVENT: time is 19924.601562
+            INSERTEVENT: future time will be 19974.601562
+          TOLAYER3: seq: 1, ack -1, check: 2280 rrrrrrrrrrrrrrrrrrrr
+          TOLAYER3: packet being corrupted
+          TOLAYER3: scheduling arrival on other side
+            INSERTEVENT: time is 19924.601562
+            INSERTEVENT: future time will be 19926.376953
+
+EVENT time: 19926.376953,  type: 2, fromlayer3  entity: 1
+B_INPUT: seq: 1 ack: -1 message: Zrrrrrrrrrrrrrrrrrrr
+B_INPUT: packet is not valid, incorrect checksum
+
+EVENT time: 19974.601562,  type: 0, timerinterrupt   entity: 0
+A_TIMER: resending packet
+          START TIMER: starting timer at 19974.601562
+            INSERTEVENT: time is 19974.601562
+            INSERTEVENT: future time will be 20024.601562
+          TOLAYER3: seq: 1, ack -1, check: 2280 rrrrrrrrrrrrrrrrrrrr
+          TOLAYER3: scheduling arrival on other side
+            INSERTEVENT: time is 19974.601562
+            INSERTEVENT: future time will be 19978.363281
+
+EVENT time: 19978.363281,  type: 2, fromlayer3  entity: 1
+B_INPUT: seq: 1 ack: -1 message: rrrrrrrrrrrrrrrrrrrr
+B_INPUT: packet is valid
+B_INPUT: correct packet received
+          TOLAYER3: seq: -1, ack 1, check: 2280 rrrrrrrrrrrrrrrrrrrr
+          TOLAYER3: packet being corrupted
+          TOLAYER3: scheduling arrival on other side
+            INSERTEVENT: time is 19978.363281
+            INSERTEVENT: future time will be 19979.839844
+          TOLAYER5: data received: rrrrrrrrrrrrrrrrrrrr
+B_APPLICATION_OUTPUT: rrrrrrrrrrrrrrrrrrrr
+
+EVENT time: 19979.839844,  type: 2, fromlayer3  entity: 0
+A_INPUT: seq: -1 ack: 999999 message: rrrrrrrrrrrrrrrrrrrr
+packet is not valid
+
+EVENT time: 20024.601562,  type: 0, timerinterrupt   entity: 0
+A_TIMER: resending packet
+          START TIMER: starting timer at 20024.601562
+            INSERTEVENT: time is 20024.601562
+            INSERTEVENT: future time will be 20074.601562
+          TOLAYER3: seq: 1, ack -1, check: 2280 rrrrrrrrrrrrrrrrrrrr
+          TOLAYER3: packet being corrupted
+          TOLAYER3: scheduling arrival on other side
+            INSERTEVENT: time is 20024.601562
+            INSERTEVENT: future time will be 20032.656250
+
+EVENT time: 20032.656250,  type: 2, fromlayer3  entity: 1
+B_INPUT: seq: 999999 ack: -1 message: rrrrrrrrrrrrrrrrrrrr
+B_INPUT: packet is not valid, incorrect checksum
+
+EVENT time: 20074.601562,  type: 0, timerinterrupt   entity: 0
+A_TIMER: resending packet
+          START TIMER: starting timer at 20074.601562
+            INSERTEVENT: time is 20074.601562
+            INSERTEVENT: future time will be 20124.601562
+          TOLAYER3: seq: 1, ack -1, check: 2280 rrrrrrrrrrrrrrrrrrrr
+          TOLAYER3: packet being corrupted
+          TOLAYER3: scheduling arrival on other side
+            INSERTEVENT: time is 20074.601562
+            INSERTEVENT: future time will be 20078.337891
+
+EVENT time: 20078.337891,  type: 2, fromlayer3  entity: 1
+B_INPUT: seq: 1 ack: -1 message: Zrrrrrrrrrrrrrrrrrrr
+B_INPUT: packet is not valid, incorrect checksum
+
+EVENT time: 20124.601562,  type: 0, timerinterrupt   entity: 0
+A_TIMER: resending packet
+          START TIMER: starting timer at 20124.601562
+            INSERTEVENT: time is 20124.601562
+            INSERTEVENT: future time will be 20174.601562
+          TOLAYER3: seq: 1, ack -1, check: 2280 rrrrrrrrrrrrrrrrrrrr
+          TOLAYER3: packet being corrupted
+          TOLAYER3: scheduling arrival on other side
+            INSERTEVENT: time is 20124.601562
+            INSERTEVENT: future time will be 20133.550781
+
+EVENT time: 20133.550781,  type: 2, fromlayer3  entity: 1
+B_INPUT: seq: 1 ack: -1 message: Zrrrrrrrrrrrrrrrrrrr
+B_INPUT: packet is not valid, incorrect checksum
+
+EVENT time: 20174.601562,  type: 0, timerinterrupt   entity: 0
+A_TIMER: resending packet
+          START TIMER: starting timer at 20174.601562
+            INSERTEVENT: time is 20174.601562
+            INSERTEVENT: future time will be 20224.601562
+          TOLAYER3: seq: 1, ack -1, check: 2280 rrrrrrrrrrrrrrrrrrrr
+          TOLAYER3: packet being corrupted
+          TOLAYER3: scheduling arrival on other side
+            INSERTEVENT: time is 20174.601562
+            INSERTEVENT: future time will be 20183.220703
+
+EVENT time: 20183.220703,  type: 2, fromlayer3  entity: 1
+B_INPUT: seq: 1 ack: -1 message: Zrrrrrrrrrrrrrrrrrrr
+B_INPUT: packet is not valid, incorrect checksum
+
+EVENT time: 20224.601562,  type: 0, timerinterrupt   entity: 0
+A_TIMER: resending packet
+          START TIMER: starting timer at 20224.601562
+            INSERTEVENT: time is 20224.601562
+            INSERTEVENT: future time will be 20274.601562
+          TOLAYER3: seq: 1, ack -1, check: 2280 rrrrrrrrrrrrrrrrrrrr
+          TOLAYER3: packet being corrupted
+          TOLAYER3: scheduling arrival on other side
+            INSERTEVENT: time is 20224.601562
+            INSERTEVENT: future time will be 20226.039062
+
+EVENT time: 20226.039062,  type: 2, fromlayer3  entity: 1
+B_INPUT: seq: 1 ack: -1 message: Zrrrrrrrrrrrrrrrrrrr
+B_INPUT: packet is not valid, incorrect checksum
+
+EVENT time: 20274.601562,  type: 0, timerinterrupt   entity: 0
+A_TIMER: resending packet
+          START TIMER: starting timer at 20274.601562
+            INSERTEVENT: time is 20274.601562
+            INSERTEVENT: future time will be 20324.601562
+          TOLAYER3: seq: 1, ack -1, check: 2280 rrrrrrrrrrrrrrrrrrrr
+          TOLAYER3: packet being corrupted
+          TOLAYER3: scheduling arrival on other side
+            INSERTEVENT: time is 20274.601562
+            INSERTEVENT: future time will be 20281.341797
+
+EVENT time: 20281.341797,  type: 2, fromlayer3  entity: 1
+B_INPUT: seq: 1 ack: -1 message: Zrrrrrrrrrrrrrrrrrrr
+B_INPUT: packet is not valid, incorrect checksum
+
+EVENT time: 20324.601562,  type: 0, timerinterrupt   entity: 0
+A_TIMER: resending packet
+          START TIMER: starting timer at 20324.601562
+            INSERTEVENT: time is 20324.601562
+            INSERTEVENT: future time will be 20374.601562
+          TOLAYER3: seq: 1, ack -1, check: 2280 rrrrrrrrrrrrrrrrrrrr
+          TOLAYER3: scheduling arrival on other side
+            INSERTEVENT: time is 20324.601562
+            INSERTEVENT: future time will be 20326.343750
+
+EVENT time: 20326.343750,  type: 2, fromlayer3  entity: 1
+B_INPUT: seq: 1 ack: -1 message: rrrrrrrrrrrrrrrrrrrr
+B_INPUT: packet is valid
+B_INPUT: duplicate packet received, resend ack
+          TOLAYER3: seq: -1, ack 1, check: 2280 rrrrrrrrrrrrrrrrrrrr
+          TOLAYER3: packet being corrupted
+          TOLAYER3: scheduling arrival on other side
+            INSERTEVENT: time is 20326.343750
+            INSERTEVENT: future time will be 20328.564453
+
+EVENT time: 20328.564453,  type: 2, fromlayer3  entity: 0
+A_INPUT: seq: -1 ack: 1 message: Zrrrrrrrrrrrrrrrrrrr
+packet is not valid
+
+EVENT time: 20374.601562,  type: 0, timerinterrupt   entity: 0
+A_TIMER: resending packet
+          START TIMER: starting timer at 20374.601562
+            INSERTEVENT: time is 20374.601562
+            INSERTEVENT: future time will be 20424.601562
+          TOLAYER3: seq: 1, ack -1, check: 2280 rrrrrrrrrrrrrrrrrrrr
+          TOLAYER3: packet being corrupted
+          TOLAYER3: scheduling arrival on other side
+            INSERTEVENT: time is 20374.601562
+            INSERTEVENT: future time will be 20382.945312
+
+EVENT time: 20382.945312,  type: 2, fromlayer3  entity: 1
+B_INPUT: seq: 1 ack: -1 message: Zrrrrrrrrrrrrrrrrrrr
+B_INPUT: packet is not valid, incorrect checksum
+
+EVENT time: 20424.601562,  type: 0, timerinterrupt   entity: 0
+A_TIMER: resending packet
+          START TIMER: starting timer at 20424.601562
+            INSERTEVENT: time is 20424.601562
+            INSERTEVENT: future time will be 20474.601562
+          TOLAYER3: seq: 1, ack -1, check: 2280 rrrrrrrrrrrrrrrrrrrr
+          TOLAYER3: packet being corrupted
+          TOLAYER3: scheduling arrival on other side
+            INSERTEVENT: time is 20424.601562
+            INSERTEVENT: future time will be 20432.980469
+
+EVENT time: 20432.980469,  type: 2, fromlayer3  entity: 1
+B_INPUT: seq: 1 ack: -1 message: Zrrrrrrrrrrrrrrrrrrr
+B_INPUT: packet is not valid, incorrect checksum
+
+EVENT time: 20474.601562,  type: 0, timerinterrupt   entity: 0
+A_TIMER: resending packet
+          START TIMER: starting timer at 20474.601562
+            INSERTEVENT: time is 20474.601562
+            INSERTEVENT: future time will be 20524.601562
+          TOLAYER3: seq: 1, ack -1, check: 2280 rrrrrrrrrrrrrrrrrrrr
+          TOLAYER3: scheduling arrival on other side
+            INSERTEVENT: time is 20474.601562
+            INSERTEVENT: future time will be 20481.236328
+
+EVENT time: 20481.236328,  type: 2, fromlayer3  entity: 1
+B_INPUT: seq: 1 ack: -1 message: rrrrrrrrrrrrrrrrrrrr
+B_INPUT: packet is valid
+B_INPUT: duplicate packet received, resend ack
+          TOLAYER3: seq: -1, ack 1, check: 2280 rrrrrrrrrrrrrrrrrrrr
+          TOLAYER3: packet being corrupted
+          TOLAYER3: scheduling arrival on other side
+            INSERTEVENT: time is 20481.236328
+            INSERTEVENT: future time will be 20488.990234
+
+EVENT time: 20488.990234,  type: 2, fromlayer3  entity: 0
+A_INPUT: seq: -1 ack: 1 message: Zrrrrrrrrrrrrrrrrrrr
+packet is not valid
+
+EVENT time: 20524.601562,  type: 0, timerinterrupt   entity: 0
+A_TIMER: resending packet
+          START TIMER: starting timer at 20524.601562
+            INSERTEVENT: time is 20524.601562
+            INSERTEVENT: future time will be 20574.601562
+          TOLAYER3: seq: 1, ack -1, check: 2280 rrrrrrrrrrrrrrrrrrrr
+          TOLAYER3: packet being corrupted
+          TOLAYER3: scheduling arrival on other side
+            INSERTEVENT: time is 20524.601562
+            INSERTEVENT: future time will be 20532.298828
+
+EVENT time: 20532.298828,  type: 2, fromlayer3  entity: 1
+B_INPUT: seq: 1 ack: -1 message: Zrrrrrrrrrrrrrrrrrrr
+B_INPUT: packet is not valid, incorrect checksum
+
+EVENT time: 20574.601562,  type: 0, timerinterrupt   entity: 0
+A_TIMER: resending packet
+          START TIMER: starting timer at 20574.601562
+            INSERTEVENT: time is 20574.601562
+            INSERTEVENT: future time will be 20624.601562
+          TOLAYER3: seq: 1, ack -1, check: 2280 rrrrrrrrrrrrrrrrrrrr
+          TOLAYER3: packet being corrupted
+          TOLAYER3: scheduling arrival on other side
+            INSERTEVENT: time is 20574.601562
+            INSERTEVENT: future time will be 20579.582031
+
+EVENT time: 20579.582031,  type: 2, fromlayer3  entity: 1
+B_INPUT: seq: 1 ack: -1 message: Zrrrrrrrrrrrrrrrrrrr
+B_INPUT: packet is not valid, incorrect checksum
+
+EVENT time: 20624.601562,  type: 0, timerinterrupt   entity: 0
+A_TIMER: resending packet
+          START TIMER: starting timer at 20624.601562
+            INSERTEVENT: time is 20624.601562
+            INSERTEVENT: future time will be 20674.601562
+          TOLAYER3: seq: 1, ack -1, check: 2280 rrrrrrrrrrrrrrrrrrrr
+          TOLAYER3: packet being corrupted
+          TOLAYER3: scheduling arrival on other side
+            INSERTEVENT: time is 20624.601562
+            INSERTEVENT: future time will be 20634.453125
+
+EVENT time: 20634.453125,  type: 2, fromlayer3  entity: 1
+B_INPUT: seq: 1 ack: -1 message: Zrrrrrrrrrrrrrrrrrrr
+B_INPUT: packet is not valid, incorrect checksum
+
+EVENT time: 20674.601562,  type: 0, timerinterrupt   entity: 0
+A_TIMER: resending packet
+          START TIMER: starting timer at 20674.601562
+            INSERTEVENT: time is 20674.601562
+            INSERTEVENT: future time will be 20724.601562
+          TOLAYER3: seq: 1, ack -1, check: 2280 rrrrrrrrrrrrrrrrrrrr
+          TOLAYER3: packet being corrupted
+          TOLAYER3: scheduling arrival on other side
+            INSERTEVENT: time is 20674.601562
+            INSERTEVENT: future time will be 20678.595703
+
+EVENT time: 20678.595703,  type: 2, fromlayer3  entity: 1
+B_INPUT: seq: 1 ack: -1 message: Zrrrrrrrrrrrrrrrrrrr
+B_INPUT: packet is not valid, incorrect checksum
+
+EVENT time: 20724.601562,  type: 0, timerinterrupt   entity: 0
+A_TIMER: resending packet
+          START TIMER: starting timer at 20724.601562
+            INSERTEVENT: time is 20724.601562
+            INSERTEVENT: future time will be 20774.601562
+          TOLAYER3: seq: 1, ack -1, check: 2280 rrrrrrrrrrrrrrrrrrrr
+          TOLAYER3: packet being corrupted
+          TOLAYER3: scheduling arrival on other side
+            INSERTEVENT: time is 20724.601562
+            INSERTEVENT: future time will be 20729.412109
+
+EVENT time: 20729.412109,  type: 2, fromlayer3  entity: 1
+B_INPUT: seq: 1 ack: -1 message: Zrrrrrrrrrrrrrrrrrrr
+B_INPUT: packet is not valid, incorrect checksum
+
+EVENT time: 20774.601562,  type: 0, timerinterrupt   entity: 0
+A_TIMER: resending packet
+          START TIMER: starting timer at 20774.601562
+            INSERTEVENT: time is 20774.601562
+            INSERTEVENT: future time will be 20824.601562
+          TOLAYER3: seq: 1, ack -1, check: 2280 rrrrrrrrrrrrrrrrrrrr
+          TOLAYER3: packet being corrupted
+          TOLAYER3: scheduling arrival on other side
+            INSERTEVENT: time is 20774.601562
+            INSERTEVENT: future time will be 20778.675781
+
+EVENT time: 20778.675781,  type: 2, fromlayer3  entity: 1
+B_INPUT: seq: 1 ack: -1 message: Zrrrrrrrrrrrrrrrrrrr
+B_INPUT: packet is not valid, incorrect checksum
+
+EVENT time: 20824.601562,  type: 0, timerinterrupt   entity: 0
+A_TIMER: resending packet
+          START TIMER: starting timer at 20824.601562
+            INSERTEVENT: time is 20824.601562
+            INSERTEVENT: future time will be 20874.601562
+          TOLAYER3: seq: 1, ack -1, check: 2280 rrrrrrrrrrrrrrrrrrrr
+          TOLAYER3: scheduling arrival on other side
+            INSERTEVENT: time is 20824.601562
+            INSERTEVENT: future time will be 20833.916016
+
+EVENT time: 20833.916016,  type: 2, fromlayer3  entity: 1
+B_INPUT: seq: 1 ack: -1 message: rrrrrrrrrrrrrrrrrrrr
+B_INPUT: packet is valid
+B_INPUT: duplicate packet received, resend ack
+          TOLAYER3: seq: -1, ack 1, check: 2280 rrrrrrrrrrrrrrrrrrrr
+          TOLAYER3: packet being corrupted
+          TOLAYER3: scheduling arrival on other side
+            INSERTEVENT: time is 20833.916016
+            INSERTEVENT: future time will be 20840.982422
+
+EVENT time: 20840.982422,  type: 2, fromlayer3  entity: 0
+A_INPUT: seq: -1 ack: 1 message: Zrrrrrrrrrrrrrrrrrrr
+packet is not valid
+
+EVENT time: 20874.601562,  type: 0, timerinterrupt   entity: 0
+A_TIMER: resending packet
+          START TIMER: starting timer at 20874.601562
+            INSERTEVENT: time is 20874.601562
+            INSERTEVENT: future time will be 20924.601562
+          TOLAYER3: seq: 1, ack -1, check: 2280 rrrrrrrrrrrrrrrrrrrr
+          TOLAYER3: scheduling arrival on other side
+            INSERTEVENT: time is 20874.601562
+            INSERTEVENT: future time will be 20878.453125
+
+EVENT time: 20878.046875,  type: 1, fromlayer5  entity: 0
+          GENERATE NEXT ARRIVAL: creating new arrival
+            INSERTEVENT: time is 20878.046875
+            INSERTEVENT: future time will be 21766.804688
+          MAINLOOP: data given to student: tttttttttttttttttttt
+A_OUTPUT called: tttttttttttttttttttt
+A_OUTPUT: message in_transit, returning
+
+EVENT time: 20878.453125,  type: 2, fromlayer3  entity: 1
+ Simulator terminated at time 20878.453125
+ after sending 20 msgs from layer5
+
+[PA2]20 packets sent from the Application Layer of Sender A[/PA2]
+[PA2]237 packets sent from the Transport Layer of Sender A[/PA2]
+[PA2]236 packets received at the Transport layer of Receiver B[/PA2]
+[PA2]10 packets received at the Application layer of Receiver B[/PA2]
+[PA2]Total time: 20878.453125 time units[/PA2]
+[PA2]Throughput: 0.000479 packets/time units[/PA2]
