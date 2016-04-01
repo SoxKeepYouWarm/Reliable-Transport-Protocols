@@ -13,4 +13,6 @@ sh experiment_one_sr.sh &
 
 wait
 
+echo "DONE!"
+
 exit 0

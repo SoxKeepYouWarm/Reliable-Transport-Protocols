@@ -289,16 +289,16 @@ void A_input(struct pkt packet) {
 	if (valid_packet(packet)) {
 		printf("packet is valid\n");
 		
-		if (packet.acknum < base) {
+		if (packet.acknum <= base) {
 			printf("A_INPUT: acknum: %d received old packet, drop it\n", packet.acknum);
 			return;
 		}
 		
 		// move window up past last ack
-		window->advance_window( (packet.acknum + 1) - base);
+		window->advance_window(packet.acknum - base);
 		
 		// update new base
-		base = packet.acknum + 1;
+		base = packet.acknum;
 		printf("A_INPUT: new base: %d\n", base);
 		
 		stoptimer(FROM_A);
@@ -382,7 +382,7 @@ void B_input(struct pkt packet) {
 			printf("B_INPUT: packet has expected sequence number\n");
 			
 			struct pkt response_packet;
-			response_packet.acknum = expected_seqnum;
+			response_packet.acknum = expected_seqnum + 1;
 			response_packet.seqnum = -1;
 			for (int i = 0; i < 20; i++) {
 				response_packet.payload[i] = '0';
@@ -401,7 +401,7 @@ void B_input(struct pkt packet) {
 			struct pkt response_packet;
 			
 			// re acknowledge last packet
-			response_packet.acknum = expected_seqnum - 1;
+			response_packet.acknum = expected_seqnum;
 			response_packet.seqnum = -1;
 			for (int i = 0; i < 20; i++) {
 				response_packet.payload[i] = '0';
