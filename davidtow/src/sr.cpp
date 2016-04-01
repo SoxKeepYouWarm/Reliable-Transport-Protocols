@@ -93,8 +93,10 @@ void Window::insert_packet(struct pkt packet) {
 	end_index = ( end_index + 1 ) % size;
 	
 	// set window frame
+	if (end_index >= size || end_index < 0) { printf("ERROR: INSERT_PACKET\n"); }
 	window[end_index].packet = packet;
 	window[end_index].packet_received = FALSE;
+	printf("INSERT_PACKET: SUCCESS\n");
 	
 	packet_count++;
 	if ( start_index == -1 ) {
@@ -116,12 +118,14 @@ void Window::advance_window(int steps) {
 		//delete window[start_index];
 		
 		if ( start_index == end_index ) {
+			if (start_index >= size || start_index < 0) { printf("ERROR: ADVANCE_WINDOW\n"); }
 			window[start_index].packet_received = FALSE;
 			start_index = -1 ;
 			end_index = -1 ;
 			packet_count = 0;
 			printf("ADVANCE_WINDOW: reset indeces to -1, cleared flags\n");
 		} else {
+			if (start_index >= size || start_index < 0) { printf("ERROR: ADVANCE_WINDOW\n"); }
 			window[start_index].packet_received = FALSE;
 			start_index = ( start_index + 1 ) % size;
 			packet_count --;
@@ -134,7 +138,8 @@ void Window::advance_window(int steps) {
 
 
 int Window::is_full() {
-	return (start_index == ( (end_index + 1) % size) );
+	//return (start_index == ( (end_index + 1) % size) );
+	return packet_count == size;
 }
 
 
@@ -143,6 +148,7 @@ struct Window_frame* Window::get_window_frame_by_seqnum(int seqnum) {
 	int frame_index = seqnum - base;
 	int position = (frame_index + start_index) % size;
 	printf("SUSPECT CODE: base: %d size: %d frame_index: %d position: %d\n", base, size, frame_index, position);
+	if (position >= size || position < 0) { printf("ERROR: GET_WINDOW_FRAME_BY_SEQNUM\n"); }
 	return &window[position];
 }
 
@@ -166,6 +172,7 @@ void print_window_contents(Window window) {
 	std::cout << "WINDOW CONTENTS: ";
 	for (int i = 0; i <= window.size; i++) {
 		int pos = (window.start_index + i) % window.size;
+		if (pos >= window.size || pos < 0) { printf("ERROR: PRINT_WINDOW_CONTENTS\n"); }
 		std::cout << window.window[pos].packet.seqnum << " ";
 		
 		if (pos == window.end_index) {
@@ -206,6 +213,7 @@ void print_receiver_window_contents(Receiver_Window window) {
 	
 	for (int i = 0; i < window.size; i++) {
 		int pos = (window.start_index + i) % window.size;
+		if (pos >= window.size || pos < 0) { printf("ERROR: PRINT_RECEIVER_WINDOW_CONTENTS\n"); }
 		printf("%d ", window.window[pos].seqnum);
 	}
 	printf("\n");
@@ -239,11 +247,12 @@ void Receiver_Window::record_packet(struct pkt packet) {
 		return;
 	}
 	
-	int position = packet.seqnum - base + start_index;
+	int position = (packet.seqnum - base + start_index) % this->size;
 	printf("RECORD_PACKET: position: %d seqnum: %d base: %d start_index: %d end_index %d\n", 
 			position, packet.seqnum, base, start_index, end_index);
 	
-	window[position] = packet;
+	if (position >= this->size || position < 0) { printf("ERROR: RECORD_PACKET\n"); }
+	this->window[position] = packet;
 	attempt_advance();
 	
 }
@@ -254,7 +263,8 @@ void Receiver_Window::attempt_advance() {
 	for (int i = 0; i < size; i++) {
 		
 		int position = (start_index + i) % size;
-		if (window[position].seqnum == base) {
+		if (position >= this->size || position < 0) { printf("ERROR: ATTEMPT_ADVANCE\n"); }
+		if (this->window[position].seqnum == base) {
 			advancements ++;
 			base++;
 		} else {
@@ -266,9 +276,9 @@ void Receiver_Window::attempt_advance() {
 	printf("ATTEMPT_ADVANCE: steps: %d\n", advancements);
 	
 	for (int i = 0; i < advancements; i++) {
-		printf("B_INPUT: delivering seq_num %d\n", window[start_index].seqnum);
-		tolayer5(FROM_B, window[start_index].payload);
-		window[start_index].seqnum = -1;
+		printf("B_INPUT: delivering seq_num %d\n", this->window[start_index].seqnum);
+		tolayer5(FROM_B, this->window[start_index].payload);
+		this->window[start_index].seqnum = -1;
 		start_index = (start_index + 1) % size;
 		end_index = (end_index + 1) % size;
 	}
@@ -370,6 +380,7 @@ void Timer::set_timer_for_next_event() {
 	Event next_event = timed_events.front();
 	float time_to_next_alarm = next_event.alarm_time - get_sim_time();
 	starttimer(FROM_A, time_to_next_alarm);
+	printf("SET_TIMER_fOR_NEXT_EVENT: seqnum: %d alarm_time: %f\n", next_event.packet.seqnum, time_to_next_alarm);
 	
 }
 
@@ -397,6 +408,7 @@ void Timer::handle_next_event_alarm() {
 		// send packet out
 		printf("A_OUTPUT: resending packet %d\n", triggered_event.packet.seqnum);
 		tolayer3(FROM_A, triggered_event.packet);
+		printf("DEBUG: CALLED AFTER TOLAYER3\n");
 		
 	} else {
 		printf("event queue empty, no event to be handled :(\n");
@@ -652,7 +664,7 @@ void A_timerinterrupt() {
 	// timer went off, resend packet and restart timer
 	
 	timer->handle_next_event_alarm();
-	
+	printf("A_INTERRUPT: handled alarm\n");
 	
 }
 

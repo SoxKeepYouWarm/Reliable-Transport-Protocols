@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CodeLite_Workspace Name="cse489_pa2" Database="">
-  <Project Name="tests" Path="tests/tests.project" Active="Yes"/>
-  <Project Name="cse489_pa2" Path="cse489_pa2.project" Active="No"/>
+  <Project Name="tests" Path="tests/tests.project" Active="No"/>
+  <Project Name="cse489_pa2" Path="cse489_pa2.project" Active="Yes"/>
   <BuildMatrix>
     <WorkspaceConfiguration Name="Debug" Selected="yes">
       <Environment/>

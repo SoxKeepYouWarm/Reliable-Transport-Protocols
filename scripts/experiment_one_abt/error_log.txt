@@ -1,0 +1,15 @@
+usage: run_experiments [-h] [-o FILE] [-n] -m MESSAGES -l LOSS -c CORRUPTION
+                       -t TIME -w WINDOW -p PATH
+run_experiments: error: argument -w/--window is required
+usage: run_experiments [-h] [-o FILE] [-n] -m MESSAGES -l LOSS -c CORRUPTION
+                       -t TIME -w WINDOW -p PATH
+run_experiments: error: argument -w/--window is required
+usage: run_experiments [-h] [-o FILE] [-n] -m MESSAGES -l LOSS -c CORRUPTION
+                       -t TIME -w WINDOW -p PATH
+run_experiments: error: argument -w/--window is required
+usage: run_experiments [-h] [-o FILE] [-n] -m MESSAGES -l LOSS -c CORRUPTION
+                       -t TIME -w WINDOW -p PATH
+run_experiments: error: argument -w/--window is required
+usage: run_experiments [-h] [-o FILE] [-n] -m MESSAGES -l LOSS -c CORRUPTION
+                       -t TIME -w WINDOW -p PATH
+run_experiments: error: argument -w/--window is required
