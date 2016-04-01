@@ -12,7 +12,7 @@ EVENT time: 914.479309,  type: 1, fromlayer5  entity: 0
 A_OUTPUT called: aaaaaaaaaaaaaaaaaaaa
           START TIMER: starting timer at 914.479309
             INSERTEVENT: time is 914.479309
-            INSERTEVENT: future time will be 964.479309
+            INSERTEVENT: future time will be 944.479309
 IN_TRANSIT: setting TRUE
 A_OUTPUT: packet leaving A: seq: 0 ack: -1 msg: aaaaaaaaaaaaaaaaaaaa
           TOLAYER3: seq: 0, ack -1, check: 1939 aaaaaaaaaaaaaaaaaaaa
@@ -46,7 +46,7 @@ EVENT time: 2195.214844,  type: 1, fromlayer5  entity: 0
 A_OUTPUT called: bbbbbbbbbbbbbbbbbbbb
           START TIMER: starting timer at 2195.214844
             INSERTEVENT: time is 2195.214844
-            INSERTEVENT: future time will be 2245.214844
+            INSERTEVENT: future time will be 2225.214844
 IN_TRANSIT: setting TRUE
 A_OUTPUT: packet leaving A: seq: 1 ack: -1 msg: bbbbbbbbbbbbbbbbbbbb
           TOLAYER3: seq: 1, ack -1, check: 1960 bbbbbbbbbbbbbbbbbbbb
@@ -80,7 +80,7 @@ EVENT time: 3581.955566,  type: 1, fromlayer5  entity: 0
 A_OUTPUT called: cccccccccccccccccccc
           START TIMER: starting timer at 3581.955566
             INSERTEVENT: time is 3581.955566
-            INSERTEVENT: future time will be 3631.955566
+            INSERTEVENT: future time will be 3611.955566
 IN_TRANSIT: setting TRUE
 A_OUTPUT: packet leaving A: seq: 0 ack: -1 msg: cccccccccccccccccccc
           TOLAYER3: seq: 0, ack -1, check: 1979 cccccccccccccccccccc
@@ -93,32 +93,32 @@ EVENT time: 3583.409668,  type: 2, fromlayer3  entity: 1
 B_INPUT: seq: 999999 ack: -1 message: cccccccccccccccccccc
 B_INPUT: packet is not valid, incorrect checksum
 
-EVENT time: 3631.955566,  type: 0, timerinterrupt   entity: 0
+EVENT time: 3611.955566,  type: 0, timerinterrupt   entity: 0
 A_TIMER: resending packet
-          START TIMER: starting timer at 3631.955566
-            INSERTEVENT: time is 3631.955566
-            INSERTEVENT: future time will be 3681.955566
+          START TIMER: starting timer at 3611.955566
+            INSERTEVENT: time is 3611.955566
+            INSERTEVENT: future time will be 3641.955566
           TOLAYER3: seq: 0, ack -1, check: 1979 cccccccccccccccccccc
           TOLAYER3: scheduling arrival on other side
-            INSERTEVENT: time is 3631.955566
-            INSERTEVENT: future time will be 3641.835449
+            INSERTEVENT: time is 3611.955566
+            INSERTEVENT: future time will be 3621.835449
 
-EVENT time: 3641.835449,  type: 2, fromlayer3  entity: 1
+EVENT time: 3621.835449,  type: 2, fromlayer3  entity: 1
 B_INPUT: seq: 0 ack: -1 message: cccccccccccccccccccc
 B_INPUT: packet is valid
 B_INPUT: correct packet received
           TOLAYER3: seq: -1, ack 0, check: 1979 cccccccccccccccccccc
           TOLAYER3: scheduling arrival on other side
-            INSERTEVENT: time is 3641.835449
-            INSERTEVENT: future time will be 3644.456787
+            INSERTEVENT: time is 3621.835449
+            INSERTEVENT: future time will be 3624.456787
           TOLAYER5: data received: cccccccccccccccccccc
 B_APPLICATION_OUTPUT: cccccccccccccccccccc
 
-EVENT time: 3644.456787,  type: 2, fromlayer3  entity: 0
+EVENT time: 3624.456787,  type: 2, fromlayer3  entity: 0
 A_INPUT: seq: -1 ack: 0 message: cccccccccccccccccccc
 packet is valid
 correct sequence number
-          STOP TIMER: stopping timer at 3644.456787
+          STOP TIMER: stopping timer at 3624.456787
 IN_TRANSIT: setting FALSE
 
 EVENT time: 4434.778809,  type: 1, fromlayer5  entity: 0
@@ -129,7 +129,7 @@ EVENT time: 4434.778809,  type: 1, fromlayer5  entity: 0
 A_OUTPUT called: dddddddddddddddddddd
           START TIMER: starting timer at 4434.778809
             INSERTEVENT: time is 4434.778809
-            INSERTEVENT: future time will be 4484.778809
+            INSERTEVENT: future time will be 4464.778809
 IN_TRANSIT: setting TRUE
 A_OUTPUT: packet leaving A: seq: 1 ack: -1 msg: dddddddddddddddddddd
           TOLAYER3: seq: 1, ack -1, check: 2000 dddddddddddddddddddd
@@ -163,7 +163,7 @@ EVENT time: 5312.759766,  type: 1, fromlayer5  entity: 0
 A_OUTPUT called: eeeeeeeeeeeeeeeeeeee
           START TIMER: starting timer at 5312.759766
             INSERTEVENT: time is 5312.759766
-            INSERTEVENT: future time will be 5362.759766
+            INSERTEVENT: future time will be 5342.759766
 IN_TRANSIT: setting TRUE
 A_OUTPUT: packet leaving A: seq: 0 ack: -1 msg: eeeeeeeeeeeeeeeeeeee
           TOLAYER3: seq: 0, ack -1, check: 2019 eeeeeeeeeeeeeeeeeeee
@@ -197,7 +197,7 @@ EVENT time: 5519.540039,  type: 1, fromlayer5  entity: 0
 A_OUTPUT called: ffffffffffffffffffff
           START TIMER: starting timer at 5519.540039
             INSERTEVENT: time is 5519.540039
-            INSERTEVENT: future time will be 5569.540039
+            INSERTEVENT: future time will be 5549.540039
 IN_TRANSIT: setting TRUE
 A_OUTPUT: packet leaving A: seq: 1 ack: -1 msg: ffffffffffffffffffff
           TOLAYER3: seq: 1, ack -1, check: 2040 ffffffffffffffffffff
@@ -231,7 +231,7 @@ EVENT time: 6145.914062,  type: 1, fromlayer5  entity: 0
 A_OUTPUT called: gggggggggggggggggggg
           START TIMER: starting timer at 6145.914062
             INSERTEVENT: time is 6145.914062
-            INSERTEVENT: future time will be 6195.914062
+            INSERTEVENT: future time will be 6175.914062
 IN_TRANSIT: setting TRUE
 A_OUTPUT: packet leaving A: seq: 0 ack: -1 msg: gggggggggggggggggggg
           TOLAYER3: seq: 0, ack -1, check: 2059 gggggggggggggggggggg
@@ -265,7 +265,7 @@ EVENT time: 6322.970703,  type: 1, fromlayer5  entity: 0
 A_OUTPUT called: hhhhhhhhhhhhhhhhhhhh
           START TIMER: starting timer at 6322.970703
             INSERTEVENT: time is 6322.970703
-            INSERTEVENT: future time will be 6372.970703
+            INSERTEVENT: future time will be 6352.970703
 IN_TRANSIT: setting TRUE
 A_OUTPUT: packet leaving A: seq: 1 ack: -1 msg: hhhhhhhhhhhhhhhhhhhh
           TOLAYER3: seq: 1, ack -1, check: 2080 hhhhhhhhhhhhhhhhhhhh
@@ -299,7 +299,7 @@ EVENT time: 6690.572266,  type: 1, fromlayer5  entity: 0
 A_OUTPUT called: iiiiiiiiiiiiiiiiiiii
           START TIMER: starting timer at 6690.572266
             INSERTEVENT: time is 6690.572266
-            INSERTEVENT: future time will be 6740.572266
+            INSERTEVENT: future time will be 6720.572266
 IN_TRANSIT: setting TRUE
 A_OUTPUT: packet leaving A: seq: 0 ack: -1 msg: iiiiiiiiiiiiiiiiiiii
           TOLAYER3: seq: 0, ack -1, check: 2099 iiiiiiiiiiiiiiiiiiii
@@ -333,7 +333,7 @@ EVENT time: 7610.445312,  type: 1, fromlayer5  entity: 0
 A_OUTPUT called: jjjjjjjjjjjjjjjjjjjj
           START TIMER: starting timer at 7610.445312
             INSERTEVENT: time is 7610.445312
-            INSERTEVENT: future time will be 7660.445312
+            INSERTEVENT: future time will be 7640.445312
 IN_TRANSIT: setting TRUE
 A_OUTPUT: packet leaving A: seq: 1 ack: -1 msg: jjjjjjjjjjjjjjjjjjjj
           TOLAYER3: seq: 1, ack -1, check: 2120 jjjjjjjjjjjjjjjjjjjj
@@ -367,7 +367,7 @@ EVENT time: 7753.089355,  type: 1, fromlayer5  entity: 0
 A_OUTPUT called: kkkkkkkkkkkkkkkkkkkk
           START TIMER: starting timer at 7753.089355
             INSERTEVENT: time is 7753.089355
-            INSERTEVENT: future time will be 7803.089355
+            INSERTEVENT: future time will be 7783.089355
 IN_TRANSIT: setting TRUE
 A_OUTPUT: packet leaving A: seq: 0 ack: -1 msg: kkkkkkkkkkkkkkkkkkkk
           TOLAYER3: seq: 0, ack -1, check: 2139 kkkkkkkkkkkkkkkkkkkk
@@ -391,45 +391,45 @@ EVENT time: 7771.327637,  type: 2, fromlayer3  entity: 0
 A_INPUT: seq: 999999 ack: 0 message: kkkkkkkkkkkkkkkkkkkk
 packet is not valid
 
-EVENT time: 7803.089355,  type: 0, timerinterrupt   entity: 0
+EVENT time: 7783.089355,  type: 0, timerinterrupt   entity: 0
 A_TIMER: resending packet
-          START TIMER: starting timer at 7803.089355
-            INSERTEVENT: time is 7803.089355
-            INSERTEVENT: future time will be 7853.089355
+          START TIMER: starting timer at 7783.089355
+            INSERTEVENT: time is 7783.089355
+            INSERTEVENT: future time will be 7813.089355
           TOLAYER3: seq: 0, ack -1, check: 2139 kkkkkkkkkkkkkkkkkkkk
           TOLAYER3: packet being corrupted
           TOLAYER3: scheduling arrival on other side
-            INSERTEVENT: time is 7803.089355
-            INSERTEVENT: future time will be 7808.668457
+            INSERTEVENT: time is 7783.089355
+            INSERTEVENT: future time will be 7788.668457
 
-EVENT time: 7808.668457,  type: 2, fromlayer3  entity: 1
+EVENT time: 7788.668457,  type: 2, fromlayer3  entity: 1
 B_INPUT: seq: 0 ack: -1 message: Zkkkkkkkkkkkkkkkkkkk
 B_INPUT: packet is not valid, incorrect checksum
 
-EVENT time: 7853.089355,  type: 0, timerinterrupt   entity: 0
+EVENT time: 7813.089355,  type: 0, timerinterrupt   entity: 0
 A_TIMER: resending packet
-          START TIMER: starting timer at 7853.089355
-            INSERTEVENT: time is 7853.089355
-            INSERTEVENT: future time will be 7903.089355
+          START TIMER: starting timer at 7813.089355
+            INSERTEVENT: time is 7813.089355
+            INSERTEVENT: future time will be 7843.089355
           TOLAYER3: seq: 0, ack -1, check: 2139 kkkkkkkkkkkkkkkkkkkk
           TOLAYER3: scheduling arrival on other side
-            INSERTEVENT: time is 7853.089355
-            INSERTEVENT: future time will be 7859.736816
+            INSERTEVENT: time is 7813.089355
+            INSERTEVENT: future time will be 7819.736816
 
-EVENT time: 7859.736816,  type: 2, fromlayer3  entity: 1
+EVENT time: 7819.736816,  type: 2, fromlayer3  entity: 1
 B_INPUT: seq: 0 ack: -1 message: kkkkkkkkkkkkkkkkkkkk
 B_INPUT: packet is valid
 B_INPUT: duplicate packet received, resend ack
           TOLAYER3: seq: -1, ack 0, check: 2139 kkkkkkkkkkkkkkkkkkkk
           TOLAYER3: scheduling arrival on other side
-            INSERTEVENT: time is 7859.736816
-            INSERTEVENT: future time will be 7861.065430
+            INSERTEVENT: time is 7819.736816
+            INSERTEVENT: future time will be 7821.065430
 
-EVENT time: 7861.065430,  type: 2, fromlayer3  entity: 0
+EVENT time: 7821.065430,  type: 2, fromlayer3  entity: 0
 A_INPUT: seq: -1 ack: 0 message: kkkkkkkkkkkkkkkkkkkk
 packet is valid
 correct sequence number
-          STOP TIMER: stopping timer at 7861.065430
+          STOP TIMER: stopping timer at 7821.065430
 IN_TRANSIT: setting FALSE
 
 EVENT time: 7959.576660,  type: 1, fromlayer5  entity: 0
@@ -440,7 +440,7 @@ EVENT time: 7959.576660,  type: 1, fromlayer5  entity: 0
 A_OUTPUT called: llllllllllllllllllll
           START TIMER: starting timer at 7959.576660
             INSERTEVENT: time is 7959.576660
-            INSERTEVENT: future time will be 8009.576660
+            INSERTEVENT: future time will be 7989.576660
 IN_TRANSIT: setting TRUE
 A_OUTPUT: packet leaving A: seq: 1 ack: -1 msg: llllllllllllllllllll
           TOLAYER3: seq: 1, ack -1, check: 2160 llllllllllllllllllll
@@ -474,7 +474,7 @@ EVENT time: 8660.586914,  type: 1, fromlayer5  entity: 0
 A_OUTPUT called: mmmmmmmmmmmmmmmmmmmm
           START TIMER: starting timer at 8660.586914
             INSERTEVENT: time is 8660.586914
-            INSERTEVENT: future time will be 8710.586914
+            INSERTEVENT: future time will be 8690.586914
 IN_TRANSIT: setting TRUE
 A_OUTPUT: packet leaving A: seq: 0 ack: -1 msg: mmmmmmmmmmmmmmmmmmmm
           TOLAYER3: seq: 0, ack -1, check: 2179 mmmmmmmmmmmmmmmmmmmm
@@ -498,54 +498,54 @@ EVENT time: 8670.993164,  type: 2, fromlayer3  entity: 0
 A_INPUT: seq: -1 ack: 0 message: Zmmmmmmmmmmmmmmmmmmm
 packet is not valid
 
-EVENT time: 8710.586914,  type: 0, timerinterrupt   entity: 0
+EVENT time: 8690.586914,  type: 0, timerinterrupt   entity: 0
 A_TIMER: resending packet
-          START TIMER: starting timer at 8710.586914
-            INSERTEVENT: time is 8710.586914
-            INSERTEVENT: future time will be 8760.586914
+          START TIMER: starting timer at 8690.586914
+            INSERTEVENT: time is 8690.586914
+            INSERTEVENT: future time will be 8720.586914
           TOLAYER3: seq: 0, ack -1, check: 2179 mmmmmmmmmmmmmmmmmmmm
           TOLAYER3: scheduling arrival on other side
-            INSERTEVENT: time is 8710.586914
-            INSERTEVENT: future time will be 8714.206055
+            INSERTEVENT: time is 8690.586914
+            INSERTEVENT: future time will be 8694.206055
 
-EVENT time: 8714.206055,  type: 2, fromlayer3  entity: 1
+EVENT time: 8694.206055,  type: 2, fromlayer3  entity: 1
 B_INPUT: seq: 0 ack: -1 message: mmmmmmmmmmmmmmmmmmmm
 B_INPUT: packet is valid
 B_INPUT: duplicate packet received, resend ack
           TOLAYER3: seq: -1, ack 0, check: 2179 mmmmmmmmmmmmmmmmmmmm
           TOLAYER3: packet being corrupted
           TOLAYER3: scheduling arrival on other side
-            INSERTEVENT: time is 8714.206055
-            INSERTEVENT: future time will be 8718.632812
+            INSERTEVENT: time is 8694.206055
+            INSERTEVENT: future time will be 8698.632812
 
-EVENT time: 8718.632812,  type: 2, fromlayer3  entity: 0
+EVENT time: 8698.632812,  type: 2, fromlayer3  entity: 0
 A_INPUT: seq: -1 ack: 0 message: Zmmmmmmmmmmmmmmmmmmm
 packet is not valid
 
-EVENT time: 8760.586914,  type: 0, timerinterrupt   entity: 0
+EVENT time: 8720.586914,  type: 0, timerinterrupt   entity: 0
 A_TIMER: resending packet
-          START TIMER: starting timer at 8760.586914
-            INSERTEVENT: time is 8760.586914
-            INSERTEVENT: future time will be 8810.586914
+          START TIMER: starting timer at 8720.586914
+            INSERTEVENT: time is 8720.586914
+            INSERTEVENT: future time will be 8750.586914
           TOLAYER3: seq: 0, ack -1, check: 2179 mmmmmmmmmmmmmmmmmmmm
           TOLAYER3: scheduling arrival on other side
-            INSERTEVENT: time is 8760.586914
-            INSERTEVENT: future time will be 8761.692383
+            INSERTEVENT: time is 8720.586914
+            INSERTEVENT: future time will be 8721.692383
 
-EVENT time: 8761.692383,  type: 2, fromlayer3  entity: 1
+EVENT time: 8721.692383,  type: 2, fromlayer3  entity: 1
 B_INPUT: seq: 0 ack: -1 message: mmmmmmmmmmmmmmmmmmmm
 B_INPUT: packet is valid
 B_INPUT: duplicate packet received, resend ack
           TOLAYER3: seq: -1, ack 0, check: 2179 mmmmmmmmmmmmmmmmmmmm
           TOLAYER3: scheduling arrival on other side
-            INSERTEVENT: time is 8761.692383
-            INSERTEVENT: future time will be 8768.445312
+            INSERTEVENT: time is 8721.692383
+            INSERTEVENT: future time will be 8728.445312
 
-EVENT time: 8768.445312,  type: 2, fromlayer3  entity: 0
+EVENT time: 8728.445312,  type: 2, fromlayer3  entity: 0
 A_INPUT: seq: -1 ack: 0 message: mmmmmmmmmmmmmmmmmmmm
 packet is valid
 correct sequence number
-          STOP TIMER: stopping timer at 8768.445312
+          STOP TIMER: stopping timer at 8728.445312
 IN_TRANSIT: setting FALSE
 
 EVENT time: 9936.199219,  type: 1, fromlayer5  entity: 0
@@ -556,7 +556,7 @@ EVENT time: 9936.199219,  type: 1, fromlayer5  entity: 0
 A_OUTPUT called: nnnnnnnnnnnnnnnnnnnn
           START TIMER: starting timer at 9936.199219
             INSERTEVENT: time is 9936.199219
-            INSERTEVENT: future time will be 9986.199219
+            INSERTEVENT: future time will be 9966.199219
 IN_TRANSIT: setting TRUE
 A_OUTPUT: packet leaving A: seq: 1 ack: -1 msg: nnnnnnnnnnnnnnnnnnnn
           TOLAYER3: seq: 1, ack -1, check: 2200 nnnnnnnnnnnnnnnnnnnn
@@ -590,7 +590,7 @@ EVENT time: 11786.957031,  type: 1, fromlayer5  entity: 0
 A_OUTPUT called: oooooooooooooooooooo
           START TIMER: starting timer at 11786.957031
             INSERTEVENT: time is 11786.957031
-            INSERTEVENT: future time will be 11836.957031
+            INSERTEVENT: future time will be 11816.957031
 IN_TRANSIT: setting TRUE
 A_OUTPUT: packet leaving A: seq: 0 ack: -1 msg: oooooooooooooooooooo
           TOLAYER3: seq: 0, ack -1, check: 2219 oooooooooooooooooooo
@@ -624,7 +624,7 @@ EVENT time: 12232.913086,  type: 1, fromlayer5  entity: 0
 A_OUTPUT called: pppppppppppppppppppp
           START TIMER: starting timer at 12232.913086
             INSERTEVENT: time is 12232.913086
-            INSERTEVENT: future time will be 12282.913086
+            INSERTEVENT: future time will be 12262.913086
 IN_TRANSIT: setting TRUE
 A_OUTPUT: packet leaving A: seq: 1 ack: -1 msg: pppppppppppppppppppp
           TOLAYER3: seq: 1, ack -1, check: 2240 pppppppppppppppppppp
@@ -658,7 +658,7 @@ EVENT time: 14051.936523,  type: 1, fromlayer5  entity: 0
 A_OUTPUT called: qqqqqqqqqqqqqqqqqqqq
           START TIMER: starting timer at 14051.936523
             INSERTEVENT: time is 14051.936523
-            INSERTEVENT: future time will be 14101.936523
+            INSERTEVENT: future time will be 14081.936523
 IN_TRANSIT: setting TRUE
 A_OUTPUT: packet leaving A: seq: 0 ack: -1 msg: qqqqqqqqqqqqqqqqqqqq
           TOLAYER3: seq: 0, ack -1, check: 2259 qqqqqqqqqqqqqqqqqqqq
@@ -692,7 +692,7 @@ EVENT time: 15886.726562,  type: 1, fromlayer5  entity: 0
 A_OUTPUT called: rrrrrrrrrrrrrrrrrrrr
           START TIMER: starting timer at 15886.726562
             INSERTEVENT: time is 15886.726562
-            INSERTEVENT: future time will be 15936.726562
+            INSERTEVENT: future time will be 15916.726562
 IN_TRANSIT: setting TRUE
 A_OUTPUT: packet leaving A: seq: 1 ack: -1 msg: rrrrrrrrrrrrrrrrrrrr
           TOLAYER3: seq: 1, ack -1, check: 2280 rrrrrrrrrrrrrrrrrrrr
@@ -726,7 +726,7 @@ EVENT time: 17274.908203,  type: 1, fromlayer5  entity: 0
 A_OUTPUT called: ssssssssssssssssssss
           START TIMER: starting timer at 17274.908203
             INSERTEVENT: time is 17274.908203
-            INSERTEVENT: future time will be 17324.908203
+            INSERTEVENT: future time will be 17304.908203
 IN_TRANSIT: setting TRUE
 A_OUTPUT: packet leaving A: seq: 0 ack: -1 msg: ssssssssssssssssssss
           TOLAYER3: seq: 0, ack -1, check: 2299 ssssssssssssssssssss
@@ -760,7 +760,7 @@ EVENT time: 17757.738281,  type: 1, fromlayer5  entity: 0
 A_OUTPUT called: tttttttttttttttttttt
           START TIMER: starting timer at 17757.738281
             INSERTEVENT: time is 17757.738281
-            INSERTEVENT: future time will be 17807.738281
+            INSERTEVENT: future time will be 17787.738281
 IN_TRANSIT: setting TRUE
 A_OUTPUT: packet leaving A: seq: 1 ack: -1 msg: tttttttttttttttttttt
           TOLAYER3: seq: 1, ack -1, check: 2320 tttttttttttttttttttt

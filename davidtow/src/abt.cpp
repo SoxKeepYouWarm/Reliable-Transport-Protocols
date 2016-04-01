@@ -23,7 +23,7 @@
 #define FROM_A 0
 #define FROM_B 1
 
-#define TIMEOUT 50
+#define TIMEOUT 30
 
 int sequence_num_a;
 int sequence_num_b;

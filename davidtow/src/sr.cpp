@@ -27,7 +27,7 @@
 #define FROM_A 0
 #define FROM_B 1
 
-#define TIME_A 100
+#define TIME_A 30
 
 #define ACK_RETURNED -2
 

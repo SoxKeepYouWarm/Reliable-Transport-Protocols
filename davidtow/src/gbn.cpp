@@ -25,7 +25,7 @@
 #define FROM_A 0
 #define FROM_B 1
 
-#define TIME_A 100
+#define TIME_A 50
 
 int base; 
 int next_seqnum; 

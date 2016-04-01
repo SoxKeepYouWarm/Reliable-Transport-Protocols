@@ -1,0 +1,1012 @@
+          GENERATE NEXT ARRIVAL: creating new arrival
+            INSERTEVENT: time is 0.000000
+            INSERTEVENT: future time will be 45.723965
+a init just called
+b init just called
+
+EVENT time: 45.723965,  type: 1, fromlayer5  entity: 0
+          GENERATE NEXT ARRIVAL: creating new arrival
+            INSERTEVENT: time is 45.723965
+            INSERTEVENT: future time will be 109.760742
+          MAINLOOP: data given to student: aaaaaaaaaaaaaaaaaaaa
+A_OUTPUT called: aaaaaaaaaaaaaaaaaaaa
+          START TIMER: starting timer at 45.723965
+            INSERTEVENT: time is 45.723965
+            INSERTEVENT: future time will be 95.723969
+A_OUTPUT: packet leaving A
+          TOLAYER3: seq: 0, ack -1, check: 1939 aaaaaaaaaaaaaaaaaaaa
+          TOLAYER3: scheduling arrival on other side
+            INSERTEVENT: time is 45.723965
+            INSERTEVENT: future time will be 50.864571
+WINDOW CONTENTS: 0     start: 0 end: 0
+
+EVENT time: 50.864571,  type: 2, fromlayer3  entity: 1
+B_INPUT: seq_num: 0 message: aaaaaaaaaaaaaaaaaaaa
+B_INPUT: received valid packet from A
+B_INPUT: packet has expected sequence number
+          TOLAYER3: packet being lost
+          TOLAYER5: data received: 00000000000000000000
+B_APPLICATION_OUTPUT: aaaaaaaaaaaaaaaaaaaa
+
+EVENT time: 95.723969,  type: 0, timerinterrupt   entity: 0
+A_TIMER: resending packets
+          START TIMER: starting timer at 95.723969
+            INSERTEVENT: time is 95.723969
+            INSERTEVENT: future time will be 145.723969
+          TOLAYER3: packet being lost
+
+EVENT time: 109.760742,  type: 1, fromlayer5  entity: 0
+          GENERATE NEXT ARRIVAL: creating new arrival
+            INSERTEVENT: time is 109.760742
+            INSERTEVENT: future time will be 128.923767
+          MAINLOOP: data given to student: bbbbbbbbbbbbbbbbbbbb
+A_OUTPUT called: bbbbbbbbbbbbbbbbbbbb
+A_OUTPUT: packet leaving A
+          TOLAYER3: seq: 1, ack -1, check: 1960 bbbbbbbbbbbbbbbbbbbb
+          TOLAYER3: scheduling arrival on other side
+            INSERTEVENT: time is 109.760742
+            INSERTEVENT: future time will be 114.757622
+WINDOW CONTENTS: 0 1     start: 0 end: 1
+
+EVENT time: 114.757622,  type: 2, fromlayer3  entity: 1
+B_INPUT: seq_num: 1 message: bbbbbbbbbbbbbbbbbbbb
+B_INPUT: received valid packet from A
+B_INPUT: packet has expected sequence number
+          TOLAYER3: seq: -1, ack 1, check: 960 00000000000000000000
+          TOLAYER3: scheduling arrival on other side
+            INSERTEVENT: time is 114.757622
+            INSERTEVENT: future time will be 117.730019
+          TOLAYER5: data received: 00000000000000000000
+B_APPLICATION_OUTPUT: bbbbbbbbbbbbbbbbbbbb
+
+EVENT time: 117.730019,  type: 2, fromlayer3  entity: 0
+A_INPUT: ack_num: 1 message: 00000000000000000000
+packet is valid
+          STOP TIMER: stopping timer at 117.730019
+WINDOW CONTENTS: window is empty
+
+EVENT time: 128.923767,  type: 1, fromlayer5  entity: 0
+          GENERATE NEXT ARRIVAL: creating new arrival
+            INSERTEVENT: time is 128.923767
+            INSERTEVENT: future time will be 180.358932
+          MAINLOOP: data given to student: cccccccccccccccccccc
+A_OUTPUT called: cccccccccccccccccccc
+          START TIMER: starting timer at 128.923767
+            INSERTEVENT: time is 128.923767
+            INSERTEVENT: future time will be 178.923767
+A_OUTPUT: packet leaving A
+          TOLAYER3: seq: 2, ack -1, check: 1981 cccccccccccccccccccc
+          TOLAYER3: scheduling arrival on other side
+            INSERTEVENT: time is 128.923767
+            INSERTEVENT: future time will be 133.015442
+WINDOW CONTENTS: 2     start: 0 end: 0
+
+EVENT time: 133.015442,  type: 2, fromlayer3  entity: 1
+B_INPUT: seq_num: 2 message: cccccccccccccccccccc
+B_INPUT: received valid packet from A
+B_INPUT: packet has expected sequence number
+          TOLAYER3: packet being lost
+          TOLAYER5: data received: 00000000000000000000
+B_APPLICATION_OUTPUT: cccccccccccccccccccc
+
+EVENT time: 178.923767,  type: 0, timerinterrupt   entity: 0
+A_TIMER: resending packets
+          START TIMER: starting timer at 178.923767
+            INSERTEVENT: time is 178.923767
+            INSERTEVENT: future time will be 228.923767
+
+EVENT time: 180.358932,  type: 1, fromlayer5  entity: 0
+          GENERATE NEXT ARRIVAL: creating new arrival
+            INSERTEVENT: time is 180.358932
+            INSERTEVENT: future time will be 261.294403
+          MAINLOOP: data given to student: dddddddddddddddddddd
+A_OUTPUT called: dddddddddddddddddddd
+A_OUTPUT: packet leaving A
+          TOLAYER3: seq: 3, ack -1, check: 2002 dddddddddddddddddddd
+          TOLAYER3: scheduling arrival on other side
+            INSERTEVENT: time is 180.358932
+            INSERTEVENT: future time will be 190.238724
+WINDOW CONTENTS: 2 3     start: 0 end: 1
+
+EVENT time: 190.238724,  type: 2, fromlayer3  entity: 1
+B_INPUT: seq_num: 3 message: dddddddddddddddddddd
+B_INPUT: received valid packet from A
+B_INPUT: packet has expected sequence number
+          TOLAYER3: packet being lost
+          TOLAYER5: data received: 00000000000000000000
+B_APPLICATION_OUTPUT: dddddddddddddddddddd
+
+EVENT time: 228.923767,  type: 0, timerinterrupt   entity: 0
+A_TIMER: resending packets
+          START TIMER: starting timer at 228.923767
+            INSERTEVENT: time is 228.923767
+            INSERTEVENT: future time will be 278.923767
+          TOLAYER3: packet being lost
+
+EVENT time: 261.294403,  type: 1, fromlayer5  entity: 0
+          GENERATE NEXT ARRIVAL: creating new arrival
+            INSERTEVENT: time is 261.294403
+            INSERTEVENT: future time will be 297.219055
+          MAINLOOP: data given to student: eeeeeeeeeeeeeeeeeeee
+A_OUTPUT called: eeeeeeeeeeeeeeeeeeee
+A_OUTPUT: packet leaving A
+          TOLAYER3: seq: 4, ack -1, check: 2023 eeeeeeeeeeeeeeeeeeee
+          TOLAYER3: scheduling arrival on other side
+            INSERTEVENT: time is 261.294403
+            INSERTEVENT: future time will be 269.978455
+WINDOW CONTENTS: 2 3 4     start: 0 end: 2
+
+EVENT time: 269.978455,  type: 2, fromlayer3  entity: 1
+B_INPUT: seq_num: 4 message: eeeeeeeeeeeeeeeeeeee
+B_INPUT: received valid packet from A
+B_INPUT: packet has expected sequence number
+          TOLAYER3: seq: -1, ack 4, check: 963 00000000000000000000
+          TOLAYER3: scheduling arrival on other side
+            INSERTEVENT: time is 269.978455
+            INSERTEVENT: future time will be 274.455139
+          TOLAYER5: data received: 00000000000000000000
+B_APPLICATION_OUTPUT: eeeeeeeeeeeeeeeeeeee
+
+EVENT time: 274.455139,  type: 2, fromlayer3  entity: 0
+A_INPUT: ack_num: 4 message: 00000000000000000000
+packet is valid
+          STOP TIMER: stopping timer at 274.455139
+WINDOW CONTENTS: window is empty
+
+EVENT time: 297.219055,  type: 1, fromlayer5  entity: 0
+          GENERATE NEXT ARRIVAL: creating new arrival
+            INSERTEVENT: time is 297.219055
+            INSERTEVENT: future time will be 339.874512
+          MAINLOOP: data given to student: ffffffffffffffffffff
+A_OUTPUT called: ffffffffffffffffffff
+          START TIMER: starting timer at 297.219055
+            INSERTEVENT: time is 297.219055
+            INSERTEVENT: future time will be 347.219055
+A_OUTPUT: packet leaving A
+          TOLAYER3: packet being lost
+WINDOW CONTENTS: 5     start: 0 end: 0
+
+EVENT time: 339.874512,  type: 1, fromlayer5  entity: 0
+          GENERATE NEXT ARRIVAL: creating new arrival
+            INSERTEVENT: time is 339.874512
+            INSERTEVENT: future time will be 399.915070
+          MAINLOOP: data given to student: gggggggggggggggggggg
+A_OUTPUT called: gggggggggggggggggggg
+A_OUTPUT: packet leaving A
+          TOLAYER3: seq: 6, ack -1, check: 2065 gggggggggggggggggggg
+          TOLAYER3: scheduling arrival on other side
+            INSERTEVENT: time is 339.874512
+            INSERTEVENT: future time will be 341.857605
+WINDOW CONTENTS: 5 6     start: 0 end: 1
+
+EVENT time: 341.857605,  type: 2, fromlayer3  entity: 1
+B_INPUT: seq_num: 6 message: gggggggggggggggggggg
+B_INPUT: received valid packet from A
+B_INPUT: received packet with unexpected sequence number
+B_INPUT: sending ACK: 5
+          TOLAYER3: packet being lost
+
+EVENT time: 347.219055,  type: 0, timerinterrupt   entity: 0
+A_TIMER: resending packets
+          START TIMER: starting timer at 347.219055
+            INSERTEVENT: time is 347.219055
+            INSERTEVENT: future time will be 397.219055
+          TOLAYER3: seq: 5, ack -1, check: 2044 ffffffffffffffffffff
+          TOLAYER3: scheduling arrival on other side
+            INSERTEVENT: time is 347.219055
+            INSERTEVENT: future time will be 351.037750
+
+EVENT time: 351.037750,  type: 2, fromlayer3  entity: 1
+B_INPUT: seq_num: 5 message: ffffffffffffffffffff
+B_INPUT: received valid packet from A
+B_INPUT: packet has expected sequence number
+          TOLAYER3: seq: -1, ack 5, check: 964 00000000000000000000
+          TOLAYER3: scheduling arrival on other side
+            INSERTEVENT: time is 351.037750
+            INSERTEVENT: future time will be 356.828827
+          TOLAYER5: data received: 00000000000000000000
+B_APPLICATION_OUTPUT: ffffffffffffffffffff
+
+EVENT time: 356.828827,  type: 2, fromlayer3  entity: 0
+A_INPUT: ack_num: 5 message: 00000000000000000000
+packet is valid
+          STOP TIMER: stopping timer at 356.828827
+          START TIMER: starting timer at 356.828827
+            INSERTEVENT: time is 356.828827
+            INSERTEVENT: future time will be 406.828827
+WINDOW CONTENTS: 6     start: 1 end: 1
+
+EVENT time: 399.915070,  type: 1, fromlayer5  entity: 0
+          GENERATE NEXT ARRIVAL: creating new arrival
+            INSERTEVENT: time is 399.915070
+            INSERTEVENT: future time will be 496.919281
+          MAINLOOP: data given to student: hhhhhhhhhhhhhhhhhhhh
+A_OUTPUT called: hhhhhhhhhhhhhhhhhhhh
+A_OUTPUT: packet leaving A
+          TOLAYER3: seq: 7, ack -1, check: 2086 hhhhhhhhhhhhhhhhhhhh
+          TOLAYER3: scheduling arrival on other side
+            INSERTEVENT: time is 399.915070
+            INSERTEVENT: future time will be 401.711823
+WINDOW CONTENTS: 6 7     start: 1 end: 2
+
+EVENT time: 401.711823,  type: 2, fromlayer3  entity: 1
+B_INPUT: seq_num: 7 message: hhhhhhhhhhhhhhhhhhhh
+B_INPUT: received valid packet from A
+B_INPUT: received packet with unexpected sequence number
+B_INPUT: sending ACK: 6
+          TOLAYER3: packet being lost
+
+EVENT time: 406.828827,  type: 0, timerinterrupt   entity: 0
+A_TIMER: resending packets
+          START TIMER: starting timer at 406.828827
+            INSERTEVENT: time is 406.828827
+            INSERTEVENT: future time will be 456.828827
+          TOLAYER3: seq: 6, ack -1, check: 2065 gggggggggggggggggggg
+          TOLAYER3: scheduling arrival on other side
+            INSERTEVENT: time is 406.828827
+            INSERTEVENT: future time will be 415.924530
+
+EVENT time: 415.924530,  type: 2, fromlayer3  entity: 1
+B_INPUT: seq_num: 6 message: gggggggggggggggggggg
+B_INPUT: received valid packet from A
+B_INPUT: packet has expected sequence number
+          TOLAYER3: seq: -1, ack 6, check: 965 00000000000000000000
+          TOLAYER3: scheduling arrival on other side
+            INSERTEVENT: time is 415.924530
+            INSERTEVENT: future time will be 418.578735
+          TOLAYER5: data received: 00000000000000000000
+B_APPLICATION_OUTPUT: gggggggggggggggggggg
+
+EVENT time: 418.578735,  type: 2, fromlayer3  entity: 0
+A_INPUT: ack_num: 6 message: 00000000000000000000
+packet is valid
+          STOP TIMER: stopping timer at 418.578735
+          START TIMER: starting timer at 418.578735
+            INSERTEVENT: time is 418.578735
+            INSERTEVENT: future time will be 468.578735
+WINDOW CONTENTS: 7     start: 2 end: 2
+
+EVENT time: 468.578735,  type: 0, timerinterrupt   entity: 0
+A_TIMER: resending packets
+          START TIMER: starting timer at 468.578735
+            INSERTEVENT: time is 468.578735
+            INSERTEVENT: future time will be 518.578735
+
+EVENT time: 496.919281,  type: 1, fromlayer5  entity: 0
+          GENERATE NEXT ARRIVAL: creating new arrival
+            INSERTEVENT: time is 496.919281
+            INSERTEVENT: future time will be 574.758362
+          MAINLOOP: data given to student: iiiiiiiiiiiiiiiiiiii
+A_OUTPUT called: iiiiiiiiiiiiiiiiiiii
+A_OUTPUT: packet leaving A
+          TOLAYER3: seq: 8, ack -1, check: 2107 iiiiiiiiiiiiiiiiiiii
+          TOLAYER3: scheduling arrival on other side
+            INSERTEVENT: time is 496.919281
+            INSERTEVENT: future time will be 498.582031
+WINDOW CONTENTS: 7 8     start: 2 end: 3
+
+EVENT time: 498.582031,  type: 2, fromlayer3  entity: 1
+B_INPUT: seq_num: 8 message: iiiiiiiiiiiiiiiiiiii
+B_INPUT: received valid packet from A
+B_INPUT: received packet with unexpected sequence number
+B_INPUT: sending ACK: 7
+          TOLAYER3: seq: -1, ack 7, check: 966 00000000000000000000
+          TOLAYER3: scheduling arrival on other side
+            INSERTEVENT: time is 498.582031
+            INSERTEVENT: future time will be 503.721466
+
+EVENT time: 503.721466,  type: 2, fromlayer3  entity: 0
+A_INPUT: ack_num: 7 message: 00000000000000000000
+packet is valid
+          STOP TIMER: stopping timer at 503.721466
+          START TIMER: starting timer at 503.721466
+            INSERTEVENT: time is 503.721466
+            INSERTEVENT: future time will be 553.721436
+WINDOW CONTENTS: 8     start: 3 end: 3
+
+EVENT time: 553.721436,  type: 0, timerinterrupt   entity: 0
+A_TIMER: resending packets
+          START TIMER: starting timer at 553.721436
+            INSERTEVENT: time is 553.721436
+            INSERTEVENT: future time will be 603.721436
+
+EVENT time: 574.758362,  type: 1, fromlayer5  entity: 0
+          GENERATE NEXT ARRIVAL: creating new arrival
+            INSERTEVENT: time is 574.758362
+            INSERTEVENT: future time will be 658.311646
+          MAINLOOP: data given to student: jjjjjjjjjjjjjjjjjjjj
+A_OUTPUT called: jjjjjjjjjjjjjjjjjjjj
+A_OUTPUT: packet leaving A
+          TOLAYER3: seq: 9, ack -1, check: 2128 jjjjjjjjjjjjjjjjjjjj
+          TOLAYER3: scheduling arrival on other side
+            INSERTEVENT: time is 574.758362
+            INSERTEVENT: future time will be 577.578430
+WINDOW CONTENTS: 8 9     start: 3 end: 4
+
+EVENT time: 577.578430,  type: 2, fromlayer3  entity: 1
+B_INPUT: seq_num: 9 message: jjjjjjjjjjjjjjjjjjjj
+B_INPUT: received valid packet from A
+B_INPUT: received packet with unexpected sequence number
+B_INPUT: sending ACK: 7
+          TOLAYER3: seq: -1, ack 7, check: 966 00000000000000000000
+          TOLAYER3: scheduling arrival on other side
+            INSERTEVENT: time is 577.578430
+            INSERTEVENT: future time will be 579.220337
+
+EVENT time: 579.220337,  type: 2, fromlayer3  entity: 0
+A_INPUT: ack_num: 7 message: 00000000000000000000
+packet is valid
+          STOP TIMER: stopping timer at 579.220337
+          START TIMER: starting timer at 579.220337
+            INSERTEVENT: time is 579.220337
+            INSERTEVENT: future time will be 629.220337
+WINDOW CONTENTS: 8 9     start: 3 end: 4
+
+EVENT time: 629.220337,  type: 0, timerinterrupt   entity: 0
+A_TIMER: resending packets
+          START TIMER: starting timer at 629.220337
+            INSERTEVENT: time is 629.220337
+            INSERTEVENT: future time will be 679.220337
+          TOLAYER3: seq: 8, ack -1, check: 2107 iiiiiiiiiiiiiiiiiiii
+          TOLAYER3: scheduling arrival on other side
+            INSERTEVENT: time is 629.220337
+            INSERTEVENT: future time will be 633.680908
+
+EVENT time: 633.680908,  type: 2, fromlayer3  entity: 1
+B_INPUT: seq_num: 8 message: iiiiiiiiiiiiiiiiiiii
+B_INPUT: received valid packet from A
+B_INPUT: received packet with unexpected sequence number
+B_INPUT: sending ACK: 7
+          TOLAYER3: seq: -1, ack 7, check: 966 00000000000000000000
+          TOLAYER3: scheduling arrival on other side
+            INSERTEVENT: time is 633.680908
+            INSERTEVENT: future time will be 642.932556
+
+EVENT time: 642.932556,  type: 2, fromlayer3  entity: 0
+A_INPUT: ack_num: 7 message: 00000000000000000000
+packet is valid
+          STOP TIMER: stopping timer at 642.932556
+          START TIMER: starting timer at 642.932556
+            INSERTEVENT: time is 642.932556
+            INSERTEVENT: future time will be 692.932556
+WINDOW CONTENTS: 8 9     start: 3 end: 4
+
+EVENT time: 658.311646,  type: 1, fromlayer5  entity: 0
+          GENERATE NEXT ARRIVAL: creating new arrival
+            INSERTEVENT: time is 658.311646
+            INSERTEVENT: future time will be 748.401306
+          MAINLOOP: data given to student: kkkkkkkkkkkkkkkkkkkk
+A_OUTPUT called: kkkkkkkkkkkkkkkkkkkk
+A_OUTPUT: packet leaving A
+          TOLAYER3: seq: 10, ack -1, check: 2149 kkkkkkkkkkkkkkkkkkkk
+          TOLAYER3: scheduling arrival on other side
+            INSERTEVENT: time is 658.311646
+            INSERTEVENT: future time will be 661.037598
+WINDOW CONTENTS: 8 9 10     start: 3 end: 5
+
+EVENT time: 661.037598,  type: 2, fromlayer3  entity: 1
+B_INPUT: seq_num: 10 message: kkkkkkkkkkkkkkkkkkkk
+B_INPUT: received valid packet from A
+B_INPUT: received packet with unexpected sequence number
+B_INPUT: sending ACK: 7
+          TOLAYER3: seq: -1, ack 7, check: 966 00000000000000000000
+          TOLAYER3: scheduling arrival on other side
+            INSERTEVENT: time is 661.037598
+            INSERTEVENT: future time will be 662.844482
+
+EVENT time: 662.844482,  type: 2, fromlayer3  entity: 0
+A_INPUT: ack_num: 7 message: 00000000000000000000
+packet is valid
+          STOP TIMER: stopping timer at 662.844482
+          START TIMER: starting timer at 662.844482
+            INSERTEVENT: time is 662.844482
+            INSERTEVENT: future time will be 712.844482
+WINDOW CONTENTS: 8 9 10     start: 3 end: 5
+
+EVENT time: 712.844482,  type: 0, timerinterrupt   entity: 0
+A_TIMER: resending packets
+          START TIMER: starting timer at 712.844482
+            INSERTEVENT: time is 712.844482
+            INSERTEVENT: future time will be 762.844482
+          TOLAYER3: seq: 8, ack -1, check: 2107 iiiiiiiiiiiiiiiiiiii
+          TOLAYER3: scheduling arrival on other side
+            INSERTEVENT: time is 712.844482
+            INSERTEVENT: future time will be 718.423645
+          TOLAYER3: packet being lost
+
+EVENT time: 718.423645,  type: 2, fromlayer3  entity: 1
+B_INPUT: seq_num: 8 message: iiiiiiiiiiiiiiiiiiii
+B_INPUT: received valid packet from A
+B_INPUT: received packet with unexpected sequence number
+B_INPUT: sending ACK: 7
+          TOLAYER3: packet being lost
+
+EVENT time: 748.401306,  type: 1, fromlayer5  entity: 0
+          GENERATE NEXT ARRIVAL: creating new arrival
+            INSERTEVENT: time is 748.401306
+            INSERTEVENT: future time will be 811.153076
+          MAINLOOP: data given to student: llllllllllllllllllll
+A_OUTPUT called: llllllllllllllllllll
+A_OUTPUT: packet leaving A
+          TOLAYER3: packet being lost
+WINDOW CONTENTS: 8 9 10 11     start: 3 end: 6
+
+EVENT time: 762.844482,  type: 0, timerinterrupt   entity: 0
+A_TIMER: resending packets
+          START TIMER: starting timer at 762.844482
+            INSERTEVENT: time is 762.844482
+            INSERTEVENT: future time will be 812.844482
+          TOLAYER3: seq: 8, ack -1, check: 2107 iiiiiiiiiiiiiiiiiiii
+          TOLAYER3: scheduling arrival on other side
+            INSERTEVENT: time is 762.844482
+            INSERTEVENT: future time will be 764.172974
+          TOLAYER3: packet being lost
+          TOLAYER3: seq: 10, ack -1, check: 2149 kkkkkkkkkkkkkkkkkkkk
+          TOLAYER3: scheduling arrival on other side
+            INSERTEVENT: time is 762.844482
+            INSERTEVENT: future time will be 767.739319
+
+EVENT time: 764.172974,  type: 2, fromlayer3  entity: 1
+B_INPUT: seq_num: 8 message: iiiiiiiiiiiiiiiiiiii
+B_INPUT: received valid packet from A
+B_INPUT: received packet with unexpected sequence number
+B_INPUT: sending ACK: 7
+          TOLAYER3: seq: -1, ack 7, check: 966 00000000000000000000
+          TOLAYER3: scheduling arrival on other side
+            INSERTEVENT: time is 764.172974
+            INSERTEVENT: future time will be 773.792358
+
+EVENT time: 767.739319,  type: 2, fromlayer3  entity: 1
+B_INPUT: seq_num: 10 message: kkkkkkkkkkkkkkkkkkkk
+B_INPUT: received valid packet from A
+B_INPUT: received packet with unexpected sequence number
+B_INPUT: sending ACK: 7
+          TOLAYER3: seq: -1, ack 7, check: 966 00000000000000000000
+          TOLAYER3: scheduling arrival on other side
+            INSERTEVENT: time is 767.739319
+            INSERTEVENT: future time will be 778.688232
+
+EVENT time: 773.792358,  type: 2, fromlayer3  entity: 0
+A_INPUT: ack_num: 7 message: 00000000000000000000
+packet is valid
+          STOP TIMER: stopping timer at 773.792358
+          START TIMER: starting timer at 773.792358
+            INSERTEVENT: time is 773.792358
+            INSERTEVENT: future time will be 823.792358
+WINDOW CONTENTS: 8 9 10 11     start: 3 end: 6
+
+EVENT time: 778.688232,  type: 2, fromlayer3  entity: 0
+A_INPUT: ack_num: 7 message: 00000000000000000000
+packet is valid
+          STOP TIMER: stopping timer at 778.688232
+          START TIMER: starting timer at 778.688232
+            INSERTEVENT: time is 778.688232
+            INSERTEVENT: future time will be 828.688232
+WINDOW CONTENTS: 8 9 10 11     start: 3 end: 6
+
+EVENT time: 811.153076,  type: 1, fromlayer5  entity: 0
+          GENERATE NEXT ARRIVAL: creating new arrival
+            INSERTEVENT: time is 811.153076
+            INSERTEVENT: future time will be 910.757202
+          MAINLOOP: data given to student: mmmmmmmmmmmmmmmmmmmm
+A_OUTPUT called: mmmmmmmmmmmmmmmmmmmm
+A_OUTPUT: packet leaving A
+          TOLAYER3: packet being lost
+WINDOW CONTENTS: 8 9 10 11 12     start: 3 end: 7
+
+EVENT time: 828.688232,  type: 0, timerinterrupt   entity: 0
+A_TIMER: resending packets
+          START TIMER: starting timer at 828.688232
+            INSERTEVENT: time is 828.688232
+            INSERTEVENT: future time will be 878.688232
+          TOLAYER3: seq: 8, ack -1, check: 2107 iiiiiiiiiiiiiiiiiiii
+          TOLAYER3: scheduling arrival on other side
+            INSERTEVENT: time is 828.688232
+            INSERTEVENT: future time will be 830.581787
+          TOLAYER3: seq: 9, ack -1, check: 2128 jjjjjjjjjjjjjjjjjjjj
+          TOLAYER3: scheduling arrival on other side
+            INSERTEVENT: time is 828.688232
+            INSERTEVENT: future time will be 834.201294
+          TOLAYER3: seq: 10, ack -1, check: 2149 kkkkkkkkkkkkkkkkkkkk
+          TOLAYER3: scheduling arrival on other side
+            INSERTEVENT: time is 828.688232
+            INSERTEVENT: future time will be 838.627686
+          TOLAYER3: seq: 11, ack -1, check: 2170 llllllllllllllllllll
+          TOLAYER3: scheduling arrival on other side
+            INSERTEVENT: time is 828.688232
+            INSERTEVENT: future time will be 847.633301
+
+EVENT time: 830.581787,  type: 2, fromlayer3  entity: 1
+B_INPUT: seq_num: 8 message: iiiiiiiiiiiiiiiiiiii
+B_INPUT: received valid packet from A
+B_INPUT: received packet with unexpected sequence number
+B_INPUT: sending ACK: 7
+          TOLAYER3: seq: -1, ack 7, check: 966 00000000000000000000
+          TOLAYER3: scheduling arrival on other side
+            INSERTEVENT: time is 830.581787
+            INSERTEVENT: future time will be 833.172119
+
+EVENT time: 833.172119,  type: 2, fromlayer3  entity: 0
+A_INPUT: ack_num: 7 message: 00000000000000000000
+packet is valid
+          STOP TIMER: stopping timer at 833.172119
+          START TIMER: starting timer at 833.172119
+            INSERTEVENT: time is 833.172119
+            INSERTEVENT: future time will be 883.172119
+WINDOW CONTENTS: 8 9 10 11 12     start: 3 end: 7
+
+EVENT time: 834.201294,  type: 2, fromlayer3  entity: 1
+B_INPUT: seq_num: 9 message: jjjjjjjjjjjjjjjjjjjj
+B_INPUT: received valid packet from A
+B_INPUT: received packet with unexpected sequence number
+B_INPUT: sending ACK: 7
+          TOLAYER3: packet being lost
+
+EVENT time: 838.627686,  type: 2, fromlayer3  entity: 1
+B_INPUT: seq_num: 10 message: kkkkkkkkkkkkkkkkkkkk
+B_INPUT: received valid packet from A
+B_INPUT: received packet with unexpected sequence number
+B_INPUT: sending ACK: 7
+          TOLAYER3: seq: -1, ack 7, check: 966 00000000000000000000
+          TOLAYER3: scheduling arrival on other side
+            INSERTEVENT: time is 838.627686
+            INSERTEVENT: future time will be 845.708923
+
+EVENT time: 845.708923,  type: 2, fromlayer3  entity: 0
+A_INPUT: ack_num: 7 message: 00000000000000000000
+packet is valid
+          STOP TIMER: stopping timer at 845.708923
+          START TIMER: starting timer at 845.708923
+            INSERTEVENT: time is 845.708923
+            INSERTEVENT: future time will be 895.708923
+WINDOW CONTENTS: 8 9 10 11 12     start: 3 end: 7
+
+EVENT time: 847.633301,  type: 2, fromlayer3  entity: 1
+B_INPUT: seq_num: 11 message: llllllllllllllllllll
+B_INPUT: received valid packet from A
+B_INPUT: received packet with unexpected sequence number
+B_INPUT: sending ACK: 7
+          TOLAYER3: packet being lost
+
+EVENT time: 895.708923,  type: 0, timerinterrupt   entity: 0
+A_TIMER: resending packets
+          START TIMER: starting timer at 895.708923
+            INSERTEVENT: time is 895.708923
+            INSERTEVENT: future time will be 945.708923
+          TOLAYER3: seq: 8, ack -1, check: 2107 iiiiiiiiiiiiiiiiiiii
+          TOLAYER3: scheduling arrival on other side
+            INSERTEVENT: time is 895.708923
+            INSERTEVENT: future time will be 898.105713
+          TOLAYER3: packet being lost
+          TOLAYER3: packet being lost
+          TOLAYER3: seq: 11, ack -1, check: 2170 llllllllllllllllllll
+          TOLAYER3: scheduling arrival on other side
+            INSERTEVENT: time is 895.708923
+            INSERTEVENT: future time will be 906.852783
+
+EVENT time: 898.105713,  type: 2, fromlayer3  entity: 1
+B_INPUT: seq_num: 8 message: iiiiiiiiiiiiiiiiiiii
+B_INPUT: received valid packet from A
+B_INPUT: received packet with unexpected sequence number
+B_INPUT: sending ACK: 7
+          TOLAYER3: seq: -1, ack 7, check: 966 00000000000000000000
+          TOLAYER3: scheduling arrival on other side
+            INSERTEVENT: time is 898.105713
+            INSERTEVENT: future time will be 906.817139
+
+EVENT time: 906.817139,  type: 2, fromlayer3  entity: 0
+A_INPUT: ack_num: 7 message: 00000000000000000000
+packet is valid
+          STOP TIMER: stopping timer at 906.817139
+          START TIMER: starting timer at 906.817139
+            INSERTEVENT: time is 906.817139
+            INSERTEVENT: future time will be 956.817139
+WINDOW CONTENTS: 8 9 10 11 12     start: 3 end: 7
+
+EVENT time: 906.852783,  type: 2, fromlayer3  entity: 1
+B_INPUT: seq_num: 11 message: llllllllllllllllllll
+B_INPUT: received valid packet from A
+B_INPUT: received packet with unexpected sequence number
+B_INPUT: sending ACK: 7
+          TOLAYER3: packet being lost
+
+EVENT time: 910.757202,  type: 1, fromlayer5  entity: 0
+          GENERATE NEXT ARRIVAL: creating new arrival
+            INSERTEVENT: time is 910.757202
+            INSERTEVENT: future time will be 1006.368286
+          MAINLOOP: data given to student: nnnnnnnnnnnnnnnnnnnn
+A_OUTPUT called: nnnnnnnnnnnnnnnnnnnn
+A_OUTPUT: packet leaving A
+          TOLAYER3: packet being lost
+WINDOW CONTENTS: 8 9 10 11 12 13     start: 3 end: 8
+
+EVENT time: 956.817139,  type: 0, timerinterrupt   entity: 0
+A_TIMER: resending packets
+          START TIMER: starting timer at 956.817139
+            INSERTEVENT: time is 956.817139
+            INSERTEVENT: future time will be 1006.817139
+          TOLAYER3: packet being lost
+          TOLAYER3: packet being lost
+          TOLAYER3: packet being lost
+          TOLAYER3: seq: 11, ack -1, check: 2170 llllllllllllllllllll
+          TOLAYER3: scheduling arrival on other side
+            INSERTEVENT: time is 956.817139
+            INSERTEVENT: future time will be 963.468079
+          TOLAYER3: seq: 12, ack -1, check: 2191 mmmmmmmmmmmmmmmmmmmm
+          TOLAYER3: scheduling arrival on other side
+            INSERTEVENT: time is 956.817139
+            INSERTEVENT: future time will be 969.124573
+
+EVENT time: 963.468079,  type: 2, fromlayer3  entity: 1
+B_INPUT: seq_num: 11 message: llllllllllllllllllll
+B_INPUT: received valid packet from A
+B_INPUT: received packet with unexpected sequence number
+B_INPUT: sending ACK: 7
+          TOLAYER3: seq: -1, ack 7, check: 966 00000000000000000000
+          TOLAYER3: scheduling arrival on other side
+            INSERTEVENT: time is 963.468079
+            INSERTEVENT: future time will be 970.714905
+
+EVENT time: 969.124573,  type: 2, fromlayer3  entity: 1
+B_INPUT: seq_num: 12 message: mmmmmmmmmmmmmmmmmmmm
+B_INPUT: received valid packet from A
+B_INPUT: received packet with unexpected sequence number
+B_INPUT: sending ACK: 7
+          TOLAYER3: seq: -1, ack 7, check: 966 00000000000000000000
+          TOLAYER3: scheduling arrival on other side
+            INSERTEVENT: time is 969.124573
+            INSERTEVENT: future time will be 977.290161
+
+EVENT time: 970.714905,  type: 2, fromlayer3  entity: 0
+A_INPUT: ack_num: 7 message: 00000000000000000000
+packet is valid
+          STOP TIMER: stopping timer at 970.714905
+          START TIMER: starting timer at 970.714905
+            INSERTEVENT: time is 970.714905
+            INSERTEVENT: future time will be 1020.714905
+WINDOW CONTENTS: 8 9 10 11 12 13     start: 3 end: 8
+
+EVENT time: 977.290161,  type: 2, fromlayer3  entity: 0
+A_INPUT: ack_num: 7 message: 00000000000000000000
+packet is valid
+          STOP TIMER: stopping timer at 977.290161
+          START TIMER: starting timer at 977.290161
+            INSERTEVENT: time is 977.290161
+            INSERTEVENT: future time will be 1027.290161
+WINDOW CONTENTS: 8 9 10 11 12 13     start: 3 end: 8
+
+EVENT time: 1006.368286,  type: 1, fromlayer5  entity: 0
+          GENERATE NEXT ARRIVAL: creating new arrival
+            INSERTEVENT: time is 1006.368286
+            INSERTEVENT: future time will be 1058.380127
+          MAINLOOP: data given to student: oooooooooooooooooooo
+A_OUTPUT called: oooooooooooooooooooo
+A_OUTPUT: packet leaving A
+          TOLAYER3: seq: 14, ack -1, check: 2233 oooooooooooooooooooo
+          TOLAYER3: scheduling arrival on other side
+            INSERTEVENT: time is 1006.368286
+            INSERTEVENT: future time will be 1009.541016
+WINDOW CONTENTS: 8 9 10 11 12 13 14     start: 3 end: 9
+
+EVENT time: 1009.541016,  type: 2, fromlayer3  entity: 1
+B_INPUT: seq_num: 14 message: oooooooooooooooooooo
+B_INPUT: received valid packet from A
+B_INPUT: received packet with unexpected sequence number
+B_INPUT: sending ACK: 7
+          TOLAYER3: seq: -1, ack 7, check: 966 00000000000000000000
+          TOLAYER3: scheduling arrival on other side
+            INSERTEVENT: time is 1009.541016
+            INSERTEVENT: future time will be 1014.720581
+
+EVENT time: 1014.720581,  type: 2, fromlayer3  entity: 0
+A_INPUT: ack_num: 7 message: 00000000000000000000
+packet is valid
+          STOP TIMER: stopping timer at 1014.720581
+          START TIMER: starting timer at 1014.720581
+            INSERTEVENT: time is 1014.720581
+            INSERTEVENT: future time will be 1064.720581
+WINDOW CONTENTS: 8 9 10 11 12 13 14     start: 3 end: 9
+
+EVENT time: 1058.380127,  type: 1, fromlayer5  entity: 0
+          GENERATE NEXT ARRIVAL: creating new arrival
+            INSERTEVENT: time is 1058.380127
+            INSERTEVENT: future time will be 1076.045776
+          MAINLOOP: data given to student: pppppppppppppppppppp
+A_OUTPUT called: pppppppppppppppppppp
+A_OUTPUT: packet leaving A
+          TOLAYER3: packet being lost
+WINDOW CONTENTS: 8 9 10 11 12 13 14 15     start: 3 end: 10
+
+EVENT time: 1064.720581,  type: 0, timerinterrupt   entity: 0
+A_TIMER: resending packets
+          START TIMER: starting timer at 1064.720581
+            INSERTEVENT: time is 1064.720581
+            INSERTEVENT: future time will be 1114.720581
+          TOLAYER3: packet being lost
+          TOLAYER3: seq: 9, ack -1, check: 2128 jjjjjjjjjjjjjjjjjjjj
+          TOLAYER3: scheduling arrival on other side
+            INSERTEVENT: time is 1064.720581
+            INSERTEVENT: future time will be 1067.358643
+          TOLAYER3: packet being lost
+          TOLAYER3: packet being lost
+          TOLAYER3: seq: 12, ack -1, check: 2191 mmmmmmmmmmmmmmmmmmmm
+          TOLAYER3: scheduling arrival on other side
+            INSERTEVENT: time is 1064.720581
+            INSERTEVENT: future time will be 1070.269043
+          TOLAYER3: seq: 13, ack -1, check: 2212 nnnnnnnnnnnnnnnnnnnn
+          TOLAYER3: scheduling arrival on other side
+            INSERTEVENT: time is 1064.720581
+            INSERTEVENT: future time will be 1072.436035
+          TOLAYER3: packet being lost
+
+EVENT time: 1067.358643,  type: 2, fromlayer3  entity: 1
+B_INPUT: seq_num: 9 message: jjjjjjjjjjjjjjjjjjjj
+B_INPUT: received valid packet from A
+B_INPUT: received packet with unexpected sequence number
+B_INPUT: sending ACK: 7
+          TOLAYER3: seq: -1, ack 7, check: 966 00000000000000000000
+          TOLAYER3: scheduling arrival on other side
+            INSERTEVENT: time is 1067.358643
+            INSERTEVENT: future time will be 1073.133667
+
+EVENT time: 1070.269043,  type: 2, fromlayer3  entity: 1
+B_INPUT: seq_num: 12 message: mmmmmmmmmmmmmmmmmmmm
+B_INPUT: received valid packet from A
+B_INPUT: received packet with unexpected sequence number
+B_INPUT: sending ACK: 7
+          TOLAYER3: packet being lost
+
+EVENT time: 1072.436035,  type: 2, fromlayer3  entity: 1
+B_INPUT: seq_num: 13 message: nnnnnnnnnnnnnnnnnnnn
+B_INPUT: received valid packet from A
+B_INPUT: received packet with unexpected sequence number
+B_INPUT: sending ACK: 7
+          TOLAYER3: packet being lost
+
+EVENT time: 1073.133667,  type: 2, fromlayer3  entity: 0
+A_INPUT: ack_num: 7 message: 00000000000000000000
+packet is valid
+          STOP TIMER: stopping timer at 1073.133667
+          START TIMER: starting timer at 1073.133667
+            INSERTEVENT: time is 1073.133667
+            INSERTEVENT: future time will be 1123.133667
+WINDOW CONTENTS: 8 9 10 11 12 13 14 15     start: 3 end: 10
+
+EVENT time: 1076.045776,  type: 1, fromlayer5  entity: 0
+          GENERATE NEXT ARRIVAL: creating new arrival
+            INSERTEVENT: time is 1076.045776
+            INSERTEVENT: future time will be 1130.220093
+          MAINLOOP: data given to student: qqqqqqqqqqqqqqqqqqqq
+A_OUTPUT called: qqqqqqqqqqqqqqqqqqqq
+A_OUTPUT: packet leaving A
+          TOLAYER3: seq: 16, ack -1, check: 2275 qqqqqqqqqqqqqqqqqqqq
+          TOLAYER3: scheduling arrival on other side
+            INSERTEVENT: time is 1076.045776
+            INSERTEVENT: future time will be 1084.642822
+WINDOW CONTENTS: 8 9 10 11 12 13 14 15 16     start: 3 end: 11
+
+EVENT time: 1084.642822,  type: 2, fromlayer3  entity: 1
+B_INPUT: seq_num: 16 message: qqqqqqqqqqqqqqqqqqqq
+B_INPUT: received valid packet from A
+B_INPUT: received packet with unexpected sequence number
+B_INPUT: sending ACK: 7
+          TOLAYER3: seq: -1, ack 7, check: 966 00000000000000000000
+          TOLAYER3: scheduling arrival on other side
+            INSERTEVENT: time is 1084.642822
+            INSERTEVENT: future time will be 1092.297974
+
+EVENT time: 1092.297974,  type: 2, fromlayer3  entity: 0
+A_INPUT: ack_num: 7 message: 00000000000000000000
+packet is valid
+          STOP TIMER: stopping timer at 1092.297974
+          START TIMER: starting timer at 1092.297974
+            INSERTEVENT: time is 1092.297974
+            INSERTEVENT: future time will be 1142.297974
+WINDOW CONTENTS: 8 9 10 11 12 13 14 15 16     start: 3 end: 11
+
+EVENT time: 1130.220093,  type: 1, fromlayer5  entity: 0
+          GENERATE NEXT ARRIVAL: creating new arrival
+            INSERTEVENT: time is 1130.220093
+            INSERTEVENT: future time will be 1139.469482
+          MAINLOOP: data given to student: rrrrrrrrrrrrrrrrrrrr
+A_OUTPUT called: rrrrrrrrrrrrrrrrrrrr
+A_OUTPUT: packet leaving A
+          TOLAYER3: seq: 17, ack -1, check: 2296 rrrrrrrrrrrrrrrrrrrr
+          TOLAYER3: scheduling arrival on other side
+            INSERTEVENT: time is 1130.220093
+            INSERTEVENT: future time will be 1139.691284
+WINDOW CONTENTS: 8 9 10 11 12 13 14 15 16 17     start: 3 end: 12
+
+EVENT time: 1139.469482,  type: 1, fromlayer5  entity: 0
+          GENERATE NEXT ARRIVAL: creating new arrival
+            INSERTEVENT: time is 1139.469482
+            INSERTEVENT: future time will be 1203.479370
+          MAINLOOP: data given to student: ssssssssssssssssssss
+A_OUTPUT called: ssssssssssssssssssss
+A_OUTPUT: packet leaving A
+          TOLAYER3: packet being lost
+WINDOW CONTENTS: 8 9 10 11 12 13 14 15 16 17 18     start: 3 end: 13
+
+EVENT time: 1139.691284,  type: 2, fromlayer3  entity: 1
+B_INPUT: seq_num: 17 message: rrrrrrrrrrrrrrrrrrrr
+B_INPUT: received valid packet from A
+B_INPUT: received packet with unexpected sequence number
+B_INPUT: sending ACK: 7
+          TOLAYER3: packet being lost
+
+EVENT time: 1142.297974,  type: 0, timerinterrupt   entity: 0
+A_TIMER: resending packets
+          START TIMER: starting timer at 1142.297974
+            INSERTEVENT: time is 1142.297974
+            INSERTEVENT: future time will be 1192.297974
+          TOLAYER3: packet being lost
+          TOLAYER3: seq: 9, ack -1, check: 2128 jjjjjjjjjjjjjjjjjjjj
+          TOLAYER3: scheduling arrival on other side
+            INSERTEVENT: time is 1142.297974
+            INSERTEVENT: future time will be 1147.422363
+          TOLAYER3: seq: 10, ack -1, check: 2149 kkkkkkkkkkkkkkkkkkkk
+          TOLAYER3: scheduling arrival on other side
+            INSERTEVENT: time is 1142.297974
+            INSERTEVENT: future time will be 1156.305786
+          TOLAYER3: seq: 11, ack -1, check: 2170 llllllllllllllllllll
+          TOLAYER3: scheduling arrival on other side
+            INSERTEVENT: time is 1142.297974
+            INSERTEVENT: future time will be 1163.189575
+          TOLAYER3: seq: 12, ack -1, check: 2191 mmmmmmmmmmmmmmmmmmmm
+          TOLAYER3: scheduling arrival on other side
+            INSERTEVENT: time is 1142.297974
+            INSERTEVENT: future time will be 1171.377930
+          TOLAYER3: seq: 13, ack -1, check: 2212 nnnnnnnnnnnnnnnnnnnn
+          TOLAYER3: scheduling arrival on other side
+            INSERTEVENT: time is 1142.297974
+            INSERTEVENT: future time will be 1175.280029
+          TOLAYER3: seq: 14, ack -1, check: 2233 oooooooooooooooooooo
+          TOLAYER3: scheduling arrival on other side
+            INSERTEVENT: time is 1142.297974
+            INSERTEVENT: future time will be 1184.057739
+          TOLAYER3: seq: 15, ack -1, check: 2254 pppppppppppppppppppp
+          TOLAYER3: scheduling arrival on other side
+            INSERTEVENT: time is 1142.297974
+            INSERTEVENT: future time will be 1185.954346
+          TOLAYER3: packet being lost
+          TOLAYER3: seq: 17, ack -1, check: 2296 rrrrrrrrrrrrrrrrrrrr
+          TOLAYER3: scheduling arrival on other side
+            INSERTEVENT: time is 1142.297974
+            INSERTEVENT: future time will be 1187.344727
+
+EVENT time: 1147.422363,  type: 2, fromlayer3  entity: 1
+B_INPUT: seq_num: 9 message: jjjjjjjjjjjjjjjjjjjj
+B_INPUT: received valid packet from A
+B_INPUT: received packet with unexpected sequence number
+B_INPUT: sending ACK: 7
+          TOLAYER3: seq: -1, ack 7, check: 966 00000000000000000000
+          TOLAYER3: scheduling arrival on other side
+            INSERTEVENT: time is 1147.422363
+            INSERTEVENT: future time will be 1156.739258
+
+EVENT time: 1156.305786,  type: 2, fromlayer3  entity: 1
+B_INPUT: seq_num: 10 message: kkkkkkkkkkkkkkkkkkkk
+B_INPUT: received valid packet from A
+B_INPUT: received packet with unexpected sequence number
+B_INPUT: sending ACK: 7
+          TOLAYER3: seq: -1, ack 7, check: 966 00000000000000000000
+          TOLAYER3: scheduling arrival on other side
+            INSERTEVENT: time is 1156.305786
+            INSERTEVENT: future time will be 1158.988892
+
+EVENT time: 1156.739258,  type: 2, fromlayer3  entity: 0
+A_INPUT: ack_num: 7 message: 00000000000000000000
+packet is valid
+          STOP TIMER: stopping timer at 1156.739258
+          START TIMER: starting timer at 1156.739258
+            INSERTEVENT: time is 1156.739258
+            INSERTEVENT: future time will be 1206.739258
+WINDOW CONTENTS: 8 9 10 11 12 13 14 15 16 17 18     start: 3 end: 13
+
+EVENT time: 1158.988892,  type: 2, fromlayer3  entity: 0
+A_INPUT: ack_num: 7 message: 00000000000000000000
+packet is valid
+          STOP TIMER: stopping timer at 1158.988892
+          START TIMER: starting timer at 1158.988892
+            INSERTEVENT: time is 1158.988892
+            INSERTEVENT: future time will be 1208.988892
+WINDOW CONTENTS: 8 9 10 11 12 13 14 15 16 17 18     start: 3 end: 13
+
+EVENT time: 1163.189575,  type: 2, fromlayer3  entity: 1
+B_INPUT: seq_num: 11 message: llllllllllllllllllll
+B_INPUT: received valid packet from A
+B_INPUT: received packet with unexpected sequence number
+B_INPUT: sending ACK: 7
+          TOLAYER3: packet being lost
+
+EVENT time: 1171.377930,  type: 2, fromlayer3  entity: 1
+B_INPUT: seq_num: 12 message: mmmmmmmmmmmmmmmmmmmm
+B_INPUT: received valid packet from A
+B_INPUT: received packet with unexpected sequence number
+B_INPUT: sending ACK: 7
+          TOLAYER3: seq: -1, ack 7, check: 966 00000000000000000000
+          TOLAYER3: scheduling arrival on other side
+            INSERTEVENT: time is 1171.377930
+            INSERTEVENT: future time will be 1172.448853
+
+EVENT time: 1172.448853,  type: 2, fromlayer3  entity: 0
+A_INPUT: ack_num: 7 message: 00000000000000000000
+packet is valid
+          STOP TIMER: stopping timer at 1172.448853
+          START TIMER: starting timer at 1172.448853
+            INSERTEVENT: time is 1172.448853
+            INSERTEVENT: future time will be 1222.448853
+WINDOW CONTENTS: 8 9 10 11 12 13 14 15 16 17 18     start: 3 end: 13
+
+EVENT time: 1175.280029,  type: 2, fromlayer3  entity: 1
+B_INPUT: seq_num: 13 message: nnnnnnnnnnnnnnnnnnnn
+B_INPUT: received valid packet from A
+B_INPUT: received packet with unexpected sequence number
+B_INPUT: sending ACK: 7
+          TOLAYER3: seq: -1, ack 7, check: 966 00000000000000000000
+          TOLAYER3: scheduling arrival on other side
+            INSERTEVENT: time is 1175.280029
+            INSERTEVENT: future time will be 1180.984619
+
+EVENT time: 1180.984619,  type: 2, fromlayer3  entity: 0
+A_INPUT: ack_num: 7 message: 00000000000000000000
+packet is valid
+          STOP TIMER: stopping timer at 1180.984619
+          START TIMER: starting timer at 1180.984619
+            INSERTEVENT: time is 1180.984619
+            INSERTEVENT: future time will be 1230.984619
+WINDOW CONTENTS: 8 9 10 11 12 13 14 15 16 17 18     start: 3 end: 13
+
+EVENT time: 1184.057739,  type: 2, fromlayer3  entity: 1
+B_INPUT: seq_num: 14 message: oooooooooooooooooooo
+B_INPUT: received valid packet from A
+B_INPUT: received packet with unexpected sequence number
+B_INPUT: sending ACK: 7
+          TOLAYER3: packet being lost
+
+EVENT time: 1185.954346,  type: 2, fromlayer3  entity: 1
+B_INPUT: seq_num: 15 message: pppppppppppppppppppp
+B_INPUT: received valid packet from A
+B_INPUT: received packet with unexpected sequence number
+B_INPUT: sending ACK: 7
+          TOLAYER3: packet being lost
+
+EVENT time: 1187.344727,  type: 2, fromlayer3  entity: 1
+B_INPUT: seq_num: 17 message: rrrrrrrrrrrrrrrrrrrr
+B_INPUT: received valid packet from A
+B_INPUT: received packet with unexpected sequence number
+B_INPUT: sending ACK: 7
+          TOLAYER3: seq: -1, ack 7, check: 966 00000000000000000000
+          TOLAYER3: scheduling arrival on other side
+            INSERTEVENT: time is 1187.344727
+            INSERTEVENT: future time will be 1196.674316
+
+EVENT time: 1196.674316,  type: 2, fromlayer3  entity: 0
+A_INPUT: ack_num: 7 message: 00000000000000000000
+packet is valid
+          STOP TIMER: stopping timer at 1196.674316
+          START TIMER: starting timer at 1196.674316
+            INSERTEVENT: time is 1196.674316
+            INSERTEVENT: future time will be 1246.674316
+WINDOW CONTENTS: 8 9 10 11 12 13 14 15 16 17 18     start: 3 end: 13
+
+EVENT time: 1203.479370,  type: 1, fromlayer5  entity: 0
+          GENERATE NEXT ARRIVAL: creating new arrival
+            INSERTEVENT: time is 1203.479370
+            INSERTEVENT: future time will be 1232.622559
+          MAINLOOP: data given to student: tttttttttttttttttttt
+A_OUTPUT called: tttttttttttttttttttt
+A_OUTPUT: packet leaving A
+          TOLAYER3: packet being lost
+WINDOW CONTENTS: 8 9 10 11 12 13 14 15 16 17 18 19     start: 3 end: 14
+
+EVENT time: 1232.622559,  type: 1, fromlayer5  entity: 0
+ Simulator terminated at time 1232.622559
+ after sending 20 msgs from layer5
+
+[PA2]20 packets sent from the Application Layer of Sender A[/PA2]
+[PA2]60 packets sent from the Transport Layer of Sender A[/PA2]
+[PA2]38 packets received at the Transport layer of Receiver B[/PA2]
+[PA2]7 packets received at the Application layer of Receiver B[/PA2]
+[PA2]Total time: 1232.622559 time units[/PA2]
+[PA2]Throughput: 0.005679 packets/time units[/PA2]
