@@ -15,12 +15,14 @@ A_OUTPUT called: aaaaaaaaaaaaaaaaaaaa
           START TIMER: starting timer at 45.723965
             INSERTEVENT: time is 45.723965
             INSERTEVENT: future time will be 75.723969
+SET_TIMER_fOR_NEXT_EVENT: seqnum: 0 alarm_time: 30.000004
 A_OUTPUT: packet leaving A
           TOLAYER3: seq: 0, ack -1, check: 1939 aaaaaaaaaaaaaaaaaaaa
           TOLAYER3: packet being corrupted
           TOLAYER3: scheduling arrival on other side
             INSERTEVENT: time is 45.723965
             INSERTEVENT: future time will be 50.864571
+INSERT_PACKET: SUCCESS
 WINDOW CONTENTS: 0     start: 0 end: 0
 
 EVENT time: 50.864571,  type: 2, fromlayer3  entity: 1
@@ -32,12 +34,15 @@ HANDLE_EVENT: seq_num: 0
           START TIMER: starting timer at 75.723969
             INSERTEVENT: time is 75.723969
             INSERTEVENT: future time will be 105.723969
+SET_TIMER_fOR_NEXT_EVENT: seqnum: 0 alarm_time: 30.000000
 A_OUTPUT: resending packet 0
           TOLAYER3: seq: 0, ack -1, check: 1939 aaaaaaaaaaaaaaaaaaaa
           TOLAYER3: packet being corrupted
           TOLAYER3: scheduling arrival on other side
             INSERTEVENT: time is 75.723969
             INSERTEVENT: future time will be 78.448639
+DEBUG: CALLED AFTER TOLAYER3
+A_INTERRUPT: handled alarm
 
 EVENT time: 78.448639,  type: 2, fromlayer3  entity: 1
 B_INPUT: seq_num: 0 message: Zaaaaaaaaaaaaaaaaaaa
@@ -48,12 +53,15 @@ HANDLE_EVENT: seq_num: 0
           START TIMER: starting timer at 105.723969
             INSERTEVENT: time is 105.723969
             INSERTEVENT: future time will be 135.723969
+SET_TIMER_fOR_NEXT_EVENT: seqnum: 0 alarm_time: 30.000000
 A_OUTPUT: resending packet 0
           TOLAYER3: seq: 0, ack -1, check: 1939 aaaaaaaaaaaaaaaaaaaa
           TOLAYER3: packet being corrupted
           TOLAYER3: scheduling arrival on other side
             INSERTEVENT: time is 105.723969
             INSERTEVENT: future time will be 112.601746
+DEBUG: CALLED AFTER TOLAYER3
+A_INTERRUPT: handled alarm
 
 EVENT time: 109.760742,  type: 1, fromlayer5  entity: 0
           GENERATE NEXT ARRIVAL: creating new arrival
@@ -67,6 +75,7 @@ A_OUTPUT: packet leaving A
           TOLAYER3: scheduling arrival on other side
             INSERTEVENT: time is 109.760742
             INSERTEVENT: future time will be 116.693428
+INSERT_PACKET: SUCCESS
 WINDOW CONTENTS: 0 1     start: 0 end: 1
 
 EVENT time: 112.601746,  type: 2, fromlayer3  entity: 1
@@ -82,23 +91,29 @@ HANDLE_EVENT: seq_num: 0
           START TIMER: starting timer at 135.723969
             INSERTEVENT: time is 135.723969
             INSERTEVENT: future time will be 139.760742
+SET_TIMER_fOR_NEXT_EVENT: seqnum: 1 alarm_time: 4.036774
 A_OUTPUT: resending packet 0
           TOLAYER3: seq: 0, ack -1, check: 1939 aaaaaaaaaaaaaaaaaaaa
           TOLAYER3: scheduling arrival on other side
             INSERTEVENT: time is 135.723969
             INSERTEVENT: future time will be 144.635086
+DEBUG: CALLED AFTER TOLAYER3
+A_INTERRUPT: handled alarm
 
 EVENT time: 139.760742,  type: 0, timerinterrupt   entity: 0
 HANDLE_EVENT: seq_num: 1
           START TIMER: starting timer at 139.760742
             INSERTEVENT: time is 139.760742
             INSERTEVENT: future time will be 165.723969
+SET_TIMER_fOR_NEXT_EVENT: seqnum: 0 alarm_time: 25.963226
 A_OUTPUT: resending packet 1
           TOLAYER3: seq: 1, ack -1, check: 1960 bbbbbbbbbbbbbbbbbbbb
           TOLAYER3: packet being corrupted
           TOLAYER3: scheduling arrival on other side
             INSERTEVENT: time is 139.760742
             INSERTEVENT: future time will be 148.193604
+DEBUG: CALLED AFTER TOLAYER3
+A_INTERRUPT: handled alarm
 
 EVENT time: 144.635086,  type: 2, fromlayer3  entity: 1
 B_INPUT: seq_num: 0 message: aaaaaaaaaaaaaaaaaaaa
@@ -133,6 +148,7 @@ A_OUTPUT: packet leaving A
           TOLAYER3: scheduling arrival on other side
             INSERTEVENT: time is 161.195908
             INSERTEVENT: future time will be 166.034897
+INSERT_PACKET: SUCCESS
 WINDOW CONTENTS: 0 1 2     start: 0 end: 2
 
 EVENT time: 165.723969,  type: 0, timerinterrupt   entity: 0
@@ -140,11 +156,14 @@ HANDLE_EVENT: seq_num: 0
           START TIMER: starting timer at 165.723969
             INSERTEVENT: time is 165.723969
             INSERTEVENT: future time will be 169.760742
+SET_TIMER_fOR_NEXT_EVENT: seqnum: 1 alarm_time: 4.036774
 A_OUTPUT: resending packet 0
           TOLAYER3: seq: 0, ack -1, check: 1939 aaaaaaaaaaaaaaaaaaaa
           TOLAYER3: scheduling arrival on other side
             INSERTEVENT: time is 165.723969
             INSERTEVENT: future time will be 168.017990
+DEBUG: CALLED AFTER TOLAYER3
+A_INTERRUPT: handled alarm
 
 EVENT time: 166.034897,  type: 2, fromlayer3  entity: 1
 B_INPUT: seq_num: 2 message: Zccccccccccccccccccc
@@ -165,12 +184,15 @@ HANDLE_EVENT: seq_num: 1
           START TIMER: starting timer at 169.760742
             INSERTEVENT: time is 169.760742
             INSERTEVENT: future time will be 191.195908
+SET_TIMER_fOR_NEXT_EVENT: seqnum: 2 alarm_time: 21.435165
 A_OUTPUT: resending packet 1
           TOLAYER3: seq: 1, ack -1, check: 1960 bbbbbbbbbbbbbbbbbbbb
           TOLAYER3: packet being corrupted
           TOLAYER3: scheduling arrival on other side
             INSERTEVENT: time is 169.760742
             INSERTEVENT: future time will be 175.551819
+DEBUG: CALLED AFTER TOLAYER3
+A_INTERRUPT: handled alarm
 
 EVENT time: 175.551819,  type: 2, fromlayer3  entity: 1
 B_INPUT: seq_num: 1 message: bbbbbbbbbbbbbbbbbbbb
@@ -185,12 +207,15 @@ HANDLE_EVENT: seq_num: 2
           START TIMER: starting timer at 191.195908
             INSERTEVENT: time is 191.195908
             INSERTEVENT: future time will be 195.723969
+SET_TIMER_fOR_NEXT_EVENT: seqnum: 0 alarm_time: 4.528061
 A_OUTPUT: resending packet 2
           TOLAYER3: seq: 2, ack -1, check: 1981 cccccccccccccccccccc
           TOLAYER3: packet being corrupted
           TOLAYER3: scheduling arrival on other side
             INSERTEVENT: time is 191.195908
             INSERTEVENT: future time will be 192.992661
+DEBUG: CALLED AFTER TOLAYER3
+A_INTERRUPT: handled alarm
 
 EVENT time: 192.992661,  type: 2, fromlayer3  entity: 1
 B_INPUT: seq_num: 2 message: Zccccccccccccccccccc
@@ -201,24 +226,30 @@ HANDLE_EVENT: seq_num: 0
           START TIMER: starting timer at 195.723969
             INSERTEVENT: time is 195.723969
             INSERTEVENT: future time will be 199.760742
+SET_TIMER_fOR_NEXT_EVENT: seqnum: 1 alarm_time: 4.036774
 A_OUTPUT: resending packet 0
           TOLAYER3: seq: 0, ack -1, check: 1939 aaaaaaaaaaaaaaaaaaaa
           TOLAYER3: packet being corrupted
           TOLAYER3: scheduling arrival on other side
             INSERTEVENT: time is 195.723969
             INSERTEVENT: future time will be 204.819656
+DEBUG: CALLED AFTER TOLAYER3
+A_INTERRUPT: handled alarm
 
 EVENT time: 199.760742,  type: 0, timerinterrupt   entity: 0
 HANDLE_EVENT: seq_num: 1
           START TIMER: starting timer at 199.760742
             INSERTEVENT: time is 199.760742
             INSERTEVENT: future time will be 221.195908
+SET_TIMER_fOR_NEXT_EVENT: seqnum: 2 alarm_time: 21.435165
 A_OUTPUT: resending packet 1
           TOLAYER3: seq: 1, ack -1, check: 1960 bbbbbbbbbbbbbbbbbbbb
           TOLAYER3: packet being corrupted
           TOLAYER3: scheduling arrival on other side
             INSERTEVENT: time is 199.760742
             INSERTEVENT: future time will be 207.798340
+DEBUG: CALLED AFTER TOLAYER3
+A_INTERRUPT: handled alarm
 
 EVENT time: 199.825775,  type: 1, fromlayer5  entity: 0
           GENERATE NEXT ARRIVAL: creating new arrival
@@ -232,6 +263,7 @@ A_OUTPUT: packet leaving A
           TOLAYER3: scheduling arrival on other side
             INSERTEVENT: time is 199.825775
             INSERTEVENT: future time will be 212.479141
+INSERT_PACKET: SUCCESS
 WINDOW CONTENTS: 0 1 2 3     start: 0 end: 3
 
 EVENT time: 204.819656,  type: 2, fromlayer3  entity: 1
@@ -249,6 +281,7 @@ A_OUTPUT: packet leaving A
           TOLAYER3: scheduling arrival on other side
             INSERTEVENT: time is 207.189560
             INSERTEVENT: future time will be 215.299225
+INSERT_PACKET: SUCCESS
 WINDOW CONTENTS: 0 1 2 3 4     start: 0 end: 4
 
 EVENT time: 207.798340,  type: 2, fromlayer3  entity: 1
@@ -290,12 +323,15 @@ HANDLE_EVENT: seq_num: 2
           START TIMER: starting timer at 221.195908
             INSERTEVENT: time is 221.195908
             INSERTEVENT: future time will be 225.723969
+SET_TIMER_fOR_NEXT_EVENT: seqnum: 0 alarm_time: 4.528061
 A_OUTPUT: resending packet 2
           TOLAYER3: seq: 2, ack -1, check: 1981 cccccccccccccccccccc
           TOLAYER3: packet being corrupted
           TOLAYER3: scheduling arrival on other side
             INSERTEVENT: time is 221.195908
             INSERTEVENT: future time will be 225.656494
+DEBUG: CALLED AFTER TOLAYER3
+A_INTERRUPT: handled alarm
 
 EVENT time: 225.656494,  type: 2, fromlayer3  entity: 1
 B_INPUT: seq_num: 2 message: cccccccccccccccccccc
@@ -306,11 +342,14 @@ HANDLE_EVENT: seq_num: 0
           START TIMER: starting timer at 225.723969
             INSERTEVENT: time is 225.723969
             INSERTEVENT: future time will be 229.760742
+SET_TIMER_fOR_NEXT_EVENT: seqnum: 1 alarm_time: 4.036774
 A_OUTPUT: resending packet 0
           TOLAYER3: seq: 0, ack -1, check: 1939 aaaaaaaaaaaaaaaaaaaa
           TOLAYER3: scheduling arrival on other side
             INSERTEVENT: time is 225.723969
             INSERTEVENT: future time will be 227.653168
+DEBUG: CALLED AFTER TOLAYER3
+A_INTERRUPT: handled alarm
 
 EVENT time: 227.653168,  type: 2, fromlayer3  entity: 1
 B_INPUT: seq_num: 0 message: aaaaaaaaaaaaaaaaaaaa
@@ -326,23 +365,29 @@ HANDLE_EVENT: seq_num: 1
           START TIMER: starting timer at 229.760742
             INSERTEVENT: time is 229.760742
             INSERTEVENT: future time will be 229.825775
+SET_TIMER_fOR_NEXT_EVENT: seqnum: 3 alarm_time: 0.065033
 A_OUTPUT: resending packet 1
           TOLAYER3: seq: 1, ack -1, check: 1960 bbbbbbbbbbbbbbbbbbbb
           TOLAYER3: scheduling arrival on other side
             INSERTEVENT: time is 229.760742
             INSERTEVENT: future time will be 231.567642
+DEBUG: CALLED AFTER TOLAYER3
+A_INTERRUPT: handled alarm
 
 EVENT time: 229.825775,  type: 0, timerinterrupt   entity: 0
 HANDLE_EVENT: seq_num: 3
           START TIMER: starting timer at 229.825775
             INSERTEVENT: time is 229.825775
             INSERTEVENT: future time will be 251.195908
+SET_TIMER_fOR_NEXT_EVENT: seqnum: 2 alarm_time: 21.370132
 A_OUTPUT: resending packet 3
           TOLAYER3: seq: 3, ack -1, check: 2002 dddddddddddddddddddd
           TOLAYER3: packet being corrupted
           TOLAYER3: scheduling arrival on other side
             INSERTEVENT: time is 229.825775
             INSERTEVENT: future time will be 237.146835
+DEBUG: CALLED AFTER TOLAYER3
+A_INTERRUPT: handled alarm
 
 EVENT time: 230.379120,  type: 2, fromlayer3  entity: 0
 A_INPUT: ack_num: 0 message: aaaaaaaaaaaaaaaaaaaa
@@ -389,12 +434,15 @@ HANDLE_EVENT: seq_num: 2
           START TIMER: starting timer at 251.195908
             INSERTEVENT: time is 251.195908
             INSERTEVENT: future time will be 259.760742
+SET_TIMER_fOR_NEXT_EVENT: seqnum: 1 alarm_time: 8.564835
 A_OUTPUT: resending packet 2
           TOLAYER3: seq: 2, ack -1, check: 1981 cccccccccccccccccccc
           TOLAYER3: packet being corrupted
           TOLAYER3: scheduling arrival on other side
             INSERTEVENT: time is 251.195908
             INSERTEVENT: future time will be 258.692322
+DEBUG: CALLED AFTER TOLAYER3
+A_INTERRUPT: handled alarm
 
 EVENT time: 258.692322,  type: 2, fromlayer3  entity: 1
 B_INPUT: seq_num: 999999 message: cccccccccccccccccccc
@@ -405,24 +453,30 @@ HANDLE_EVENT: seq_num: 1
           START TIMER: starting timer at 259.760742
             INSERTEVENT: time is 259.760742
             INSERTEVENT: future time will be 259.825775
+SET_TIMER_fOR_NEXT_EVENT: seqnum: 3 alarm_time: 0.065033
 A_OUTPUT: resending packet 1
           TOLAYER3: seq: 1, ack -1, check: 1960 bbbbbbbbbbbbbbbbbbbb
           TOLAYER3: packet being corrupted
           TOLAYER3: scheduling arrival on other side
             INSERTEVENT: time is 259.760742
             INSERTEVENT: future time will be 265.735382
+DEBUG: CALLED AFTER TOLAYER3
+A_INTERRUPT: handled alarm
 
 EVENT time: 259.825775,  type: 0, timerinterrupt   entity: 0
 HANDLE_EVENT: seq_num: 3
           START TIMER: starting timer at 259.825775
             INSERTEVENT: time is 259.825775
             INSERTEVENT: future time will be 281.195923
+SET_TIMER_fOR_NEXT_EVENT: seqnum: 2 alarm_time: 21.370148
 A_OUTPUT: resending packet 3
           TOLAYER3: seq: 3, ack -1, check: 2002 dddddddddddddddddddd
           TOLAYER3: packet being corrupted
           TOLAYER3: scheduling arrival on other side
             INSERTEVENT: time is 259.825775
             INSERTEVENT: future time will be 272.475647
+DEBUG: CALLED AFTER TOLAYER3
+A_INTERRUPT: handled alarm
 
 EVENT time: 265.735382,  type: 2, fromlayer3  entity: 1
 B_INPUT: seq_num: 1 message: bbbbbbbbbbbbbbbbbbbb
@@ -437,11 +491,14 @@ HANDLE_EVENT: seq_num: 2
           START TIMER: starting timer at 281.195923
             INSERTEVENT: time is 281.195923
             INSERTEVENT: future time will be 289.760742
+SET_TIMER_fOR_NEXT_EVENT: seqnum: 1 alarm_time: 8.564819
 A_OUTPUT: resending packet 2
           TOLAYER3: seq: 2, ack -1, check: 1981 cccccccccccccccccccc
           TOLAYER3: scheduling arrival on other side
             INSERTEVENT: time is 281.195923
             INSERTEVENT: future time will be 285.469482
+DEBUG: CALLED AFTER TOLAYER3
+A_INTERRUPT: handled alarm
 
 EVENT time: 285.469482,  type: 2, fromlayer3  entity: 1
 B_INPUT: seq_num: 2 message: cccccccccccccccccccc
@@ -476,23 +533,29 @@ HANDLE_EVENT: seq_num: 1
           START TIMER: starting timer at 289.760742
             INSERTEVENT: time is 289.760742
             INSERTEVENT: future time will be 289.825775
+SET_TIMER_fOR_NEXT_EVENT: seqnum: 3 alarm_time: 0.065033
 A_OUTPUT: resending packet 1
           TOLAYER3: seq: 1, ack -1, check: 1960 bbbbbbbbbbbbbbbbbbbb
           TOLAYER3: packet being corrupted
           TOLAYER3: scheduling arrival on other side
             INSERTEVENT: time is 289.760742
             INSERTEVENT: future time will be 292.434998
+DEBUG: CALLED AFTER TOLAYER3
+A_INTERRUPT: handled alarm
 
 EVENT time: 289.825775,  type: 0, timerinterrupt   entity: 0
 HANDLE_EVENT: seq_num: 3
           START TIMER: starting timer at 289.825775
             INSERTEVENT: time is 289.825775
             INSERTEVENT: future time will be 319.760742
+SET_TIMER_fOR_NEXT_EVENT: seqnum: 1 alarm_time: 29.934967
 A_OUTPUT: resending packet 3
           TOLAYER3: seq: 3, ack -1, check: 2002 dddddddddddddddddddd
           TOLAYER3: scheduling arrival on other side
             INSERTEVENT: time is 289.825775
             INSERTEVENT: future time will be 299.717865
+DEBUG: CALLED AFTER TOLAYER3
+A_INTERRUPT: handled alarm
 
 EVENT time: 290.742798,  type: 1, fromlayer5  entity: 0
           GENERATE NEXT ARRIVAL: creating new arrival
@@ -506,6 +569,7 @@ A_OUTPUT: packet leaving A
           TOLAYER3: scheduling arrival on other side
             INSERTEVENT: time is 290.742798
             INSERTEVENT: future time will be 302.308167
+INSERT_PACKET: SUCCESS
 WINDOW CONTENTS: 1 2 3 4 5     start: 1 end: 5
 
 EVENT time: 291.910858,  type: 1, fromlayer5  entity: 0
@@ -520,6 +584,7 @@ A_OUTPUT: packet leaving A
           TOLAYER3: scheduling arrival on other side
             INSERTEVENT: time is 291.910858
             INSERTEVENT: future time will be 311.138641
+INSERT_PACKET: SUCCESS
 WINDOW CONTENTS: 1 2 3 4 5 6     start: 1 end: 6
 
 EVENT time: 292.434998,  type: 2, fromlayer3  entity: 1
@@ -558,48 +623,60 @@ HANDLE_EVENT: seq_num: 1
           START TIMER: starting timer at 319.760742
             INSERTEVENT: time is 319.760742
             INSERTEVENT: future time will be 319.825775
+SET_TIMER_fOR_NEXT_EVENT: seqnum: 3 alarm_time: 0.065033
 A_OUTPUT: resending packet 1
           TOLAYER3: seq: 1, ack -1, check: 1960 bbbbbbbbbbbbbbbbbbbb
           TOLAYER3: packet being corrupted
           TOLAYER3: scheduling arrival on other side
             INSERTEVENT: time is 319.760742
             INSERTEVENT: future time will be 328.507812
+DEBUG: CALLED AFTER TOLAYER3
+A_INTERRUPT: handled alarm
 
 EVENT time: 319.825775,  type: 0, timerinterrupt   entity: 0
 HANDLE_EVENT: seq_num: 3
           START TIMER: starting timer at 319.825775
             INSERTEVENT: time is 319.825775
             INSERTEVENT: future time will be 320.742798
+SET_TIMER_fOR_NEXT_EVENT: seqnum: 5 alarm_time: 0.917023
 A_OUTPUT: resending packet 3
           TOLAYER3: seq: 3, ack -1, check: 2002 dddddddddddddddddddd
           TOLAYER3: packet being corrupted
           TOLAYER3: scheduling arrival on other side
             INSERTEVENT: time is 319.825775
             INSERTEVENT: future time will be 337.693420
+DEBUG: CALLED AFTER TOLAYER3
+A_INTERRUPT: handled alarm
 
 EVENT time: 320.742798,  type: 0, timerinterrupt   entity: 0
 HANDLE_EVENT: seq_num: 5
           START TIMER: starting timer at 320.742798
             INSERTEVENT: time is 320.742798
             INSERTEVENT: future time will be 321.910858
+SET_TIMER_fOR_NEXT_EVENT: seqnum: 6 alarm_time: 1.168060
 A_OUTPUT: resending packet 5
           TOLAYER3: seq: 5, ack -1, check: 2044 ffffffffffffffffffff
           TOLAYER3: packet being corrupted
           TOLAYER3: scheduling arrival on other side
             INSERTEVENT: time is 320.742798
             INSERTEVENT: future time will be 340.382660
+DEBUG: CALLED AFTER TOLAYER3
+A_INTERRUPT: handled alarm
 
 EVENT time: 321.910858,  type: 0, timerinterrupt   entity: 0
 HANDLE_EVENT: seq_num: 6
           START TIMER: starting timer at 321.910858
             INSERTEVENT: time is 321.910858
             INSERTEVENT: future time will be 349.760742
+SET_TIMER_fOR_NEXT_EVENT: seqnum: 1 alarm_time: 27.849884
 A_OUTPUT: resending packet 6
           TOLAYER3: seq: 6, ack -1, check: 2065 gggggggggggggggggggg
           TOLAYER3: packet being corrupted
           TOLAYER3: scheduling arrival on other side
             INSERTEVENT: time is 321.910858
             INSERTEVENT: future time will be 347.033569
+DEBUG: CALLED AFTER TOLAYER3
+A_INTERRUPT: handled alarm
 
 EVENT time: 328.507812,  type: 2, fromlayer3  entity: 1
 B_INPUT: seq_num: 1 message: Zbbbbbbbbbbbbbbbbbbb
@@ -622,48 +699,60 @@ HANDLE_EVENT: seq_num: 1
           START TIMER: starting timer at 349.760742
             INSERTEVENT: time is 349.760742
             INSERTEVENT: future time will be 349.825775
+SET_TIMER_fOR_NEXT_EVENT: seqnum: 3 alarm_time: 0.065033
 A_OUTPUT: resending packet 1
           TOLAYER3: seq: 1, ack -1, check: 1960 bbbbbbbbbbbbbbbbbbbb
           TOLAYER3: packet being corrupted
           TOLAYER3: scheduling arrival on other side
             INSERTEVENT: time is 349.760742
             INSERTEVENT: future time will be 354.169922
+DEBUG: CALLED AFTER TOLAYER3
+A_INTERRUPT: handled alarm
 
 EVENT time: 349.825775,  type: 0, timerinterrupt   entity: 0
 HANDLE_EVENT: seq_num: 3
           START TIMER: starting timer at 349.825775
             INSERTEVENT: time is 349.825775
             INSERTEVENT: future time will be 350.742798
+SET_TIMER_fOR_NEXT_EVENT: seqnum: 5 alarm_time: 0.917023
 A_OUTPUT: resending packet 3
           TOLAYER3: seq: 3, ack -1, check: 2002 dddddddddddddddddddd
           TOLAYER3: packet being corrupted
           TOLAYER3: scheduling arrival on other side
             INSERTEVENT: time is 349.825775
             INSERTEVENT: future time will be 361.020508
+DEBUG: CALLED AFTER TOLAYER3
+A_INTERRUPT: handled alarm
 
 EVENT time: 350.742798,  type: 0, timerinterrupt   entity: 0
 HANDLE_EVENT: seq_num: 5
           START TIMER: starting timer at 350.742798
             INSERTEVENT: time is 350.742798
             INSERTEVENT: future time will be 351.910858
+SET_TIMER_fOR_NEXT_EVENT: seqnum: 6 alarm_time: 1.168060
 A_OUTPUT: resending packet 5
           TOLAYER3: seq: 5, ack -1, check: 2044 ffffffffffffffffffff
           TOLAYER3: packet being corrupted
           TOLAYER3: scheduling arrival on other side
             INSERTEVENT: time is 350.742798
             INSERTEVENT: future time will be 370.078705
+DEBUG: CALLED AFTER TOLAYER3
+A_INTERRUPT: handled alarm
 
 EVENT time: 351.910858,  type: 0, timerinterrupt   entity: 0
 HANDLE_EVENT: seq_num: 6
           START TIMER: starting timer at 351.910858
             INSERTEVENT: time is 351.910858
             INSERTEVENT: future time will be 379.760742
+SET_TIMER_fOR_NEXT_EVENT: seqnum: 1 alarm_time: 27.849884
 A_OUTPUT: resending packet 6
           TOLAYER3: seq: 6, ack -1, check: 2065 gggggggggggggggggggg
           TOLAYER3: packet being corrupted
           TOLAYER3: scheduling arrival on other side
             INSERTEVENT: time is 351.910858
             INSERTEVENT: future time will be 375.258240
+DEBUG: CALLED AFTER TOLAYER3
+A_INTERRUPT: handled alarm
 
 EVENT time: 354.169922,  type: 2, fromlayer3  entity: 1
 B_INPUT: seq_num: 1 message: Zbbbbbbbbbbbbbbbbbbb
@@ -686,48 +775,60 @@ HANDLE_EVENT: seq_num: 1
           START TIMER: starting timer at 379.760742
             INSERTEVENT: time is 379.760742
             INSERTEVENT: future time will be 379.825775
+SET_TIMER_fOR_NEXT_EVENT: seqnum: 3 alarm_time: 0.065033
 A_OUTPUT: resending packet 1
           TOLAYER3: seq: 1, ack -1, check: 1960 bbbbbbbbbbbbbbbbbbbb
           TOLAYER3: packet being corrupted
           TOLAYER3: scheduling arrival on other side
             INSERTEVENT: time is 379.760742
             INSERTEVENT: future time will be 383.766876
+DEBUG: CALLED AFTER TOLAYER3
+A_INTERRUPT: handled alarm
 
 EVENT time: 379.825775,  type: 0, timerinterrupt   entity: 0
 HANDLE_EVENT: seq_num: 3
           START TIMER: starting timer at 379.825775
             INSERTEVENT: time is 379.825775
             INSERTEVENT: future time will be 380.742798
+SET_TIMER_fOR_NEXT_EVENT: seqnum: 5 alarm_time: 0.917023
 A_OUTPUT: resending packet 3
           TOLAYER3: seq: 3, ack -1, check: 2002 dddddddddddddddddddd
           TOLAYER3: packet being corrupted
           TOLAYER3: scheduling arrival on other side
             INSERTEVENT: time is 379.825775
             INSERTEVENT: future time will be 384.988068
+DEBUG: CALLED AFTER TOLAYER3
+A_INTERRUPT: handled alarm
 
 EVENT time: 380.742798,  type: 0, timerinterrupt   entity: 0
 HANDLE_EVENT: seq_num: 5
           START TIMER: starting timer at 380.742798
             INSERTEVENT: time is 380.742798
             INSERTEVENT: future time will be 381.910858
+SET_TIMER_fOR_NEXT_EVENT: seqnum: 6 alarm_time: 1.168060
 A_OUTPUT: resending packet 5
           TOLAYER3: seq: 5, ack -1, check: 2044 ffffffffffffffffffff
           TOLAYER3: packet being corrupted
           TOLAYER3: scheduling arrival on other side
             INSERTEVENT: time is 380.742798
             INSERTEVENT: future time will be 389.455597
+DEBUG: CALLED AFTER TOLAYER3
+A_INTERRUPT: handled alarm
 
 EVENT time: 381.910858,  type: 0, timerinterrupt   entity: 0
 HANDLE_EVENT: seq_num: 6
           START TIMER: starting timer at 381.910858
             INSERTEVENT: time is 381.910858
             INSERTEVENT: future time will be 409.760742
+SET_TIMER_fOR_NEXT_EVENT: seqnum: 1 alarm_time: 27.849884
 A_OUTPUT: resending packet 6
           TOLAYER3: seq: 6, ack -1, check: 2065 gggggggggggggggggggg
           TOLAYER3: packet being corrupted
           TOLAYER3: scheduling arrival on other side
             INSERTEVENT: time is 381.910858
             INSERTEVENT: future time will be 391.760101
+DEBUG: CALLED AFTER TOLAYER3
+A_INTERRUPT: handled alarm
 
 EVENT time: 383.766876,  type: 2, fromlayer3  entity: 1
 B_INPUT: seq_num: 1 message: Zbbbbbbbbbbbbbbbbbbb
@@ -745,6 +846,7 @@ A_OUTPUT: packet leaving A
           TOLAYER3: scheduling arrival on other side
             INSERTEVENT: time is 384.448730
             INSERTEVENT: future time will be 394.781891
+INSERT_PACKET: SUCCESS
 WINDOW CONTENTS: 1 2 3 4 5 6 7     start: 1 end: 7
 
 EVENT time: 384.988068,  type: 2, fromlayer3  entity: 1
@@ -768,48 +870,60 @@ HANDLE_EVENT: seq_num: 1
           START TIMER: starting timer at 409.760742
             INSERTEVENT: time is 409.760742
             INSERTEVENT: future time will be 409.825775
+SET_TIMER_fOR_NEXT_EVENT: seqnum: 3 alarm_time: 0.065033
 A_OUTPUT: resending packet 1
           TOLAYER3: seq: 1, ack -1, check: 1960 bbbbbbbbbbbbbbbbbbbb
           TOLAYER3: packet being corrupted
           TOLAYER3: scheduling arrival on other side
             INSERTEVENT: time is 409.760742
             INSERTEVENT: future time will be 412.879669
+DEBUG: CALLED AFTER TOLAYER3
+A_INTERRUPT: handled alarm
 
 EVENT time: 409.825775,  type: 0, timerinterrupt   entity: 0
 HANDLE_EVENT: seq_num: 3
           START TIMER: starting timer at 409.825775
             INSERTEVENT: time is 409.825775
             INSERTEVENT: future time will be 410.742798
+SET_TIMER_fOR_NEXT_EVENT: seqnum: 5 alarm_time: 0.917023
 A_OUTPUT: resending packet 3
           TOLAYER3: seq: 3, ack -1, check: 2002 dddddddddddddddddddd
           TOLAYER3: packet being corrupted
           TOLAYER3: scheduling arrival on other side
             INSERTEVENT: time is 409.825775
             INSERTEVENT: future time will be 414.712128
+DEBUG: CALLED AFTER TOLAYER3
+A_INTERRUPT: handled alarm
 
 EVENT time: 410.742798,  type: 0, timerinterrupt   entity: 0
 HANDLE_EVENT: seq_num: 5
           START TIMER: starting timer at 410.742798
             INSERTEVENT: time is 410.742798
             INSERTEVENT: future time will be 411.910858
+SET_TIMER_fOR_NEXT_EVENT: seqnum: 6 alarm_time: 1.168060
 A_OUTPUT: resending packet 5
           TOLAYER3: seq: 5, ack -1, check: 2044 ffffffffffffffffffff
           TOLAYER3: packet being corrupted
           TOLAYER3: scheduling arrival on other side
             INSERTEVENT: time is 410.742798
             INSERTEVENT: future time will be 421.473022
+DEBUG: CALLED AFTER TOLAYER3
+A_INTERRUPT: handled alarm
 
 EVENT time: 411.910858,  type: 0, timerinterrupt   entity: 0
 HANDLE_EVENT: seq_num: 6
           START TIMER: starting timer at 411.910858
             INSERTEVENT: time is 411.910858
             INSERTEVENT: future time will be 414.448730
+SET_TIMER_fOR_NEXT_EVENT: seqnum: 7 alarm_time: 2.537872
 A_OUTPUT: resending packet 6
           TOLAYER3: seq: 6, ack -1, check: 2065 gggggggggggggggggggg
           TOLAYER3: packet being corrupted
           TOLAYER3: scheduling arrival on other side
             INSERTEVENT: time is 411.910858
             INSERTEVENT: future time will be 426.508820
+DEBUG: CALLED AFTER TOLAYER3
+A_INTERRUPT: handled alarm
 
 EVENT time: 412.879669,  type: 2, fromlayer3  entity: 1
 B_INPUT: seq_num: 1 message: Zbbbbbbbbbbbbbbbbbbb
@@ -820,12 +934,15 @@ HANDLE_EVENT: seq_num: 7
           START TIMER: starting timer at 414.448730
             INSERTEVENT: time is 414.448730
             INSERTEVENT: future time will be 439.760742
+SET_TIMER_fOR_NEXT_EVENT: seqnum: 1 alarm_time: 25.312012
 A_OUTPUT: resending packet 7
           TOLAYER3: seq: 7, ack -1, check: 2086 hhhhhhhhhhhhhhhhhhhh
           TOLAYER3: packet being corrupted
           TOLAYER3: scheduling arrival on other side
             INSERTEVENT: time is 414.448730
             INSERTEVENT: future time will be 435.392212
+DEBUG: CALLED AFTER TOLAYER3
+A_INTERRUPT: handled alarm
 
 EVENT time: 414.712128,  type: 2, fromlayer3  entity: 1
 B_INPUT: seq_num: 3 message: dddddddddddddddddddd
@@ -855,6 +972,7 @@ A_OUTPUT: packet leaving A
           TOLAYER3: scheduling arrival on other side
             INSERTEVENT: time is 436.823273
             INSERTEVENT: future time will be 446.688080
+INSERT_PACKET: SUCCESS
 WINDOW CONTENTS: 1 2 3 4 5 6 7 8     start: 1 end: 8
 
 EVENT time: 439.760742,  type: 0, timerinterrupt   entity: 0
@@ -862,59 +980,74 @@ HANDLE_EVENT: seq_num: 1
           START TIMER: starting timer at 439.760742
             INSERTEVENT: time is 439.760742
             INSERTEVENT: future time will be 439.825775
+SET_TIMER_fOR_NEXT_EVENT: seqnum: 3 alarm_time: 0.065033
 A_OUTPUT: resending packet 1
           TOLAYER3: seq: 1, ack -1, check: 1960 bbbbbbbbbbbbbbbbbbbb
           TOLAYER3: packet being corrupted
           TOLAYER3: scheduling arrival on other side
             INSERTEVENT: time is 439.760742
             INSERTEVENT: future time will be 450.590149
+DEBUG: CALLED AFTER TOLAYER3
+A_INTERRUPT: handled alarm
 
 EVENT time: 439.825775,  type: 0, timerinterrupt   entity: 0
 HANDLE_EVENT: seq_num: 3
           START TIMER: starting timer at 439.825775
             INSERTEVENT: time is 439.825775
             INSERTEVENT: future time will be 440.742798
+SET_TIMER_fOR_NEXT_EVENT: seqnum: 5 alarm_time: 0.917023
 A_OUTPUT: resending packet 3
           TOLAYER3: seq: 3, ack -1, check: 2002 dddddddddddddddddddd
           TOLAYER3: packet being corrupted
           TOLAYER3: scheduling arrival on other side
             INSERTEVENT: time is 439.825775
             INSERTEVENT: future time will be 456.393555
+DEBUG: CALLED AFTER TOLAYER3
+A_INTERRUPT: handled alarm
 
 EVENT time: 440.742798,  type: 0, timerinterrupt   entity: 0
 HANDLE_EVENT: seq_num: 5
           START TIMER: starting timer at 440.742798
             INSERTEVENT: time is 440.742798
             INSERTEVENT: future time will be 441.910858
+SET_TIMER_fOR_NEXT_EVENT: seqnum: 6 alarm_time: 1.168060
 A_OUTPUT: resending packet 5
           TOLAYER3: seq: 5, ack -1, check: 2044 ffffffffffffffffffff
           TOLAYER3: packet being corrupted
           TOLAYER3: scheduling arrival on other side
             INSERTEVENT: time is 440.742798
             INSERTEVENT: future time will be 460.307343
+DEBUG: CALLED AFTER TOLAYER3
+A_INTERRUPT: handled alarm
 
 EVENT time: 441.910858,  type: 0, timerinterrupt   entity: 0
 HANDLE_EVENT: seq_num: 6
           START TIMER: starting timer at 441.910858
             INSERTEVENT: time is 441.910858
             INSERTEVENT: future time will be 444.448730
+SET_TIMER_fOR_NEXT_EVENT: seqnum: 7 alarm_time: 2.537872
 A_OUTPUT: resending packet 6
           TOLAYER3: seq: 6, ack -1, check: 2065 gggggggggggggggggggg
           TOLAYER3: scheduling arrival on other side
             INSERTEVENT: time is 441.910858
             INSERTEVENT: future time will be 465.966858
+DEBUG: CALLED AFTER TOLAYER3
+A_INTERRUPT: handled alarm
 
 EVENT time: 444.448730,  type: 0, timerinterrupt   entity: 0
 HANDLE_EVENT: seq_num: 7
           START TIMER: starting timer at 444.448730
             INSERTEVENT: time is 444.448730
             INSERTEVENT: future time will be 466.823273
+SET_TIMER_fOR_NEXT_EVENT: seqnum: 8 alarm_time: 22.374542
 A_OUTPUT: resending packet 7
           TOLAYER3: seq: 7, ack -1, check: 2086 hhhhhhhhhhhhhhhhhhhh
           TOLAYER3: packet being corrupted
           TOLAYER3: scheduling arrival on other side
             INSERTEVENT: time is 444.448730
             INSERTEVENT: future time will be 474.024139
+DEBUG: CALLED AFTER TOLAYER3
+A_INTERRUPT: handled alarm
 
 EVENT time: 446.688080,  type: 2, fromlayer3  entity: 1
 B_INPUT: seq_num: 8 message: Ziiiiiiiiiiiiiiiiiii
@@ -948,58 +1081,73 @@ HANDLE_EVENT: seq_num: 8
           START TIMER: starting timer at 466.823273
             INSERTEVENT: time is 466.823273
             INSERTEVENT: future time will be 469.760742
+SET_TIMER_fOR_NEXT_EVENT: seqnum: 1 alarm_time: 2.937469
 A_OUTPUT: resending packet 8
           TOLAYER3: seq: 8, ack -1, check: 2107 iiiiiiiiiiiiiiiiiiii
           TOLAYER3: packet being corrupted
           TOLAYER3: scheduling arrival on other side
             INSERTEVENT: time is 466.823273
             INSERTEVENT: future time will be 479.728699
+DEBUG: CALLED AFTER TOLAYER3
+A_INTERRUPT: handled alarm
 
 EVENT time: 469.760742,  type: 0, timerinterrupt   entity: 0
 HANDLE_EVENT: seq_num: 1
           START TIMER: starting timer at 469.760742
             INSERTEVENT: time is 469.760742
             INSERTEVENT: future time will be 469.825775
+SET_TIMER_fOR_NEXT_EVENT: seqnum: 3 alarm_time: 0.065033
 A_OUTPUT: resending packet 1
           TOLAYER3: seq: 1, ack -1, check: 1960 bbbbbbbbbbbbbbbbbbbb
           TOLAYER3: scheduling arrival on other side
             INSERTEVENT: time is 469.760742
             INSERTEVENT: future time will be 487.711792
+DEBUG: CALLED AFTER TOLAYER3
+A_INTERRUPT: handled alarm
 
 EVENT time: 469.825775,  type: 0, timerinterrupt   entity: 0
 HANDLE_EVENT: seq_num: 3
           START TIMER: starting timer at 469.825775
             INSERTEVENT: time is 469.825775
             INSERTEVENT: future time will be 470.742798
+SET_TIMER_fOR_NEXT_EVENT: seqnum: 5 alarm_time: 0.917023
 A_OUTPUT: resending packet 3
           TOLAYER3: seq: 3, ack -1, check: 2002 dddddddddddddddddddd
           TOLAYER3: packet being corrupted
           TOLAYER3: scheduling arrival on other side
             INSERTEVENT: time is 469.825775
             INSERTEVENT: future time will be 491.334686
+DEBUG: CALLED AFTER TOLAYER3
+A_INTERRUPT: handled alarm
 
 EVENT time: 470.742798,  type: 0, timerinterrupt   entity: 0
 HANDLE_EVENT: seq_num: 5
           START TIMER: starting timer at 470.742798
             INSERTEVENT: time is 470.742798
             INSERTEVENT: future time will be 471.910858
+SET_TIMER_fOR_NEXT_EVENT: seqnum: 6 alarm_time: 1.168060
 A_OUTPUT: resending packet 5
           TOLAYER3: seq: 5, ack -1, check: 2044 ffffffffffffffffffff
           TOLAYER3: packet being corrupted
           TOLAYER3: scheduling arrival on other side
             INSERTEVENT: time is 470.742798
             INSERTEVENT: future time will be 493.344086
+DEBUG: CALLED AFTER TOLAYER3
+A_INTERRUPT: handled alarm
 
 EVENT time: 471.910858,  type: 0, timerinterrupt   entity: 0
 HANDLE_EVENT: seq_num: 6
           START TIMER: starting timer at 471.910858
             INSERTEVENT: time is 471.910858
             INSERTEVENT: future time will be 474.448730
+SET_TIMER_fOR_NEXT_EVENT: seqnum: 7 alarm_time: 2.537872
 A_OUTPUT: resending packet 6
           TOLAYER3: seq: 6, ack -1, check: 2065 gggggggggggggggggggg
           TOLAYER3: scheduling arrival on other side
             INSERTEVENT: time is 471.910858
             INSERTEVENT: future time will be 500.447540
+DEBUG: CALLED AFTER TOLAYER3
+A_INTERRUPT: handled alarm
 
 EVENT time: 472.340881,  type: 2, fromlayer3  entity: 0
 A_INPUT: ack_num: 6 message: gggggggggggggggggggg
@@ -1014,12 +1162,15 @@ HANDLE_EVENT: seq_num: 7
           START TIMER: starting timer at 474.448730
             INSERTEVENT: time is 474.448730
             INSERTEVENT: future time will be 496.823273
+SET_TIMER_fOR_NEXT_EVENT: seqnum: 8 alarm_time: 22.374542
 A_OUTPUT: resending packet 7
           TOLAYER3: seq: 7, ack -1, check: 2086 hhhhhhhhhhhhhhhhhhhh
           TOLAYER3: packet being corrupted
           TOLAYER3: scheduling arrival on other side
             INSERTEVENT: time is 474.448730
             INSERTEVENT: future time will be 507.941406
+DEBUG: CALLED AFTER TOLAYER3
+A_INTERRUPT: handled alarm
 
 EVENT time: 479.728699,  type: 2, fromlayer3  entity: 1
 B_INPUT: seq_num: 8 message: Ziiiiiiiiiiiiiiiiiii
@@ -1052,36 +1203,45 @@ HANDLE_EVENT: seq_num: 8
           START TIMER: starting timer at 496.823273
             INSERTEVENT: time is 496.823273
             INSERTEVENT: future time will be 499.760742
+SET_TIMER_fOR_NEXT_EVENT: seqnum: 1 alarm_time: 2.937469
 A_OUTPUT: resending packet 8
           TOLAYER3: seq: 8, ack -1, check: 2107 iiiiiiiiiiiiiiiiiiii
           TOLAYER3: packet being corrupted
           TOLAYER3: scheduling arrival on other side
             INSERTEVENT: time is 496.823273
             INSERTEVENT: future time will be 511.845673
+DEBUG: CALLED AFTER TOLAYER3
+A_INTERRUPT: handled alarm
 
 EVENT time: 499.760742,  type: 0, timerinterrupt   entity: 0
 HANDLE_EVENT: seq_num: 1
           START TIMER: starting timer at 499.760742
             INSERTEVENT: time is 499.760742
             INSERTEVENT: future time will be 499.825775
+SET_TIMER_fOR_NEXT_EVENT: seqnum: 3 alarm_time: 0.065033
 A_OUTPUT: resending packet 1
           TOLAYER3: seq: 1, ack -1, check: 1960 bbbbbbbbbbbbbbbbbbbb
           TOLAYER3: packet being corrupted
           TOLAYER3: scheduling arrival on other side
             INSERTEVENT: time is 499.760742
             INSERTEVENT: future time will be 520.537537
+DEBUG: CALLED AFTER TOLAYER3
+A_INTERRUPT: handled alarm
 
 EVENT time: 499.825775,  type: 0, timerinterrupt   entity: 0
 HANDLE_EVENT: seq_num: 3
           START TIMER: starting timer at 499.825775
             INSERTEVENT: time is 499.825775
             INSERTEVENT: future time will be 500.742798
+SET_TIMER_fOR_NEXT_EVENT: seqnum: 5 alarm_time: 0.917023
 A_OUTPUT: resending packet 3
           TOLAYER3: seq: 3, ack -1, check: 2002 dddddddddddddddddddd
           TOLAYER3: packet being corrupted
           TOLAYER3: scheduling arrival on other side
             INSERTEVENT: time is 499.825775
             INSERTEVENT: future time will be 526.553162
+DEBUG: CALLED AFTER TOLAYER3
+A_INTERRUPT: handled alarm
 
 EVENT time: 500.447540,  type: 2, fromlayer3  entity: 1
 B_INPUT: seq_num: 6 message: gggggggggggggggggggg
@@ -1099,12 +1259,15 @@ HANDLE_EVENT: seq_num: 5
           START TIMER: starting timer at 500.742798
             INSERTEVENT: time is 500.742798
             INSERTEVENT: future time will be 501.910858
+SET_TIMER_fOR_NEXT_EVENT: seqnum: 6 alarm_time: 1.168060
 A_OUTPUT: resending packet 5
           TOLAYER3: seq: 5, ack -1, check: 2044 ffffffffffffffffffff
           TOLAYER3: packet being corrupted
           TOLAYER3: scheduling arrival on other side
             INSERTEVENT: time is 500.742798
             INSERTEVENT: future time will be 529.956909
+DEBUG: CALLED AFTER TOLAYER3
+A_INTERRUPT: handled alarm
 
 EVENT time: 501.447968,  type: 2, fromlayer3  entity: 0
 A_INPUT: ack_num: 6 message: Zggggggggggggggggggg
@@ -1115,12 +1278,15 @@ HANDLE_EVENT: seq_num: 6
           START TIMER: starting timer at 501.910858
             INSERTEVENT: time is 501.910858
             INSERTEVENT: future time will be 504.448730
+SET_TIMER_fOR_NEXT_EVENT: seqnum: 7 alarm_time: 2.537872
 A_OUTPUT: resending packet 6
           TOLAYER3: seq: 6, ack -1, check: 2065 gggggggggggggggggggg
           TOLAYER3: packet being corrupted
           TOLAYER3: scheduling arrival on other side
             INSERTEVENT: time is 501.910858
             INSERTEVENT: future time will be 537.375732
+DEBUG: CALLED AFTER TOLAYER3
+A_INTERRUPT: handled alarm
 
 EVENT time: 502.199249,  type: 1, fromlayer5  entity: 0
           GENERATE NEXT ARRIVAL: creating new arrival
@@ -1134,6 +1300,7 @@ A_OUTPUT: packet leaving A
           TOLAYER3: scheduling arrival on other side
             INSERTEVENT: time is 502.199249
             INSERTEVENT: future time will be 543.533813
+INSERT_PACKET: SUCCESS
 WINDOW CONTENTS: 1 2 3 4 5 6 7 8 9     start: 1 end: 9
 
 EVENT time: 504.448730,  type: 0, timerinterrupt   entity: 0
@@ -1141,12 +1308,15 @@ HANDLE_EVENT: seq_num: 7
           START TIMER: starting timer at 504.448730
             INSERTEVENT: time is 504.448730
             INSERTEVENT: future time will be 526.823242
+SET_TIMER_fOR_NEXT_EVENT: seqnum: 8 alarm_time: 22.374512
 A_OUTPUT: resending packet 7
           TOLAYER3: seq: 7, ack -1, check: 2086 hhhhhhhhhhhhhhhhhhhh
           TOLAYER3: packet being corrupted
           TOLAYER3: scheduling arrival on other side
             INSERTEVENT: time is 504.448730
             INSERTEVENT: future time will be 552.317688
+DEBUG: CALLED AFTER TOLAYER3
+A_INTERRUPT: handled alarm
 
 EVENT time: 507.941406,  type: 2, fromlayer3  entity: 1
 B_INPUT: seq_num: 7 message: Zhhhhhhhhhhhhhhhhhhh
@@ -1169,36 +1339,45 @@ HANDLE_EVENT: seq_num: 8
           START TIMER: starting timer at 526.823242
             INSERTEVENT: time is 526.823242
             INSERTEVENT: future time will be 529.760742
+SET_TIMER_fOR_NEXT_EVENT: seqnum: 1 alarm_time: 2.937500
 A_OUTPUT: resending packet 8
           TOLAYER3: seq: 8, ack -1, check: 2107 iiiiiiiiiiiiiiiiiiii
           TOLAYER3: packet being corrupted
           TOLAYER3: scheduling arrival on other side
             INSERTEVENT: time is 526.823242
             INSERTEVENT: future time will be 555.072205
+DEBUG: CALLED AFTER TOLAYER3
+A_INTERRUPT: handled alarm
 
 EVENT time: 529.760742,  type: 0, timerinterrupt   entity: 0
 HANDLE_EVENT: seq_num: 1
           START TIMER: starting timer at 529.760742
             INSERTEVENT: time is 529.760742
             INSERTEVENT: future time will be 529.825806
+SET_TIMER_fOR_NEXT_EVENT: seqnum: 3 alarm_time: 0.065063
 A_OUTPUT: resending packet 1
           TOLAYER3: seq: 1, ack -1, check: 1960 bbbbbbbbbbbbbbbbbbbb
           TOLAYER3: packet being corrupted
           TOLAYER3: scheduling arrival on other side
             INSERTEVENT: time is 529.760742
             INSERTEVENT: future time will be 556.616333
+DEBUG: CALLED AFTER TOLAYER3
+A_INTERRUPT: handled alarm
 
 EVENT time: 529.825806,  type: 0, timerinterrupt   entity: 0
 HANDLE_EVENT: seq_num: 3
           START TIMER: starting timer at 529.825806
             INSERTEVENT: time is 529.825806
             INSERTEVENT: future time will be 530.742798
+SET_TIMER_fOR_NEXT_EVENT: seqnum: 5 alarm_time: 0.916992
 A_OUTPUT: resending packet 3
           TOLAYER3: seq: 3, ack -1, check: 2002 dddddddddddddddddddd
           TOLAYER3: packet being corrupted
           TOLAYER3: scheduling arrival on other side
             INSERTEVENT: time is 529.825806
             INSERTEVENT: future time will be 566.522217
+DEBUG: CALLED AFTER TOLAYER3
+A_INTERRUPT: handled alarm
 
 EVENT time: 529.956909,  type: 2, fromlayer3  entity: 1
 B_INPUT: seq_num: 5 message: Zfffffffffffffffffff
@@ -1209,46 +1388,58 @@ HANDLE_EVENT: seq_num: 5
           START TIMER: starting timer at 530.742798
             INSERTEVENT: time is 530.742798
             INSERTEVENT: future time will be 531.910889
+SET_TIMER_fOR_NEXT_EVENT: seqnum: 6 alarm_time: 1.168091
 A_OUTPUT: resending packet 5
           TOLAYER3: seq: 5, ack -1, check: 2044 ffffffffffffffffffff
           TOLAYER3: scheduling arrival on other side
             INSERTEVENT: time is 530.742798
             INSERTEVENT: future time will be 572.600464
+DEBUG: CALLED AFTER TOLAYER3
+A_INTERRUPT: handled alarm
 
 EVENT time: 531.910889,  type: 0, timerinterrupt   entity: 0
 HANDLE_EVENT: seq_num: 6
           START TIMER: starting timer at 531.910889
             INSERTEVENT: time is 531.910889
             INSERTEVENT: future time will be 532.199219
+SET_TIMER_fOR_NEXT_EVENT: seqnum: 9 alarm_time: 0.288330
 A_OUTPUT: resending packet 6
           TOLAYER3: seq: 6, ack -1, check: 2065 gggggggggggggggggggg
           TOLAYER3: packet being corrupted
           TOLAYER3: scheduling arrival on other side
             INSERTEVENT: time is 531.910889
             INSERTEVENT: future time will be 578.994080
+DEBUG: CALLED AFTER TOLAYER3
+A_INTERRUPT: handled alarm
 
 EVENT time: 532.199219,  type: 0, timerinterrupt   entity: 0
 HANDLE_EVENT: seq_num: 9
           START TIMER: starting timer at 532.199219
             INSERTEVENT: time is 532.199219
             INSERTEVENT: future time will be 534.448730
+SET_TIMER_fOR_NEXT_EVENT: seqnum: 7 alarm_time: 2.249512
 A_OUTPUT: resending packet 9
           TOLAYER3: seq: 9, ack -1, check: 2128 jjjjjjjjjjjjjjjjjjjj
           TOLAYER3: packet being corrupted
           TOLAYER3: scheduling arrival on other side
             INSERTEVENT: time is 532.199219
             INSERTEVENT: future time will be 580.313782
+DEBUG: CALLED AFTER TOLAYER3
+A_INTERRUPT: handled alarm
 
 EVENT time: 534.448730,  type: 0, timerinterrupt   entity: 0
 HANDLE_EVENT: seq_num: 7
           START TIMER: starting timer at 534.448730
             INSERTEVENT: time is 534.448730
             INSERTEVENT: future time will be 556.823242
+SET_TIMER_fOR_NEXT_EVENT: seqnum: 8 alarm_time: 22.374512
 A_OUTPUT: resending packet 7
           TOLAYER3: seq: 7, ack -1, check: 2086 hhhhhhhhhhhhhhhhhhhh
           TOLAYER3: scheduling arrival on other side
             INSERTEVENT: time is 534.448730
             INSERTEVENT: future time will be 587.889893
+DEBUG: CALLED AFTER TOLAYER3
+A_INTERRUPT: handled alarm
 
 EVENT time: 537.375732,  type: 2, fromlayer3  entity: 1
 B_INPUT: seq_num: 6 message: Zggggggggggggggggggg
@@ -1270,6 +1461,7 @@ A_OUTPUT: packet leaving A
           TOLAYER3: scheduling arrival on other side
             INSERTEVENT: time is 545.673218
             INSERTEVENT: future time will be 595.122253
+INSERT_PACKET: SUCCESS
 WINDOW CONTENTS: 1 2 3 4 5 6 7 8 9 10     start: 1 end: 10
 
 EVENT time: 552.317688,  type: 2, fromlayer3  entity: 1
@@ -1289,83 +1481,104 @@ HANDLE_EVENT: seq_num: 8
           START TIMER: starting timer at 556.823242
             INSERTEVENT: time is 556.823242
             INSERTEVENT: future time will be 559.760742
+SET_TIMER_fOR_NEXT_EVENT: seqnum: 1 alarm_time: 2.937500
 A_OUTPUT: resending packet 8
           TOLAYER3: seq: 8, ack -1, check: 2107 iiiiiiiiiiiiiiiiiiii
           TOLAYER3: packet being corrupted
           TOLAYER3: scheduling arrival on other side
             INSERTEVENT: time is 556.823242
             INSERTEVENT: future time will be 599.185120
+DEBUG: CALLED AFTER TOLAYER3
+A_INTERRUPT: handled alarm
 
 EVENT time: 559.760742,  type: 0, timerinterrupt   entity: 0
 HANDLE_EVENT: seq_num: 1
           START TIMER: starting timer at 559.760742
             INSERTEVENT: time is 559.760742
             INSERTEVENT: future time will be 559.825806
+SET_TIMER_fOR_NEXT_EVENT: seqnum: 3 alarm_time: 0.065063
 A_OUTPUT: resending packet 1
           TOLAYER3: seq: 1, ack -1, check: 1960 bbbbbbbbbbbbbbbbbbbb
           TOLAYER3: packet being corrupted
           TOLAYER3: scheduling arrival on other side
             INSERTEVENT: time is 559.760742
             INSERTEVENT: future time will be 605.297791
+DEBUG: CALLED AFTER TOLAYER3
+A_INTERRUPT: handled alarm
 
 EVENT time: 559.825806,  type: 0, timerinterrupt   entity: 0
 HANDLE_EVENT: seq_num: 3
           START TIMER: starting timer at 559.825806
             INSERTEVENT: time is 559.825806
             INSERTEVENT: future time will be 560.742798
+SET_TIMER_fOR_NEXT_EVENT: seqnum: 5 alarm_time: 0.916992
 A_OUTPUT: resending packet 3
           TOLAYER3: seq: 3, ack -1, check: 2002 dddddddddddddddddddd
           TOLAYER3: packet being corrupted
           TOLAYER3: scheduling arrival on other side
             INSERTEVENT: time is 559.825806
             INSERTEVENT: future time will be 607.307617
+DEBUG: CALLED AFTER TOLAYER3
+A_INTERRUPT: handled alarm
 
 EVENT time: 560.742798,  type: 0, timerinterrupt   entity: 0
 HANDLE_EVENT: seq_num: 5
           START TIMER: starting timer at 560.742798
             INSERTEVENT: time is 560.742798
             INSERTEVENT: future time will be 561.910889
+SET_TIMER_fOR_NEXT_EVENT: seqnum: 6 alarm_time: 1.168091
 A_OUTPUT: resending packet 5
           TOLAYER3: seq: 5, ack -1, check: 2044 ffffffffffffffffffff
           TOLAYER3: scheduling arrival on other side
             INSERTEVENT: time is 560.742798
             INSERTEVENT: future time will be 616.302734
+DEBUG: CALLED AFTER TOLAYER3
+A_INTERRUPT: handled alarm
 
 EVENT time: 561.910889,  type: 0, timerinterrupt   entity: 0
 HANDLE_EVENT: seq_num: 6
           START TIMER: starting timer at 561.910889
             INSERTEVENT: time is 561.910889
             INSERTEVENT: future time will be 562.199219
+SET_TIMER_fOR_NEXT_EVENT: seqnum: 9 alarm_time: 0.288330
 A_OUTPUT: resending packet 6
           TOLAYER3: seq: 6, ack -1, check: 2065 gggggggggggggggggggg
           TOLAYER3: packet being corrupted
           TOLAYER3: scheduling arrival on other side
             INSERTEVENT: time is 561.910889
             INSERTEVENT: future time will be 621.691467
+DEBUG: CALLED AFTER TOLAYER3
+A_INTERRUPT: handled alarm
 
 EVENT time: 562.199219,  type: 0, timerinterrupt   entity: 0
 HANDLE_EVENT: seq_num: 9
           START TIMER: starting timer at 562.199219
             INSERTEVENT: time is 562.199219
             INSERTEVENT: future time will be 564.448730
+SET_TIMER_fOR_NEXT_EVENT: seqnum: 7 alarm_time: 2.249512
 A_OUTPUT: resending packet 9
           TOLAYER3: seq: 9, ack -1, check: 2128 jjjjjjjjjjjjjjjjjjjj
           TOLAYER3: packet being corrupted
           TOLAYER3: scheduling arrival on other side
             INSERTEVENT: time is 562.199219
             INSERTEVENT: future time will be 626.209473
+DEBUG: CALLED AFTER TOLAYER3
+A_INTERRUPT: handled alarm
 
 EVENT time: 564.448730,  type: 0, timerinterrupt   entity: 0
 HANDLE_EVENT: seq_num: 7
           START TIMER: starting timer at 564.448730
             INSERTEVENT: time is 564.448730
             INSERTEVENT: future time will be 575.673218
+SET_TIMER_fOR_NEXT_EVENT: seqnum: 10 alarm_time: 11.224487
 A_OUTPUT: resending packet 7
           TOLAYER3: seq: 7, ack -1, check: 2086 hhhhhhhhhhhhhhhhhhhh
           TOLAYER3: packet being corrupted
           TOLAYER3: scheduling arrival on other side
             INSERTEVENT: time is 564.448730
             INSERTEVENT: future time will be 631.231384
+DEBUG: CALLED AFTER TOLAYER3
+A_INTERRUPT: handled alarm
 
 EVENT time: 566.522217,  type: 2, fromlayer3  entity: 1
 B_INPUT: seq_num: 999999 message: dddddddddddddddddddd
@@ -1395,12 +1608,15 @@ HANDLE_EVENT: seq_num: 10
           START TIMER: starting timer at 575.673218
             INSERTEVENT: time is 575.673218
             INSERTEVENT: future time will be 586.823242
+SET_TIMER_fOR_NEXT_EVENT: seqnum: 8 alarm_time: 11.150024
 A_OUTPUT: resending packet 10
           TOLAYER3: seq: 10, ack -1, check: 2149 kkkkkkkkkkkkkkkkkkkk
           TOLAYER3: packet being corrupted
           TOLAYER3: scheduling arrival on other side
             INSERTEVENT: time is 575.673218
             INSERTEVENT: future time will be 632.626404
+DEBUG: CALLED AFTER TOLAYER3
+A_INTERRUPT: handled alarm
 
 EVENT time: 578.994080,  type: 2, fromlayer3  entity: 1
 B_INPUT: seq_num: 6 message: gggggggggggggggggggg
@@ -1415,12 +1631,15 @@ HANDLE_EVENT: seq_num: 8
           START TIMER: starting timer at 586.823242
             INSERTEVENT: time is 586.823242
             INSERTEVENT: future time will be 589.760742
+SET_TIMER_fOR_NEXT_EVENT: seqnum: 1 alarm_time: 2.937500
 A_OUTPUT: resending packet 8
           TOLAYER3: seq: 8, ack -1, check: 2107 iiiiiiiiiiiiiiiiiiii
           TOLAYER3: packet being corrupted
           TOLAYER3: scheduling arrival on other side
             INSERTEVENT: time is 586.823242
             INSERTEVENT: future time will be 636.293762
+DEBUG: CALLED AFTER TOLAYER3
+A_INTERRUPT: handled alarm
 
 EVENT time: 587.889893,  type: 2, fromlayer3  entity: 1
 B_INPUT: seq_num: 7 message: hhhhhhhhhhhhhhhhhhhh
@@ -1440,36 +1659,45 @@ HANDLE_EVENT: seq_num: 1
           START TIMER: starting timer at 589.760742
             INSERTEVENT: time is 589.760742
             INSERTEVENT: future time will be 589.825806
+SET_TIMER_fOR_NEXT_EVENT: seqnum: 3 alarm_time: 0.065063
 A_OUTPUT: resending packet 1
           TOLAYER3: seq: 1, ack -1, check: 1960 bbbbbbbbbbbbbbbbbbbb
           TOLAYER3: packet being corrupted
           TOLAYER3: scheduling arrival on other side
             INSERTEVENT: time is 589.760742
             INSERTEVENT: future time will be 639.537109
+DEBUG: CALLED AFTER TOLAYER3
+A_INTERRUPT: handled alarm
 
 EVENT time: 589.825806,  type: 0, timerinterrupt   entity: 0
 HANDLE_EVENT: seq_num: 3
           START TIMER: starting timer at 589.825806
             INSERTEVENT: time is 589.825806
             INSERTEVENT: future time will be 590.742798
+SET_TIMER_fOR_NEXT_EVENT: seqnum: 5 alarm_time: 0.916992
 A_OUTPUT: resending packet 3
           TOLAYER3: seq: 3, ack -1, check: 2002 dddddddddddddddddddd
           TOLAYER3: packet being corrupted
           TOLAYER3: scheduling arrival on other side
             INSERTEVENT: time is 589.825806
             INSERTEVENT: future time will be 640.557007
+DEBUG: CALLED AFTER TOLAYER3
+A_INTERRUPT: handled alarm
 
 EVENT time: 590.742798,  type: 0, timerinterrupt   entity: 0
 HANDLE_EVENT: seq_num: 5
           START TIMER: starting timer at 590.742798
             INSERTEVENT: time is 590.742798
             INSERTEVENT: future time will be 591.910889
+SET_TIMER_fOR_NEXT_EVENT: seqnum: 6 alarm_time: 1.168091
 A_OUTPUT: resending packet 5
           TOLAYER3: seq: 5, ack -1, check: 2044 ffffffffffffffffffff
           TOLAYER3: packet being corrupted
           TOLAYER3: scheduling arrival on other side
             INSERTEVENT: time is 590.742798
             INSERTEVENT: future time will be 645.887146
+DEBUG: CALLED AFTER TOLAYER3
+A_INTERRUPT: handled alarm
 
 EVENT time: 591.422302,  type: 2, fromlayer3  entity: 0
 A_INPUT: ack_num: 7 message: Zhhhhhhhhhhhhhhhhhhh
@@ -1480,35 +1708,44 @@ HANDLE_EVENT: seq_num: 6
           START TIMER: starting timer at 591.910889
             INSERTEVENT: time is 591.910889
             INSERTEVENT: future time will be 592.199219
+SET_TIMER_fOR_NEXT_EVENT: seqnum: 9 alarm_time: 0.288330
 A_OUTPUT: resending packet 6
           TOLAYER3: seq: 6, ack -1, check: 2065 gggggggggggggggggggg
           TOLAYER3: packet being corrupted
           TOLAYER3: scheduling arrival on other side
             INSERTEVENT: time is 591.910889
             INSERTEVENT: future time will be 651.021423
+DEBUG: CALLED AFTER TOLAYER3
+A_INTERRUPT: handled alarm
 
 EVENT time: 592.199219,  type: 0, timerinterrupt   entity: 0
 HANDLE_EVENT: seq_num: 9
           START TIMER: starting timer at 592.199219
             INSERTEVENT: time is 592.199219
             INSERTEVENT: future time will be 594.448730
+SET_TIMER_fOR_NEXT_EVENT: seqnum: 7 alarm_time: 2.249512
 A_OUTPUT: resending packet 9
           TOLAYER3: seq: 9, ack -1, check: 2128 jjjjjjjjjjjjjjjjjjjj
           TOLAYER3: scheduling arrival on other side
             INSERTEVENT: time is 592.199219
             INSERTEVENT: future time will be 655.579285
+DEBUG: CALLED AFTER TOLAYER3
+A_INTERRUPT: handled alarm
 
 EVENT time: 594.448730,  type: 0, timerinterrupt   entity: 0
 HANDLE_EVENT: seq_num: 7
           START TIMER: starting timer at 594.448730
             INSERTEVENT: time is 594.448730
             INSERTEVENT: future time will be 605.673218
+SET_TIMER_fOR_NEXT_EVENT: seqnum: 10 alarm_time: 11.224487
 A_OUTPUT: resending packet 7
           TOLAYER3: seq: 7, ack -1, check: 2086 hhhhhhhhhhhhhhhhhhhh
           TOLAYER3: packet being corrupted
           TOLAYER3: scheduling arrival on other side
             INSERTEVENT: time is 594.448730
             INSERTEVENT: future time will be 660.532166
+DEBUG: CALLED AFTER TOLAYER3
+A_INTERRUPT: handled alarm
 
 EVENT time: 595.122253,  type: 2, fromlayer3  entity: 1
 B_INPUT: seq_num: 10 message: Zkkkkkkkkkkkkkkkkkkk
@@ -1527,12 +1764,15 @@ HANDLE_EVENT: seq_num: 10
           START TIMER: starting timer at 605.673218
             INSERTEVENT: time is 605.673218
             INSERTEVENT: future time will be 616.823242
+SET_TIMER_fOR_NEXT_EVENT: seqnum: 8 alarm_time: 11.150024
 A_OUTPUT: resending packet 10
           TOLAYER3: seq: 10, ack -1, check: 2149 kkkkkkkkkkkkkkkkkkkk
           TOLAYER3: packet being corrupted
           TOLAYER3: scheduling arrival on other side
             INSERTEVENT: time is 605.673218
             INSERTEVENT: future time will be 661.659546
+DEBUG: CALLED AFTER TOLAYER3
+A_INTERRUPT: handled alarm
 
 EVENT time: 607.307617,  type: 2, fromlayer3  entity: 1
 B_INPUT: seq_num: 3 message: Zddddddddddddddddddd
@@ -1552,12 +1792,15 @@ HANDLE_EVENT: seq_num: 8
           START TIMER: starting timer at 616.823242
             INSERTEVENT: time is 616.823242
             INSERTEVENT: future time will be 619.760742
+SET_TIMER_fOR_NEXT_EVENT: seqnum: 1 alarm_time: 2.937500
 A_OUTPUT: resending packet 8
           TOLAYER3: seq: 8, ack -1, check: 2107 iiiiiiiiiiiiiiiiiiii
           TOLAYER3: packet being corrupted
           TOLAYER3: scheduling arrival on other side
             INSERTEVENT: time is 616.823242
             INSERTEVENT: future time will be 667.774963
+DEBUG: CALLED AFTER TOLAYER3
+A_INTERRUPT: handled alarm
 
 EVENT time: 617.575623,  type: 2, fromlayer3  entity: 0
 A_INPUT: ack_num: 5 message: ffffffffffffffffffff
@@ -1580,24 +1823,30 @@ HANDLE_EVENT: seq_num: 1
           START TIMER: starting timer at 619.760742
             INSERTEVENT: time is 619.760742
             INSERTEVENT: future time will be 619.825806
+SET_TIMER_fOR_NEXT_EVENT: seqnum: 3 alarm_time: 0.065063
 A_OUTPUT: resending packet 1
           TOLAYER3: seq: 1, ack -1, check: 1960 bbbbbbbbbbbbbbbbbbbb
           TOLAYER3: packet being corrupted
           TOLAYER3: scheduling arrival on other side
             INSERTEVENT: time is 619.760742
             INSERTEVENT: future time will be 675.905762
+DEBUG: CALLED AFTER TOLAYER3
+A_INTERRUPT: handled alarm
 
 EVENT time: 619.825806,  type: 0, timerinterrupt   entity: 0
 HANDLE_EVENT: seq_num: 3
           START TIMER: starting timer at 619.825806
             INSERTEVENT: time is 619.825806
             INSERTEVENT: future time will be 621.910889
+SET_TIMER_fOR_NEXT_EVENT: seqnum: 6 alarm_time: 2.085083
 A_OUTPUT: resending packet 3
           TOLAYER3: seq: 3, ack -1, check: 2002 dddddddddddddddddddd
           TOLAYER3: packet being corrupted
           TOLAYER3: scheduling arrival on other side
             INSERTEVENT: time is 619.825806
             INSERTEVENT: future time will be 680.772278
+DEBUG: CALLED AFTER TOLAYER3
+A_INTERRUPT: handled alarm
 
 EVENT time: 621.691467,  type: 2, fromlayer3  entity: 1
 B_INPUT: seq_num: 6 message: Zggggggggggggggggggg
@@ -1608,35 +1857,44 @@ HANDLE_EVENT: seq_num: 6
           START TIMER: starting timer at 621.910889
             INSERTEVENT: time is 621.910889
             INSERTEVENT: future time will be 622.199219
+SET_TIMER_fOR_NEXT_EVENT: seqnum: 9 alarm_time: 0.288330
 A_OUTPUT: resending packet 6
           TOLAYER3: seq: 6, ack -1, check: 2065 gggggggggggggggggggg
           TOLAYER3: scheduling arrival on other side
             INSERTEVENT: time is 621.910889
             INSERTEVENT: future time will be 690.310669
+DEBUG: CALLED AFTER TOLAYER3
+A_INTERRUPT: handled alarm
 
 EVENT time: 622.199219,  type: 0, timerinterrupt   entity: 0
 HANDLE_EVENT: seq_num: 9
           START TIMER: starting timer at 622.199219
             INSERTEVENT: time is 622.199219
             INSERTEVENT: future time will be 624.448730
+SET_TIMER_fOR_NEXT_EVENT: seqnum: 7 alarm_time: 2.249512
 A_OUTPUT: resending packet 9
           TOLAYER3: seq: 9, ack -1, check: 2128 jjjjjjjjjjjjjjjjjjjj
           TOLAYER3: packet being corrupted
           TOLAYER3: scheduling arrival on other side
             INSERTEVENT: time is 622.199219
             INSERTEVENT: future time will be 697.768311
+DEBUG: CALLED AFTER TOLAYER3
+A_INTERRUPT: handled alarm
 
 EVENT time: 624.448730,  type: 0, timerinterrupt   entity: 0
 HANDLE_EVENT: seq_num: 7
           START TIMER: starting timer at 624.448730
             INSERTEVENT: time is 624.448730
             INSERTEVENT: future time will be 635.673218
+SET_TIMER_fOR_NEXT_EVENT: seqnum: 10 alarm_time: 11.224487
 A_OUTPUT: resending packet 7
           TOLAYER3: seq: 7, ack -1, check: 2086 hhhhhhhhhhhhhhhhhhhh
           TOLAYER3: packet being corrupted
           TOLAYER3: scheduling arrival on other side
             INSERTEVENT: time is 624.448730
             INSERTEVENT: future time will be 707.166870
+DEBUG: CALLED AFTER TOLAYER3
+A_INTERRUPT: handled alarm
 
 EVENT time: 626.209473,  type: 2, fromlayer3  entity: 1
 B_INPUT: seq_num: 9 message: Zjjjjjjjjjjjjjjjjjjj
@@ -1654,6 +1912,7 @@ A_OUTPUT: packet leaving A
           TOLAYER3: scheduling arrival on other side
             INSERTEVENT: time is 627.447937
             INSERTEVENT: future time will be 712.117188
+INSERT_PACKET: SUCCESS
 WINDOW CONTENTS: 1 2 3 4 5 6 7 8 9 10 11     start: 1 end: 11
 
 EVENT time: 631.231384,  type: 2, fromlayer3  entity: 1
@@ -1669,12 +1928,15 @@ HANDLE_EVENT: seq_num: 10
           START TIMER: starting timer at 635.673218
             INSERTEVENT: time is 635.673218
             INSERTEVENT: future time will be 646.823242
+SET_TIMER_fOR_NEXT_EVENT: seqnum: 8 alarm_time: 11.150024
 A_OUTPUT: resending packet 10
           TOLAYER3: seq: 10, ack -1, check: 2149 kkkkkkkkkkkkkkkkkkkk
           TOLAYER3: packet being corrupted
           TOLAYER3: scheduling arrival on other side
             INSERTEVENT: time is 635.673218
             INSERTEVENT: future time will be 715.747070
+DEBUG: CALLED AFTER TOLAYER3
+A_INTERRUPT: handled alarm
 
 EVENT time: 636.293762,  type: 2, fromlayer3  entity: 1
 B_INPUT: seq_num: 8 message: Ziiiiiiiiiiiiiiiiiii
@@ -1697,36 +1959,45 @@ HANDLE_EVENT: seq_num: 8
           START TIMER: starting timer at 646.823242
             INSERTEVENT: time is 646.823242
             INSERTEVENT: future time will be 649.760742
+SET_TIMER_fOR_NEXT_EVENT: seqnum: 1 alarm_time: 2.937500
 A_OUTPUT: resending packet 8
           TOLAYER3: seq: 8, ack -1, check: 2107 iiiiiiiiiiiiiiiiiiii
           TOLAYER3: packet being corrupted
           TOLAYER3: scheduling arrival on other side
             INSERTEVENT: time is 646.823242
             INSERTEVENT: future time will be 723.988831
+DEBUG: CALLED AFTER TOLAYER3
+A_INTERRUPT: handled alarm
 
 EVENT time: 649.760742,  type: 0, timerinterrupt   entity: 0
 HANDLE_EVENT: seq_num: 1
           START TIMER: starting timer at 649.760742
             INSERTEVENT: time is 649.760742
             INSERTEVENT: future time will be 649.825806
+SET_TIMER_fOR_NEXT_EVENT: seqnum: 3 alarm_time: 0.065063
 A_OUTPUT: resending packet 1
           TOLAYER3: seq: 1, ack -1, check: 1960 bbbbbbbbbbbbbbbbbbbb
           TOLAYER3: packet being corrupted
           TOLAYER3: scheduling arrival on other side
             INSERTEVENT: time is 649.760742
             INSERTEVENT: future time will be 729.892822
+DEBUG: CALLED AFTER TOLAYER3
+A_INTERRUPT: handled alarm
 
 EVENT time: 649.825806,  type: 0, timerinterrupt   entity: 0
 HANDLE_EVENT: seq_num: 3
           START TIMER: starting timer at 649.825806
             INSERTEVENT: time is 649.825806
             INSERTEVENT: future time will be 651.910889
+SET_TIMER_fOR_NEXT_EVENT: seqnum: 6 alarm_time: 2.085083
 A_OUTPUT: resending packet 3
           TOLAYER3: seq: 3, ack -1, check: 2002 dddddddddddddddddddd
           TOLAYER3: packet being corrupted
           TOLAYER3: scheduling arrival on other side
             INSERTEVENT: time is 649.825806
             INSERTEVENT: future time will be 732.652649
+DEBUG: CALLED AFTER TOLAYER3
+A_INTERRUPT: handled alarm
 
 EVENT time: 651.021423,  type: 2, fromlayer3  entity: 1
 B_INPUT: seq_num: 999999 message: gggggggggggggggggggg
@@ -1737,36 +2008,45 @@ HANDLE_EVENT: seq_num: 6
           START TIMER: starting timer at 651.910889
             INSERTEVENT: time is 651.910889
             INSERTEVENT: future time will be 652.199219
+SET_TIMER_fOR_NEXT_EVENT: seqnum: 9 alarm_time: 0.288330
 A_OUTPUT: resending packet 6
           TOLAYER3: seq: 6, ack -1, check: 2065 gggggggggggggggggggg
           TOLAYER3: packet being corrupted
           TOLAYER3: scheduling arrival on other side
             INSERTEVENT: time is 651.910889
             INSERTEVENT: future time will be 735.570740
+DEBUG: CALLED AFTER TOLAYER3
+A_INTERRUPT: handled alarm
 
 EVENT time: 652.199219,  type: 0, timerinterrupt   entity: 0
 HANDLE_EVENT: seq_num: 9
           START TIMER: starting timer at 652.199219
             INSERTEVENT: time is 652.199219
             INSERTEVENT: future time will be 654.448730
+SET_TIMER_fOR_NEXT_EVENT: seqnum: 7 alarm_time: 2.249512
 A_OUTPUT: resending packet 9
           TOLAYER3: seq: 9, ack -1, check: 2128 jjjjjjjjjjjjjjjjjjjj
           TOLAYER3: packet being corrupted
           TOLAYER3: scheduling arrival on other side
             INSERTEVENT: time is 652.199219
             INSERTEVENT: future time will be 740.555847
+DEBUG: CALLED AFTER TOLAYER3
+A_INTERRUPT: handled alarm
 
 EVENT time: 654.448730,  type: 0, timerinterrupt   entity: 0
 HANDLE_EVENT: seq_num: 7
           START TIMER: starting timer at 654.448730
             INSERTEVENT: time is 654.448730
             INSERTEVENT: future time will be 657.447937
+SET_TIMER_fOR_NEXT_EVENT: seqnum: 11 alarm_time: 2.999207
 A_OUTPUT: resending packet 7
           TOLAYER3: seq: 7, ack -1, check: 2086 hhhhhhhhhhhhhhhhhhhh
           TOLAYER3: packet being corrupted
           TOLAYER3: scheduling arrival on other side
             INSERTEVENT: time is 654.448730
             INSERTEVENT: future time will be 750.497620
+DEBUG: CALLED AFTER TOLAYER3
+A_INTERRUPT: handled alarm
 
 EVENT time: 655.579285,  type: 2, fromlayer3  entity: 1
 B_INPUT: seq_num: 9 message: jjjjjjjjjjjjjjjjjjjj
@@ -1783,12 +2063,15 @@ HANDLE_EVENT: seq_num: 11
           START TIMER: starting timer at 657.447937
             INSERTEVENT: time is 657.447937
             INSERTEVENT: future time will be 665.673218
+SET_TIMER_fOR_NEXT_EVENT: seqnum: 10 alarm_time: 8.225281
 A_OUTPUT: resending packet 11
           TOLAYER3: seq: 11, ack -1, check: 2170 llllllllllllllllllll
           TOLAYER3: packet being corrupted
           TOLAYER3: scheduling arrival on other side
             INSERTEVENT: time is 657.447937
             INSERTEVENT: future time will be 757.016907
+DEBUG: CALLED AFTER TOLAYER3
+A_INTERRUPT: handled alarm
 
 EVENT time: 659.468689,  type: 2, fromlayer3  entity: 0
 A_INPUT: ack_num: 9 message: jjjjjjjjjjjjjjjjjjjj
@@ -1819,12 +2102,15 @@ HANDLE_EVENT: seq_num: 10
           START TIMER: starting timer at 665.673218
             INSERTEVENT: time is 665.673218
             INSERTEVENT: future time will be 676.823242
+SET_TIMER_fOR_NEXT_EVENT: seqnum: 8 alarm_time: 11.150024
 A_OUTPUT: resending packet 10
           TOLAYER3: seq: 10, ack -1, check: 2149 kkkkkkkkkkkkkkkkkkkk
           TOLAYER3: packet being corrupted
           TOLAYER3: scheduling arrival on other side
             INSERTEVENT: time is 665.673218
             INSERTEVENT: future time will be 762.760071
+DEBUG: CALLED AFTER TOLAYER3
+A_INTERRUPT: handled alarm
 
 EVENT time: 667.774963,  type: 2, fromlayer3  entity: 1
 B_INPUT: seq_num: 8 message: Ziiiiiiiiiiiiiiiiiii
@@ -1839,12 +2125,15 @@ HANDLE_EVENT: seq_num: 8
           START TIMER: starting timer at 676.823242
             INSERTEVENT: time is 676.823242
             INSERTEVENT: future time will be 679.760742
+SET_TIMER_fOR_NEXT_EVENT: seqnum: 1 alarm_time: 2.937500
 A_OUTPUT: resending packet 8
           TOLAYER3: seq: 8, ack -1, check: 2107 iiiiiiiiiiiiiiiiiiii
           TOLAYER3: packet being corrupted
           TOLAYER3: scheduling arrival on other side
             INSERTEVENT: time is 676.823242
             INSERTEVENT: future time will be 764.177368
+DEBUG: CALLED AFTER TOLAYER3
+A_INTERRUPT: handled alarm
 
 EVENT time: 678.742065,  type: 1, fromlayer5  entity: 0
           GENERATE NEXT ARRIVAL: creating new arrival
@@ -1858,6 +2147,7 @@ A_OUTPUT: packet leaving A
           TOLAYER3: scheduling arrival on other side
             INSERTEVENT: time is 678.742065
             INSERTEVENT: future time will be 768.689941
+INSERT_PACKET: SUCCESS
 WINDOW CONTENTS: 1 2 3 4 5 6 7 8 9 10 11 12     start: 1 end: 12
 
 EVENT time: 679.760742,  type: 0, timerinterrupt   entity: 0
@@ -1865,24 +2155,30 @@ HANDLE_EVENT: seq_num: 1
           START TIMER: starting timer at 679.760742
             INSERTEVENT: time is 679.760742
             INSERTEVENT: future time will be 679.825806
+SET_TIMER_fOR_NEXT_EVENT: seqnum: 3 alarm_time: 0.065063
 A_OUTPUT: resending packet 1
           TOLAYER3: seq: 1, ack -1, check: 1960 bbbbbbbbbbbbbbbbbbbb
           TOLAYER3: packet being corrupted
           TOLAYER3: scheduling arrival on other side
             INSERTEVENT: time is 679.760742
             INSERTEVENT: future time will be 772.849731
+DEBUG: CALLED AFTER TOLAYER3
+A_INTERRUPT: handled alarm
 
 EVENT time: 679.825806,  type: 0, timerinterrupt   entity: 0
 HANDLE_EVENT: seq_num: 3
           START TIMER: starting timer at 679.825806
             INSERTEVENT: time is 679.825806
             INSERTEVENT: future time will be 681.910889
+SET_TIMER_fOR_NEXT_EVENT: seqnum: 6 alarm_time: 2.085083
 A_OUTPUT: resending packet 3
           TOLAYER3: seq: 3, ack -1, check: 2002 dddddddddddddddddddd
           TOLAYER3: packet being corrupted
           TOLAYER3: scheduling arrival on other side
             INSERTEVENT: time is 679.825806
             INSERTEVENT: future time will be 774.337646
+DEBUG: CALLED AFTER TOLAYER3
+A_INTERRUPT: handled alarm
 
 EVENT time: 680.772278,  type: 2, fromlayer3  entity: 1
 B_INPUT: seq_num: 3 message: Zddddddddddddddddddd
@@ -1900,6 +2196,7 @@ A_OUTPUT: packet leaving A
           TOLAYER3: scheduling arrival on other side
             INSERTEVENT: time is 680.828430
             INSERTEVENT: future time will be 778.543091
+INSERT_PACKET: SUCCESS
 WINDOW CONTENTS: 1 2 3 4 5 6 7 8 9 10 11 12 13     start: 1 end: 13
 
 EVENT time: 681.910889,  type: 0, timerinterrupt   entity: 0
@@ -1907,24 +2204,30 @@ HANDLE_EVENT: seq_num: 6
           START TIMER: starting timer at 681.910889
             INSERTEVENT: time is 681.910889
             INSERTEVENT: future time will be 684.448730
+SET_TIMER_fOR_NEXT_EVENT: seqnum: 7 alarm_time: 2.537842
 A_OUTPUT: resending packet 6
           TOLAYER3: seq: 6, ack -1, check: 2065 gggggggggggggggggggg
           TOLAYER3: packet being corrupted
           TOLAYER3: scheduling arrival on other side
             INSERTEVENT: time is 681.910889
             INSERTEVENT: future time will be 788.536255
+DEBUG: CALLED AFTER TOLAYER3
+A_INTERRUPT: handled alarm
 
 EVENT time: 684.448730,  type: 0, timerinterrupt   entity: 0
 HANDLE_EVENT: seq_num: 7
           START TIMER: starting timer at 684.448730
             INSERTEVENT: time is 684.448730
             INSERTEVENT: future time will be 687.447937
+SET_TIMER_fOR_NEXT_EVENT: seqnum: 11 alarm_time: 2.999207
 A_OUTPUT: resending packet 7
           TOLAYER3: seq: 7, ack -1, check: 2086 hhhhhhhhhhhhhhhhhhhh
           TOLAYER3: packet being corrupted
           TOLAYER3: scheduling arrival on other side
             INSERTEVENT: time is 684.448730
             INSERTEVENT: future time will be 791.606079
+DEBUG: CALLED AFTER TOLAYER3
+A_INTERRUPT: handled alarm
 
 EVENT time: 685.602600,  type: 1, fromlayer5  entity: 0
           GENERATE NEXT ARRIVAL: creating new arrival
@@ -1938,6 +2241,7 @@ A_OUTPUT: packet leaving A
           TOLAYER3: scheduling arrival on other side
             INSERTEVENT: time is 685.602600
             INSERTEVENT: future time will be 797.467834
+INSERT_PACKET: SUCCESS
 WINDOW CONTENTS: 1 2 3 4 5 6 7 8 9 10 11 12 13 14     start: 1 end: 14
 
 EVENT time: 687.447937,  type: 0, timerinterrupt   entity: 0
@@ -1945,12 +2249,15 @@ HANDLE_EVENT: seq_num: 11
           START TIMER: starting timer at 687.447937
             INSERTEVENT: time is 687.447937
             INSERTEVENT: future time will be 695.673218
+SET_TIMER_fOR_NEXT_EVENT: seqnum: 10 alarm_time: 8.225281
 A_OUTPUT: resending packet 11
           TOLAYER3: seq: 11, ack -1, check: 2170 llllllllllllllllllll
           TOLAYER3: packet being corrupted
           TOLAYER3: scheduling arrival on other side
             INSERTEVENT: time is 687.447937
             INSERTEVENT: future time will be 799.389832
+DEBUG: CALLED AFTER TOLAYER3
+A_INTERRUPT: handled alarm
 
 EVENT time: 690.310669,  type: 2, fromlayer3  entity: 1
 B_INPUT: seq_num: 6 message: gggggggggggggggggggg
@@ -1967,12 +2274,15 @@ HANDLE_EVENT: seq_num: 10
           START TIMER: starting timer at 695.673218
             INSERTEVENT: time is 695.673218
             INSERTEVENT: future time will be 706.823242
+SET_TIMER_fOR_NEXT_EVENT: seqnum: 8 alarm_time: 11.150024
 A_OUTPUT: resending packet 10
           TOLAYER3: seq: 10, ack -1, check: 2149 kkkkkkkkkkkkkkkkkkkk
           TOLAYER3: packet being corrupted
           TOLAYER3: scheduling arrival on other side
             INSERTEVENT: time is 695.673218
             INSERTEVENT: future time will be 802.770813
+DEBUG: CALLED AFTER TOLAYER3
+A_INTERRUPT: handled alarm
 
 EVENT time: 697.768311,  type: 2, fromlayer3  entity: 1
 B_INPUT: seq_num: 9 message: Zjjjjjjjjjjjjjjjjjjj
@@ -1987,12 +2297,15 @@ HANDLE_EVENT: seq_num: 8
           START TIMER: starting timer at 706.823242
             INSERTEVENT: time is 706.823242
             INSERTEVENT: future time will be 708.742065
+SET_TIMER_fOR_NEXT_EVENT: seqnum: 12 alarm_time: 1.918823
 A_OUTPUT: resending packet 8
           TOLAYER3: seq: 8, ack -1, check: 2107 iiiiiiiiiiiiiiiiiiii
           TOLAYER3: packet being corrupted
           TOLAYER3: scheduling arrival on other side
             INSERTEVENT: time is 706.823242
             INSERTEVENT: future time will be 806.592834
+DEBUG: CALLED AFTER TOLAYER3
+A_INTERRUPT: handled alarm
 
 EVENT time: 707.166870,  type: 2, fromlayer3  entity: 1
 B_INPUT: seq_num: 7 message: Zhhhhhhhhhhhhhhhhhhh
@@ -2003,60 +2316,75 @@ HANDLE_EVENT: seq_num: 12
           START TIMER: starting timer at 708.742065
             INSERTEVENT: time is 708.742065
             INSERTEVENT: future time will be 709.760742
+SET_TIMER_fOR_NEXT_EVENT: seqnum: 1 alarm_time: 1.018677
 A_OUTPUT: resending packet 12
           TOLAYER3: seq: 12, ack -1, check: 2191 mmmmmmmmmmmmmmmmmmmm
           TOLAYER3: packet being corrupted
           TOLAYER3: scheduling arrival on other side
             INSERTEVENT: time is 708.742065
             INSERTEVENT: future time will be 813.807373
+DEBUG: CALLED AFTER TOLAYER3
+A_INTERRUPT: handled alarm
 
 EVENT time: 709.760742,  type: 0, timerinterrupt   entity: 0
 HANDLE_EVENT: seq_num: 1
           START TIMER: starting timer at 709.760742
             INSERTEVENT: time is 709.760742
             INSERTEVENT: future time will be 709.825806
+SET_TIMER_fOR_NEXT_EVENT: seqnum: 3 alarm_time: 0.065063
 A_OUTPUT: resending packet 1
           TOLAYER3: seq: 1, ack -1, check: 1960 bbbbbbbbbbbbbbbbbbbb
           TOLAYER3: packet being corrupted
           TOLAYER3: scheduling arrival on other side
             INSERTEVENT: time is 709.760742
             INSERTEVENT: future time will be 817.757629
+DEBUG: CALLED AFTER TOLAYER3
+A_INTERRUPT: handled alarm
 
 EVENT time: 709.825806,  type: 0, timerinterrupt   entity: 0
 HANDLE_EVENT: seq_num: 3
           START TIMER: starting timer at 709.825806
             INSERTEVENT: time is 709.825806
             INSERTEVENT: future time will be 710.828430
+SET_TIMER_fOR_NEXT_EVENT: seqnum: 13 alarm_time: 1.002625
 A_OUTPUT: resending packet 3
           TOLAYER3: seq: 3, ack -1, check: 2002 dddddddddddddddddddd
           TOLAYER3: packet being corrupted
           TOLAYER3: scheduling arrival on other side
             INSERTEVENT: time is 709.825806
             INSERTEVENT: future time will be 821.270203
+DEBUG: CALLED AFTER TOLAYER3
+A_INTERRUPT: handled alarm
 
 EVENT time: 710.828430,  type: 0, timerinterrupt   entity: 0
 HANDLE_EVENT: seq_num: 13
           START TIMER: starting timer at 710.828430
             INSERTEVENT: time is 710.828430
             INSERTEVENT: future time will be 711.910889
+SET_TIMER_fOR_NEXT_EVENT: seqnum: 6 alarm_time: 1.082458
 A_OUTPUT: resending packet 13
           TOLAYER3: seq: 13, ack -1, check: 2212 nnnnnnnnnnnnnnnnnnnn
           TOLAYER3: packet being corrupted
           TOLAYER3: scheduling arrival on other side
             INSERTEVENT: time is 710.828430
             INSERTEVENT: future time will be 828.018372
+DEBUG: CALLED AFTER TOLAYER3
+A_INTERRUPT: handled alarm
 
 EVENT time: 711.910889,  type: 0, timerinterrupt   entity: 0
 HANDLE_EVENT: seq_num: 6
           START TIMER: starting timer at 711.910889
             INSERTEVENT: time is 711.910889
             INSERTEVENT: future time will be 714.448730
+SET_TIMER_fOR_NEXT_EVENT: seqnum: 7 alarm_time: 2.537842
 A_OUTPUT: resending packet 6
           TOLAYER3: seq: 6, ack -1, check: 2065 gggggggggggggggggggg
           TOLAYER3: packet being corrupted
           TOLAYER3: scheduling arrival on other side
             INSERTEVENT: time is 711.910889
             INSERTEVENT: future time will be 833.566406
+DEBUG: CALLED AFTER TOLAYER3
+A_INTERRUPT: handled alarm
 
 EVENT time: 712.117188,  type: 2, fromlayer3  entity: 1
 B_INPUT: seq_num: 11 message: llllllllllllllllllll
@@ -2067,23 +2395,29 @@ HANDLE_EVENT: seq_num: 7
           START TIMER: starting timer at 714.448730
             INSERTEVENT: time is 714.448730
             INSERTEVENT: future time will be 715.602600
+SET_TIMER_fOR_NEXT_EVENT: seqnum: 14 alarm_time: 1.153870
 A_OUTPUT: resending packet 7
           TOLAYER3: seq: 7, ack -1, check: 2086 hhhhhhhhhhhhhhhhhhhh
           TOLAYER3: packet being corrupted
           TOLAYER3: scheduling arrival on other side
             INSERTEVENT: time is 714.448730
             INSERTEVENT: future time will be 843.302612
+DEBUG: CALLED AFTER TOLAYER3
+A_INTERRUPT: handled alarm
 
 EVENT time: 715.602600,  type: 0, timerinterrupt   entity: 0
 HANDLE_EVENT: seq_num: 14
           START TIMER: starting timer at 715.602600
             INSERTEVENT: time is 715.602600
             INSERTEVENT: future time will be 717.447937
+SET_TIMER_fOR_NEXT_EVENT: seqnum: 11 alarm_time: 1.845337
 A_OUTPUT: resending packet 14
           TOLAYER3: seq: 14, ack -1, check: 2233 oooooooooooooooooooo
           TOLAYER3: scheduling arrival on other side
             INSERTEVENT: time is 715.602600
             INSERTEVENT: future time will be 852.804871
+DEBUG: CALLED AFTER TOLAYER3
+A_INTERRUPT: handled alarm
 
 EVENT time: 715.747070,  type: 2, fromlayer3  entity: 1
 B_INPUT: seq_num: 10 message: Zkkkkkkkkkkkkkkkkkkk
@@ -2094,12 +2428,15 @@ HANDLE_EVENT: seq_num: 11
           START TIMER: starting timer at 717.447937
             INSERTEVENT: time is 717.447937
             INSERTEVENT: future time will be 725.673218
+SET_TIMER_fOR_NEXT_EVENT: seqnum: 10 alarm_time: 8.225281
 A_OUTPUT: resending packet 11
           TOLAYER3: seq: 11, ack -1, check: 2170 llllllllllllllllllll
           TOLAYER3: packet being corrupted
           TOLAYER3: scheduling arrival on other side
             INSERTEVENT: time is 717.447937
             INSERTEVENT: future time will be 856.129211
+DEBUG: CALLED AFTER TOLAYER3
+A_INTERRUPT: handled alarm
 
 EVENT time: 719.509705,  type: 1, fromlayer5  entity: 0
           GENERATE NEXT ARRIVAL: creating new arrival
@@ -2112,6 +2449,7 @@ A_OUTPUT: packet leaving A
           TOLAYER3: scheduling arrival on other side
             INSERTEVENT: time is 719.509705
             INSERTEVENT: future time will be 857.568665
+INSERT_PACKET: SUCCESS
 WINDOW CONTENTS: 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15     start: 1 end: 15
 
 EVENT time: 723.988831,  type: 2, fromlayer3  entity: 1
@@ -2130,6 +2468,7 @@ A_OUTPUT: packet leaving A
           TOLAYER3: scheduling arrival on other side
             INSERTEVENT: time is 724.710754
             INSERTEVENT: future time will be 864.241821
+INSERT_PACKET: SUCCESS
 WINDOW CONTENTS: 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16     start: 1 end: 16
 
 EVENT time: 725.673218,  type: 0, timerinterrupt   entity: 0
@@ -2137,11 +2476,14 @@ HANDLE_EVENT: seq_num: 10
           START TIMER: starting timer at 725.673218
             INSERTEVENT: time is 725.673218
             INSERTEVENT: future time will be 736.823242
+SET_TIMER_fOR_NEXT_EVENT: seqnum: 8 alarm_time: 11.150024
 A_OUTPUT: resending packet 10
           TOLAYER3: seq: 10, ack -1, check: 2149 kkkkkkkkkkkkkkkkkkkk
           TOLAYER3: scheduling arrival on other side
             INSERTEVENT: time is 725.673218
             INSERTEVENT: future time will be 868.103149
+DEBUG: CALLED AFTER TOLAYER3
+A_INTERRUPT: handled alarm
 
 EVENT time: 729.892822,  type: 2, fromlayer3  entity: 1
 B_INPUT: seq_num: 1 message: bbbbbbbbbbbbbbbbbbbb
@@ -2160,47 +2502,59 @@ HANDLE_EVENT: seq_num: 8
           START TIMER: starting timer at 736.823242
             INSERTEVENT: time is 736.823242
             INSERTEVENT: future time will be 738.742065
+SET_TIMER_fOR_NEXT_EVENT: seqnum: 12 alarm_time: 1.918823
 A_OUTPUT: resending packet 8
           TOLAYER3: seq: 8, ack -1, check: 2107 iiiiiiiiiiiiiiiiiiii
           TOLAYER3: packet being corrupted
           TOLAYER3: scheduling arrival on other side
             INSERTEVENT: time is 736.823242
             INSERTEVENT: future time will be 877.712646
+DEBUG: CALLED AFTER TOLAYER3
+A_INTERRUPT: handled alarm
 
 EVENT time: 738.742065,  type: 0, timerinterrupt   entity: 0
 HANDLE_EVENT: seq_num: 12
           START TIMER: starting timer at 738.742065
             INSERTEVENT: time is 738.742065
             INSERTEVENT: future time will be 739.760742
+SET_TIMER_fOR_NEXT_EVENT: seqnum: 1 alarm_time: 1.018677
 A_OUTPUT: resending packet 12
           TOLAYER3: seq: 12, ack -1, check: 2191 mmmmmmmmmmmmmmmmmmmm
           TOLAYER3: packet being corrupted
           TOLAYER3: scheduling arrival on other side
             INSERTEVENT: time is 738.742065
             INSERTEVENT: future time will be 885.550598
+DEBUG: CALLED AFTER TOLAYER3
+A_INTERRUPT: handled alarm
 
 EVENT time: 739.760742,  type: 0, timerinterrupt   entity: 0
 HANDLE_EVENT: seq_num: 1
           START TIMER: starting timer at 739.760742
             INSERTEVENT: time is 739.760742
             INSERTEVENT: future time will be 739.825806
+SET_TIMER_fOR_NEXT_EVENT: seqnum: 3 alarm_time: 0.065063
 A_OUTPUT: resending packet 1
           TOLAYER3: seq: 1, ack -1, check: 1960 bbbbbbbbbbbbbbbbbbbb
           TOLAYER3: scheduling arrival on other side
             INSERTEVENT: time is 739.760742
             INSERTEVENT: future time will be 891.771057
+DEBUG: CALLED AFTER TOLAYER3
+A_INTERRUPT: handled alarm
 
 EVENT time: 739.825806,  type: 0, timerinterrupt   entity: 0
 HANDLE_EVENT: seq_num: 3
           START TIMER: starting timer at 739.825806
             INSERTEVENT: time is 739.825806
             INSERTEVENT: future time will be 740.828430
+SET_TIMER_fOR_NEXT_EVENT: seqnum: 13 alarm_time: 1.002625
 A_OUTPUT: resending packet 3
           TOLAYER3: seq: 3, ack -1, check: 2002 dddddddddddddddddddd
           TOLAYER3: packet being corrupted
           TOLAYER3: scheduling arrival on other side
             INSERTEVENT: time is 739.825806
             INSERTEVENT: future time will be 900.108704
+DEBUG: CALLED AFTER TOLAYER3
+A_INTERRUPT: handled alarm
 
 EVENT time: 740.555847,  type: 2, fromlayer3  entity: 1
 B_INPUT: seq_num: 9 message: Zjjjjjjjjjjjjjjjjjjj
@@ -2211,71 +2565,89 @@ HANDLE_EVENT: seq_num: 13
           START TIMER: starting timer at 740.828430
             INSERTEVENT: time is 740.828430
             INSERTEVENT: future time will be 741.910889
+SET_TIMER_fOR_NEXT_EVENT: seqnum: 6 alarm_time: 1.082458
 A_OUTPUT: resending packet 13
           TOLAYER3: seq: 13, ack -1, check: 2212 nnnnnnnnnnnnnnnnnnnn
           TOLAYER3: packet being corrupted
           TOLAYER3: scheduling arrival on other side
             INSERTEVENT: time is 740.828430
             INSERTEVENT: future time will be 901.530334
+DEBUG: CALLED AFTER TOLAYER3
+A_INTERRUPT: handled alarm
 
 EVENT time: 741.910889,  type: 0, timerinterrupt   entity: 0
 HANDLE_EVENT: seq_num: 6
           START TIMER: starting timer at 741.910889
             INSERTEVENT: time is 741.910889
             INSERTEVENT: future time will be 744.448730
+SET_TIMER_fOR_NEXT_EVENT: seqnum: 7 alarm_time: 2.537842
 A_OUTPUT: resending packet 6
           TOLAYER3: seq: 6, ack -1, check: 2065 gggggggggggggggggggg
           TOLAYER3: packet being corrupted
           TOLAYER3: scheduling arrival on other side
             INSERTEVENT: time is 741.910889
             INSERTEVENT: future time will be 910.045776
+DEBUG: CALLED AFTER TOLAYER3
+A_INTERRUPT: handled alarm
 
 EVENT time: 744.448730,  type: 0, timerinterrupt   entity: 0
 HANDLE_EVENT: seq_num: 7
           START TIMER: starting timer at 744.448730
             INSERTEVENT: time is 744.448730
             INSERTEVENT: future time will be 745.602600
+SET_TIMER_fOR_NEXT_EVENT: seqnum: 14 alarm_time: 1.153870
 A_OUTPUT: resending packet 7
           TOLAYER3: seq: 7, ack -1, check: 2086 hhhhhhhhhhhhhhhhhhhh
           TOLAYER3: packet being corrupted
           TOLAYER3: scheduling arrival on other side
             INSERTEVENT: time is 744.448730
             INSERTEVENT: future time will be 918.599915
+DEBUG: CALLED AFTER TOLAYER3
+A_INTERRUPT: handled alarm
 
 EVENT time: 745.602600,  type: 0, timerinterrupt   entity: 0
 HANDLE_EVENT: seq_num: 14
           START TIMER: starting timer at 745.602600
             INSERTEVENT: time is 745.602600
             INSERTEVENT: future time will be 747.447937
+SET_TIMER_fOR_NEXT_EVENT: seqnum: 11 alarm_time: 1.845337
 A_OUTPUT: resending packet 14
           TOLAYER3: seq: 14, ack -1, check: 2233 oooooooooooooooooooo
           TOLAYER3: packet being corrupted
           TOLAYER3: scheduling arrival on other side
             INSERTEVENT: time is 745.602600
             INSERTEVENT: future time will be 923.953613
+DEBUG: CALLED AFTER TOLAYER3
+A_INTERRUPT: handled alarm
 
 EVENT time: 747.447937,  type: 0, timerinterrupt   entity: 0
 HANDLE_EVENT: seq_num: 11
           START TIMER: starting timer at 747.447937
             INSERTEVENT: time is 747.447937
             INSERTEVENT: future time will be 749.509705
+SET_TIMER_fOR_NEXT_EVENT: seqnum: 15 alarm_time: 2.061768
 A_OUTPUT: resending packet 11
           TOLAYER3: seq: 11, ack -1, check: 2170 llllllllllllllllllll
           TOLAYER3: packet being corrupted
           TOLAYER3: scheduling arrival on other side
             INSERTEVENT: time is 747.447937
             INSERTEVENT: future time will be 925.290283
+DEBUG: CALLED AFTER TOLAYER3
+A_INTERRUPT: handled alarm
 
 EVENT time: 749.509705,  type: 0, timerinterrupt   entity: 0
 HANDLE_EVENT: seq_num: 15
           START TIMER: starting timer at 749.509705
             INSERTEVENT: time is 749.509705
             INSERTEVENT: future time will be 754.710754
+SET_TIMER_fOR_NEXT_EVENT: seqnum: 16 alarm_time: 5.201050
 A_OUTPUT: resending packet 15
           TOLAYER3: seq: 15, ack -1, check: 2254 pppppppppppppppppppp
           TOLAYER3: scheduling arrival on other side
             INSERTEVENT: time is 749.509705
             INSERTEVENT: future time will be 926.551392
+DEBUG: CALLED AFTER TOLAYER3
+A_INTERRUPT: handled alarm
 
 EVENT time: 750.497620,  type: 2, fromlayer3  entity: 1
 B_INPUT: seq_num: 7 message: Zhhhhhhhhhhhhhhhhhhh
@@ -2286,24 +2658,30 @@ HANDLE_EVENT: seq_num: 16
           START TIMER: starting timer at 754.710754
             INSERTEVENT: time is 754.710754
             INSERTEVENT: future time will be 755.673218
+SET_TIMER_fOR_NEXT_EVENT: seqnum: 10 alarm_time: 0.962463
 A_OUTPUT: resending packet 16
           TOLAYER3: seq: 16, ack -1, check: 2275 qqqqqqqqqqqqqqqqqqqq
           TOLAYER3: packet being corrupted
           TOLAYER3: scheduling arrival on other side
             INSERTEVENT: time is 754.710754
             INSERTEVENT: future time will be 927.918213
+DEBUG: CALLED AFTER TOLAYER3
+A_INTERRUPT: handled alarm
 
 EVENT time: 755.673218,  type: 0, timerinterrupt   entity: 0
 HANDLE_EVENT: seq_num: 10
           START TIMER: starting timer at 755.673218
             INSERTEVENT: time is 755.673218
             INSERTEVENT: future time will be 766.823242
+SET_TIMER_fOR_NEXT_EVENT: seqnum: 8 alarm_time: 11.150024
 A_OUTPUT: resending packet 10
           TOLAYER3: seq: 10, ack -1, check: 2149 kkkkkkkkkkkkkkkkkkkk
           TOLAYER3: packet being corrupted
           TOLAYER3: scheduling arrival on other side
             INSERTEVENT: time is 755.673218
             INSERTEVENT: future time will be 931.858337
+DEBUG: CALLED AFTER TOLAYER3
+A_INTERRUPT: handled alarm
 
 EVENT time: 757.016907,  type: 2, fromlayer3  entity: 1
 B_INPUT: seq_num: 11 message: llllllllllllllllllll
@@ -2322,12 +2700,15 @@ HANDLE_EVENT: seq_num: 8
           START TIMER: starting timer at 766.823242
             INSERTEVENT: time is 766.823242
             INSERTEVENT: future time will be 768.742065
+SET_TIMER_fOR_NEXT_EVENT: seqnum: 12 alarm_time: 1.918823
 A_OUTPUT: resending packet 8
           TOLAYER3: seq: 8, ack -1, check: 2107 iiiiiiiiiiiiiiiiiiii
           TOLAYER3: packet being corrupted
           TOLAYER3: scheduling arrival on other side
             INSERTEVENT: time is 766.823242
             INSERTEVENT: future time will be 938.073792
+DEBUG: CALLED AFTER TOLAYER3
+A_INTERRUPT: handled alarm
 
 EVENT time: 768.689941,  type: 2, fromlayer3  entity: 1
 B_INPUT: seq_num: 12 message: Zmmmmmmmmmmmmmmmmmmm
@@ -2338,59 +2719,74 @@ HANDLE_EVENT: seq_num: 12
           START TIMER: starting timer at 768.742065
             INSERTEVENT: time is 768.742065
             INSERTEVENT: future time will be 769.760742
+SET_TIMER_fOR_NEXT_EVENT: seqnum: 1 alarm_time: 1.018677
 A_OUTPUT: resending packet 12
           TOLAYER3: seq: 12, ack -1, check: 2191 mmmmmmmmmmmmmmmmmmmm
           TOLAYER3: scheduling arrival on other side
             INSERTEVENT: time is 768.742065
             INSERTEVENT: future time will be 947.411072
+DEBUG: CALLED AFTER TOLAYER3
+A_INTERRUPT: handled alarm
 
 EVENT time: 769.760742,  type: 0, timerinterrupt   entity: 0
 HANDLE_EVENT: seq_num: 1
           START TIMER: starting timer at 769.760742
             INSERTEVENT: time is 769.760742
             INSERTEVENT: future time will be 769.825806
+SET_TIMER_fOR_NEXT_EVENT: seqnum: 3 alarm_time: 0.065063
 A_OUTPUT: resending packet 1
           TOLAYER3: seq: 1, ack -1, check: 1960 bbbbbbbbbbbbbbbbbbbb
           TOLAYER3: packet being corrupted
           TOLAYER3: scheduling arrival on other side
             INSERTEVENT: time is 769.760742
             INSERTEVENT: future time will be 951.894165
+DEBUG: CALLED AFTER TOLAYER3
+A_INTERRUPT: handled alarm
 
 EVENT time: 769.825806,  type: 0, timerinterrupt   entity: 0
 HANDLE_EVENT: seq_num: 3
           START TIMER: starting timer at 769.825806
             INSERTEVENT: time is 769.825806
             INSERTEVENT: future time will be 770.828430
+SET_TIMER_fOR_NEXT_EVENT: seqnum: 13 alarm_time: 1.002625
 A_OUTPUT: resending packet 3
           TOLAYER3: seq: 3, ack -1, check: 2002 dddddddddddddddddddd
           TOLAYER3: packet being corrupted
           TOLAYER3: scheduling arrival on other side
             INSERTEVENT: time is 769.825806
             INSERTEVENT: future time will be 960.151062
+DEBUG: CALLED AFTER TOLAYER3
+A_INTERRUPT: handled alarm
 
 EVENT time: 770.828430,  type: 0, timerinterrupt   entity: 0
 HANDLE_EVENT: seq_num: 13
           START TIMER: starting timer at 770.828430
             INSERTEVENT: time is 770.828430
             INSERTEVENT: future time will be 771.910889
+SET_TIMER_fOR_NEXT_EVENT: seqnum: 6 alarm_time: 1.082458
 A_OUTPUT: resending packet 13
           TOLAYER3: seq: 13, ack -1, check: 2212 nnnnnnnnnnnnnnnnnnnn
           TOLAYER3: packet being corrupted
           TOLAYER3: scheduling arrival on other side
             INSERTEVENT: time is 770.828430
             INSERTEVENT: future time will be 969.186401
+DEBUG: CALLED AFTER TOLAYER3
+A_INTERRUPT: handled alarm
 
 EVENT time: 771.910889,  type: 0, timerinterrupt   entity: 0
 HANDLE_EVENT: seq_num: 6
           START TIMER: starting timer at 771.910889
             INSERTEVENT: time is 771.910889
             INSERTEVENT: future time will be 774.448730
+SET_TIMER_fOR_NEXT_EVENT: seqnum: 7 alarm_time: 2.537842
 A_OUTPUT: resending packet 6
           TOLAYER3: seq: 6, ack -1, check: 2065 gggggggggggggggggggg
           TOLAYER3: packet being corrupted
           TOLAYER3: scheduling arrival on other side
             INSERTEVENT: time is 771.910889
             INSERTEVENT: future time will be 970.215454
+DEBUG: CALLED AFTER TOLAYER3
+A_INTERRUPT: handled alarm
 
 EVENT time: 772.849731,  type: 2, fromlayer3  entity: 1
 B_INPUT: seq_num: 1 message: Zbbbbbbbbbbbbbbbbbbb
@@ -2405,35 +2801,44 @@ HANDLE_EVENT: seq_num: 7
           START TIMER: starting timer at 774.448730
             INSERTEVENT: time is 774.448730
             INSERTEVENT: future time will be 775.602600
+SET_TIMER_fOR_NEXT_EVENT: seqnum: 14 alarm_time: 1.153870
 A_OUTPUT: resending packet 7
           TOLAYER3: seq: 7, ack -1, check: 2086 hhhhhhhhhhhhhhhhhhhh
           TOLAYER3: packet being corrupted
           TOLAYER3: scheduling arrival on other side
             INSERTEVENT: time is 774.448730
             INSERTEVENT: future time will be 972.656677
+DEBUG: CALLED AFTER TOLAYER3
+A_INTERRUPT: handled alarm
 
 EVENT time: 775.602600,  type: 0, timerinterrupt   entity: 0
 HANDLE_EVENT: seq_num: 14
           START TIMER: starting timer at 775.602600
             INSERTEVENT: time is 775.602600
             INSERTEVENT: future time will be 777.447937
+SET_TIMER_fOR_NEXT_EVENT: seqnum: 11 alarm_time: 1.845337
 A_OUTPUT: resending packet 14
           TOLAYER3: seq: 14, ack -1, check: 2233 oooooooooooooooooooo
           TOLAYER3: packet being corrupted
           TOLAYER3: scheduling arrival on other side
             INSERTEVENT: time is 775.602600
             INSERTEVENT: future time will be 982.514465
+DEBUG: CALLED AFTER TOLAYER3
+A_INTERRUPT: handled alarm
 
 EVENT time: 777.447937,  type: 0, timerinterrupt   entity: 0
 HANDLE_EVENT: seq_num: 11
           START TIMER: starting timer at 777.447937
             INSERTEVENT: time is 777.447937
             INSERTEVENT: future time will be 779.509705
+SET_TIMER_fOR_NEXT_EVENT: seqnum: 15 alarm_time: 2.061768
 A_OUTPUT: resending packet 11
           TOLAYER3: seq: 11, ack -1, check: 2170 llllllllllllllllllll
           TOLAYER3: scheduling arrival on other side
             INSERTEVENT: time is 777.447937
             INSERTEVENT: future time will be 990.350769
+DEBUG: CALLED AFTER TOLAYER3
+A_INTERRUPT: handled alarm
 
 EVENT time: 778.543091,  type: 2, fromlayer3  entity: 1
 B_INPUT: seq_num: 13 message: Znnnnnnnnnnnnnnnnnnn
@@ -2444,35 +2849,44 @@ HANDLE_EVENT: seq_num: 15
           START TIMER: starting timer at 779.509705
             INSERTEVENT: time is 779.509705
             INSERTEVENT: future time will be 784.710754
+SET_TIMER_fOR_NEXT_EVENT: seqnum: 16 alarm_time: 5.201050
 A_OUTPUT: resending packet 15
           TOLAYER3: seq: 15, ack -1, check: 2254 pppppppppppppppppppp
           TOLAYER3: scheduling arrival on other side
             INSERTEVENT: time is 779.509705
             INSERTEVENT: future time will be 995.292236
+DEBUG: CALLED AFTER TOLAYER3
+A_INTERRUPT: handled alarm
 
 EVENT time: 784.710754,  type: 0, timerinterrupt   entity: 0
 HANDLE_EVENT: seq_num: 16
           START TIMER: starting timer at 784.710754
             INSERTEVENT: time is 784.710754
             INSERTEVENT: future time will be 785.673218
+SET_TIMER_fOR_NEXT_EVENT: seqnum: 10 alarm_time: 0.962463
 A_OUTPUT: resending packet 16
           TOLAYER3: seq: 16, ack -1, check: 2275 qqqqqqqqqqqqqqqqqqqq
           TOLAYER3: packet being corrupted
           TOLAYER3: scheduling arrival on other side
             INSERTEVENT: time is 784.710754
             INSERTEVENT: future time will be 996.833618
+DEBUG: CALLED AFTER TOLAYER3
+A_INTERRUPT: handled alarm
 
 EVENT time: 785.673218,  type: 0, timerinterrupt   entity: 0
 HANDLE_EVENT: seq_num: 10
           START TIMER: starting timer at 785.673218
             INSERTEVENT: time is 785.673218
             INSERTEVENT: future time will be 796.823242
+SET_TIMER_fOR_NEXT_EVENT: seqnum: 8 alarm_time: 11.150024
 A_OUTPUT: resending packet 10
           TOLAYER3: seq: 10, ack -1, check: 2149 kkkkkkkkkkkkkkkkkkkk
           TOLAYER3: packet being corrupted
           TOLAYER3: scheduling arrival on other side
             INSERTEVENT: time is 785.673218
             INSERTEVENT: future time will be 1001.591003
+DEBUG: CALLED AFTER TOLAYER3
+A_INTERRUPT: handled alarm
 
 EVENT time: 787.270386,  type: 1, fromlayer5  entity: 0
           GENERATE NEXT ARRIVAL: creating new arrival
@@ -2485,6 +2899,7 @@ A_OUTPUT: packet leaving A
           TOLAYER3: scheduling arrival on other side
             INSERTEVENT: time is 787.270386
             INSERTEVENT: future time will be 1010.057129
+INSERT_PACKET: SUCCESS
 WINDOW CONTENTS: 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17     start: 1 end: 17
 
 EVENT time: 788.536255,  type: 2, fromlayer3  entity: 1
@@ -2500,11 +2915,14 @@ HANDLE_EVENT: seq_num: 8
           START TIMER: starting timer at 796.823242
             INSERTEVENT: time is 796.823242
             INSERTEVENT: future time will be 798.742065
+SET_TIMER_fOR_NEXT_EVENT: seqnum: 12 alarm_time: 1.918823
 A_OUTPUT: resending packet 8
           TOLAYER3: seq: 8, ack -1, check: 2107 iiiiiiiiiiiiiiiiiiii
           TOLAYER3: scheduling arrival on other side
             INSERTEVENT: time is 796.823242
             INSERTEVENT: future time will be 1011.456421
+DEBUG: CALLED AFTER TOLAYER3
+A_INTERRUPT: handled alarm
 
 EVENT time: 797.467834,  type: 2, fromlayer3  entity: 1
 B_INPUT: seq_num: 999999 message: oooooooooooooooooooo
@@ -2515,11 +2933,14 @@ HANDLE_EVENT: seq_num: 12
           START TIMER: starting timer at 798.742065
             INSERTEVENT: time is 798.742065
             INSERTEVENT: future time will be 799.760742
+SET_TIMER_fOR_NEXT_EVENT: seqnum: 1 alarm_time: 1.018677
 A_OUTPUT: resending packet 12
           TOLAYER3: seq: 12, ack -1, check: 2191 mmmmmmmmmmmmmmmmmmmm
           TOLAYER3: scheduling arrival on other side
             INSERTEVENT: time is 798.742065
             INSERTEVENT: future time will be 1014.170959
+DEBUG: CALLED AFTER TOLAYER3
+A_INTERRUPT: handled alarm
 
 EVENT time: 799.389832,  type: 2, fromlayer3  entity: 1
 B_INPUT: seq_num: 11 message: Zlllllllllllllllllll
@@ -2530,47 +2951,59 @@ HANDLE_EVENT: seq_num: 1
           START TIMER: starting timer at 799.760742
             INSERTEVENT: time is 799.760742
             INSERTEVENT: future time will be 799.825806
+SET_TIMER_fOR_NEXT_EVENT: seqnum: 3 alarm_time: 0.065063
 A_OUTPUT: resending packet 1
           TOLAYER3: seq: 1, ack -1, check: 1960 bbbbbbbbbbbbbbbbbbbb
           TOLAYER3: packet being corrupted
           TOLAYER3: scheduling arrival on other side
             INSERTEVENT: time is 799.760742
             INSERTEVENT: future time will be 1022.803162
+DEBUG: CALLED AFTER TOLAYER3
+A_INTERRUPT: handled alarm
 
 EVENT time: 799.825806,  type: 0, timerinterrupt   entity: 0
 HANDLE_EVENT: seq_num: 3
           START TIMER: starting timer at 799.825806
             INSERTEVENT: time is 799.825806
             INSERTEVENT: future time will be 800.828430
+SET_TIMER_fOR_NEXT_EVENT: seqnum: 13 alarm_time: 1.002625
 A_OUTPUT: resending packet 3
           TOLAYER3: seq: 3, ack -1, check: 2002 dddddddddddddddddddd
           TOLAYER3: packet being corrupted
           TOLAYER3: scheduling arrival on other side
             INSERTEVENT: time is 799.825806
             INSERTEVENT: future time will be 1029.656982
+DEBUG: CALLED AFTER TOLAYER3
+A_INTERRUPT: handled alarm
 
 EVENT time: 800.828430,  type: 0, timerinterrupt   entity: 0
 HANDLE_EVENT: seq_num: 13
           START TIMER: starting timer at 800.828430
             INSERTEVENT: time is 800.828430
             INSERTEVENT: future time will be 801.910889
+SET_TIMER_fOR_NEXT_EVENT: seqnum: 6 alarm_time: 1.082458
 A_OUTPUT: resending packet 13
           TOLAYER3: seq: 13, ack -1, check: 2212 nnnnnnnnnnnnnnnnnnnn
           TOLAYER3: packet being corrupted
           TOLAYER3: scheduling arrival on other side
             INSERTEVENT: time is 800.828430
             INSERTEVENT: future time will be 1031.595947
+DEBUG: CALLED AFTER TOLAYER3
+A_INTERRUPT: handled alarm
 
 EVENT time: 801.910889,  type: 0, timerinterrupt   entity: 0
 HANDLE_EVENT: seq_num: 6
           START TIMER: starting timer at 801.910889
             INSERTEVENT: time is 801.910889
             INSERTEVENT: future time will be 804.448730
+SET_TIMER_fOR_NEXT_EVENT: seqnum: 7 alarm_time: 2.537842
 A_OUTPUT: resending packet 6
           TOLAYER3: seq: 6, ack -1, check: 2065 gggggggggggggggggggg
           TOLAYER3: scheduling arrival on other side
             INSERTEVENT: time is 801.910889
             INSERTEVENT: future time will be 1035.263916
+DEBUG: CALLED AFTER TOLAYER3
+A_INTERRUPT: handled alarm
 
 EVENT time: 802.770813,  type: 2, fromlayer3  entity: 1
 B_INPUT: seq_num: 10 message: Zkkkkkkkkkkkkkkkkkkk
@@ -2581,24 +3014,30 @@ HANDLE_EVENT: seq_num: 7
           START TIMER: starting timer at 804.448730
             INSERTEVENT: time is 804.448730
             INSERTEVENT: future time will be 805.602600
+SET_TIMER_fOR_NEXT_EVENT: seqnum: 14 alarm_time: 1.153870
 A_OUTPUT: resending packet 7
           TOLAYER3: seq: 7, ack -1, check: 2086 hhhhhhhhhhhhhhhhhhhh
           TOLAYER3: packet being corrupted
           TOLAYER3: scheduling arrival on other side
             INSERTEVENT: time is 804.448730
             INSERTEVENT: future time will be 1037.691162
+DEBUG: CALLED AFTER TOLAYER3
+A_INTERRUPT: handled alarm
 
 EVENT time: 805.602600,  type: 0, timerinterrupt   entity: 0
 HANDLE_EVENT: seq_num: 14
           START TIMER: starting timer at 805.602600
             INSERTEVENT: time is 805.602600
             INSERTEVENT: future time will be 807.447937
+SET_TIMER_fOR_NEXT_EVENT: seqnum: 11 alarm_time: 1.845337
 A_OUTPUT: resending packet 14
           TOLAYER3: seq: 14, ack -1, check: 2233 oooooooooooooooooooo
           TOLAYER3: packet being corrupted
           TOLAYER3: scheduling arrival on other side
             INSERTEVENT: time is 805.602600
             INSERTEVENT: future time will be 1039.604126
+DEBUG: CALLED AFTER TOLAYER3
+A_INTERRUPT: handled alarm
 
 EVENT time: 806.592834,  type: 2, fromlayer3  entity: 1
 B_INPUT: seq_num: 8 message: iiiiiiiiiiiiiiiiiiii
@@ -2609,23 +3048,29 @@ HANDLE_EVENT: seq_num: 11
           START TIMER: starting timer at 807.447937
             INSERTEVENT: time is 807.447937
             INSERTEVENT: future time will be 809.509705
+SET_TIMER_fOR_NEXT_EVENT: seqnum: 15 alarm_time: 2.061768
 A_OUTPUT: resending packet 11
           TOLAYER3: seq: 11, ack -1, check: 2170 llllllllllllllllllll
           TOLAYER3: scheduling arrival on other side
             INSERTEVENT: time is 807.447937
             INSERTEVENT: future time will be 1042.714111
+DEBUG: CALLED AFTER TOLAYER3
+A_INTERRUPT: handled alarm
 
 EVENT time: 809.509705,  type: 0, timerinterrupt   entity: 0
 HANDLE_EVENT: seq_num: 15
           START TIMER: starting timer at 809.509705
             INSERTEVENT: time is 809.509705
             INSERTEVENT: future time will be 814.710754
+SET_TIMER_fOR_NEXT_EVENT: seqnum: 16 alarm_time: 5.201050
 A_OUTPUT: resending packet 15
           TOLAYER3: seq: 15, ack -1, check: 2254 pppppppppppppppppppp
           TOLAYER3: packet being corrupted
           TOLAYER3: scheduling arrival on other side
             INSERTEVENT: time is 809.509705
             INSERTEVENT: future time will be 1045.099365
+DEBUG: CALLED AFTER TOLAYER3
+A_INTERRUPT: handled alarm
 
 EVENT time: 813.807373,  type: 2, fromlayer3  entity: 1
 B_INPUT: seq_num: 999999 message: mmmmmmmmmmmmmmmmmmmm
@@ -2636,35 +3081,44 @@ HANDLE_EVENT: seq_num: 16
           START TIMER: starting timer at 814.710754
             INSERTEVENT: time is 814.710754
             INSERTEVENT: future time will be 815.673218
+SET_TIMER_fOR_NEXT_EVENT: seqnum: 10 alarm_time: 0.962463
 A_OUTPUT: resending packet 16
           TOLAYER3: seq: 16, ack -1, check: 2275 qqqqqqqqqqqqqqqqqqqq
           TOLAYER3: packet being corrupted
           TOLAYER3: scheduling arrival on other side
             INSERTEVENT: time is 814.710754
             INSERTEVENT: future time will be 1050.198364
+DEBUG: CALLED AFTER TOLAYER3
+A_INTERRUPT: handled alarm
 
 EVENT time: 815.673218,  type: 0, timerinterrupt   entity: 0
 HANDLE_EVENT: seq_num: 10
           START TIMER: starting timer at 815.673218
             INSERTEVENT: time is 815.673218
             INSERTEVENT: future time will be 817.270386
+SET_TIMER_fOR_NEXT_EVENT: seqnum: 17 alarm_time: 1.597168
 A_OUTPUT: resending packet 10
           TOLAYER3: seq: 10, ack -1, check: 2149 kkkkkkkkkkkkkkkkkkkk
           TOLAYER3: packet being corrupted
           TOLAYER3: scheduling arrival on other side
             INSERTEVENT: time is 815.673218
             INSERTEVENT: future time will be 1058.813477
+DEBUG: CALLED AFTER TOLAYER3
+A_INTERRUPT: handled alarm
 
 EVENT time: 817.270386,  type: 0, timerinterrupt   entity: 0
 HANDLE_EVENT: seq_num: 17
           START TIMER: starting timer at 817.270386
             INSERTEVENT: time is 817.270386
             INSERTEVENT: future time will be 826.823242
+SET_TIMER_fOR_NEXT_EVENT: seqnum: 8 alarm_time: 9.552856
 A_OUTPUT: resending packet 17
           TOLAYER3: seq: 17, ack -1, check: 2296 rrrrrrrrrrrrrrrrrrrr
           TOLAYER3: scheduling arrival on other side
             INSERTEVENT: time is 817.270386
             INSERTEVENT: future time will be 1064.381470
+DEBUG: CALLED AFTER TOLAYER3
+A_INTERRUPT: handled alarm
 
 EVENT time: 817.757629,  type: 2, fromlayer3  entity: 1
 B_INPUT: seq_num: 1 message: Zbbbbbbbbbbbbbbbbbbb
@@ -2679,11 +3133,14 @@ HANDLE_EVENT: seq_num: 8
           START TIMER: starting timer at 826.823242
             INSERTEVENT: time is 826.823242
             INSERTEVENT: future time will be 828.742065
+SET_TIMER_fOR_NEXT_EVENT: seqnum: 12 alarm_time: 1.918823
 A_OUTPUT: resending packet 8
           TOLAYER3: seq: 8, ack -1, check: 2107 iiiiiiiiiiiiiiiiiiii
           TOLAYER3: scheduling arrival on other side
             INSERTEVENT: time is 826.823242
             INSERTEVENT: future time will be 1068.581055
+DEBUG: CALLED AFTER TOLAYER3
+A_INTERRUPT: handled alarm
 
 EVENT time: 828.018372,  type: 2, fromlayer3  entity: 1
 B_INPUT: seq_num: 13 message: Znnnnnnnnnnnnnnnnnnn
@@ -2694,60 +3151,75 @@ HANDLE_EVENT: seq_num: 12
           START TIMER: starting timer at 828.742065
             INSERTEVENT: time is 828.742065
             INSERTEVENT: future time will be 829.760742
+SET_TIMER_fOR_NEXT_EVENT: seqnum: 1 alarm_time: 1.018677
 A_OUTPUT: resending packet 12
           TOLAYER3: seq: 12, ack -1, check: 2191 mmmmmmmmmmmmmmmmmmmm
           TOLAYER3: packet being corrupted
           TOLAYER3: scheduling arrival on other side
             INSERTEVENT: time is 828.742065
             INSERTEVENT: future time will be 1071.953613
+DEBUG: CALLED AFTER TOLAYER3
+A_INTERRUPT: handled alarm
 
 EVENT time: 829.760742,  type: 0, timerinterrupt   entity: 0
 HANDLE_EVENT: seq_num: 1
           START TIMER: starting timer at 829.760742
             INSERTEVENT: time is 829.760742
             INSERTEVENT: future time will be 829.825806
+SET_TIMER_fOR_NEXT_EVENT: seqnum: 3 alarm_time: 0.065063
 A_OUTPUT: resending packet 1
           TOLAYER3: seq: 1, ack -1, check: 1960 bbbbbbbbbbbbbbbbbbbb
           TOLAYER3: packet being corrupted
           TOLAYER3: scheduling arrival on other side
             INSERTEVENT: time is 829.760742
             INSERTEVENT: future time will be 1081.094482
+DEBUG: CALLED AFTER TOLAYER3
+A_INTERRUPT: handled alarm
 
 EVENT time: 829.825806,  type: 0, timerinterrupt   entity: 0
 HANDLE_EVENT: seq_num: 3
           START TIMER: starting timer at 829.825806
             INSERTEVENT: time is 829.825806
             INSERTEVENT: future time will be 830.828430
+SET_TIMER_fOR_NEXT_EVENT: seqnum: 13 alarm_time: 1.002625
 A_OUTPUT: resending packet 3
           TOLAYER3: seq: 3, ack -1, check: 2002 dddddddddddddddddddd
           TOLAYER3: packet being corrupted
           TOLAYER3: scheduling arrival on other side
             INSERTEVENT: time is 829.825806
             INSERTEVENT: future time will be 1085.220093
+DEBUG: CALLED AFTER TOLAYER3
+A_INTERRUPT: handled alarm
 
 EVENT time: 830.828430,  type: 0, timerinterrupt   entity: 0
 HANDLE_EVENT: seq_num: 13
           START TIMER: starting timer at 830.828430
             INSERTEVENT: time is 830.828430
             INSERTEVENT: future time will be 831.910889
+SET_TIMER_fOR_NEXT_EVENT: seqnum: 6 alarm_time: 1.082458
 A_OUTPUT: resending packet 13
           TOLAYER3: seq: 13, ack -1, check: 2212 nnnnnnnnnnnnnnnnnnnn
           TOLAYER3: packet being corrupted
           TOLAYER3: scheduling arrival on other side
             INSERTEVENT: time is 830.828430
             INSERTEVENT: future time will be 1090.145386
+DEBUG: CALLED AFTER TOLAYER3
+A_INTERRUPT: handled alarm
 
 EVENT time: 831.910889,  type: 0, timerinterrupt   entity: 0
 HANDLE_EVENT: seq_num: 6
           START TIMER: starting timer at 831.910889
             INSERTEVENT: time is 831.910889
             INSERTEVENT: future time will be 834.448730
+SET_TIMER_fOR_NEXT_EVENT: seqnum: 7 alarm_time: 2.537842
 A_OUTPUT: resending packet 6
           TOLAYER3: seq: 6, ack -1, check: 2065 gggggggggggggggggggg
           TOLAYER3: packet being corrupted
           TOLAYER3: scheduling arrival on other side
             INSERTEVENT: time is 831.910889
             INSERTEVENT: future time will be 1096.436401
+DEBUG: CALLED AFTER TOLAYER3
+A_INTERRUPT: handled alarm
 
 EVENT time: 833.566406,  type: 2, fromlayer3  entity: 1
 B_INPUT: seq_num: 6 message: Zggggggggggggggggggg
@@ -2758,47 +3230,59 @@ HANDLE_EVENT: seq_num: 7
           START TIMER: starting timer at 834.448730
             INSERTEVENT: time is 834.448730
             INSERTEVENT: future time will be 835.602600
+SET_TIMER_fOR_NEXT_EVENT: seqnum: 14 alarm_time: 1.153870
 A_OUTPUT: resending packet 7
           TOLAYER3: seq: 7, ack -1, check: 2086 hhhhhhhhhhhhhhhhhhhh
           TOLAYER3: packet being corrupted
           TOLAYER3: scheduling arrival on other side
             INSERTEVENT: time is 834.448730
             INSERTEVENT: future time will be 1097.777832
+DEBUG: CALLED AFTER TOLAYER3
+A_INTERRUPT: handled alarm
 
 EVENT time: 835.602600,  type: 0, timerinterrupt   entity: 0
 HANDLE_EVENT: seq_num: 14
           START TIMER: starting timer at 835.602600
             INSERTEVENT: time is 835.602600
             INSERTEVENT: future time will be 837.447937
+SET_TIMER_fOR_NEXT_EVENT: seqnum: 11 alarm_time: 1.845337
 A_OUTPUT: resending packet 14
           TOLAYER3: seq: 14, ack -1, check: 2233 oooooooooooooooooooo
           TOLAYER3: packet being corrupted
           TOLAYER3: scheduling arrival on other side
             INSERTEVENT: time is 835.602600
             INSERTEVENT: future time will be 1099.610229
+DEBUG: CALLED AFTER TOLAYER3
+A_INTERRUPT: handled alarm
 
 EVENT time: 837.447937,  type: 0, timerinterrupt   entity: 0
 HANDLE_EVENT: seq_num: 11
           START TIMER: starting timer at 837.447937
             INSERTEVENT: time is 837.447937
             INSERTEVENT: future time will be 839.509705
+SET_TIMER_fOR_NEXT_EVENT: seqnum: 15 alarm_time: 2.061768
 A_OUTPUT: resending packet 11
           TOLAYER3: seq: 11, ack -1, check: 2170 llllllllllllllllllll
           TOLAYER3: scheduling arrival on other side
             INSERTEVENT: time is 837.447937
             INSERTEVENT: future time will be 1109.570801
+DEBUG: CALLED AFTER TOLAYER3
+A_INTERRUPT: handled alarm
 
 EVENT time: 839.509705,  type: 0, timerinterrupt   entity: 0
 HANDLE_EVENT: seq_num: 15
           START TIMER: starting timer at 839.509705
             INSERTEVENT: time is 839.509705
             INSERTEVENT: future time will be 844.710754
+SET_TIMER_fOR_NEXT_EVENT: seqnum: 16 alarm_time: 5.201050
 A_OUTPUT: resending packet 15
           TOLAYER3: seq: 15, ack -1, check: 2254 pppppppppppppppppppp
           TOLAYER3: packet being corrupted
           TOLAYER3: scheduling arrival on other side
             INSERTEVENT: time is 839.509705
             INSERTEVENT: future time will be 1112.903931
+DEBUG: CALLED AFTER TOLAYER3
+A_INTERRUPT: handled alarm
 
 EVENT time: 843.302612,  type: 2, fromlayer3  entity: 1
 B_INPUT: seq_num: 7 message: Zhhhhhhhhhhhhhhhhhhh
@@ -2809,36 +3293,45 @@ HANDLE_EVENT: seq_num: 16
           START TIMER: starting timer at 844.710754
             INSERTEVENT: time is 844.710754
             INSERTEVENT: future time will be 845.673218
+SET_TIMER_fOR_NEXT_EVENT: seqnum: 10 alarm_time: 0.962463
 A_OUTPUT: resending packet 16
           TOLAYER3: seq: 16, ack -1, check: 2275 qqqqqqqqqqqqqqqqqqqq
           TOLAYER3: packet being corrupted
           TOLAYER3: scheduling arrival on other side
             INSERTEVENT: time is 844.710754
             INSERTEVENT: future time will be 1114.342529
+DEBUG: CALLED AFTER TOLAYER3
+A_INTERRUPT: handled alarm
 
 EVENT time: 845.673218,  type: 0, timerinterrupt   entity: 0
 HANDLE_EVENT: seq_num: 10
           START TIMER: starting timer at 845.673218
             INSERTEVENT: time is 845.673218
             INSERTEVENT: future time will be 847.270386
+SET_TIMER_fOR_NEXT_EVENT: seqnum: 17 alarm_time: 1.597168
 A_OUTPUT: resending packet 10
           TOLAYER3: seq: 10, ack -1, check: 2149 kkkkkkkkkkkkkkkkkkkk
           TOLAYER3: packet being corrupted
           TOLAYER3: scheduling arrival on other side
             INSERTEVENT: time is 845.673218
             INSERTEVENT: future time will be 1119.550293
+DEBUG: CALLED AFTER TOLAYER3
+A_INTERRUPT: handled alarm
 
 EVENT time: 847.270386,  type: 0, timerinterrupt   entity: 0
 HANDLE_EVENT: seq_num: 17
           START TIMER: starting timer at 847.270386
             INSERTEVENT: time is 847.270386
             INSERTEVENT: future time will be 856.823242
+SET_TIMER_fOR_NEXT_EVENT: seqnum: 8 alarm_time: 9.552856
 A_OUTPUT: resending packet 17
           TOLAYER3: seq: 17, ack -1, check: 2296 rrrrrrrrrrrrrrrrrrrr
           TOLAYER3: packet being corrupted
           TOLAYER3: scheduling arrival on other side
             INSERTEVENT: time is 847.270386
             INSERTEVENT: future time will be 1121.578247
+DEBUG: CALLED AFTER TOLAYER3
+A_INTERRUPT: handled alarm
 
 EVENT time: 852.087036,  type: 1, fromlayer5  entity: 0
           GENERATE NEXT ARRIVAL: creating new arrival
@@ -2852,6 +3345,7 @@ A_OUTPUT: packet leaving A
           TOLAYER3: scheduling arrival on other side
             INSERTEVENT: time is 852.087036
             INSERTEVENT: future time will be 1130.197754
+INSERT_PACKET: SUCCESS
 WINDOW CONTENTS: 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18     start: 1 end: 18
 
 EVENT time: 852.804871,  type: 2, fromlayer3  entity: 1
@@ -2874,12 +3368,15 @@ HANDLE_EVENT: seq_num: 8
           START TIMER: starting timer at 856.823242
             INSERTEVENT: time is 856.823242
             INSERTEVENT: future time will be 858.742065
+SET_TIMER_fOR_NEXT_EVENT: seqnum: 12 alarm_time: 1.918823
 A_OUTPUT: resending packet 8
           TOLAYER3: seq: 8, ack -1, check: 2107 iiiiiiiiiiiiiiiiiiii
           TOLAYER3: packet being corrupted
           TOLAYER3: scheduling arrival on other side
             INSERTEVENT: time is 856.823242
             INSERTEVENT: future time will be 1137.815552
+DEBUG: CALLED AFTER TOLAYER3
+A_INTERRUPT: handled alarm
 
 EVENT time: 857.568665,  type: 2, fromlayer3  entity: 1
 B_INPUT: seq_num: 15 message: pppppppppppppppppppp
@@ -2897,48 +3394,60 @@ HANDLE_EVENT: seq_num: 12
           START TIMER: starting timer at 858.742065
             INSERTEVENT: time is 858.742065
             INSERTEVENT: future time will be 859.760742
+SET_TIMER_fOR_NEXT_EVENT: seqnum: 1 alarm_time: 1.018677
 A_OUTPUT: resending packet 12
           TOLAYER3: seq: 12, ack -1, check: 2191 mmmmmmmmmmmmmmmmmmmm
           TOLAYER3: packet being corrupted
           TOLAYER3: scheduling arrival on other side
             INSERTEVENT: time is 858.742065
             INSERTEVENT: future time will be 1145.146240
+DEBUG: CALLED AFTER TOLAYER3
+A_INTERRUPT: handled alarm
 
 EVENT time: 859.760742,  type: 0, timerinterrupt   entity: 0
 HANDLE_EVENT: seq_num: 1
           START TIMER: starting timer at 859.760742
             INSERTEVENT: time is 859.760742
             INSERTEVENT: future time will be 859.825806
+SET_TIMER_fOR_NEXT_EVENT: seqnum: 3 alarm_time: 0.065063
 A_OUTPUT: resending packet 1
           TOLAYER3: seq: 1, ack -1, check: 1960 bbbbbbbbbbbbbbbbbbbb
           TOLAYER3: packet being corrupted
           TOLAYER3: scheduling arrival on other side
             INSERTEVENT: time is 859.760742
             INSERTEVENT: future time will be 1154.201294
+DEBUG: CALLED AFTER TOLAYER3
+A_INTERRUPT: handled alarm
 
 EVENT time: 859.825806,  type: 0, timerinterrupt   entity: 0
 HANDLE_EVENT: seq_num: 3
           START TIMER: starting timer at 859.825806
             INSERTEVENT: time is 859.825806
             INSERTEVENT: future time will be 860.828430
+SET_TIMER_fOR_NEXT_EVENT: seqnum: 13 alarm_time: 1.002625
 A_OUTPUT: resending packet 3
           TOLAYER3: seq: 3, ack -1, check: 2002 dddddddddddddddddddd
           TOLAYER3: packet being corrupted
           TOLAYER3: scheduling arrival on other side
             INSERTEVENT: time is 859.825806
             INSERTEVENT: future time will be 1162.812012
+DEBUG: CALLED AFTER TOLAYER3
+A_INTERRUPT: handled alarm
 
 EVENT time: 860.828430,  type: 0, timerinterrupt   entity: 0
 HANDLE_EVENT: seq_num: 13
           START TIMER: starting timer at 860.828430
             INSERTEVENT: time is 860.828430
             INSERTEVENT: future time will be 861.910889
+SET_TIMER_fOR_NEXT_EVENT: seqnum: 6 alarm_time: 1.082458
 A_OUTPUT: resending packet 13
           TOLAYER3: seq: 13, ack -1, check: 2212 nnnnnnnnnnnnnnnnnnnn
           TOLAYER3: packet being corrupted
           TOLAYER3: scheduling arrival on other side
             INSERTEVENT: time is 860.828430
             INSERTEVENT: future time will be 1168.797363
+DEBUG: CALLED AFTER TOLAYER3
+A_INTERRUPT: handled alarm
 
 EVENT time: 860.953064,  type: 2, fromlayer3  entity: 0
 A_INPUT: ack_num: 14 message: oooooooooooooooooooo
@@ -2949,12 +3458,15 @@ HANDLE_EVENT: seq_num: 6
           START TIMER: starting timer at 861.910889
             INSERTEVENT: time is 861.910889
             INSERTEVENT: future time will be 864.448730
+SET_TIMER_fOR_NEXT_EVENT: seqnum: 7 alarm_time: 2.537842
 A_OUTPUT: resending packet 6
           TOLAYER3: seq: 6, ack -1, check: 2065 gggggggggggggggggggg
           TOLAYER3: packet being corrupted
           TOLAYER3: scheduling arrival on other side
             INSERTEVENT: time is 861.910889
             INSERTEVENT: future time will be 1176.418823
+DEBUG: CALLED AFTER TOLAYER3
+A_INTERRUPT: handled alarm
 
 EVENT time: 864.241821,  type: 2, fromlayer3  entity: 1
 B_INPUT: seq_num: 16 message: Zqqqqqqqqqqqqqqqqqqq
@@ -2965,36 +3477,45 @@ HANDLE_EVENT: seq_num: 7
           START TIMER: starting timer at 864.448730
             INSERTEVENT: time is 864.448730
             INSERTEVENT: future time will be 865.602600
+SET_TIMER_fOR_NEXT_EVENT: seqnum: 14 alarm_time: 1.153870
 A_OUTPUT: resending packet 7
           TOLAYER3: seq: 7, ack -1, check: 2086 hhhhhhhhhhhhhhhhhhhh
           TOLAYER3: packet being corrupted
           TOLAYER3: scheduling arrival on other side
             INSERTEVENT: time is 864.448730
             INSERTEVENT: future time will be 1178.956177
+DEBUG: CALLED AFTER TOLAYER3
+A_INTERRUPT: handled alarm
 
 EVENT time: 865.602600,  type: 0, timerinterrupt   entity: 0
 HANDLE_EVENT: seq_num: 14
           START TIMER: starting timer at 865.602600
             INSERTEVENT: time is 865.602600
             INSERTEVENT: future time will be 867.447937
+SET_TIMER_fOR_NEXT_EVENT: seqnum: 11 alarm_time: 1.845337
 A_OUTPUT: resending packet 14
           TOLAYER3: seq: 14, ack -1, check: 2233 oooooooooooooooooooo
           TOLAYER3: packet being corrupted
           TOLAYER3: scheduling arrival on other side
             INSERTEVENT: time is 865.602600
             INSERTEVENT: future time will be 1187.544800
+DEBUG: CALLED AFTER TOLAYER3
+A_INTERRUPT: handled alarm
 
 EVENT time: 867.447937,  type: 0, timerinterrupt   entity: 0
 HANDLE_EVENT: seq_num: 11
           START TIMER: starting timer at 867.447937
             INSERTEVENT: time is 867.447937
             INSERTEVENT: future time will be 869.509705
+SET_TIMER_fOR_NEXT_EVENT: seqnum: 15 alarm_time: 2.061768
 A_OUTPUT: resending packet 11
           TOLAYER3: seq: 11, ack -1, check: 2170 llllllllllllllllllll
           TOLAYER3: packet being corrupted
           TOLAYER3: scheduling arrival on other side
             INSERTEVENT: time is 867.447937
             INSERTEVENT: future time will be 1195.369385
+DEBUG: CALLED AFTER TOLAYER3
+A_INTERRUPT: handled alarm
 
 EVENT time: 867.826355,  type: 2, fromlayer3  entity: 0
 A_INPUT: ack_num: 999999 message: pppppppppppppppppppp
@@ -3016,12 +3537,15 @@ HANDLE_EVENT: seq_num: 15
           START TIMER: starting timer at 869.509705
             INSERTEVENT: time is 869.509705
             INSERTEVENT: future time will be 874.710754
+SET_TIMER_fOR_NEXT_EVENT: seqnum: 16 alarm_time: 5.201050
 A_OUTPUT: resending packet 15
           TOLAYER3: seq: 15, ack -1, check: 2254 pppppppppppppppppppp
           TOLAYER3: packet being corrupted
           TOLAYER3: scheduling arrival on other side
             INSERTEVENT: time is 869.509705
             INSERTEVENT: future time will be 1198.665039
+DEBUG: CALLED AFTER TOLAYER3
+A_INTERRUPT: handled alarm
 
 EVENT time: 871.847534,  type: 2, fromlayer3  entity: 0
 A_INPUT: ack_num: 10 message: Zkkkkkkkkkkkkkkkkkkk
@@ -3032,35 +3556,44 @@ HANDLE_EVENT: seq_num: 16
           START TIMER: starting timer at 874.710754
             INSERTEVENT: time is 874.710754
             INSERTEVENT: future time will be 875.673218
+SET_TIMER_fOR_NEXT_EVENT: seqnum: 10 alarm_time: 0.962463
 A_OUTPUT: resending packet 16
           TOLAYER3: seq: 16, ack -1, check: 2275 qqqqqqqqqqqqqqqqqqqq
           TOLAYER3: packet being corrupted
           TOLAYER3: scheduling arrival on other side
             INSERTEVENT: time is 874.710754
             INSERTEVENT: future time will be 1204.877563
+DEBUG: CALLED AFTER TOLAYER3
+A_INTERRUPT: handled alarm
 
 EVENT time: 875.673218,  type: 0, timerinterrupt   entity: 0
 HANDLE_EVENT: seq_num: 10
           START TIMER: starting timer at 875.673218
             INSERTEVENT: time is 875.673218
             INSERTEVENT: future time will be 877.270386
+SET_TIMER_fOR_NEXT_EVENT: seqnum: 17 alarm_time: 1.597168
 A_OUTPUT: resending packet 10
           TOLAYER3: seq: 10, ack -1, check: 2149 kkkkkkkkkkkkkkkkkkkk
           TOLAYER3: packet being corrupted
           TOLAYER3: scheduling arrival on other side
             INSERTEVENT: time is 875.673218
             INSERTEVENT: future time will be 1213.652222
+DEBUG: CALLED AFTER TOLAYER3
+A_INTERRUPT: handled alarm
 
 EVENT time: 877.270386,  type: 0, timerinterrupt   entity: 0
 HANDLE_EVENT: seq_num: 17
           START TIMER: starting timer at 877.270386
             INSERTEVENT: time is 877.270386
             INSERTEVENT: future time will be 882.087036
+SET_TIMER_fOR_NEXT_EVENT: seqnum: 18 alarm_time: 4.816650
 A_OUTPUT: resending packet 17
           TOLAYER3: seq: 17, ack -1, check: 2296 rrrrrrrrrrrrrrrrrrrr
           TOLAYER3: scheduling arrival on other side
             INSERTEVENT: time is 877.270386
             INSERTEVENT: future time will be 1218.924438
+DEBUG: CALLED AFTER TOLAYER3
+A_INTERRUPT: handled alarm
 
 EVENT time: 877.712646,  type: 2, fromlayer3  entity: 1
 B_INPUT: seq_num: 8 message: Ziiiiiiiiiiiiiiiiiii
@@ -3071,11 +3604,14 @@ HANDLE_EVENT: seq_num: 18
           START TIMER: starting timer at 882.087036
             INSERTEVENT: time is 882.087036
             INSERTEVENT: future time will be 886.823242
+SET_TIMER_fOR_NEXT_EVENT: seqnum: 8 alarm_time: 4.736206
 A_OUTPUT: resending packet 18
           TOLAYER3: seq: 18, ack -1, check: 2317 ssssssssssssssssssss
           TOLAYER3: scheduling arrival on other side
             INSERTEVENT: time is 882.087036
             INSERTEVENT: future time will be 1225.734009
+DEBUG: CALLED AFTER TOLAYER3
+A_INTERRUPT: handled alarm
 
 EVENT time: 885.550598,  type: 2, fromlayer3  entity: 1
 B_INPUT: seq_num: 12 message: Zmmmmmmmmmmmmmmmmmmm
@@ -3086,59 +3622,74 @@ HANDLE_EVENT: seq_num: 8
           START TIMER: starting timer at 886.823242
             INSERTEVENT: time is 886.823242
             INSERTEVENT: future time will be 888.742065
+SET_TIMER_fOR_NEXT_EVENT: seqnum: 12 alarm_time: 1.918823
 A_OUTPUT: resending packet 8
           TOLAYER3: seq: 8, ack -1, check: 2107 iiiiiiiiiiiiiiiiiiii
           TOLAYER3: packet being corrupted
           TOLAYER3: scheduling arrival on other side
             INSERTEVENT: time is 886.823242
             INSERTEVENT: future time will be 1231.698730
+DEBUG: CALLED AFTER TOLAYER3
+A_INTERRUPT: handled alarm
 
 EVENT time: 888.742065,  type: 0, timerinterrupt   entity: 0
 HANDLE_EVENT: seq_num: 12
           START TIMER: starting timer at 888.742065
             INSERTEVENT: time is 888.742065
             INSERTEVENT: future time will be 889.760742
+SET_TIMER_fOR_NEXT_EVENT: seqnum: 1 alarm_time: 1.018677
 A_OUTPUT: resending packet 12
           TOLAYER3: seq: 12, ack -1, check: 2191 mmmmmmmmmmmmmmmmmmmm
           TOLAYER3: packet being corrupted
           TOLAYER3: scheduling arrival on other side
             INSERTEVENT: time is 888.742065
             INSERTEVENT: future time will be 1235.020142
+DEBUG: CALLED AFTER TOLAYER3
+A_INTERRUPT: handled alarm
 
 EVENT time: 889.760742,  type: 0, timerinterrupt   entity: 0
 HANDLE_EVENT: seq_num: 1
           START TIMER: starting timer at 889.760742
             INSERTEVENT: time is 889.760742
             INSERTEVENT: future time will be 889.825806
+SET_TIMER_fOR_NEXT_EVENT: seqnum: 3 alarm_time: 0.065063
 A_OUTPUT: resending packet 1
           TOLAYER3: seq: 1, ack -1, check: 1960 bbbbbbbbbbbbbbbbbbbb
           TOLAYER3: packet being corrupted
           TOLAYER3: scheduling arrival on other side
             INSERTEVENT: time is 889.760742
             INSERTEVENT: future time will be 1244.216675
+DEBUG: CALLED AFTER TOLAYER3
+A_INTERRUPT: handled alarm
 
 EVENT time: 889.825806,  type: 0, timerinterrupt   entity: 0
 HANDLE_EVENT: seq_num: 3
           START TIMER: starting timer at 889.825806
             INSERTEVENT: time is 889.825806
             INSERTEVENT: future time will be 890.828430
+SET_TIMER_fOR_NEXT_EVENT: seqnum: 13 alarm_time: 1.002625
 A_OUTPUT: resending packet 3
           TOLAYER3: seq: 3, ack -1, check: 2002 dddddddddddddddddddd
           TOLAYER3: scheduling arrival on other side
             INSERTEVENT: time is 889.825806
             INSERTEVENT: future time will be 1248.103638
+DEBUG: CALLED AFTER TOLAYER3
+A_INTERRUPT: handled alarm
 
 EVENT time: 890.828430,  type: 0, timerinterrupt   entity: 0
 HANDLE_EVENT: seq_num: 13
           START TIMER: starting timer at 890.828430
             INSERTEVENT: time is 890.828430
             INSERTEVENT: future time will be 891.910889
+SET_TIMER_fOR_NEXT_EVENT: seqnum: 6 alarm_time: 1.082458
 A_OUTPUT: resending packet 13
           TOLAYER3: seq: 13, ack -1, check: 2212 nnnnnnnnnnnnnnnnnnnn
           TOLAYER3: packet being corrupted
           TOLAYER3: scheduling arrival on other side
             INSERTEVENT: time is 890.828430
             INSERTEVENT: future time will be 1249.947754
+DEBUG: CALLED AFTER TOLAYER3
+A_INTERRUPT: handled alarm
 
 EVENT time: 891.771057,  type: 2, fromlayer3  entity: 1
 B_INPUT: seq_num: 1 message: bbbbbbbbbbbbbbbbbbbb
@@ -3155,35 +3706,44 @@ HANDLE_EVENT: seq_num: 6
           START TIMER: starting timer at 891.910889
             INSERTEVENT: time is 891.910889
             INSERTEVENT: future time will be 894.448730
+SET_TIMER_fOR_NEXT_EVENT: seqnum: 7 alarm_time: 2.537842
 A_OUTPUT: resending packet 6
           TOLAYER3: seq: 6, ack -1, check: 2065 gggggggggggggggggggg
           TOLAYER3: packet being corrupted
           TOLAYER3: scheduling arrival on other side
             INSERTEVENT: time is 891.910889
             INSERTEVENT: future time will be 1251.114746
+DEBUG: CALLED AFTER TOLAYER3
+A_INTERRUPT: handled alarm
 
 EVENT time: 894.448730,  type: 0, timerinterrupt   entity: 0
 HANDLE_EVENT: seq_num: 7
           START TIMER: starting timer at 894.448730
             INSERTEVENT: time is 894.448730
             INSERTEVENT: future time will be 895.602600
+SET_TIMER_fOR_NEXT_EVENT: seqnum: 14 alarm_time: 1.153870
 A_OUTPUT: resending packet 7
           TOLAYER3: seq: 7, ack -1, check: 2086 hhhhhhhhhhhhhhhhhhhh
           TOLAYER3: scheduling arrival on other side
             INSERTEVENT: time is 894.448730
             INSERTEVENT: future time will be 1253.438354
+DEBUG: CALLED AFTER TOLAYER3
+A_INTERRUPT: handled alarm
 
 EVENT time: 895.602600,  type: 0, timerinterrupt   entity: 0
 HANDLE_EVENT: seq_num: 14
           START TIMER: starting timer at 895.602600
             INSERTEVENT: time is 895.602600
             INSERTEVENT: future time will be 897.447937
+SET_TIMER_fOR_NEXT_EVENT: seqnum: 11 alarm_time: 1.845337
 A_OUTPUT: resending packet 14
           TOLAYER3: seq: 14, ack -1, check: 2233 oooooooooooooooooooo
           TOLAYER3: packet being corrupted
           TOLAYER3: scheduling arrival on other side
             INSERTEVENT: time is 895.602600
             INSERTEVENT: future time will be 1260.678101
+DEBUG: CALLED AFTER TOLAYER3
+A_INTERRUPT: handled alarm
 
 EVENT time: 895.744995,  type: 2, fromlayer3  entity: 0
 A_INPUT: ack_num: 1 message: Zbbbbbbbbbbbbbbbbbbb
@@ -3194,24 +3754,30 @@ HANDLE_EVENT: seq_num: 11
           START TIMER: starting timer at 897.447937
             INSERTEVENT: time is 897.447937
             INSERTEVENT: future time will be 899.509705
+SET_TIMER_fOR_NEXT_EVENT: seqnum: 15 alarm_time: 2.061768
 A_OUTPUT: resending packet 11
           TOLAYER3: seq: 11, ack -1, check: 2170 llllllllllllllllllll
           TOLAYER3: packet being corrupted
           TOLAYER3: scheduling arrival on other side
             INSERTEVENT: time is 897.447937
             INSERTEVENT: future time will be 1266.988159
+DEBUG: CALLED AFTER TOLAYER3
+A_INTERRUPT: handled alarm
 
 EVENT time: 899.509705,  type: 0, timerinterrupt   entity: 0
 HANDLE_EVENT: seq_num: 15
           START TIMER: starting timer at 899.509705
             INSERTEVENT: time is 899.509705
             INSERTEVENT: future time will be 904.710754
+SET_TIMER_fOR_NEXT_EVENT: seqnum: 16 alarm_time: 5.201050
 A_OUTPUT: resending packet 15
           TOLAYER3: seq: 15, ack -1, check: 2254 pppppppppppppppppppp
           TOLAYER3: packet being corrupted
           TOLAYER3: scheduling arrival on other side
             INSERTEVENT: time is 899.509705
             INSERTEVENT: future time will be 1270.929932
+DEBUG: CALLED AFTER TOLAYER3
+A_INTERRUPT: handled alarm
 
 EVENT time: 900.108704,  type: 2, fromlayer3  entity: 1
 B_INPUT: seq_num: 3 message: Zddddddddddddddddddd
@@ -3226,34 +3792,43 @@ HANDLE_EVENT: seq_num: 16
           START TIMER: starting timer at 904.710754
             INSERTEVENT: time is 904.710754
             INSERTEVENT: future time will be 905.673218
+SET_TIMER_fOR_NEXT_EVENT: seqnum: 10 alarm_time: 0.962463
 A_OUTPUT: resending packet 16
           TOLAYER3: seq: 16, ack -1, check: 2275 qqqqqqqqqqqqqqqqqqqq
           TOLAYER3: scheduling arrival on other side
             INSERTEVENT: time is 904.710754
             INSERTEVENT: future time will be 1280.388794
+DEBUG: CALLED AFTER TOLAYER3
+A_INTERRUPT: handled alarm
 
 EVENT time: 905.673218,  type: 0, timerinterrupt   entity: 0
 HANDLE_EVENT: seq_num: 10
           START TIMER: starting timer at 905.673218
             INSERTEVENT: time is 905.673218
             INSERTEVENT: future time will be 907.270386
+SET_TIMER_fOR_NEXT_EVENT: seqnum: 17 alarm_time: 1.597168
 A_OUTPUT: resending packet 10
           TOLAYER3: seq: 10, ack -1, check: 2149 kkkkkkkkkkkkkkkkkkkk
           TOLAYER3: scheduling arrival on other side
             INSERTEVENT: time is 905.673218
             INSERTEVENT: future time will be 1287.801514
+DEBUG: CALLED AFTER TOLAYER3
+A_INTERRUPT: handled alarm
 
 EVENT time: 907.270386,  type: 0, timerinterrupt   entity: 0
 HANDLE_EVENT: seq_num: 17
           START TIMER: starting timer at 907.270386
             INSERTEVENT: time is 907.270386
             INSERTEVENT: future time will be 912.087036
+SET_TIMER_fOR_NEXT_EVENT: seqnum: 18 alarm_time: 4.816650
 A_OUTPUT: resending packet 17
           TOLAYER3: seq: 17, ack -1, check: 2296 rrrrrrrrrrrrrrrrrrrr
           TOLAYER3: packet being corrupted
           TOLAYER3: scheduling arrival on other side
             INSERTEVENT: time is 907.270386
             INSERTEVENT: future time will be 1289.380615
+DEBUG: CALLED AFTER TOLAYER3
+A_INTERRUPT: handled alarm
 
 EVENT time: 910.045776,  type: 2, fromlayer3  entity: 1
 B_INPUT: seq_num: 6 message: gggggggggggggggggggg
@@ -3264,24 +3839,30 @@ HANDLE_EVENT: seq_num: 18
           START TIMER: starting timer at 912.087036
             INSERTEVENT: time is 912.087036
             INSERTEVENT: future time will be 916.823242
+SET_TIMER_fOR_NEXT_EVENT: seqnum: 8 alarm_time: 4.736206
 A_OUTPUT: resending packet 18
           TOLAYER3: seq: 18, ack -1, check: 2317 ssssssssssssssssssss
           TOLAYER3: packet being corrupted
           TOLAYER3: scheduling arrival on other side
             INSERTEVENT: time is 912.087036
             INSERTEVENT: future time will be 1298.600830
+DEBUG: CALLED AFTER TOLAYER3
+A_INTERRUPT: handled alarm
 
 EVENT time: 916.823242,  type: 0, timerinterrupt   entity: 0
 HANDLE_EVENT: seq_num: 8
           START TIMER: starting timer at 916.823242
             INSERTEVENT: time is 916.823242
             INSERTEVENT: future time will be 918.742065
+SET_TIMER_fOR_NEXT_EVENT: seqnum: 12 alarm_time: 1.918823
 A_OUTPUT: resending packet 8
           TOLAYER3: seq: 8, ack -1, check: 2107 iiiiiiiiiiiiiiiiiiii
           TOLAYER3: packet being corrupted
           TOLAYER3: scheduling arrival on other side
             INSERTEVENT: time is 916.823242
             INSERTEVENT: future time will be 1302.009033
+DEBUG: CALLED AFTER TOLAYER3
+A_INTERRUPT: handled alarm
 
 EVENT time: 918.599915,  type: 2, fromlayer3  entity: 1
 B_INPUT: seq_num: 999999 message: hhhhhhhhhhhhhhhhhhhh
@@ -3292,59 +3873,74 @@ HANDLE_EVENT: seq_num: 12
           START TIMER: starting timer at 918.742065
             INSERTEVENT: time is 918.742065
             INSERTEVENT: future time will be 919.760742
+SET_TIMER_fOR_NEXT_EVENT: seqnum: 1 alarm_time: 1.018677
 A_OUTPUT: resending packet 12
           TOLAYER3: seq: 12, ack -1, check: 2191 mmmmmmmmmmmmmmmmmmmm
           TOLAYER3: packet being corrupted
           TOLAYER3: scheduling arrival on other side
             INSERTEVENT: time is 918.742065
             INSERTEVENT: future time will be 1304.461182
+DEBUG: CALLED AFTER TOLAYER3
+A_INTERRUPT: handled alarm
 
 EVENT time: 919.760742,  type: 0, timerinterrupt   entity: 0
 HANDLE_EVENT: seq_num: 1
           START TIMER: starting timer at 919.760742
             INSERTEVENT: time is 919.760742
             INSERTEVENT: future time will be 919.825806
+SET_TIMER_fOR_NEXT_EVENT: seqnum: 3 alarm_time: 0.065063
 A_OUTPUT: resending packet 1
           TOLAYER3: seq: 1, ack -1, check: 1960 bbbbbbbbbbbbbbbbbbbb
           TOLAYER3: packet being corrupted
           TOLAYER3: scheduling arrival on other side
             INSERTEVENT: time is 919.760742
             INSERTEVENT: future time will be 1306.858765
+DEBUG: CALLED AFTER TOLAYER3
+A_INTERRUPT: handled alarm
 
 EVENT time: 919.825806,  type: 0, timerinterrupt   entity: 0
 HANDLE_EVENT: seq_num: 3
           START TIMER: starting timer at 919.825806
             INSERTEVENT: time is 919.825806
             INSERTEVENT: future time will be 920.828430
+SET_TIMER_fOR_NEXT_EVENT: seqnum: 13 alarm_time: 1.002625
 A_OUTPUT: resending packet 3
           TOLAYER3: seq: 3, ack -1, check: 2002 dddddddddddddddddddd
           TOLAYER3: packet being corrupted
           TOLAYER3: scheduling arrival on other side
             INSERTEVENT: time is 919.825806
             INSERTEVENT: future time will be 1312.489502
+DEBUG: CALLED AFTER TOLAYER3
+A_INTERRUPT: handled alarm
 
 EVENT time: 920.828430,  type: 0, timerinterrupt   entity: 0
 HANDLE_EVENT: seq_num: 13
           START TIMER: starting timer at 920.828430
             INSERTEVENT: time is 920.828430
             INSERTEVENT: future time will be 921.910889
+SET_TIMER_fOR_NEXT_EVENT: seqnum: 6 alarm_time: 1.082458
 A_OUTPUT: resending packet 13
           TOLAYER3: seq: 13, ack -1, check: 2212 nnnnnnnnnnnnnnnnnnnn
           TOLAYER3: packet being corrupted
           TOLAYER3: scheduling arrival on other side
             INSERTEVENT: time is 920.828430
             INSERTEVENT: future time will be 1320.675781
+DEBUG: CALLED AFTER TOLAYER3
+A_INTERRUPT: handled alarm
 
 EVENT time: 921.910889,  type: 0, timerinterrupt   entity: 0
 HANDLE_EVENT: seq_num: 6
           START TIMER: starting timer at 921.910889
             INSERTEVENT: time is 921.910889
             INSERTEVENT: future time will be 924.448730
+SET_TIMER_fOR_NEXT_EVENT: seqnum: 7 alarm_time: 2.537842
 A_OUTPUT: resending packet 6
           TOLAYER3: seq: 6, ack -1, check: 2065 gggggggggggggggggggg
           TOLAYER3: scheduling arrival on other side
             INSERTEVENT: time is 921.910889
             INSERTEVENT: future time will be 1325.136597
+DEBUG: CALLED AFTER TOLAYER3
+A_INTERRUPT: handled alarm
 
 EVENT time: 923.711731,  type: 1, fromlayer5  entity: 0
           GENERATE NEXT ARRIVAL: creating new arrival
@@ -3358,6 +3954,7 @@ A_OUTPUT: packet leaving A
           TOLAYER3: scheduling arrival on other side
             INSERTEVENT: time is 923.711731
             INSERTEVENT: future time will be 1329.066284
+INSERT_PACKET: SUCCESS
 WINDOW CONTENTS: 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19     start: 1 end: 19
 
 EVENT time: 923.953613,  type: 2, fromlayer3  entity: 1

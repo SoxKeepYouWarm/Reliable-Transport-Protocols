@@ -15,11 +15,13 @@ A_OUTPUT called: aaaaaaaaaaaaaaaaaaaa
           START TIMER: starting timer at 45.723965
             INSERTEVENT: time is 45.723965
             INSERTEVENT: future time will be 75.723969
+SET_TIMER_fOR_NEXT_EVENT: seqnum: 0 alarm_time: 30.000004
 A_OUTPUT: packet leaving A
           TOLAYER3: seq: 0, ack -1, check: 1939 aaaaaaaaaaaaaaaaaaaa
           TOLAYER3: scheduling arrival on other side
             INSERTEVENT: time is 45.723965
             INSERTEVENT: future time will be 50.864571
+INSERT_PACKET: SUCCESS
 WINDOW CONTENTS: 0     start: 0 end: 0
 
 EVENT time: 50.864571,  type: 2, fromlayer3  entity: 1
@@ -36,11 +38,14 @@ HANDLE_EVENT: seq_num: 0
           START TIMER: starting timer at 75.723969
             INSERTEVENT: time is 75.723969
             INSERTEVENT: future time will be 105.723969
+SET_TIMER_fOR_NEXT_EVENT: seqnum: 0 alarm_time: 30.000000
 A_OUTPUT: resending packet 0
           TOLAYER3: seq: 0, ack -1, check: 1939 aaaaaaaaaaaaaaaaaaaa
           TOLAYER3: scheduling arrival on other side
             INSERTEVENT: time is 75.723969
             INSERTEVENT: future time will be 78.448639
+DEBUG: CALLED AFTER TOLAYER3
+A_INTERRUPT: handled alarm
 
 EVENT time: 78.448639,  type: 2, fromlayer3  entity: 1
 B_INPUT: seq_num: 0 message: aaaaaaaaaaaaaaaaaaaa
@@ -81,11 +86,13 @@ A_OUTPUT called: bbbbbbbbbbbbbbbbbbbb
           START TIMER: starting timer at 109.760742
             INSERTEVENT: time is 109.760742
             INSERTEVENT: future time will be 139.760742
+SET_TIMER_fOR_NEXT_EVENT: seqnum: 1 alarm_time: 30.000000
 A_OUTPUT: packet leaving A
           TOLAYER3: seq: 1, ack -1, check: 1960 bbbbbbbbbbbbbbbbbbbb
           TOLAYER3: scheduling arrival on other side
             INSERTEVENT: time is 109.760742
             INSERTEVENT: future time will be 115.389908
+INSERT_PACKET: SUCCESS
 WINDOW CONTENTS: 1     start: 0 end: 0
 
 EVENT time: 115.389908,  type: 2, fromlayer3  entity: 1
@@ -130,11 +137,13 @@ A_OUTPUT called: cccccccccccccccccccc
           START TIMER: starting timer at 131.676239
             INSERTEVENT: time is 131.676239
             INSERTEVENT: future time will be 161.676239
+SET_TIMER_fOR_NEXT_EVENT: seqnum: 2 alarm_time: 30.000000
 A_OUTPUT: packet leaving A
           TOLAYER3: seq: 2, ack -1, check: 1981 cccccccccccccccccccc
           TOLAYER3: scheduling arrival on other side
             INSERTEVENT: time is 131.676239
             INSERTEVENT: future time will be 141.556030
+INSERT_PACKET: SUCCESS
 WINDOW CONTENTS: 2     start: 0 end: 0
 
 EVENT time: 141.556030,  type: 2, fromlayer3  entity: 1
@@ -179,11 +188,13 @@ A_OUTPUT called: dddddddddddddddddddd
           START TIMER: starting timer at 212.611725
             INSERTEVENT: time is 212.611725
             INSERTEVENT: future time will be 242.611725
+SET_TIMER_fOR_NEXT_EVENT: seqnum: 3 alarm_time: 30.000000
 A_OUTPUT: packet leaving A
           TOLAYER3: seq: 3, ack -1, check: 2002 dddddddddddddddddddd
           TOLAYER3: scheduling arrival on other side
             INSERTEVENT: time is 212.611725
             INSERTEVENT: future time will be 219.759613
+INSERT_PACKET: SUCCESS
 WINDOW CONTENTS: 3     start: 0 end: 0
 
 EVENT time: 219.759613,  type: 2, fromlayer3  entity: 1
@@ -228,11 +239,13 @@ A_OUTPUT called: eeeeeeeeeeeeeeeeeeee
           START TIMER: starting timer at 256.510773
             INSERTEVENT: time is 256.510773
             INSERTEVENT: future time will be 286.510773
+SET_TIMER_fOR_NEXT_EVENT: seqnum: 4 alarm_time: 30.000000
 A_OUTPUT: packet leaving A
           TOLAYER3: seq: 4, ack -1, check: 2023 eeeeeeeeeeeeeeeeeeee
           TOLAYER3: scheduling arrival on other side
             INSERTEVENT: time is 256.510773
             INSERTEVENT: future time will be 266.220032
+INSERT_PACKET: SUCCESS
 WINDOW CONTENTS: 4     start: 0 end: 0
 
 EVENT time: 266.220032,  type: 2, fromlayer3  entity: 1
@@ -258,6 +271,7 @@ A_OUTPUT: packet leaving A
           TOLAYER3: scheduling arrival on other side
             INSERTEVENT: time is 266.849792
             INSERTEVENT: future time will be 271.951019
+INSERT_PACKET: SUCCESS
 WINDOW CONTENTS: 4 5     start: 0 end: 1
 
 EVENT time: 268.653961,  type: 2, fromlayer3  entity: 0
@@ -279,6 +293,7 @@ REMOVE_ALARM: timer needs to be set for next event
           START TIMER: starting timer at 268.653961
             INSERTEVENT: time is 268.653961
             INSERTEVENT: future time will be 296.849792
+SET_TIMER_fOR_NEXT_EVENT: seqnum: 5 alarm_time: 28.195831
 DEBUGGING: just returned from remove_alarm
 WINDOW CONTENTS: 5     start: 1 end: 1
 DEBUGGING: just returned from print_window_contents
@@ -326,8 +341,10 @@ A_OUTPUT called: gggggggggggggggggggg
           START TIMER: starting timer at 298.168488
             INSERTEVENT: time is 298.168488
             INSERTEVENT: future time will be 328.168488
+SET_TIMER_fOR_NEXT_EVENT: seqnum: 6 alarm_time: 30.000000
 A_OUTPUT: packet leaving A
           TOLAYER3: packet being lost
+INSERT_PACKET: SUCCESS
 WINDOW CONTENTS: 6     start: 0 end: 0
 
 EVENT time: 307.021332,  type: 1, fromlayer5  entity: 0
@@ -341,6 +358,7 @@ A_OUTPUT: packet leaving A
           TOLAYER3: scheduling arrival on other side
             INSERTEVENT: time is 307.021332
             INSERTEVENT: future time will be 316.117035
+INSERT_PACKET: SUCCESS
 WINDOW CONTENTS: 6 7     start: 0 end: 1
 
 EVENT time: 312.328674,  type: 1, fromlayer5  entity: 0
@@ -354,6 +372,7 @@ A_OUTPUT: packet leaving A
           TOLAYER3: scheduling arrival on other side
             INSERTEVENT: time is 312.328674
             INSERTEVENT: future time will be 319.095703
+INSERT_PACKET: SUCCESS
 WINDOW CONTENTS: 6 7 8     start: 0 end: 2
 
 EVENT time: 316.117035,  type: 2, fromlayer3  entity: 1
@@ -413,11 +432,14 @@ HANDLE_EVENT: seq_num: 6
           START TIMER: starting timer at 328.168488
             INSERTEVENT: time is 328.168488
             INSERTEVENT: future time will be 358.168488
+SET_TIMER_fOR_NEXT_EVENT: seqnum: 6 alarm_time: 30.000000
 A_OUTPUT: resending packet 6
           TOLAYER3: seq: 6, ack -1, check: 2065 gggggggggggggggggggg
           TOLAYER3: scheduling arrival on other side
             INSERTEVENT: time is 328.168488
             INSERTEVENT: future time will be 334.238434
+DEBUG: CALLED AFTER TOLAYER3
+A_INTERRUPT: handled alarm
 
 EVENT time: 334.238434,  type: 2, fromlayer3  entity: 1
 B_INPUT: seq_num: 6 message: gggggggggggggggggggg
@@ -471,11 +493,13 @@ A_OUTPUT called: jjjjjjjjjjjjjjjjjjjj
           START TIMER: starting timer at 354.243073
             INSERTEVENT: time is 354.243073
             INSERTEVENT: future time will be 384.243073
+SET_TIMER_fOR_NEXT_EVENT: seqnum: 9 alarm_time: 30.000000
 A_OUTPUT: packet leaving A
           TOLAYER3: seq: 9, ack -1, check: 2128 jjjjjjjjjjjjjjjjjjjj
           TOLAYER3: scheduling arrival on other side
             INSERTEVENT: time is 354.243073
             INSERTEVENT: future time will be 358.703644
+INSERT_PACKET: SUCCESS
 WINDOW CONTENTS: 9     start: 0 end: 0
 
 EVENT time: 358.703644,  type: 2, fromlayer3  entity: 1
@@ -520,11 +544,13 @@ A_OUTPUT called: kkkkkkkkkkkkkkkkkkkk
           START TIMER: starting timer at 450.498169
             INSERTEVENT: time is 450.498169
             INSERTEVENT: future time will be 480.498169
+SET_TIMER_fOR_NEXT_EVENT: seqnum: 10 alarm_time: 30.000000
 A_OUTPUT: packet leaving A
           TOLAYER3: seq: 10, ack -1, check: 2149 kkkkkkkkkkkkkkkkkkkk
           TOLAYER3: scheduling arrival on other side
             INSERTEVENT: time is 450.498169
             INSERTEVENT: future time will be 453.224121
+INSERT_PACKET: SUCCESS
 WINDOW CONTENTS: 10     start: 0 end: 0
 
 EVENT time: 453.224121,  type: 2, fromlayer3  entity: 1
@@ -569,11 +595,13 @@ A_OUTPUT called: llllllllllllllllllll
           START TIMER: starting timer at 540.587830
             INSERTEVENT: time is 540.587830
             INSERTEVENT: future time will be 570.587830
+SET_TIMER_fOR_NEXT_EVENT: seqnum: 11 alarm_time: 30.000000
 A_OUTPUT: packet leaving A
           TOLAYER3: seq: 11, ack -1, check: 2170 llllllllllllllllllll
           TOLAYER3: scheduling arrival on other side
             INSERTEVENT: time is 540.587830
             INSERTEVENT: future time will be 541.630371
+INSERT_PACKET: SUCCESS
 WINDOW CONTENTS: 11     start: 0 end: 0
 
 EVENT time: 541.630371,  type: 2, fromlayer3  entity: 1
@@ -618,8 +646,10 @@ A_OUTPUT called: mmmmmmmmmmmmmmmmmmmm
           START TIMER: starting timer at 637.427307
             INSERTEVENT: time is 637.427307
             INSERTEVENT: future time will be 667.427307
+SET_TIMER_fOR_NEXT_EVENT: seqnum: 12 alarm_time: 30.000000
 A_OUTPUT: packet leaving A
           TOLAYER3: packet being lost
+INSERT_PACKET: SUCCESS
 WINDOW CONTENTS: 12     start: 0 end: 0
 
 EVENT time: 667.427307,  type: 0, timerinterrupt   entity: 0
@@ -627,11 +657,14 @@ HANDLE_EVENT: seq_num: 12
           START TIMER: starting timer at 667.427307
             INSERTEVENT: time is 667.427307
             INSERTEVENT: future time will be 697.427307
+SET_TIMER_fOR_NEXT_EVENT: seqnum: 12 alarm_time: 30.000000
 A_OUTPUT: resending packet 12
           TOLAYER3: seq: 12, ack -1, check: 2191 mmmmmmmmmmmmmmmmmmmm
           TOLAYER3: scheduling arrival on other side
             INSERTEVENT: time is 667.427307
             INSERTEVENT: future time will be 671.581848
+DEBUG: CALLED AFTER TOLAYER3
+A_INTERRUPT: handled alarm
 
 EVENT time: 671.581848,  type: 2, fromlayer3  entity: 1
 B_INPUT: seq_num: 12 message: mmmmmmmmmmmmmmmmmmmm
@@ -675,11 +708,13 @@ A_OUTPUT called: nnnnnnnnnnnnnnnnnnnn
           START TIMER: starting timer at 712.295166
             INSERTEVENT: time is 712.295166
             INSERTEVENT: future time will be 742.295166
+SET_TIMER_fOR_NEXT_EVENT: seqnum: 13 alarm_time: 30.000000
 A_OUTPUT: packet leaving A
           TOLAYER3: seq: 13, ack -1, check: 2212 nnnnnnnnnnnnnnnnnnnn
           TOLAYER3: scheduling arrival on other side
             INSERTEVENT: time is 712.295166
             INSERTEVENT: future time will be 719.035400
+INSERT_PACKET: SUCCESS
 WINDOW CONTENTS: 13     start: 0 end: 0
 
 EVENT time: 719.035400,  type: 2, fromlayer3  entity: 1
@@ -696,11 +731,14 @@ HANDLE_EVENT: seq_num: 13
           START TIMER: starting timer at 742.295166
             INSERTEVENT: time is 742.295166
             INSERTEVENT: future time will be 772.295166
+SET_TIMER_fOR_NEXT_EVENT: seqnum: 13 alarm_time: 30.000000
 A_OUTPUT: resending packet 13
           TOLAYER3: seq: 13, ack -1, check: 2212 nnnnnnnnnnnnnnnnnnnn
           TOLAYER3: scheduling arrival on other side
             INSERTEVENT: time is 742.295166
             INSERTEVENT: future time will be 746.568726
+DEBUG: CALLED AFTER TOLAYER3
+A_INTERRUPT: handled alarm
 
 EVENT time: 746.568726,  type: 2, fromlayer3  entity: 1
 B_INPUT: seq_num: 13 message: nnnnnnnnnnnnnnnnnnnn
@@ -713,11 +751,14 @@ HANDLE_EVENT: seq_num: 13
           START TIMER: starting timer at 772.295166
             INSERTEVENT: time is 772.295166
             INSERTEVENT: future time will be 802.295166
+SET_TIMER_fOR_NEXT_EVENT: seqnum: 13 alarm_time: 30.000000
 A_OUTPUT: resending packet 13
           TOLAYER3: seq: 13, ack -1, check: 2212 nnnnnnnnnnnnnnnnnnnn
           TOLAYER3: scheduling arrival on other side
             INSERTEVENT: time is 772.295166
             INSERTEVENT: future time will be 780.504395
+DEBUG: CALLED AFTER TOLAYER3
+A_INTERRUPT: handled alarm
 
 EVENT time: 780.504395,  type: 2, fromlayer3  entity: 1
 B_INPUT: seq_num: 13 message: nnnnnnnnnnnnnnnnnnnn
@@ -758,11 +799,13 @@ A_OUTPUT called: oooooooooooooooooooo
           START TIMER: starting timer at 808.066101
             INSERTEVENT: time is 808.066101
             INSERTEVENT: future time will be 838.066101
+SET_TIMER_fOR_NEXT_EVENT: seqnum: 14 alarm_time: 30.000000
 A_OUTPUT: packet leaving A
           TOLAYER3: seq: 14, ack -1, check: 2233 oooooooooooooooooooo
           TOLAYER3: scheduling arrival on other side
             INSERTEVENT: time is 808.066101
             INSERTEVENT: future time will be 817.071716
+INSERT_PACKET: SUCCESS
 WINDOW CONTENTS: 14     start: 0 end: 0
 
 EVENT time: 808.761536,  type: 1, fromlayer5  entity: 0
@@ -776,6 +819,7 @@ A_OUTPUT: packet leaving A
           TOLAYER3: scheduling arrival on other side
             INSERTEVENT: time is 808.761536
             INSERTEVENT: future time will be 823.824524
+INSERT_PACKET: SUCCESS
 WINDOW CONTENTS: 14 15     start: 0 end: 1
 
 EVENT time: 817.071716,  type: 2, fromlayer3  entity: 1
@@ -821,6 +865,7 @@ REMOVE_ALARM: timer needs to be set for next event
           START TIMER: starting timer at 824.152954
             INSERTEVENT: time is 824.152954
             INSERTEVENT: future time will be 838.761536
+SET_TIMER_fOR_NEXT_EVENT: seqnum: 15 alarm_time: 14.608582
 DEBUGGING: just returned from remove_alarm
 WINDOW CONTENTS: 15     start: 1 end: 1
 DEBUGGING: just returned from print_window_contents
@@ -856,11 +901,13 @@ A_OUTPUT called: qqqqqqqqqqqqqqqqqqqq
           START TIMER: starting timer at 897.395996
             INSERTEVENT: time is 897.395996
             INSERTEVENT: future time will be 927.395996
+SET_TIMER_fOR_NEXT_EVENT: seqnum: 16 alarm_time: 30.000000
 A_OUTPUT: packet leaving A
           TOLAYER3: seq: 16, ack -1, check: 2275 qqqqqqqqqqqqqqqqqqqq
           TOLAYER3: scheduling arrival on other side
             INSERTEVENT: time is 897.395996
             INSERTEVENT: future time will be 899.412170
+INSERT_PACKET: SUCCESS
 WINDOW CONTENTS: 16     start: 0 end: 0
 
 EVENT time: 899.412170,  type: 2, fromlayer3  entity: 1
@@ -905,11 +952,13 @@ A_OUTPUT called: rrrrrrrrrrrrrrrrrrrr
           START TIMER: starting timer at 980.258179
             INSERTEVENT: time is 980.258179
             INSERTEVENT: future time will be 1010.258179
+SET_TIMER_fOR_NEXT_EVENT: seqnum: 17 alarm_time: 30.000000
 A_OUTPUT: packet leaving A
           TOLAYER3: seq: 17, ack -1, check: 2296 rrrrrrrrrrrrrrrrrrrr
           TOLAYER3: scheduling arrival on other side
             INSERTEVENT: time is 980.258179
             INSERTEVENT: future time will be 984.738220
+INSERT_PACKET: SUCCESS
 WINDOW CONTENTS: 17     start: 0 end: 0
 
 EVENT time: 984.738220,  type: 2, fromlayer3  entity: 1
@@ -954,11 +1003,13 @@ A_OUTPUT called: ssssssssssssssssssss
           START TIMER: starting timer at 1065.940796
             INSERTEVENT: time is 1065.940796
             INSERTEVENT: future time will be 1095.940796
+SET_TIMER_fOR_NEXT_EVENT: seqnum: 18 alarm_time: 30.000000
 A_OUTPUT: packet leaving A
           TOLAYER3: seq: 18, ack -1, check: 2317 ssssssssssssssssssss
           TOLAYER3: scheduling arrival on other side
             INSERTEVENT: time is 1065.940796
             INSERTEVENT: future time will be 1072.591675
+INSERT_PACKET: SUCCESS
 WINDOW CONTENTS: 18     start: 0 end: 0
 
 EVENT time: 1072.591675,  type: 2, fromlayer3  entity: 1
@@ -1003,11 +1054,13 @@ A_OUTPUT called: tttttttttttttttttttt
           START TIMER: starting timer at 1101.957275
             INSERTEVENT: time is 1101.957275
             INSERTEVENT: future time will be 1131.957275
+SET_TIMER_fOR_NEXT_EVENT: seqnum: 19 alarm_time: 30.000000
 A_OUTPUT: packet leaving A
           TOLAYER3: seq: 19, ack -1, check: 2338 tttttttttttttttttttt
           TOLAYER3: scheduling arrival on other side
             INSERTEVENT: time is 1101.957275
             INSERTEVENT: future time will be 1103.119263
+INSERT_PACKET: SUCCESS
 WINDOW CONTENTS: 19     start: 0 end: 0
 
 EVENT time: 1103.119263,  type: 2, fromlayer3  entity: 1

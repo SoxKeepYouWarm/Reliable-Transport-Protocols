@@ -1,4 +1,0 @@
-Executing simulator [10 Runs]
-
-['ExperimentResults.csv']
-Run#1 ...

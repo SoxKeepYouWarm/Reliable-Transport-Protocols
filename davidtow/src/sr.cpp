@@ -148,7 +148,7 @@ struct Window_frame* Window::get_window_frame_by_seqnum(int seqnum) {
 	int frame_index = seqnum - base;
 	int position = (frame_index + start_index) % size;
 	printf("SUSPECT CODE: base: %d size: %d frame_index: %d position: %d\n", base, size, frame_index, position);
-	if (position >= size || position < 0) { printf("ERROR: GET_WINDOW_FRAME_BY_SEQNUM\n"); }
+	if (position >= size || position < 0) { printf("ERROR: GET_WINDOW_FRAME_BY_SEQNUM, position: %d size: %d\n", position, size); }
 	return &window[position];
 }
 
@@ -276,7 +276,7 @@ void Receiver_Window::attempt_advance() {
 	printf("ATTEMPT_ADVANCE: steps: %d\n", advancements);
 	
 	for (int i = 0; i < advancements; i++) {
-		printf("B_INPUT: delivering seq_num %d\n", this->window[start_index].seqnum);
+		printf("B_INPUT: delivering seqnum %d\n", this->window[start_index].seqnum);
 		tolayer5(FROM_B, this->window[start_index].payload);
 		this->window[start_index].seqnum = -1;
 		start_index = (start_index + 1) % size;
@@ -392,7 +392,7 @@ void Timer::handle_next_event_alarm() {
 		Event triggered_event = timed_events.front();
 		timed_events.pop_front();
 		
-		std::cout << "HANDLE_EVENT: seq_num: " << triggered_event.packet.seqnum << std::endl;
+		std::cout << "HANDLE_EVENT: seqnum: " << triggered_event.packet.seqnum << std::endl;
 		
 		// if another event is ahead of the timeout, start timer.
 		if ( ! timed_events.empty() ) {
@@ -406,7 +406,7 @@ void Timer::handle_next_event_alarm() {
 		schedule_alarm(TIME_A, triggered_event.packet);
 	
 		// send packet out
-		printf("A_OUTPUT: resending packet %d\n", triggered_event.packet.seqnum);
+		printf("A_OUTPUT: resending packet seqnum: %d\n", triggered_event.packet.seqnum);
 		tolayer3(FROM_A, triggered_event.packet);
 		printf("DEBUG: CALLED AFTER TOLAYER3\n");
 		
@@ -533,7 +533,7 @@ void build_packet_a(struct pkt* outgoing_packet, struct msg message) {
 /* called from layer 5, passed the data to be sent to other side */
 void A_output(struct msg message) {
 
-	printf("A_OUTPUT called: %.*s\n", 20, message.data);
+	printf("A_OUTPUT seqnum: %d message: %.*s\n", next_seqnum, 20, message.data);
 	
 	struct pkt outgoing_packet;
 
@@ -579,15 +579,24 @@ void A_output(struct msg message) {
 /* called from layer 3, when a packet arrives for layer 4 */
 void A_input(struct pkt packet) {
 
-	printf("A_INPUT: ack_num: %d message: %.*s\n", packet.acknum, 20, packet.payload);
+	printf("A_INPUT: seqnum: %d ack_num: %d message: %.*s\n", packet.seqnum, packet.acknum, 20, packet.payload);
 	
 	// check for valid checksum
 	if (valid_packet(packet)) {
 		printf("A_INPUT: packet is valid\n");
 		
+		if (packet.acknum < base) { 
+			printf("A_INPUT: received repeat ack, dropping packet base: %d\n", base);
+			return;
+		}
+		
 		struct Window_frame* frame = window->get_window_frame_by_seqnum(packet.acknum);
 		printf("A_INPUT: ABOUT TO RUN SUSPECT CODE\n");
 		frame->packet_received = TRUE;
+		
+		// stop frame timer
+		timer->remove_alarm(packet.acknum);
+		printf("DEBUGGING: just returned from remove_alarm\n");
 		
 		// move window up past last ack
 		int advancements = 0;
@@ -618,9 +627,7 @@ void A_input(struct pkt packet) {
 		printf("SUSPECT CODE: base: %d += advancements: %d\n", base, advancements);
 		base += advancements;
 		
-		// stop frame timer
-		timer->remove_alarm(packet.acknum);
-		printf("DEBUGGING: just returned from remove_alarm\n");
+		
 		
 		print_window_contents(*window);
 		printf("DEBUGGING: just returned from print_window_contents\n");
@@ -689,7 +696,7 @@ void A_init() {
 /* called from layer 3, when a packet arrives for layer 4 at B*/
 void B_input(struct pkt packet) {
 
-	printf("B_INPUT: seq_num: %d message: %.*s\n", packet.seqnum, 20, packet.payload);
+	printf("B_INPUT: seqnum: %d message: %.*s\n", packet.seqnum, 20, packet.payload);
 	
 	if (valid_packet(packet)) {
 		printf("B_INPUT: received valid packet from A\n");
