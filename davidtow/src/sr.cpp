@@ -447,24 +447,6 @@ void Timer::remove_alarm(int seq_num) {
 				printf("REMOVE_ALARM: timer does not need to be reset\n");
 			}
 			
-			
-			// check if this packet is associated with the current alarm
-			/*if ( ! timed_events.empty() ) {
-				
-				Event current_event = timed_events.front();
-				if (current_event.packet.seqnum == seq_num) {
-					// if so, stop the alarm
-					printf("REMOVE_ALARM: returned packet is associated with current timer alarm, stopping timer\n");
-					stoptimer(FROM_A);
-					if ( ! timed_events.empty() ) {
-						set_timer_for_next_event();
-					} 
-				} else {
-					printf("REMOVE_ALARM: returned packet alarm event removed from queue\n");
-				}
-			
-			}*/
-			
 			return;
 		}
 		

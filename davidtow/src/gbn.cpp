@@ -32,10 +32,7 @@ int next_seqnum;
 
 int expected_seqnum;  
 
-
-#define WINDOW_SIZE 10
 #define MESSAGE_BUFFERSIZE 100
-
 
 class Window {
 	
@@ -113,7 +110,9 @@ int Window::is_full() {
 
 
 struct pkt Window::get_packet(int index) {
-	return window[start_index + index];
+	int position = (start_index + index) % this->size;
+	printf("GET_PACKET: index: %d\n", index);
+	return window[position];
 }
 
 
@@ -236,7 +235,7 @@ void build_packet_a(struct pkt* outgoing_packet, struct msg message) {
 /* called from layer 5, passed the data to be sent to other side */
 void A_output(struct msg message) {
 
-	printf("A_OUTPUT called: %.*s\n", 20, message.data);
+	printf("A_OUTPUT seqnum: %d message: %.*s\n", next_seqnum, 20, message.data);
 	
 	struct pkt outgoing_packet;
 
@@ -290,11 +289,17 @@ void A_input(struct pkt packet) {
 	if (valid_packet(packet)) {
 		printf("packet is valid\n");
 		
+		if (packet.acknum < base) {
+			printf("A_INPUT: acknum: %d received old packet, drop it\n", packet.acknum);
+			return;
+		}
+		
 		// move window up past last ack
 		window->advance_window( (packet.acknum + 1) - base);
 		
 		// update new base
 		base = packet.acknum + 1;
+		printf("A_INPUT: new base: %d\n", base);
 		
 		stoptimer(FROM_A);
 		if (base < next_seqnum) {
@@ -344,7 +349,7 @@ void A_timerinterrupt() {
 	starttimer(FROM_A, TIME_A);
 	
 	for (int i = 0; i < window->packet_count; i++) {
-		struct pkt current_packet = window->get_packet(i % WINDOW_SIZE);
+		struct pkt current_packet = window->get_packet(i);
 		tolayer3(FROM_A, current_packet);
 	}
 	
@@ -394,7 +399,9 @@ void B_input(struct pkt packet) {
 		} else {
 			printf("B_INPUT: received packet with unexpected sequence number\n");
 			struct pkt response_packet;
-			response_packet.acknum = expected_seqnum;
+			
+			// re acknowledge last packet
+			response_packet.acknum = expected_seqnum - 1;
 			response_packet.seqnum = -1;
 			for (int i = 0; i < 20; i++) {
 				response_packet.payload[i] = '0';
